@@ -64,7 +64,7 @@ describe "Helpers", type: :model, vcr: true do
       id = "https://doi.org/10.5438/0000-0C2G"
       accept_header = ["text/x-bibliography; style=modern-language-association-8th-edition; locale=fr-FR"]
       redirect_url = subject.should_redirect_citation(id: id, accept_header: accept_header)
-      expect(redirect_url).to eq("/content/application/vnd.datacite.datacite+xml/10.5438/0000-0c2g")
+      expect(redirect_url).to eq("#{ENV['CITEPROC_URL']}?doi=10.5438%2F0000-0c2g&style=modern-language-association-8th-edition&locale=fr-FR")
     end
 
     it "unsupported content_type" do
