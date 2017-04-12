@@ -12,7 +12,6 @@ gem 'oj', '~> 2.18', '>= 2.18.1'
 gem 'iso8601', '~> 0.9.0'
 gem 'maremma', '~> 3.0'
 gem 'bolognese', '~> 0.8.5'
-gem 'nokogiri', '~> 1.6.8'
 
 group :development do
   gem "better_errors"
