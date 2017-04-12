@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+- 2.3.3
+
+addons:
+  code_climate:
+    repo_token: $CODECLIMATE_REPO_TOKEN
+
+install:
+- travis_retry bundle install
+
+script:
+- bundle exec rspec
+- bundle exec codeclimate-test-reporter
