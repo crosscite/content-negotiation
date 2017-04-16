@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 12 Apr 2017 13:22:09 GMT
+      - Wed, 12 Apr 2017 19:05:57 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -32,9 +32,9 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":6},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
 
 '
     http_version: 
-  recorded_at: Wed, 12 Apr 2017 13:22:09 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Wed, 12 Apr 2017 19:05:57 GMT
+recorded_with: VCR 2.9.3

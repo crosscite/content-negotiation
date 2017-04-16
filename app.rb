@@ -47,6 +47,8 @@ LOG_LEVELS = {
 configure do
   set :app_file, __FILE__
 
+  set :default_encoding, "UTF-8"
+
   # Work around rack protection referrer bug
   set :protection, except: :json_csrf
 
@@ -90,6 +92,12 @@ get '/heartbeat' do
   content_type 'text/html'
 
   'OK'
+end
+
+get '/' do
+  content_type 'text/html'
+
+  "Content Negotiation"
 end
 
 # return content in one of the formats supported by bolognese gem
@@ -141,6 +149,11 @@ get %r{/([^/]+/[^/]+)/(.+)} do
 
   content_type accept_header.first
 
+  headers['Link'] = "<#{id}> ; rel=\"identifier\", " +
+                  "<#{id}> ; rel=\"describedby\" ; type=\"application/vnd.datacite.datacite+xml\", " +
+                  "<#{id}> ; rel=\"describedby\" ; type=\"application/vnd.citationstyles.csl+json\", " +
+                  "<#{id}> ; rel=\"describedby\" ; type=\"application/x-bibtex\""
+
   redirect url, 303
 end
 
@@ -156,6 +169,11 @@ get %r{/(.+)} do
   logger.info "#{id} as #{accept_header.first}"
 
   content_type accept_header.first
+
+  headers['Link'] = "<#{id}> ; rel=\"identifier\", " +
+                  "<#{id}> ; rel=\"describedby\" ; type=\"application/vnd.datacite.datacite+xml\", " +
+                  "<#{id}> ; rel=\"describedby\" ; type=\"application/vnd.citationstyles.csl+json\", " +
+                  "<#{id}> ; rel=\"describedby\" ; type=\"application/x-bibtex\""
 
   redirect url, 303
 end

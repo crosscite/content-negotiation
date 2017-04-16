@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 12 Apr 2017 13:22:11 GMT
+      - Wed, 12 Apr 2017 19:05:56 GMT
       Server:
       - openresty/1.11.2.2
       Connection:
@@ -34,40 +34,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Wed, 12 Apr 2017 13:22:11 GMT
-- request:
-    method: head
-    uri: https://doi.org/10.5438/0000-0C2G
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Maremma - https://github.com/datacite/maremma
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-  response:
-    status:
-      code: 303
-      message: ''
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Vary:
-      - Accept
-      Location:
-      - https://blog.datacite.org/oi-project-underway-for-open-org-id-registry/
-      Expires:
-      - Wed, 12 Apr 2017 13:23:04 GMT
-      Content-Type:
-      - text/html;charset=utf-8
-      Content-Length:
-      - '227'
-      Date:
-      - Wed, 12 Apr 2017 13:22:10 GMT
-    body:
-      encoding: UTF-8
-      string: ''
-    http_version: 
-  recorded_at: Wed, 12 Apr 2017 13:22:11 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Wed, 12 Apr 2017 19:05:56 GMT
+recorded_with: VCR 2.9.3

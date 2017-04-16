@@ -23,16 +23,16 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 12 Apr 2017 13:22:11 GMT
+      - Wed, 12 Apr 2017 19:05:57 GMT
       Server:
       - openresty/1.11.2.2
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":3},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5438/0000-0C2G","media":["application/xml:https://blog.datacite.org/oi-project-underway-for-open-org-id-registry/oi-project-underway-for-open-org-id-registry.xml"]}]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5438/0000-0C2G","media":["application/xml:https://blog.datacite.org/oi-project-underway-for-open-org-id-registry/oi-project-underway-for-open-org-id-registry.xml"]}]}}
 
 '
     http_version: 
-  recorded_at: Wed, 12 Apr 2017 13:22:10 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Wed, 12 Apr 2017 19:05:56 GMT
+recorded_with: VCR 2.9.3

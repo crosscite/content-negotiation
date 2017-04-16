@@ -37,7 +37,7 @@ module Sinatra
     end
 
     def should_redirect_citation(id: nil, accept_header: nil)
-      content_type = accept_header.find { |i| i.start_with?("text/x-bibliography") }
+      content_type = Array.wrap(accept_header).find { |i| i.start_with?("text/x-bibliography") }
       return nil unless content_type.present?
 
       hsh = content_type.split("; ").reduce({}) do |sum, i|
@@ -62,7 +62,6 @@ module Sinatra
 
     def should_pass_thru(id: nil)
       return nil unless validate_doi(id)
-
       response = Maremma.head id, limit: 0
       response.headers["location"]
     end

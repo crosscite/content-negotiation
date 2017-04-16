@@ -1,3 +1,5 @@
+Encoding.default_external = Encoding::UTF_8
+
 ENV['RACK_ENV'] = 'test'
 
 # set up Code Climate

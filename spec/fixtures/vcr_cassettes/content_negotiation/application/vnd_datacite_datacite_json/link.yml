@@ -23,9 +23,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 12 Apr 2017 13:22:21 GMT
+      - Wed, 12 Apr 2017 19:05:45 GMT
       Server:
       - openresty/1.11.2.2
+      Content-Length:
+      - '116'
       Connection:
       - keep-alive
     body:
@@ -34,5 +36,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Wed, 12 Apr 2017 13:22:21 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Wed, 12 Apr 2017 19:05:45 GMT
+recorded_with: VCR 2.9.3
