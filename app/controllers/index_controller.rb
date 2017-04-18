@@ -2,7 +2,6 @@ class IndexController < ApplicationController
   before_action :load_id, :set_content_type, only: [:show]
 
   def index
-    meta = { meta: { name: ENV['SITE_TITLE'] }}.to_json
     render plain: ENV['SITE_TITLE']
   end
 
@@ -34,7 +33,6 @@ class IndexController < ApplicationController
       from = find_from_format(id: @id)
       metadata = read(id: @id, from: from)
       format = Mime::Type.lookup(@content_type).to_sym
-      Rails.logger.info format
       response.set_header("Accept", @content_type)
       Rails.logger.info "#{@id} returned as #{@content_type}"
       render format => metadata and return
