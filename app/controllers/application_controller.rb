@@ -8,7 +8,7 @@ class ApplicationController < ActionController::API
                           NoMethodError]
 
   unless Rails.env.test? || Rails.env.development?
-    rescue_from (*RESCUABLE_EXCEPTIONS) do |exception|
+    rescue_from *RESCUABLE_EXCEPTIONS do |exception|
       status, message = case exception.class.to_s
                         when "AbstractController::ActionNotFound", "ActionController::RoutingError"
                           [404, "The resource you are looking for doesn't exist."]
