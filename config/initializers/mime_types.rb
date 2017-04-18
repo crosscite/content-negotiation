@@ -23,9 +23,38 @@ Mime::Type.register "text/x-bibliography", :citation
 
 # register renderers for these Mime types
 # :citation is handled differently
-%w(crossref datacite datacite_json schema_org rdf_xml turtle citeproc codemeta bibtex ris).each do |f|
+%w(datacite_json schema_org turtle citeproc codemeta).each do |f|
   ActionController::Renderers.add f.to_sym do |obj, options|
     self.content_type ||= Mime[f.to_sym]
-    self.response_body = obj.send(f)
+    Librato.timing 'metadata.write' do
+      self.response_body = obj.send(f)
+    end
+  end
+end
+
+# these Mime types send a file for download. We give proper filename and extension
+%w(crossref datacite rdf_xml).each do |f|
+  ActionController::Renderers.add f.to_sym do |obj, options|
+    filename = obj.doi.gsub(/[^0-9A-Za-z.\-]/, '_')
+    Librato.timing 'metadata.write' do
+      send_data obj.send(f.to_s), type: Mime[f.to_sym],
+        disposition: "attachment; filename=#{filename}.xml"
+    end
+  end
+end
+
+ActionController::Renderers.add :bibtex do |obj, options|
+  filename = obj.doi.gsub(/[^0-9A-Za-z.\-]/, '_')
+  Librato.timing 'metadata.write' do
+    send_data obj.send("bibtex"), type: Mime[:bibtex],
+      disposition: "attachment; filename=#{filename}.bib"
+  end
+end
+
+ActionController::Renderers.add :ris do |obj, options|
+  filename = obj.doi.gsub(/[^0-9A-Za-z.\-]/, '_')
+  Librato.timing 'metadata.write' do
+    send_data obj.send("ris"), type: Mime[:ris],
+      disposition: "attachment; filename=#{filename}.ris"
   end
 end

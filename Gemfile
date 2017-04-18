@@ -14,6 +14,7 @@ gem 'bolognese', '~> 0.9'
 gem "dalli", "~> 2.7.6"
 gem 'lograge', '~> 0.4.1'
 gem 'bugsnag', '~> 5.3'
+gem 'librato-rails', '~> 1.4.2'
 
 group :development, :test do
   gem "better_errors"
