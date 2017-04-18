@@ -31,7 +31,12 @@ class IndexController < ApplicationController
     if available_content_types.keys.include?(@content_type)
       # from is metadata input format
       from = find_from_format(id: @id)
-      metadata = read(id: @id, from: from)
+      metadata = nil
+
+      Librato.timing 'metadata.read' do
+        metadata = read(id: @id, from: from)
+      end
+
       format = Mime::Type.lookup(@content_type).to_sym
       response.set_header("Accept", @content_type)
       Rails.logger.info "#{@id} returned as #{@content_type}"
