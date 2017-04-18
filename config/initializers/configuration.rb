@@ -16,14 +16,15 @@ end
 # default values for some ENV variables
 ENV['APPLICATION'] ||= "content-negotiation"
 ENV['HOSTNAME'] ||= "data.local"
+ENV['MEMCACHE_SERVERS'] ||= "localhost:11211"
 ENV['SITE_TITLE'] ||= "Content Resolver"
 ENV['LOG_LEVEL'] ||= "info"
 ENV['GITHUB_URL'] ||= "https://github.com/crosscite/content-negotiation"
+ENV['SEARCH_URL'] ||= "https://search.datacite.org/"
+ENV['CITEPROC_URL'] ||= "https://citation.datacite.org/format"
 ENV['TRUSTED_IP'] ||= "10.0.10.1"
 
 Rails.application.config.log_level = ENV['LOG_LEVEL'].to_sym
 
-# Use a different cache store
-# dalli uses ENV['MEMCACHE_SERVERS']
-ENV['MEMCACHE_SERVERS'] ||= ENV['HOSTNAME']
+# Use memcached as cache store
 Rails.application.config.cache_store = :dalli_store, nil, { :namespace => ENV['APPLICATION'], :compress => true }
