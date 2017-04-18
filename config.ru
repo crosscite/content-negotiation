@@ -1,9 +1,5 @@
-Encoding.default_external = Encoding::UTF_8
+# This file is used by Rack-based servers to start the application.
 
-require 'rubygems'
-require 'bundler'
+require_relative 'config/environment'
 
-Bundler.require
-require './app'
-
-run Sinatra::Application
+run Rails.application

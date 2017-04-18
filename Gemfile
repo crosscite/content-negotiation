@@ -1,29 +1,40 @@
 source 'https://rubygems.org'
 
+gem 'rails', '~> 5.0.2'
+gem 'rack-cors'
 gem 'dotenv'
-gem 'bugsnag'
-gem 'awesome_print'
-gem 'activesupport'
-gem 'sinatra', '~> 1.4.8'
-gem 'sinatra-contrib', '~> 1.4'
-
 gem 'multi_json'
 gem 'json', '~> 1.8', '>= 1.8.5'
 gem 'oj', '~> 2.18', '>= 2.18.1'
+gem 'equivalent-xml', '~> 0.6.0'
+gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 gem 'iso8601', '~> 0.9.0'
 gem 'maremma', '~> 3.5'
-gem 'bolognese', '~> 0.8.5'
+gem 'bolognese', '~> 0.9'
+gem "dalli", "~> 2.7.6"
+gem 'lograge', '~> 0.4.1'
+gem 'bugsnag', '~> 5.3'
 
-group :development do
+group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'byebug', platform: :mri
+end
+
+group :development do
+  gem 'listen', '~> 3.0.5'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
-  gem 'rspec'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'capybara'
   gem 'webmock', '~> 1.20.0'
-  gem 'vcr', '~> 2.9.3'
+  gem 'vcr', '~> 3.0.3'
   gem 'codeclimate-test-reporter', '~> 1.0.0'
   gem 'simplecov'
 end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

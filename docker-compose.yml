@@ -9,5 +9,8 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./spec:/home/app/webapp/spec
       - ./app:/home/app/webapp/app
+      - ./config:/home/app/webapp/config
+      - ./spec:/home/app/webapp/spec
+  memcached:
+    image: memcached:1.4.31
