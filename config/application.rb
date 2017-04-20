@@ -32,7 +32,7 @@ module ContentNegotiation
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
     config.lograge.enabled = true
-    config.lograge.ignore_actions = ['HeartbeatController#index', 'IndexController#show']
+    config.lograge.ignore_actions = ['HeartbeatController#index']
 
     # Make Ruby 2.4 preserve the timezone of the receiver when calling `to_time`.
     # Previous versions had false.
