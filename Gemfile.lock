@@ -42,6 +42,7 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     aggregate (0.2.2)
     arel (7.1.4)
+    benchmark_methods (0.7)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -50,8 +51,9 @@ GEM
       latex-decode (~> 0.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bolognese (0.9.5)
+    bolognese (0.9.6)
       activesupport (>= 4.2.5, < 6)
+      benchmark_methods (~> 0.7)
       bibtex-ruby (~> 4.1)
       builder (~> 3.2, >= 3.2.2)
       colorize (~> 0.8.1)
@@ -287,7 +289,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  bolognese (~> 0.9)
+  bolognese (= 0.9.6)
   bugsnag (~> 5.3)
   byebug
   capybara
