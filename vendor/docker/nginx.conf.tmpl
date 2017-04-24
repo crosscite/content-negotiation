@@ -1,3 +1,5 @@
+env PATH;
+
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
@@ -33,7 +35,11 @@ http {
 	# Logging Settings
 	##
 
-	access_log /var/log/nginx/access.log;
+  log_format custom_format '$host - $remote_addr - $remote_user [$time_local] '
+                           '"$request" $status $body_bytes_sent '
+                           '"$http_referer" "$http_user_agent"';
+
+	access_log /var/log/nginx/access.log custom_format;
 	error_log /var/log/nginx/error.log;
 
 	##
@@ -56,7 +62,7 @@ http {
 	# Uncomment it if you installed passenger or passenger-enterprise
 	##
 
-	include /etc/nginx/passenger.conf;
+  include /etc/nginx/passenger.conf;
   passenger_max_pool_size {{ default .Env.PASSENGER_MAX_POOL_SIZE "5" }};
   passenger_min_instances {{ default .Env.PASSENGER_MAX_POOL_SIZE "5" }};
 
