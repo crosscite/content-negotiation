@@ -51,12 +51,13 @@ GEM
       latex-decode (~> 0.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bolognese (0.9.6)
+    bolognese (0.9.8)
       activesupport (>= 4.2.5, < 6)
       benchmark_methods (~> 0.7)
       bibtex-ruby (~> 4.1)
       builder (~> 3.2, >= 3.2.2)
       colorize (~> 0.8.1)
+      gender_detector (~> 0.1.2)
       json-ld (~> 2.1, >= 2.1.2)
       jsonlint (~> 0.2.0)
       loofah (~> 2.0, >= 2.0.3)
@@ -289,7 +290,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  bolognese (= 0.9.6)
+  bolognese (= 0.9.8)
   bugsnag (~> 5.3)
   byebug
   capybara

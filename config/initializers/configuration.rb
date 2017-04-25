@@ -16,7 +16,7 @@ end
 # default values for some ENV variables
 ENV['APPLICATION'] ||= "content-negotiation"
 ENV['HOSTNAME'] ||= "data.local"
-ENV['MEMCACHE_SERVERS'] ||= "localhost:11211"
+ENV['MEMCACHE_SERVERS'] ||= "memcached:11211"
 ENV['SITE_TITLE'] ||= "Content Resolver"
 ENV['LOG_LEVEL'] ||= "info"
 ENV['GITHUB_URL'] ||= "https://github.com/crosscite/content-negotiation"
