@@ -9,6 +9,7 @@ Mime::Type.register "text/plain", :text, [], %w(txt)
 Mime::Type.register "application/json", :json, %w( text/x-json application/jsonrequest )
 
 # Mime types supported by bolognese gem https://github.com/datacite/bolognese
+Mime::Type.register "application/vnd.crosscite.crosscite+json", :crosscite
 Mime::Type.register "application/vnd.crossref.unixref+xml", :crossref
 Mime::Type.register "application/vnd.datacite.datacite+xml", :datacite, %w( application/x-datacite+xml )
 Mime::Type.register "application/vnd.datacite.datacite+json", :datacite_json
@@ -23,12 +24,10 @@ Mime::Type.register "text/x-bibliography", :citation
 
 # register renderers for these Mime types
 # :citation is handled differently
-%w(datacite_json schema_org turtle citeproc codemeta).each do |f|
+%w(crosscite datacite_json schema_org turtle citeproc codemeta).each do |f|
   ActionController::Renderers.add f.to_sym do |obj, options|
     self.content_type ||= Mime[f.to_sym]
-    Librato.timing 'metadata.write' do
-      self.response_body = obj.send(f)
-    end
+    self.response_body = obj.send(f)
   end
 end
 
@@ -36,25 +35,19 @@ end
 %w(crossref datacite rdf_xml).each do |f|
   ActionController::Renderers.add f.to_sym do |obj, options|
     filename = obj.doi.gsub(/[^0-9A-Za-z.\-]/, '_')
-    Librato.timing 'metadata.write' do
-      send_data obj.send(f.to_s), type: Mime[f.to_sym],
-        disposition: "attachment; filename=#{filename}.xml"
-    end
+    send_data obj.send(f.to_s), type: Mime[f.to_sym],
+      disposition: "attachment; filename=#{filename}.xml"
   end
 end
 
 ActionController::Renderers.add :bibtex do |obj, options|
   filename = obj.doi.gsub(/[^0-9A-Za-z.\-]/, '_')
-  Librato.timing 'metadata.write' do
-    send_data obj.send("bibtex"), type: Mime[:bibtex],
-      disposition: "attachment; filename=#{filename}.bib"
-  end
+  send_data obj.send("bibtex"), type: Mime[:bibtex],
+    disposition: "attachment; filename=#{filename}.bib"
 end
 
 ActionController::Renderers.add :ris do |obj, options|
   filename = obj.doi.gsub(/[^0-9A-Za-z.\-]/, '_')
-  Librato.timing 'metadata.write' do
-    send_data obj.send("ris"), type: Mime[:ris],
-      disposition: "attachment; filename=#{filename}.ris"
-  end
+  send_data obj.send("ris"), type: Mime[:ris],
+    disposition: "attachment; filename=#{filename}.ris"
 end

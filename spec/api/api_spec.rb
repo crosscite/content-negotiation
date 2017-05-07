@@ -21,7 +21,7 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.crossref.unixref+xml" }
 
       expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).fetch("doi_records", {}).fetch("doi_record", {})
+      response = Maremma.from_xml(last_response.body).dig("doi_records", "doi_record")
       expect(response.dig("crossref", "journal", "journal_article", "doi_data", "doi")).to eq("10.7554/eLife.01567")
     end
 
@@ -29,7 +29,7 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/application/vnd.crossref.unixref+xml/#{doi}"
 
       expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).fetch("doi_records", {}).fetch("doi_record", {})
+      response = Maremma.from_xml(last_response.body).dig("doi_records", "doi_record")
       expect(response.dig("crossref", "journal", "journal_article", "doi_data", "doi")).to eq("10.7554/eLife.01567")
     end
   end

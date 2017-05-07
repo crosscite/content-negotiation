@@ -29,13 +29,13 @@ class IndexController < ApplicationController
 
     # content-type available in content negotiation
     if available_content_types.keys.include?(@content_type)
-      # from is metadata input format
-      from = find_from_format(id: @id)
-      metadata = nil
 
-      Librato.timing 'metadata.read' do
-        metadata = read(id: @id, from: from)
+      # this is an expensive step, so we cache using the crosscite format
+      input = Rails.cache.fetch(@id, raw: true) do
+        Bolognese::Metadata.new(input: @id).crosscite
       end
+
+      metadata = Bolognese::Metadata.new(input: input, from: "crosscite")
 
       format = Mime::Type.lookup(@content_type).to_sym
       response.set_header("Accept", @content_type)
