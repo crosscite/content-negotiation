@@ -24,7 +24,7 @@ Mime::Type.register "text/x-bibliography", :citation
 
 # register renderers for these Mime types
 # :citation is handled differently
-%w(crosscite datacite_json schema_org turtle citeproc codemeta).each do |f|
+%w(crossref datacite crosscite datacite_json schema_org turtle citeproc codemeta).each do |f|
   ActionController::Renderers.add f.to_sym do |obj, options|
     self.content_type ||= Mime[f.to_sym]
     self.response_body = obj.send(f)
@@ -32,12 +32,10 @@ Mime::Type.register "text/x-bibliography", :citation
 end
 
 # these Mime types send a file for download. We give proper filename and extension
-%w(crossref datacite rdf_xml).each do |f|
-  ActionController::Renderers.add f.to_sym do |obj, options|
-    filename = obj.doi.gsub(/[^0-9A-Za-z.\-]/, '_')
-    send_data obj.send(f.to_s), type: Mime[f.to_sym],
-      disposition: "attachment; filename=#{filename}.xml"
-  end
+ActionController::Renderers.add :rdf_xml do |obj, options|
+  filename = obj.doi.gsub(/[^0-9A-Za-z.\-]/, '_')
+  send_data obj.send("rdf_xml"), type: Mime[:rdf_xml],
+    disposition: "attachment; filename=#{filename}.xml"
 end
 
 ActionController::Renderers.add :bibtex do |obj, options|
