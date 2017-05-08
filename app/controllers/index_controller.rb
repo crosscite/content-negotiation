@@ -36,8 +36,10 @@ class IndexController < ApplicationController
         @metadata = Metadata.new(input: input, from: "crosscite")
       else
         @metadata = Metadata.new(input: @id)
-        input = Rails.cache.write(@id, metadata.crosscite, raw: true)
+        input = Rails.cache.write(@id, @metadata.crosscite, raw: true)
       end
+
+      fail AbstractController::ActionNotFound unless @metadata.exists?
 
       format = Mime::Type.lookup(@content_type).to_sym
       response.set_header("Accept", @content_type)
