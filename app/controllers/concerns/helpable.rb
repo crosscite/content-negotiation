@@ -17,13 +17,11 @@ module Helpable
         sum
       end
 
-      hsh["style"] ||= style || "apa"
-      hsh["locale"] ||= locale || "en-US"
       metadata = Metadata.new(input: id)
       return nil unless metadata.exists?
 
-      params = { style: hsh["style"],
-                 locale: hsh["locale"] }
+      params = { style: style || hsh["style"] || "apa",
+                 locale: locale || hsh["locale"] || "en-US" }
 
       url = ENV['CITEPROC_URL'] + "?" + URI.encode_www_form(params)
       response = Maremma.post url, content_type: 'json', data: metadata.citeproc

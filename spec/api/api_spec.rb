@@ -161,11 +161,18 @@ describe 'content negotiation', type: :api, vcr: true do
       expect(last_response.body).to start_with("Ollomo, B., Durand, P.")
     end
 
-    it "link with query" do
+    it "link with query ieee" do
       get "/text/x-bibliography/#{doi}?style=ieee"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("Ollomo, B., Durand, P.")
+      expect(last_response.body).to start_with("[1]B. Ollomo et al.")
+    end
+
+    it "link with query vancouver" do
+      get "/text/x-bibliography/#{doi}?style=vancouver"
+
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to start_with("1. Ollomo B, Durand P")
     end
   end
 
