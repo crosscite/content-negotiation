@@ -22,9 +22,9 @@ ENV['LOG_LEVEL'] ||= "info"
 ENV['GITHUB_URL'] ||= "https://github.com/crosscite/content-negotiation"
 ENV['SEARCH_URL'] ||= "https://search.datacite.org/"
 ENV['CITEPROC_URL'] ||= "https://citation.datacite.org/format"
-ENV['TRUSTED_IP'] ||= "10.0.10.1"
+ENV['TRUSTED_IP'] ||= "127.0.0.0/8"
 
 Rails.application.config.log_level = ENV['LOG_LEVEL'].to_sym
 
 # Use memcached as cache store
-Rails.application.config.cache_store = :dalli_store, nil, { expires_in: 1.day, compress: true }
+Rails.application.config.cache_store = :dalli_store, nil, { expires_in: 1.day }
