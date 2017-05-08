@@ -27,9 +27,6 @@ Rails.application.configure do
   # Disable/enable fragment and page caching in ActionController
   config.action_controller.perform_caching = false
 
-  # The underlying cache store to use.
-  config.cache_store = :dalli_store, 'localhost:11211'
-
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = false
 

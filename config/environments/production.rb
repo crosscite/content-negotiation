@@ -20,7 +20,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
   # The underlying cache store to use.
-  config.cache_store = :dalli_store, ENV['MEMCACHE_SERVERS']
+  config.cache_store = :dalli_store, nil, { expires_in: 1.day, :compress => true }
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.

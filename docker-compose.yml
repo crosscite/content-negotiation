@@ -2,8 +2,6 @@ version: '2'
 
 services:
   content-negotiation:
-    env_file:
-      - .env
     image: crosscite/content-negotiation
     build: .
     ports:

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Metadata do
+describe Help do
   describe "get_registered_content_types", vcr: true do
     it 'has registered one content_type' do
       id = "https://doi.org/10.5284/1015681"
@@ -16,6 +16,7 @@ describe Metadata do
   describe "available_content_types" do
     it 'should include all mime types' do
       expect(subject.available_content_types).to eq({
+        "application/vnd.crosscite.crosscite+json" => :crosscite,
         "application/vnd.crossref.unixref+xml"=>:crossref,
         "application/vnd.datacite.datacite+xml"=>:datacite,
         "application/x-datacite+xml"=>:datacite,

@@ -29,18 +29,22 @@ class IndexController < ApplicationController
 
     # content-type available in content negotiation
     if available_content_types.keys.include?(@content_type)
-      # from is metadata input format
-      from = find_from_format(id: @id)
-      metadata = nil
 
-      Librato.timing 'metadata.read' do
-        metadata = read(id: @id, from: from)
+      # fetching and parsing is an expensive step, so we cache using the crosscite format
+      input = Rails.cache.read(@id)
+      if input.present?
+        @metadata = Metadata.new(input: input, from: "crosscite")
+      else
+        @metadata = Metadata.new(input: @id)
+        input = Rails.cache.write(@id, @metadata.crosscite, raw: true)
       end
+
+      fail AbstractController::ActionNotFound unless @metadata.exists?
 
       format = Mime::Type.lookup(@content_type).to_sym
       response.set_header("Accept", @content_type)
       Rails.logger.info "#{@id} returned as #{@content_type}"
-      render format => metadata and return
+      render format => @metadata and return
     end
 
     # no content-type found, passed on to URL registered in handle system

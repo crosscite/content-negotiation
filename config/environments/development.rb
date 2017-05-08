@@ -18,9 +18,6 @@ Rails.application.configure do
   # Disable/enable fragment and page caching in ActionController
   config.action_controller.perform_caching = false
 
-  # The underlying cache store to use.
-  config.cache_store = :dalli_store, ENV["MEMCACHE_SERVERS"]
-
   # Don't care if the mailer can't send.
   # config.action_mailer.raise_delivery_errors = false
 
