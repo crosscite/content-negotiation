@@ -17,12 +17,14 @@ module Helpable
         sum
       end
 
-      params = { doi: doi_from_url(id),
-                 style: hsh["style"] || "apa",
+      metadata = Metadata.new(input: id)
+      return nil unless metadata.exists?
+
+      params = { style: hsh["style"] || "apa",
                  locale: hsh["locale"] || "en-US" }
 
       url = ENV['CITEPROC_URL'] + "?" + URI.encode_www_form(params)
-      response = Maremma.get url
+      response = Maremma.post url, content_type: 'json', data: metadata.citeproc
       response.body.fetch("data", nil)
     end
 

@@ -29,20 +29,7 @@ class IndexController < ApplicationController
 
     # content-type available in content negotiation
     if available_content_types.keys.include?(@content_type)
-      # fetching and parsing is an expensive step,
-      # so we cache using the crosscite format in stage and production
-      if %w(stage production).include?(Rails.env)
-        input = Rails.cache.read(@id)
-        if input.present?
-          @metadata = Metadata.new(input: input, from: "crosscite")
-        else
-          @metadata = Metadata.new(input: @id)
-          input = Rails.cache.write(@id, @metadata.crosscite, raw: true)
-        end
-      else
-        @metadata = Metadata.new(input: @id)
-      end
-
+      @metadata = Metadata.new(input: @id)
       fail AbstractController::ActionNotFound unless @metadata.exists?
 
       format = Mime::Type.lookup(@content_type).to_sym

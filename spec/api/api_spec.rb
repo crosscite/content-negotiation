@@ -146,6 +146,15 @@ describe 'content negotiation', type: :api, vcr: true do
     end
   end
 
+  context "text/x-bibliography" do
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography" }
+
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to start_with("Ollomo, B., Durand, P.")
+    end
+  end
+
   context "unknown accept header" do
     it "header" do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
