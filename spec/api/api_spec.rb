@@ -165,7 +165,7 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/text/x-bibliography/#{doi}?style=ieee"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("Ollomo, B., Durand, P.")
+      expect(last_response.body).to start_with("[1]B. Ollomo et al.")
     end
   end
 
