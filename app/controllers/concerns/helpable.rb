@@ -8,7 +8,7 @@ module Helpable
     include Bolognese::DoiUtils
     include Bolognese::Utils
 
-    def formatted_citation(id: nil, content_type: nil)
+    def formatted_citation(id: nil, content_type: nil, style: nil, locale: nil)
       return nil unless content_type.starts_with?("text/x-bibliography")
 
       hsh = content_type.split("; ").reduce({}) do |sum, i|
@@ -17,11 +17,13 @@ module Helpable
         sum
       end
 
+      hsh["style"] ||= style || "apa"
+      hsh["locale"] ||= locale || "en-US"
       metadata = Metadata.new(input: id)
       return nil unless metadata.exists?
 
-      params = { style: hsh["style"] || "apa",
-                 locale: hsh["locale"] || "en-US" }
+      params = { style: hsh["style"],
+                 locale: hsh["locale"] }
 
       url = ENV['CITEPROC_URL'] + "?" + URI.encode_www_form(params)
       response = Maremma.post url, content_type: 'json', data: metadata.citeproc

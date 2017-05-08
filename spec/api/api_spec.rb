@@ -153,6 +153,20 @@ describe 'content negotiation', type: :api, vcr: true do
       expect(last_response.status).to eq(200)
       expect(last_response.body).to start_with("Ollomo, B., Durand, P.")
     end
+
+    it "link" do
+      get "/text/x-bibliography/#{doi}"
+
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to start_with("Ollomo, B., Durand, P.")
+    end
+
+    it "link with query" do
+      get "/text/x-bibliography/#{doi}?style=ieee"
+
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to start_with("Ollomo, B., Durand, P.")
+    end
   end
 
   context "unknown accept header" do
