@@ -23,7 +23,7 @@ class IndexController < ApplicationController
     if @content_type.to_s.starts_with?("text/x-bibliography")
       response.set_header("Accept", @content_type)
       Rails.logger.info "#{@id} returned as #{@content_type}"
-      render plain: formatted_citation(id: @id, content_type: @content_type),
+      render plain: formatted_citation(id: @id, content_type: @content_type, style: params[:style], locale: params[:locale]),
         content_type: @content_type and return
     end
 
