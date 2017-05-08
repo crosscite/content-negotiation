@@ -13,7 +13,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   # Global enable/disable all memcached usage
-  config.perform_caching = false
+  config.perform_caching = true
 
   # Disable/enable fragment and page caching in ActionController
   config.action_controller.perform_caching = false
