@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 08 May 2017 22:03:07 GMT
+      - Tue, 09 May 2017 05:37:31 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -32,11 +32,11 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":4},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
 
 '
     http_version: 
-  recorded_at: Mon, 08 May 2017 22:03:07 GMT
+  recorded_at: Tue, 09 May 2017 02:38:40 GMT
 - request:
     method: get
     uri: https://api.datacite.org/prefixes/10.5061
@@ -66,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Date:
-      - Mon, 08 May 2017 22:03:10 GMT
+      - Tue, 09 May 2017 05:37:33 GMT
       Etag:
       - W/"1eb3f4f371821b1becc6cd25a71755ce"
       Server:
@@ -82,9 +82,9 @@ http_interactions:
       X-Powered-By:
       - Phusion Passenger 5.1.2
       X-Request-Id:
-      - 3c078074-b0be-4ceb-995b-eef89654595b
+      - bfd343a9-b9f1-4ef9-90f4-f92c6b80fe4f
       X-Runtime:
-      - '0.652666'
+      - '0.364202'
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
@@ -95,7 +95,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"10.5061","type":"prefixes","attributes":{"registration-agency":"DataCite","updated":"2016-09-21T20:27:07Z"}}}'
     http_version: 
-  recorded_at: Mon, 08 May 2017 22:03:10 GMT
+  recorded_at: Tue, 09 May 2017 02:38:42 GMT
 - request:
     method: get
     uri: https://search.datacite.org/api?fl=doi,xml,media,minted,updated&q=doi:10.5061/dryad.8515&wt=json
@@ -119,7 +119,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 08 May 2017 22:03:12 GMT
+      - Tue, 09 May 2017 05:37:35 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -132,10 +132,10 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Mon, 08 May 2017 22:03:12 GMT
+  recorded_at: Tue, 09 May 2017 02:38:44 GMT
 - request:
     method: post
-    uri: https://citation.datacite.org/format?locale=en-US&style=ieee
+    uri: https://citation.datacite.org/format?locale=de&style=vancouver
     body:
       encoding: UTF-8
       string: |-
@@ -221,23 +221,20 @@ http_interactions:
       Content-Type:
       - text/plain
       Date:
-      - Mon, 08 May 2017 22:03:15 GMT
+      - Tue, 09 May 2017 05:37:38 GMT
       Server:
       - openresty/1.11.2.2
       Status:
       - 200 OK
       X-Powered-By:
       - Phusion Passenger 5.1.2
-      Content-Length:
-      - '111'
       Connection:
       - keep-alive
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        WzFdQi4gT2xsb21vIGV0IGFsLiwg4oCYRGF0YSBmcm9tOiBBIG5ldyBtYWxh
-        cmlhIGFnZW50IGluIEFmcmljYW4gaG9taW5pZHMu4oCZIERyeWFkIERpZ2l0
-        YWwgUmVwb3NpdG9yeSwgMjAxMS4K
+      encoding: UTF-8
+      string: "1. Ollomo B, Durand P, Prugnolle F, Douzery EJP, Arnathau C, Nkoghe
+        D, et al. Data from: A new malaria agent in African hominids. Dryad Digital
+        Repository; 2011. \n"
     http_version: 
-  recorded_at: Mon, 08 May 2017 22:03:15 GMT
+  recorded_at: Tue, 09 May 2017 02:38:47 GMT
 recorded_with: VCR 3.0.3
