@@ -23,7 +23,7 @@ class IndexController < ApplicationController
     if @content_type.to_s.starts_with?("text/x-bibliography")
       response.set_header("Accept", @content_type)
       Rails.logger.info "#{@id} returned as #{@content_type}"
-      render plain: formatted_citation(id: @id, content_type: @content_type, style: params[:style], locale: params[:locale]),
+      render plain: formatted_citation(id: @id, content_type: @content_type),
         content_type: @content_type and return
     end
 
@@ -63,7 +63,7 @@ class IndexController < ApplicationController
     if params[:application_accept].present?
       @accept_headers = ["application/" + params[:application_accept]]
     elsif params[:text_accept].present?
-      @accept_headers = ["text/" + params[:text_accept]]
+      @accept_headers = ["text/" + params[:text_accept].gsub('+', '')]
     else
       # get all accept headers provided by client
       @accept_headers = request.accepts.map { |i| i.to_s }
@@ -72,9 +72,13 @@ class IndexController < ApplicationController
     # get all registered content_types
     registered_content_types = get_registered_content_types(@id)
 
-    # select first match as content_type
-    content_types = registered_content_types.keys + available_content_types.keys
-    @content_type = (@accept_headers & content_types).first
+    # select first match as content_type, handle text/x-bibliography differently
+    if @accept_headers.first.to_s.starts_with?("text/x-bibliography")
+      @content_type = @accept_headers.first
+    else
+      content_types = registered_content_types.keys + available_content_types.keys
+      @content_type = (@accept_headers & content_types).first
+    end
 
     # redirect url if content_type is from registered content
     @media_url = registered_content_types[@content_type]
