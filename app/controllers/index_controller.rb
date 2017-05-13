@@ -30,7 +30,7 @@ class IndexController < ApplicationController
     # content-type available in content negotiation
     if available_content_types.keys.include?(@content_type)
       @metadata = Metadata.new(input: @id)
-      fail AbstractController::ActionNotFound unless @metadata.exists?
+      fail AbstractController::ActionNotFound unless @metadata.valid?
 
       format = Mime::Type.lookup(@content_type).to_sym
       response.set_header("Accept", @content_type)
