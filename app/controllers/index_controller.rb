@@ -29,10 +29,12 @@ class IndexController < ApplicationController
 
     # content-type available in content negotiation
     if available_content_types.keys.include?(@content_type)
-      @metadata = Metadata.new(input: @id)
+      from = find_from_format(id: @id)
+      format = Mime::Type.lookup(@content_type).to_sym
+
+      @metadata = Metadata.new(input: @id, from: from, format: format)
       fail AbstractController::ActionNotFound unless @metadata.valid?
 
-      format = Mime::Type.lookup(@content_type).to_sym
       response.set_header("Accept", @content_type)
       Rails.logger.info "#{@id} returned as #{@content_type}"
       render format => @metadata and return
