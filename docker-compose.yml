@@ -5,7 +5,7 @@ services:
     image: crosscite/content-negotiation
     build: .
     ports:
-      - "8080:80"
+      - "8090:80"
     volumes:
       - ./app:/home/app/webapp/app
       - ./config:/home/app/webapp/config
