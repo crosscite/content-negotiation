@@ -51,7 +51,7 @@ GEM
       latex-decode (~> 0.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bolognese (0.9.30)
+    bolognese (0.9.31)
       activesupport (>= 4.2.5, < 6)
       benchmark_methods (~> 0.7)
       bibtex-ruby (~> 4.1)
@@ -116,7 +116,7 @@ GEM
       concurrent-ruby (~> 1.0)
     hetchy (1.0.0)
     htmlentities (4.3.4)
-    i18n (0.8.5)
+    i18n (0.8.6)
     iso8601 (0.9.1)
     json (1.8.6)
     json-ld (2.1.4)
@@ -322,4 +322,4 @@ DEPENDENCIES
   webmock (~> 1.20.0)
 
 BUNDLED WITH
-   1.12.5
+   1.15.1
