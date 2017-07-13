@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # workaround for fetching accept header in path
   get '/application/*application_accept/:id', to: 'index#show', constraints: { id: /.+/, format: false }
   get '/text/*text_accept/:id', to: 'index#show', constraints: { id: /.+/, format: false }
+  get '/image/*image_accept/:id', to: 'index#show', constraints: { id: /.+/, format: false }
+  get '/chemical/*chemical_accept/:id', to: 'index#show', constraints: { id: /.+/, format: false }
   resources :index, path: '/', only: [:show, :index], constraints: { id: /.+/, format: false }
 
   root :to => 'index#index'

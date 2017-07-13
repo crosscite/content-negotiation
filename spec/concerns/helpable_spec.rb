@@ -7,6 +7,15 @@ describe Help do
       expect(subject.get_registered_content_types(id)).to eq("application/pdf"=>"http://archaeologydataservice.ac.uk/catalogue/adsdata/arch-1045-1/dissemination/pdf/356_ThewatertreatmentplantSaltersfordGrantham_Little.pdf")
     end
 
+    it 'has registered multiple content_types' do
+      id = "https://doi.org/10.14469/hpc/678"
+      expect(subject.get_registered_content_types(id)).to eq("application/xml" => "https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=4",
+                                                             "chemical/x-gaussian-checkpoint" => "https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=3",
+                                                             "chemical/x-gaussian-input" => "https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=1",
+                                                             "chemical/x-gaussian-log" => "https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=2",
+                                                             "chemical/x-gaussian-wavefunction" => "https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=5")
+    end
+
     it 'has no registered content_types' do
       id = "https://doi.org/10.5061/dryad.8515"
       expect(subject.get_registered_content_types(id)).to eq({})

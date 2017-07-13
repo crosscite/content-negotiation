@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://search.datacite.org/api?fl=doi,media&q=doi:10.15156/bio/sh003219.07fu&wt=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://611ab44713f0
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 13 Jul 2017 20:58:53 GMT
+      Server:
+      - openresty/1.11.2.2
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.15156/BIO/SH003219.07FU","media":["image/png:https://files.plutof.ut.ee/doi/AA/B9/AAB9455BA896EFF9FD07AAA57B2A3B3760379B126D2C615C0C344FE48B8B3B69.png","application/json:https://files.plutof.ut.ee/doi/45/54/455420EE44F0F2D7CC1EE52565CE5EB12BC4F3D8CF27D936B9F7642D580EC981.json","application/json-588515:https://files.plutof.ut.ee/doi/2C/AF/2CAF29DA571A2834C38291ADE305463FFD881A2410BD077A72F4D79077706F3B.json"]}]}}
+
+'
+    http_version: 
+  recorded_at: Thu, 13 Jul 2017 20:58:53 GMT
+recorded_with: VCR 3.0.3

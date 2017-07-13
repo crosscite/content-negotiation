@@ -183,6 +183,66 @@ describe 'content negotiation', type: :api, vcr: true do
     end
   end
 
+  context "chemical/x-gaussian-log" do
+    let(:doi) { "10.14469/hpc/678" }
+
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "chemical/x-gaussian-log" }
+
+      expect(last_response.status).to eq(303)
+      response = Maremma.from_xml(last_response.body)
+      expect(response.dig("html", "body", "a", "href")).to eq("https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=2")
+    end
+
+    it "link" do
+      get "/chemical/x-gaussian-log/#{doi}"
+
+      expect(last_response.status).to eq(303)
+      response = Maremma.from_xml(last_response.body)
+      expect(response.dig("html", "body", "a", "href")).to eq("https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=2")
+    end
+  end
+
+  context "image/png" do
+    let(:doi) { "10.15156/BIO/SH003219.07FU" }
+
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "image/png" }
+
+      expect(last_response.status).to eq(303)
+      response = Maremma.from_xml(last_response.body)
+      expect(response.dig("html", "body", "a", "href")).to eq("https://files.plutof.ut.ee/doi/AA/B9/AAB9455BA896EFF9FD07AAA57B2A3B3760379B126D2C615C0C344FE48B8B3B69.png")
+    end
+
+    it "link" do
+      get "/image/png/#{doi}"
+
+      expect(last_response.status).to eq(303)
+      response = Maremma.from_xml(last_response.body)
+      expect(response.dig("html", "body", "a", "href")).to eq("https://files.plutof.ut.ee/doi/AA/B9/AAB9455BA896EFF9FD07AAA57B2A3B3760379B126D2C615C0C344FE48B8B3B69.png")
+    end
+  end
+
+  context "application/xml" do
+    let(:doi) { "10.14469/hpc/678" }
+
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
+
+      expect(last_response.status).to eq(303)
+      response = Maremma.from_xml(last_response.body)
+      expect(response.dig("html", "body", "a", "href")).to eq("https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=4")
+    end
+
+    it "link" do
+      get "/application/xml/#{doi}"
+
+      expect(last_response.status).to eq(303)
+      response = Maremma.from_xml(last_response.body)
+      expect(response.dig("html", "body", "a", "href")).to eq("https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=4")
+    end
+  end
+
   context "unknown accept header" do
     it "header" do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
