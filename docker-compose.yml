@@ -3,6 +3,9 @@ version: '2'
 services:
   content-negotiation:
     image: crosscite/content-negotiation
+    environment:
+      - SANDBOX=1
+      - SEARCH_URL=https://search.test.datacite.org/
     build: .
     ports:
       - "8090:80"

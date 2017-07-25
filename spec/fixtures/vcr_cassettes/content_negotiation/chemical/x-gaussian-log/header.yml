@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://search.datacite.org/api?fl=doi,media&q=doi:10.14469/hpc/678&wt=json
+    uri: https://search.test.datacite.org/api?fl=doi,media&q=doi:10.14469/hpc/678&wt=json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://611ab44713f0
+      - Maremma - http://99a1e6d9c209
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,18 +23,51 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Thu, 13 Jul 2017 20:34:37 GMT
+      - Tue, 25 Jul 2017 17:07:11 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
-      - '544'
+      - '88'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.14469/HPC/678","media":["chemical/x-gaussian-input:https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=1","chemical/x-gaussian-log:https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=2","chemical/x-gaussian-checkpoint:https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=3","application/xml:https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=4","chemical/x-gaussian-wavefunction:https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=5"]}]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":0,"start":0,"docs":[]}}
 
 '
     http_version: 
-  recorded_at: Thu, 13 Jul 2017 20:34:37 GMT
+  recorded_at: Tue, 25 Jul 2017 17:07:09 GMT
+- request:
+    method: head
+    uri: https://doi.test.datacite.org/10.14469/hpc/678
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://99a1e6d9c209
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Tue, 25 Jul 2017 17:07:12 GMT
+      Server:
+      - openresty/1.11.2.2
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 25 Jul 2017 17:07:09 GMT
 recorded_with: VCR 3.0.3

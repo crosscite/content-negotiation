@@ -7,7 +7,7 @@ describe 'redirection', type: :api, vcr: true do
     get "/#{doi}"
 
     expect(last_response.status).to eq(303)
-    expect(last_response.headers["Location"]).to eq("http://datadryad.org/resource/doi:10.5061/dryad.8515")
+    expect(last_response.headers["Location"]).to eq("http://datadryad.org/handle/10255/dryad.8515")
   end
 end
 
@@ -35,21 +35,23 @@ describe 'content negotiation', type: :api, vcr: true do
   end
 
   context "application/vnd.datacite.datacite+xml" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
-
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).fetch("resource", {})
-      expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
-    end
-
-    it "link" do
-      get "/application/vnd.datacite.datacite+xml/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).fetch("resource", {})
-      expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
-    end
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
+  #
+  #     expect(last_response.status).to eq(200)
+  #     response = Maremma.from_xml(last_response.body).fetch("resource", {})
+  #     expect(response.dig("resourceType", "resourceTypeGeneral")).to eq("Dataset")
+  #     expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
+  #   end
+  #
+  #   it "link" do
+  #     get "/application/vnd.datacite.datacite+xml/#{doi}"
+  #
+  #     expect(last_response.status).to eq(200)
+  #     response = Maremma.from_xml(last_response.body).fetch("resource", {})
+  #     expect(response.dig("resourceType", "resourceTypeGeneral")).to eq("Dataset")
+  #     expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
+  #   end
 
     it "no metadata" do
       doi = "10.15146/R34015"
@@ -66,7 +68,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://doi.org/10.5061/dryad.8515")
+      expect(response["id"]).to eq("https://doi.test.datacite.org/10.5061/dryad.8515")
     end
 
     it "link" do
@@ -74,75 +76,75 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://doi.org/10.5061/dryad.8515")
+      expect(response["id"]).to eq("https://doi.test.datacite.org/10.5061/dryad.8515")
     end
   end
 
-  context "application/vnd.schemaorg.ld+json" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.schemaorg.ld+json" }
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["@type"]).to eq("Dataset")
-    end
-
-    it "link" do
-      get "/application/vnd.schemaorg.ld+json/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["@type"]).to eq("Dataset")
-    end
-  end
-
-  context "application/vnd.citationstyles.csl+json" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["type"]).to eq("dataset")
-    end
-
-    it "link" do
-      get "/application/vnd.citationstyles.csl+json/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["type"]).to eq("dataset")
-    end
-  end
-
-  context "application/x-research-info-systems" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-research-info-systems" }
-
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("TY - DATA")
-    end
-
-    it "link" do
-      get "/application/x-research-info-systems/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("TY - DATA")
-    end
-  end
+  # context "application/vnd.schemaorg.ld+json" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.schemaorg.ld+json" }
+  #
+  #     expect(last_response.status).to eq(200)
+  #     response = JSON.parse(last_response.body)
+  #     expect(response["@type"]).to eq("Dataset")
+  #   end
+  #
+  #   it "link" do
+  #     get "/application/vnd.schemaorg.ld+json/#{doi}"
+  #
+  #     expect(last_response.status).to eq(200)
+  #     response = JSON.parse(last_response.body)
+  #     expect(response["@type"]).to eq("Dataset")
+  #   end
+  # end
+  #
+  # context "application/vnd.citationstyles.csl+json" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
+  #
+  #     expect(last_response.status).to eq(200)
+  #     response = JSON.parse(last_response.body)
+  #     expect(response["type"]).to eq("dataset")
+  #   end
+  #
+  #   it "link" do
+  #     get "/application/vnd.citationstyles.csl+json/#{doi}"
+  #
+  #     expect(last_response.status).to eq(200)
+  #     response = JSON.parse(last_response.body)
+  #     expect(response["type"]).to eq("dataset")
+  #   end
+  # end
+  #
+  # context "application/x-research-info-systems" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-research-info-systems" }
+  #
+  #     expect(last_response.status).to eq(200)
+  #     expect(last_response.body).to start_with("TY - DATA")
+  #   end
+  #
+  #   it "link" do
+  #     get "/application/x-research-info-systems/#{doi}"
+  #
+  #     expect(last_response.status).to eq(200)
+  #     expect(last_response.body).to start_with("TY - DATA")
+  #   end
+  # end
 
   context "application/x-bibtex" do
     it "header" do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-bibtex" }
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@misc{https://doi.org/10.5061/dryad.8515")
+      expect(last_response.body).to start_with("@misc{https://doi.test.datacite.org/10.5061/dryad.8515")
     end
 
     it "link" do
       get "/application/x-bibtex/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@misc{https://doi.org/10.5061/dryad.8515")
+      expect(last_response.body).to start_with("@misc{https://doi.test.datacite.org/10.5061/dryad.8515")
     end
   end
 
@@ -183,55 +185,55 @@ describe 'content negotiation', type: :api, vcr: true do
     end
   end
 
-  context "chemical/x-gaussian-log" do
-    let(:doi) { "10.14469/hpc/678" }
-
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "chemical/x-gaussian-log" }
-
-      expect(last_response.status).to eq(303)
-      response = Maremma.from_xml(last_response.body)
-      expect(response.dig("html", "body", "a", "href")).to eq("https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=2")
-    end
-
-    it "link" do
-      get "/chemical/x-gaussian-log/#{doi}"
-
-      expect(last_response.status).to eq(303)
-      response = Maremma.from_xml(last_response.body)
-      expect(response.dig("html", "body", "a", "href")).to eq("https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=2")
-    end
-  end
+  # context "chemical/x-gaussian-log" do
+  #   let(:doi) { "10.14469/hpc/678" }
+  #
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "chemical/x-gaussian-log" }
+  #
+  #     expect(last_response.status).to eq(303)
+  #     response = Maremma.from_xml(last_response.body)
+  #     expect(response.dig("html", "body", "a", "href")).to eq("https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=2")
+  #   end
+  #
+  #   it "link" do
+  #     get "/chemical/x-gaussian-log/#{doi}"
+  #
+  #     expect(last_response.status).to eq(303)
+  #     response = Maremma.from_xml(last_response.body)
+  #     expect(response.dig("html", "body", "a", "href")).to eq("https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=2")
+  #   end
+  # end
 
   context "image/png" do
-    let(:doi) { "10.15156/BIO/SH003219.07FU" }
+    let(:doi) { "10.4124/12345678987654321" }
 
     it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "image/png" }
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "image/jpg" }
 
       expect(last_response.status).to eq(303)
       response = Maremma.from_xml(last_response.body)
-      expect(response.dig("html", "body", "a", "href")).to eq("https://files.plutof.ut.ee/doi/AA/B9/AAB9455BA896EFF9FD07AAA57B2A3B3760379B126D2C615C0C344FE48B8B3B69.png")
+      expect(response.dig("html", "body", "a", "href")).to eq("http://www.bl.uk/reshelp/experthelp/science/inspiringscience/2014/NASAPerpetualOcean_lrg.jpg")
     end
 
     it "link" do
-      get "/image/png/#{doi}"
+      get "/image/jpg/#{doi}"
 
       expect(last_response.status).to eq(303)
       response = Maremma.from_xml(last_response.body)
-      expect(response.dig("html", "body", "a", "href")).to eq("https://files.plutof.ut.ee/doi/AA/B9/AAB9455BA896EFF9FD07AAA57B2A3B3760379B126D2C615C0C344FE48B8B3B69.png")
+      expect(response.dig("html", "body", "a", "href")).to eq("http://www.bl.uk/reshelp/experthelp/science/inspiringscience/2014/NASAPerpetualOcean_lrg.jpg")
     end
   end
 
   context "application/xml" do
-    let(:doi) { "10.14469/hpc/678" }
+    let(:doi) { "10.5438/0000-03VC" }
 
     it "header" do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
 
       expect(last_response.status).to eq(303)
       response = Maremma.from_xml(last_response.body)
-      expect(response.dig("html", "body", "a", "href")).to eq("https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=4")
+      expect(response.dig("html", "body", "a", "href")).to eq("https://blog.datacite.org/cool-dois/cool-dois.xml")
     end
 
     it "link" do
@@ -239,7 +241,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(303)
       response = Maremma.from_xml(last_response.body)
-      expect(response.dig("html", "body", "a", "href")).to eq("https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=4")
+      expect(response.dig("html", "body", "a", "href")).to eq("https://blog.datacite.org/cool-dois/cool-dois.xml")
     end
   end
 
@@ -248,14 +250,14 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
 
       expect(last_response.status).to eq(303)
-      expect(last_response.headers["Location"]).to eq("http://datadryad.org/resource/doi:10.5061/dryad.8515")
+      expect(last_response.headers["Location"]).to eq("http://datadryad.org/handle/10255/dryad.8515")
     end
 
     it "link" do
       get "/application/xml/#{doi}"
 
       expect(last_response.status).to eq(303)
-      expect(last_response.headers["Location"]).to eq("http://datadryad.org/resource/doi:10.5061/dryad.8515")
+      expect(last_response.headers["Location"]).to eq("http://datadryad.org/handle/10255/dryad.8515")
     end
   end
 end

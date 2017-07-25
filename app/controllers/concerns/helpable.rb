@@ -17,7 +17,7 @@ module Helpable
         sum
       end
 
-      metadata = Metadata.new(input: id)
+      metadata = Metadata.new(input: id, sandbox: !Rails.env.production?)
       return nil unless metadata.exists?
 
       params = { style: hsh["style"] || "apa",

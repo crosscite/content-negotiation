@@ -32,7 +32,7 @@ class IndexController < ApplicationController
       from = find_from_format(id: @id)
       format = Mime::Type.lookup(@content_type).to_sym
 
-      @metadata = Metadata.new(input: @id, from: from, format: format)
+      @metadata = Metadata.new(input: @id, from: from, format: format, sandbox: !Rails.env.production?)
       fail AbstractController::ActionNotFound unless @metadata.valid?
 
       response.set_header("Accept", @content_type)
@@ -55,8 +55,9 @@ class IndexController < ApplicationController
   protected
 
   # id can be DOI or DOI expressed as URL
+  # use test handle server unless production environment
   def load_id
-    @id = normalize_id(params[:id])
+    @id = normalize_id(params[:id], sandbox: !Rails.env.production?)
     fail AbstractController::ActionNotFound unless @id.present?
   end
 

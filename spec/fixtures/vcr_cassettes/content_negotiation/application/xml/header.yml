@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://search.datacite.org/api?fl=doi,media&q=doi:10.14469/hpc/678&wt=json
+    uri: https://search.test.datacite.org/api?fl=doi,media&q=doi:10.5438/0000-03vc&wt=json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://611ab44713f0
+      - Maremma - http://99a1e6d9c209
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,18 +23,18 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Thu, 13 Jul 2017 20:47:29 GMT
+      - Tue, 25 Jul 2017 17:35:36 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
-      - '544'
+      - '252'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.14469/HPC/678","media":["chemical/x-gaussian-input:https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=1","chemical/x-gaussian-log:https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=2","chemical/x-gaussian-checkpoint:https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=3","application/xml:https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=4","chemical/x-gaussian-wavefunction:https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=5"]}]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5438/0000-03VC","media":["application/pdf:http://www.datacite.org/cirneco-test.pdf","application/xml:https://blog.datacite.org/cool-dois/cool-dois.xml"]}]}}
 
 '
     http_version: 
-  recorded_at: Thu, 13 Jul 2017 20:47:29 GMT
+  recorded_at: Tue, 25 Jul 2017 17:35:34 GMT
 recorded_with: VCR 3.0.3

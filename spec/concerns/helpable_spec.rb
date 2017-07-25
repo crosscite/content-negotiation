@@ -3,17 +3,14 @@ require 'rails_helper'
 describe Help do
   describe "get_registered_content_types", vcr: true do
     it 'has registered one content_type' do
-      id = "https://doi.org/10.5284/1015681"
-      expect(subject.get_registered_content_types(id)).to eq("application/pdf"=>"http://archaeologydataservice.ac.uk/catalogue/adsdata/arch-1045-1/dissemination/pdf/356_ThewatertreatmentplantSaltersfordGrantham_Little.pdf")
+      id = "10.0042/FOOBAR3"
+      expect(subject.get_registered_content_types(id)).to eq("text/csv" => "http://example.com")
     end
 
     it 'has registered multiple content_types' do
-      id = "https://doi.org/10.14469/hpc/678"
-      expect(subject.get_registered_content_types(id)).to eq("application/xml" => "https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=4",
-                                                             "chemical/x-gaussian-checkpoint" => "https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=3",
-                                                             "chemical/x-gaussian-input" => "https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=1",
-                                                             "chemical/x-gaussian-log" => "https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=2",
-                                                             "chemical/x-gaussian-wavefunction" => "https://data.hpc.imperial.ac.uk/resolve/?doi=678&file=5")
+      id = "10.4124/DEMODATASET4"
+      expect(subject.get_registered_content_types(id)).to eq( +"application/pdf" => "http://www.bl.uk/aboutus/stratpolprog/digi/datasets/WorkingWithDataCite_2013.pdf",
+        "image/jpeg" => "http://www.bl.uk/reshelp/experthelp/science/sciencetechnologymedicinecollections/researchdatasets/SearchMovieTN.jpg")
     end
 
     it 'has no registered content_types' do

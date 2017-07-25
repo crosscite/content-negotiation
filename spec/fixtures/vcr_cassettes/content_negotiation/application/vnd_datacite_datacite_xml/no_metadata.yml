@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://search.datacite.org/api?fl=doi,media&q=doi:10.15146/r34015&wt=json
+    uri: https://search.test.datacite.org/api?fl=doi,media&q=doi:10.15146/r34015&wt=json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://d5776cc051d1
+      - Maremma - http://99a1e6d9c209
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,18 +23,20 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 08 May 2017 06:55:56 GMT
+      - Tue, 25 Jul 2017 17:06:52 GMT
       Server:
       - openresty/1.11.2.2
+      Content-Length:
+      - '88'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":4},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.15146/R34015"}]}}
+      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":0,"start":0,"docs":[]}}
 
 '
     http_version: 
-  recorded_at: Mon, 08 May 2017 06:55:56 GMT
+  recorded_at: Tue, 25 Jul 2017 17:06:50 GMT
 - request:
     method: get
     uri: https://api.datacite.org/prefixes/10.15146
@@ -43,7 +45,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://d5776cc051d1
+      - Maremma - http://99a1e6d9c209
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -64,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Date:
-      - Mon, 08 May 2017 06:55:58 GMT
+      - Tue, 25 Jul 2017 17:06:53 GMT
       Etag:
       - W/"0039d785db4ccf293534abeec75ea56f"
       Server:
@@ -73,34 +75,46 @@ http_interactions:
       - 200 OK
       Vary:
       - Accept-Encoding
+      Via:
+      - kong/0.10.3
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
+      X-Kong-Proxy-Latency:
+      - '1'
+      X-Kong-Upstream-Latency:
+      - '365'
       X-Powered-By:
-      - Phusion Passenger 5.1.2
+      - Phusion Passenger 5.1.6
+      X-Ratelimit-Limit-Hour:
+      - '100000'
+      X-Ratelimit-Remaining-Hour:
+      - '99995'
       X-Request-Id:
-      - 956bc8f8-ffc3-4e30-9262-633d5fdb02d4
+      - c4a43d07-cfe3-4a05-9043-edea1ab2d763
       X-Runtime:
-      - '0.209607'
+      - '0.364231'
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '125'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '{"data":{"id":"10.15146","type":"prefixes","attributes":{"registration-agency":"DataCite","updated":"2016-09-21T20:24:32Z"}}}'
     http_version: 
-  recorded_at: Mon, 08 May 2017 06:55:58 GMT
+  recorded_at: Tue, 25 Jul 2017 17:06:50 GMT
 - request:
     method: get
-    uri: https://search.datacite.org/api?fl=doi,xml,media,minted,updated&q=doi:10.15146/r34015&wt=json
+    uri: https://search.test.datacite.org/api?fl=doi,xml,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.15146/r34015&wt=json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://d5776cc051d1
+      - Maremma - http://99a1e6d9c209
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -115,16 +129,16 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 08 May 2017 06:56:00 GMT
+      - Tue, 25 Jul 2017 17:06:53 GMT
       Server:
       - openresty/1.11.2.2
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"minted":"2017-03-18T12:04:20Z","updated":"2017-05-01T17:59:06Z","doi":"10.15146/R34015"}]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":0,"start":0,"docs":[]}}
 
 '
     http_version: 
-  recorded_at: Mon, 08 May 2017 06:56:00 GMT
+  recorded_at: Tue, 25 Jul 2017 17:06:51 GMT
 recorded_with: VCR 3.0.3
