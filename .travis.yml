@@ -12,6 +12,7 @@ install:
 before_script:
   - memcached -p 11211 &
   - cp .env.travis .env
+  - printenv RAILS_ENV
 
 script:
 - bundle exec rspec
