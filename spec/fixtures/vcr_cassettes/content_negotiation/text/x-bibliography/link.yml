@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 25 Jul 2017 17:07:06 GMT
+      - Sat, 05 Aug 2017 14:15:45 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -36,7 +36,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:07:04 GMT
+  recorded_at: Sat, 05 Aug 2017 14:15:42 GMT
 - request:
     method: get
     uri: https://api.datacite.org/prefixes/10.5061
@@ -45,7 +45,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -66,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Date:
-      - Tue, 25 Jul 2017 17:07:07 GMT
+      - Sat, 05 Aug 2017 14:15:46 GMT
       Etag:
       - W/"1eb3f4f371821b1becc6cd25a71755ce"
       Server:
@@ -82,19 +82,19 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Kong-Proxy-Latency:
-      - '3'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '614'
+      - '152'
       X-Powered-By:
       - Phusion Passenger 5.1.6
       X-Ratelimit-Limit-Hour:
       - '100000'
       X-Ratelimit-Remaining-Hour:
-      - '99983'
+      - '99981'
       X-Request-Id:
-      - f9f024da-9fa8-4e0b-ae64-f3753c17c7de
+      - 79e16478-775e-47ee-835c-265f4444c2e8
       X-Runtime:
-      - '0.612424'
+      - '0.149901'
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
@@ -105,7 +105,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"10.5061","type":"prefixes","attributes":{"registration-agency":"DataCite","updated":"2016-09-21T20:27:07Z"}}}'
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:07:05 GMT
+  recorded_at: Sat, 05 Aug 2017 14:15:43 GMT
 - request:
     method: get
     uri: https://search.test.datacite.org/api?fl=doi,xml,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.5061/dryad.8515&wt=json
@@ -114,7 +114,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -129,7 +129,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 25 Jul 2017 17:07:07 GMT
+      - Sat, 05 Aug 2017 14:15:46 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -142,7 +142,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:07:05 GMT
+  recorded_at: Sat, 05 Aug 2017 14:15:44 GMT
 - request:
     method: head
     uri: https://doi.test.datacite.org/10.5061/dryad.8515
@@ -151,7 +151,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -166,7 +166,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Tue, 25 Jul 2017 17:07:07 GMT
+      - Sat, 05 Aug 2017 14:15:47 GMT
       Location:
       - http://datadryad.org/handle/10255/dryad.8515
       Server:
@@ -177,10 +177,10 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:07:05 GMT
+  recorded_at: Sat, 05 Aug 2017 14:15:45 GMT
 - request:
     method: post
-    uri: https://citation.datacite.org/format?locale=en-US&style=apa
+    uri: https://citation.crosscite.org/format?locale=en-US&style=apa
     body:
       encoding: UTF-8
       string: |-
@@ -188,14 +188,12 @@ http_interactions:
           "type": "article",
           "id": "https://doi.test.datacite.org/10.5061/dryad.8515",
           "categories": [
-            [
-              "Phylogeny",
-              "Malaria",
-              "Parasites",
-              "Taxonomy",
-              "Mitochondrial genome",
-              "Africa"
-            ]
+            "Phylogeny",
+            "Malaria",
+            "Parasites",
+            "Taxonomy",
+            "Mitochondrial genome",
+            "Africa"
           ],
           "author": [
             {
@@ -231,9 +229,6 @@ http_interactions:
               "given": "François"
             }
           ],
-          "editor": [
-
-          ],
           "issued": {
             "date-parts": [
               [
@@ -248,7 +243,7 @@ http_interactions:
         }
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Content-Type:
       - application/json
       Accept:
@@ -267,13 +262,15 @@ http_interactions:
       Content-Type:
       - text/plain
       Date:
-      - Tue, 25 Jul 2017 17:07:08 GMT
+      - Sat, 05 Aug 2017 14:15:48 GMT
       Server:
       - openresty/1.11.2.2
       Status:
       - 200 OK
       X-Powered-By:
       - Phusion Passenger 5.1.5
+      Content-Length:
+      - '220'
       Connection:
       - keep-alive
     body:
@@ -285,5 +282,5 @@ http_interactions:
         bnQgaW4gQWZyaWNhbiBob21pbmlkcy4gRHJ5YWQgRGlnaXRhbCBSZXBvc2l0
         b3J5LiBodHRwczovL2RvaS5vcmcvMTAuNTA2MS9kcnlhZC44NTE1Cg==
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:07:05 GMT
+  recorded_at: Sat, 05 Aug 2017 14:15:46 GMT
 recorded_with: VCR 3.0.3

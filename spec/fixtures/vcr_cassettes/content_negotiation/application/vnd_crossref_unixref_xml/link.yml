@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 25 Jul 2017 17:06:49 GMT
+      - Sat, 05 Aug 2017 14:04:29 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -32,11 +32,11 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":0,"start":0,"docs":[]}}
+      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":0,"start":0,"docs":[]}}
 
 '
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:06:46 GMT
+  recorded_at: Sat, 05 Aug 2017 14:04:26 GMT
 - request:
     method: get
     uri: https://api.datacite.org/prefixes/10.7554
@@ -45,7 +45,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -66,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Date:
-      - Tue, 25 Jul 2017 17:06:49 GMT
+      - Sat, 05 Aug 2017 14:04:30 GMT
       Etag:
       - W/"daf85afdb45f3c2713bc7e75916ba82a"
       Server:
@@ -84,7 +84,7 @@ http_interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '188'
+      - '653'
       X-Powered-By:
       - Phusion Passenger 5.1.6
       X-Ratelimit-Limit-Hour:
@@ -92,18 +92,20 @@ http_interactions:
       X-Ratelimit-Remaining-Hour:
       - '99998'
       X-Request-Id:
-      - a155dfc4-5f81-4c11-838f-d3ccfc7f818f
+      - 9f232962-af08-49bb-bcb1-ec704f01219e
       X-Runtime:
-      - '0.187338'
+      - '0.651032'
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '124'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '{"data":{"id":"10.7554","type":"prefixes","attributes":{"registration-agency":"Crossref","updated":"2016-09-21T21:07:27Z"}}}'
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:06:47 GMT
+  recorded_at: Sat, 05 Aug 2017 14:04:28 GMT
 - request:
     method: get
     uri: http://www.crossref.org/openurl/?format=unixref&id=doi:10.7554/elife.01567&noredirect=true&pid=tech@datacite.org
@@ -112,7 +114,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/xml
   response:
@@ -123,13 +125,13 @@ http_interactions:
       Server:
       - Apache-Coyote/1.1
       Crossref-Deployment-Name:
-      - cr6-1
+      - qs3-1
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Language:
       - en-US
       Date:
-      - Tue, 25 Jul 2017 17:06:49 GMT
+      - Sat, 05 Aug 2017 14:04:30 GMT
       Connection:
       - close
     body:
@@ -772,5 +774,47 @@ http_interactions:
         aWNsZT4NCiAgICAgIDwvam91cm5hbD4NCiAgICA8L2Nyb3NzcmVmPg0KICA8
         L2RvaV9yZWNvcmQ+DQo8L2RvaV9yZWNvcmRzPg==
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:06:47 GMT
+  recorded_at: Sat, 05 Aug 2017 14:04:28 GMT
+- request:
+    method: get
+    uri: http://api.crossref.org/prefixes/10.7554
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://21a87b15fb2d
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Vary:
+      - Accept
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Content-Length:
+      - '223'
+      Server:
+      - http-kit
+      Date:
+      - Sat, 05 Aug 2017 14:04:31 GMT
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"prefix","message-version":"1.0.0","message":{"member":"http:\/\/id.crossref.org\/member\/4374","name":"eLife
+        Sciences Organisation, Ltd.","prefix":"http:\/\/id.crossref.org\/prefix\/10.7554"}}'
+    http_version: 
+  recorded_at: Sat, 05 Aug 2017 14:04:28 GMT
 recorded_with: VCR 3.0.3

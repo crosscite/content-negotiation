@@ -8,26 +8,6 @@ module Helpable
     include Bolognese::DoiUtils
     include Bolognese::Utils
 
-    def formatted_citation(id: nil, content_type: nil)
-      return nil unless content_type.starts_with?("text/x-bibliography")
-
-      hsh = content_type.split(";").reduce({}) do |sum, i|
-        k, v = i.strip.split("=")
-        sum[k] = v if v.present?
-        sum
-      end
-
-      metadata = Metadata.new(input: id, sandbox: !Rails.env.production?)
-      return nil unless metadata.exists?
-
-      params = { style: hsh["style"] || "apa",
-                 locale: hsh["locale"] || "en-US" }
-
-      url = ENV['CITEPROC_URL'] + "?" + URI.encode_www_form(params)
-      response = Maremma.post url, content_type: 'json', data: metadata.citeproc
-      response.body.fetch("data", nil)
-    end
-
     def get_handle_url(id: nil)
       response = Maremma.head(id, limit: 0)
       response.headers["location"]

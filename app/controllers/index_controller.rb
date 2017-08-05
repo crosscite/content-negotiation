@@ -7,10 +7,9 @@ class IndexController < ApplicationController
 
   # instead of letting Rails handle this, we determine content-type for the response, in that order:
   # 1. content-type registered for specific DOI
-  # 2. formatted citation via DOI formatter service
-  # 3. content-type registered for all DOIs
-  # 4. no content-type found, pass through to URL registered in handle system
-  # then redirect (1, 4) or render (2, 3) based on content_type
+  # 2. content-type registered for all DOIs, including formatted citations
+  # 3. no content-type found, pass through to URL registered in handle system
+  # then redirect (1, 3) or render (2) based on content_type
   def show
     # content-type registered for specific DOI
     if @media_url.present?
@@ -19,21 +18,24 @@ class IndexController < ApplicationController
       redirect_to @media_url, status: 303 and return
     end
 
-    # formatted citation via DOI formatter service
-    if @content_type.to_s.starts_with?("text/x-bibliography")
-      response.set_header("Accept", @content_type)
-      Rails.logger.info "#{@id} returned as #{@content_type}"
-      render plain: formatted_citation(id: @id, content_type: @content_type),
-        content_type: @content_type and return
-    end
-
     # content-type available in content negotiation
-    if available_content_types.keys.include?(@content_type)
+    if available_content_types.keys.include?(@content_type.to_s.split(";").first)
       from = find_from_format(id: @id)
-      format = Mime::Type.lookup(@content_type).to_sym
+      format = Mime::Type.lookup(@content_type.split(";").first).to_sym
 
       @metadata = Metadata.new(input: @id, from: from, format: format, sandbox: !Rails.env.production?)
-      fail AbstractController::ActionNotFound unless @metadata.valid?
+      fail AbstractController::ActionNotFound unless @metadata.exists?
+
+      if format == :citation
+        # set style and locale later so that we can take advantage of caching
+        hsh = @content_type.split(";").reduce({}) do |sum, i|
+          k, v = i.strip.split("=")
+          sum[k] = v if v.present?
+          sum
+        end
+        @metadata.style = hsh["style"] || "apa"
+        @metadata.locale = hsh["locale"] || "en-US"
+      end
 
       response.set_header("Accept", @content_type)
       Rails.logger.info "#{@id} returned as #{@content_type}"

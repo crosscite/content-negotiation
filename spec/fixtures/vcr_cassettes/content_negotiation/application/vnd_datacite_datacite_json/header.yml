@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 25 Jul 2017 17:06:53 GMT
+      - Sat, 05 Aug 2017 14:04:34 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -32,11 +32,11 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
 
 '
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:06:51 GMT
+  recorded_at: Sat, 05 Aug 2017 14:04:31 GMT
 - request:
     method: get
     uri: https://api.datacite.org/prefixes/10.5061
@@ -45,7 +45,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -66,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Date:
-      - Tue, 25 Jul 2017 17:06:54 GMT
+      - Sat, 05 Aug 2017 14:04:35 GMT
       Etag:
       - W/"1eb3f4f371821b1becc6cd25a71755ce"
       Server:
@@ -82,28 +82,30 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Kong-Proxy-Latency:
-      - '0'
+      - '1'
       X-Kong-Upstream-Latency:
-      - '143'
+      - '575'
       X-Powered-By:
       - Phusion Passenger 5.1.6
       X-Ratelimit-Limit-Hour:
       - '100000'
       X-Ratelimit-Remaining-Hour:
-      - '99994'
+      - '99996'
       X-Request-Id:
-      - 87092c86-e707-43e0-8331-66cc23bea17e
+      - 21d68d8c-6e78-415b-93d9-ff67cccb4da3
       X-Runtime:
-      - '0.141874'
+      - '0.573600'
       X-Xss-Protection:
       - 1; mode=block
+      Content-Length:
+      - '124'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '{"data":{"id":"10.5061","type":"prefixes","attributes":{"registration-agency":"DataCite","updated":"2016-09-21T20:27:07Z"}}}'
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:06:51 GMT
+  recorded_at: Sat, 05 Aug 2017 14:04:33 GMT
 - request:
     method: get
     uri: https://search.test.datacite.org/api?fl=doi,xml,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.5061/dryad.8515&wt=json
@@ -112,7 +114,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -127,9 +129,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 25 Jul 2017 17:06:54 GMT
+      - Sat, 05 Aug 2017 14:04:36 GMT
       Server:
       - openresty/1.11.2.2
+      Content-Length:
+      - '2981'
       Connection:
       - keep-alive
     body:
@@ -138,7 +142,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:06:51 GMT
+  recorded_at: Sat, 05 Aug 2017 14:04:33 GMT
 - request:
     method: head
     uri: https://doi.test.datacite.org/10.5061/dryad.8515
@@ -147,7 +151,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -162,7 +166,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Tue, 25 Jul 2017 17:06:54 GMT
+      - Sat, 05 Aug 2017 14:04:37 GMT
       Location:
       - http://datadryad.org/handle/10255/dryad.8515
       Server:
@@ -173,5 +177,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:06:52 GMT
+  recorded_at: Sat, 05 Aug 2017 14:04:34 GMT
 recorded_with: VCR 3.0.3

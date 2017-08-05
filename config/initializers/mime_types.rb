@@ -54,3 +54,8 @@ ActionController::Renderers.add :ris do |obj, options|
   send_data obj.send("ris"), type: Mime[:ris],
     disposition: "attachment; filename=#{filename}.ris"
 end
+
+ActionController::Renderers.add :citation do |obj, options|
+  self.content_type ||= "text/plain"
+  self.response_body = obj.send("citation")
+end

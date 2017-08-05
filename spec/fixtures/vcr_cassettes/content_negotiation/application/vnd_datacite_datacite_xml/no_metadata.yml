@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 25 Jul 2017 17:06:52 GMT
+      - Sat, 05 Aug 2017 14:04:31 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -32,11 +32,11 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":0,"start":0,"docs":[]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":0,"start":0,"docs":[]}}
 
 '
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:06:50 GMT
+  recorded_at: Sat, 05 Aug 2017 14:04:29 GMT
 - request:
     method: get
     uri: https://api.datacite.org/prefixes/10.15146
@@ -45,7 +45,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -66,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Date:
-      - Tue, 25 Jul 2017 17:06:53 GMT
+      - Sat, 05 Aug 2017 14:04:32 GMT
       Etag:
       - W/"0039d785db4ccf293534abeec75ea56f"
       Server:
@@ -82,19 +82,19 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Kong-Proxy-Latency:
-      - '1'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '365'
+      - '254'
       X-Powered-By:
       - Phusion Passenger 5.1.6
       X-Ratelimit-Limit-Hour:
       - '100000'
       X-Ratelimit-Remaining-Hour:
-      - '99995'
+      - '99997'
       X-Request-Id:
-      - c4a43d07-cfe3-4a05-9043-edea1ab2d763
+      - dd27d724-da77-44d6-a242-9715ac23179b
       X-Runtime:
-      - '0.364231'
+      - '0.251873'
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
@@ -105,7 +105,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"10.15146","type":"prefixes","attributes":{"registration-agency":"DataCite","updated":"2016-09-21T20:24:32Z"}}}'
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:06:50 GMT
+  recorded_at: Sat, 05 Aug 2017 14:04:30 GMT
 - request:
     method: get
     uri: https://search.test.datacite.org/api?fl=doi,xml,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.15146/r34015&wt=json
@@ -114,7 +114,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://99a1e6d9c209
+      - Maremma - http://21a87b15fb2d
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -129,9 +129,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 25 Jul 2017 17:06:53 GMT
+      - Sat, 05 Aug 2017 14:04:33 GMT
       Server:
       - openresty/1.11.2.2
+      Content-Length:
+      - '88'
       Connection:
       - keep-alive
     body:
@@ -140,5 +142,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Tue, 25 Jul 2017 17:06:51 GMT
+  recorded_at: Sat, 05 Aug 2017 14:04:31 GMT
 recorded_with: VCR 3.0.3
