@@ -42,13 +42,21 @@ class IndexController < ApplicationController
       render format => @metadata and return
     end
 
-    # no content-type found, passed on to URL registered in handle system
-    puts @id
-    handle_url = get_handle_url(id: @id)
-    accept_headers = @accept_headers.join(', ').presence || "*/*"
-    response.set_header("Accept", accept_headers)
-    Rails.logger.info "#{@id} passed on as #{accept_headers}"
-    redirect_to handle_url, status: 303
+    # no content-type found
+    # return status information from target URL
+    if params.has_key? :status
+      render json: get_landing_page_info(id: @id)
+    else
+      # passed on to URL registered in handle system
+
+      handle_url = get_handle_url(id: @id)
+      fail AbstractController::ActionNotFound unless handle_url.present?
+
+      accept_headers = @accept_headers.join(', ').presence || "*/*"
+      response.set_header("Accept", accept_headers)
+      Rails.logger.info "#{@id} passed on as #{accept_headers}"
+      redirect_to handle_url, status: 303
+    end
   end
 
   def routing_error

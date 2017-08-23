@@ -13,6 +13,15 @@ module Helpable
       response.headers["location"]
     end
 
+    def get_landing_page_info(id: nil)
+      response = Maremma.head(id, timeout: 5)
+      content_type = response.headers["Content-Type"].present? ? response.headers["Content-Type"].split(";").first : null
+
+      { "status" => response.status,
+        "content-type" => content_type,
+        "checked" => Time.zone.now.utc.iso8601 }
+    end
+
     # content-types registered for that DOI
     def get_registered_content_types(id)
       doi = doi_from_url(id)
