@@ -17,13 +17,9 @@ gem 'bugsnag', '~> 5.3'
 gem 'librato-rails', '~> 1.4.2'
 gem 'gender_detector', '~> 0.1.2'
 
-group :development, :test do
+group :development do
   gem "better_errors"
   gem "binding_of_caller"
-  gem 'byebug', platform: :mri
-end
-
-group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'

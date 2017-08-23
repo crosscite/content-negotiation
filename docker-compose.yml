@@ -4,14 +4,25 @@ services:
   content-negotiation:
     image: crosscite/content-negotiation
     environment:
-      - SANDBOX=1
       - SEARCH_URL=https://search.test.datacite.org/
     build: .
     ports:
       - "8090:80"
+    networks:
+      - public
     volumes:
       - ./app:/home/app/webapp/app
       - ./config:/home/app/webapp/config
       - ./spec:/home/app/webapp/spec
   memcached:
     image: memcached:1.4.31
+    networks:
+      - public
+networks:
+  public:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 10.0.20.0/24
+        gateway: 10.0.20.1
