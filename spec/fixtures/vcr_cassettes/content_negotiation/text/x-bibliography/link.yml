@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://21a87b15fb2d
+      - Maremma - http://36d2129ec727
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 05 Aug 2017 14:15:45 GMT
+      - Wed, 23 Aug 2017 08:40:09 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -36,7 +36,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Sat, 05 Aug 2017 14:15:42 GMT
+  recorded_at: Wed, 23 Aug 2017 08:40:09 GMT
 - request:
     method: get
     uri: https://api.datacite.org/prefixes/10.5061
@@ -45,7 +45,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://21a87b15fb2d
+      - Maremma - http://36d2129ec727
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -66,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Date:
-      - Sat, 05 Aug 2017 14:15:46 GMT
+      - Wed, 23 Aug 2017 08:40:09 GMT
       Etag:
       - W/"1eb3f4f371821b1becc6cd25a71755ce"
       Server:
@@ -84,17 +84,17 @@ http_interactions:
       X-Kong-Proxy-Latency:
       - '1'
       X-Kong-Upstream-Latency:
-      - '152'
+      - '515'
       X-Powered-By:
       - Phusion Passenger 5.1.6
       X-Ratelimit-Limit-Hour:
       - '100000'
       X-Ratelimit-Remaining-Hour:
-      - '99981'
+      - '99920'
       X-Request-Id:
-      - 79e16478-775e-47ee-835c-265f4444c2e8
+      - e4fb896b-5969-4dd5-8e41-4dc2f14f4773
       X-Runtime:
-      - '0.149901'
+      - '0.513694'
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
@@ -105,7 +105,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"10.5061","type":"prefixes","attributes":{"registration-agency":"DataCite","updated":"2016-09-21T20:27:07Z"}}}'
     http_version: 
-  recorded_at: Sat, 05 Aug 2017 14:15:43 GMT
+  recorded_at: Wed, 23 Aug 2017 08:40:09 GMT
 - request:
     method: get
     uri: https://search.test.datacite.org/api?fl=doi,xml,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.5061/dryad.8515&wt=json
@@ -114,7 +114,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://21a87b15fb2d
+      - Maremma - http://36d2129ec727
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -129,7 +129,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 05 Aug 2017 14:15:46 GMT
+      - Wed, 23 Aug 2017 08:40:09 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -142,16 +142,16 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Sat, 05 Aug 2017 14:15:44 GMT
+  recorded_at: Wed, 23 Aug 2017 08:40:09 GMT
 - request:
     method: head
-    uri: https://doi.test.datacite.org/10.5061/dryad.8515
+    uri: https://handle.test.datacite.org/10.5061/dryad.8515
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://21a87b15fb2d
+      - Maremma - http://36d2129ec727
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -166,7 +166,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Sat, 05 Aug 2017 14:15:47 GMT
+      - Wed, 23 Aug 2017 08:40:10 GMT
       Location:
       - http://datadryad.org/handle/10255/dryad.8515
       Server:
@@ -177,7 +177,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Sat, 05 Aug 2017 14:15:45 GMT
+  recorded_at: Wed, 23 Aug 2017 08:40:10 GMT
 - request:
     method: post
     uri: https://citation.crosscite.org/format?locale=en-US&style=apa
@@ -186,7 +186,7 @@ http_interactions:
       string: |-
         {
           "type": "article",
-          "id": "https://doi.test.datacite.org/10.5061/dryad.8515",
+          "id": "https://handle.test.datacite.org/10.5061/dryad.8515",
           "categories": [
             "Phylogeny",
             "Malaria",
@@ -243,7 +243,7 @@ http_interactions:
         }
     headers:
       User-Agent:
-      - Maremma - http://21a87b15fb2d
+      - Maremma - http://36d2129ec727
       Content-Type:
       - application/json
       Accept:
@@ -262,7 +262,7 @@ http_interactions:
       Content-Type:
       - text/plain
       Date:
-      - Sat, 05 Aug 2017 14:15:48 GMT
+      - Wed, 23 Aug 2017 08:40:10 GMT
       Server:
       - openresty/1.11.2.2
       Status:
@@ -282,5 +282,5 @@ http_interactions:
         bnQgaW4gQWZyaWNhbiBob21pbmlkcy4gRHJ5YWQgRGlnaXRhbCBSZXBvc2l0
         b3J5LiBodHRwczovL2RvaS5vcmcvMTAuNTA2MS9kcnlhZC44NTE1Cg==
     http_version: 
-  recorded_at: Sat, 05 Aug 2017 14:15:46 GMT
+  recorded_at: Wed, 23 Aug 2017 08:40:10 GMT
 recorded_with: VCR 3.0.3

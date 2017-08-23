@@ -68,7 +68,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://doi.test.datacite.org/10.5061/dryad.8515")
+      expect(response["id"]).to eq("https://handle.test.datacite.org/10.5061/dryad.8515")
     end
 
     it "link" do
@@ -76,75 +76,75 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://doi.test.datacite.org/10.5061/dryad.8515")
+      expect(response["id"]).to eq("https://handle.test.datacite.org/10.5061/dryad.8515")
     end
   end
 
-  # context "application/vnd.schemaorg.ld+json" do
-  #   it "header" do
-  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.schemaorg.ld+json" }
-  #
-  #     expect(last_response.status).to eq(200)
-  #     response = JSON.parse(last_response.body)
-  #     expect(response["@type"]).to eq("Dataset")
-  #   end
-  #
-  #   it "link" do
-  #     get "/application/vnd.schemaorg.ld+json/#{doi}"
-  #
-  #     expect(last_response.status).to eq(200)
-  #     response = JSON.parse(last_response.body)
-  #     expect(response["@type"]).to eq("Dataset")
-  #   end
-  # end
-  #
-  # context "application/vnd.citationstyles.csl+json" do
-  #   it "header" do
-  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
-  #
-  #     expect(last_response.status).to eq(200)
-  #     response = JSON.parse(last_response.body)
-  #     expect(response["type"]).to eq("dataset")
-  #   end
-  #
-  #   it "link" do
-  #     get "/application/vnd.citationstyles.csl+json/#{doi}"
-  #
-  #     expect(last_response.status).to eq(200)
-  #     response = JSON.parse(last_response.body)
-  #     expect(response["type"]).to eq("dataset")
-  #   end
-  # end
-  #
-  # context "application/x-research-info-systems" do
-  #   it "header" do
-  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-research-info-systems" }
-  #
-  #     expect(last_response.status).to eq(200)
-  #     expect(last_response.body).to start_with("TY - DATA")
-  #   end
-  #
-  #   it "link" do
-  #     get "/application/x-research-info-systems/#{doi}"
-  #
-  #     expect(last_response.status).to eq(200)
-  #     expect(last_response.body).to start_with("TY - DATA")
-  #   end
-  # end
+  context "application/vnd.schemaorg.ld+json" do
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.schemaorg.ld+json" }
+
+      expect(last_response.status).to eq(200)
+      response = JSON.parse(last_response.body)
+      expect(response["@type"]).to eq("CreativeWork")
+    end
+
+    it "link" do
+      get "/application/vnd.schemaorg.ld+json/#{doi}"
+
+      expect(last_response.status).to eq(200)
+      response = JSON.parse(last_response.body)
+      expect(response["@type"]).to eq("CreativeWork")
+    end
+  end
+
+  context "application/vnd.citationstyles.csl+json" do
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
+
+      expect(last_response.status).to eq(200)
+      response = JSON.parse(last_response.body)
+      expect(response["type"]).to eq("article")
+    end
+
+    it "link" do
+      get "/application/vnd.citationstyles.csl+json/#{doi}"
+
+      expect(last_response.status).to eq(200)
+      response = JSON.parse(last_response.body)
+      expect(response["type"]).to eq("article")
+    end
+  end
+
+  context "application/x-research-info-systems" do
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-research-info-systems" }
+
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to start_with("TY - GEN")
+    end
+
+    it "link" do
+      get "/application/x-research-info-systems/#{doi}"
+
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to start_with("TY - GEN")
+    end
+  end
 
   context "application/x-bibtex" do
     it "header" do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-bibtex" }
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@misc{https://doi.test.datacite.org/10.5061/dryad.8515")
+      expect(last_response.body).to start_with("@misc{https://handle.test.datacite.org/10.5061/dryad.8515")
     end
 
     it "link" do
       get "/application/x-bibtex/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@misc{https://doi.test.datacite.org/10.5061/dryad.8515")
+      expect(last_response.body).to start_with("@misc{https://handle.test.datacite.org/10.5061/dryad.8515")
     end
   end
 

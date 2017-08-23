@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://21a87b15fb2d
+      - Maremma - http://36d2129ec727
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 05 Aug 2017 14:04:25 GMT
+      - Wed, 23 Aug 2017 08:39:56 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -32,20 +32,20 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
 
 '
     http_version: 
-  recorded_at: Sat, 05 Aug 2017 14:04:22 GMT
+  recorded_at: Wed, 23 Aug 2017 08:39:56 GMT
 - request:
     method: head
-    uri: https://doi.test.datacite.org/10.5061/dryad.8515
+    uri: https://handle.test.datacite.org/10.5061/dryad.8515
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://21a87b15fb2d
+      - Maremma - http://36d2129ec727
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -60,7 +60,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Sat, 05 Aug 2017 14:04:25 GMT
+      - Wed, 23 Aug 2017 08:39:56 GMT
       Location:
       - http://datadryad.org/handle/10255/dryad.8515
       Server:
@@ -71,5 +71,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Sat, 05 Aug 2017 14:04:23 GMT
+  recorded_at: Wed, 23 Aug 2017 08:39:56 GMT
 recorded_with: VCR 3.0.3

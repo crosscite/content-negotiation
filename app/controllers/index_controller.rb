@@ -43,6 +43,7 @@ class IndexController < ApplicationController
     end
 
     # no content-type found, passed on to URL registered in handle system
+    puts @id
     handle_url = get_handle_url(id: @id)
     accept_headers = @accept_headers.join(', ').presence || "*/*"
     response.set_header("Accept", accept_headers)

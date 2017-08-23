@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://search.test.datacite.org/api?fl=doi,media&q=doi:10.5061/dryad.8515&wt=json
+    uri: https://search.test.datacite.org/api?fl=doi,media&q=doi:10.14469/hpc/678&wt=json
     body:
       encoding: US-ASCII
       string: ''
@@ -23,23 +23,23 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 23 Aug 2017 08:40:16 GMT
+      - Wed, 23 Aug 2017 08:41:15 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
-      - '116'
+      - '88'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":0,"start":0,"docs":[]}}
 
 '
     http_version: 
-  recorded_at: Wed, 23 Aug 2017 08:40:16 GMT
+  recorded_at: Wed, 23 Aug 2017 08:41:15 GMT
 - request:
     method: head
-    uri: https://handle.test.datacite.org/10.5061/dryad.8515
+    uri: https://handle.test.datacite.org/10.14469/hpc/678
     body:
       encoding: US-ASCII
       string: ''
@@ -50,7 +50,7 @@ http_interactions:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
     status:
-      code: 302
+      code: 200
       message: ''
     headers:
       Access-Control-Allow-Methods:
@@ -60,9 +60,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Wed, 23 Aug 2017 08:40:16 GMT
-      Location:
-      - http://datadryad.org/handle/10255/dryad.8515
+      - Wed, 23 Aug 2017 08:41:15 GMT
       Server:
       - openresty/1.11.2.2
       Connection:
@@ -71,5 +69,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 23 Aug 2017 08:40:16 GMT
+  recorded_at: Wed, 23 Aug 2017 08:41:15 GMT
 recorded_with: VCR 3.0.3

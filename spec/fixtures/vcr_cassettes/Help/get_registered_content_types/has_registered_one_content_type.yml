@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://21a87b15fb2d
+      - Maremma - http://36d2129ec727
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 05 Aug 2017 14:05:05 GMT
+      - Wed, 23 Aug 2017 08:40:16 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -36,5 +36,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Sat, 05 Aug 2017 14:05:03 GMT
+  recorded_at: Wed, 23 Aug 2017 08:40:16 GMT
 recorded_with: VCR 3.0.3
