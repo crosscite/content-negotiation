@@ -7,13 +7,14 @@ Rails web application for conversion of DOI metadata into different metadata for
 
 ## Installation
 
-Using Docker.
+Using Docker. There is no required configuration file.
 
 ```
-docker run -p 8080:8080 crosscite/content-negotiation
+docker run -p 8090:80 crosscite/content-negotiation
 ```
 
-You can now point your browser to `http://localhost:8080` and use the application.
+You can now point your browser to `http://localhost:8090` and use the application.
+This is an API with no user interface.
 
 ## Development
 
