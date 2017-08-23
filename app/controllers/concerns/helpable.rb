@@ -14,12 +14,24 @@ module Helpable
     end
 
     def get_landing_page_info(id: nil)
-      response = Maremma.head(id, timeout: 5)
-      content_type = response.headers["Content-Type"].present? ? response.headers["Content-Type"].split(";").first : null
+      return nil unless id.present?
 
-      { "status" => response.status,
-        "content-type" => content_type,
-        "checked" => Time.zone.now.utc.iso8601 }
+      cached_status = Rails.cache.read("status/#{id}")
+      return cached_status if cached_status.present?
+
+      response = Maremma.head(id, timeout: 5)
+      if response.headers && response.headers["Content-Type"].present?
+        content_type = response.headers["Content-Type"].split(";").first
+      else
+        content_type = nil
+      end
+
+      info = { "status" => response.status,
+               "content-type" => content_type,
+               "checked" => Time.zone.now.utc.iso8601 }
+
+      Rails.cache.write("status/#{id}", info, expires_in: 1.week)
+      info
     end
 
     # content-types registered for that DOI

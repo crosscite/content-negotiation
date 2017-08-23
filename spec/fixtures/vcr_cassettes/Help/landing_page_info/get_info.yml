@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: https://doi.org/10.5061/dryad.8515
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://fbf20f7b4b95
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 303
+      message: ''
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept
+      Location:
+      - http://datadryad.org/resource/doi:10.5061/dryad.8515
+      Expires:
+      - Wed, 23 Aug 2017 18:38:12 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '189'
+      Date:
+      - Wed, 23 Aug 2017 18:03:13 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 23 Aug 2017 18:03:14 GMT
+- request:
+    method: head
+    uri: http://datadryad.org/resource/doi:10.5061/dryad.8515
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://fbf20f7b4b95
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 23 Aug 2017 18:03:14 GMT
+      Set-Cookie:
+      - JSESSIONID=06F38D3E7A4702612E06C10287171E47; Path=/
+      X-Cocoon-Version:
+      - 2.2.0
+      Last-Modified:
+      - Fri, 02 Sep 2011 15:35:45 EDT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '36071'
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 23 Aug 2017 18:03:14 GMT
+recorded_with: VCR 3.0.3
