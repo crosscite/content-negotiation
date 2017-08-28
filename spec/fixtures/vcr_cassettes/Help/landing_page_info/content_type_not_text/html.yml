@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fbf20f7b4b95
+      - Maremma - http://ba01423f7919
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Wed, 23 Aug 2017 18:17:00 GMT
+      - Mon, 28 Aug 2017 08:35:26 GMT
       Location:
       - https://hdl.handle.net/21.T11998/0000-0001-DDB8-7
       Server:
@@ -34,7 +34,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 23 Aug 2017 18:17:00 GMT
+  recorded_at: Mon, 28 Aug 2017 08:35:26 GMT
 - request:
     method: head
     uri: https://hdl.handle.net/21.T11998/0000-0001-DDB8-7
@@ -43,7 +43,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fbf20f7b4b95
+      - Maremma - http://ba01423f7919
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -56,18 +56,18 @@ http_interactions:
       Location:
       - https://cdstar.de.dariah.eu/test/public/EAEA0-A51E-A71F-5B08-0
       Expires:
-      - Thu, 24 Aug 2017 18:17:01 GMT
+      - Tue, 29 Aug 2017 08:35:26 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
       - '209'
       Date:
-      - Wed, 23 Aug 2017 18:17:01 GMT
+      - Mon, 28 Aug 2017 08:35:26 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 23 Aug 2017 18:17:01 GMT
+  recorded_at: Mon, 28 Aug 2017 08:35:26 GMT
 - request:
     method: head
     uri: https://cdstar.de.dariah.eu/test/public/EAEA0-A51E-A71F-5B08-0
@@ -76,7 +76,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fbf20f7b4b95
+      - Maremma - http://ba01423f7919
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -87,7 +87,7 @@ http_interactions:
       Server:
       - nginx/1.10.3 (Ubuntu)
       Date:
-      - Wed, 23 Aug 2017 18:17:01 GMT
+      - Mon, 28 Aug 2017 08:35:27 GMT
       Content-Type:
       - application/x-zip-compressed
       Content-Length:
@@ -108,5 +108,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 23 Aug 2017 18:17:01 GMT
+  recorded_at: Mon, 28 Aug 2017 08:35:27 GMT
 recorded_with: VCR 3.0.3
