@@ -43,26 +43,42 @@ describe Help do
     it "status 200" do
       id = "https://doi.org/10.5061/dryad.8515"
       info = subject.get_landing_page_info(id: id)
-      expect(info).to eq("status"=>200, "content-type"=>"text/html", "checked"=>"2017-08-23T18:14:53Z")
+      expect(info).to eq("status"=>200, "content-type"=>"text/html", "checked"=>"2017-08-28T07:42:05Z")
     end
 
     it "status 404" do
       id = "https://handle.test.datacite.org/10.0155/1pb0"
       info = subject.get_landing_page_info(id: id)
-      expect(info).to eq("status"=>404, "content-type"=>nil, "checked"=>"2017-08-23T18:22:44Z")
+      expect(info).to eq("status"=>404, "content-type"=>nil, "checked"=>"2017-08-28T07:39:11Z")
     end
 
     it "status 408" do
       id = "https://doi.org/10.5061/dryad.8515x"
       stub = stub_request(:head, id).to_return(:status => [408])
       info = subject.get_landing_page_info(id: id)
-      expect(info).to eq("status"=>408, "content-type"=>nil, "checked"=>"2017-08-23T18:25:24Z")
+      expect(info).to eq("status"=>408, "content-type"=>nil, "checked"=>"2017-08-28T07:39:11Z")
     end
 
     it "content type not text/html" do
       id = "https://handle.test.datacite.org/10.20375/0000-0001-ddb8-7"
       info = subject.get_landing_page_info(id: id)
-      expect(info).to eq("status"=>200, "content-type"=>"application/x-zip-compressed", "checked"=>"2017-08-23T18:17:01Z")
+      expect(info).to eq("status"=>200, "content-type"=>"application/x-zip-compressed", "checked"=>"2017-08-28T07:39:11Z")
+    end
+  end
+
+  describe "media_url_info", vcr: true do
+    it "status 200" do
+      id = "http://www.bl.uk/pdf/issnappform.pdf"
+      media_type = "application/pdf"
+      info = subject.get_media_url_info(id: id, media_type: media_type)
+      expect(info).to eq("status"=>200, "content-type"=>"application/pdf", "checked"=>"2017-08-28T07:36:39Z")
+    end
+
+    it "status 408" do
+      id = "https://doi.org/10.4124/00001x"
+      stub = stub_request(:head, id).to_return(:status => [408])
+      info = subject.get_landing_page_info(id: id)
+      expect(info).to eq("status"=>408, "content-type"=>nil, "checked"=>"2017-08-28T07:39:11Z")
     end
   end
 end

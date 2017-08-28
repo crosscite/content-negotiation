@@ -13,9 +13,14 @@ class IndexController < ApplicationController
   def show
     # content-type registered for specific DOI
     if @media_url.present?
-      response.set_header("Accept", @content_type)
-      Rails.logger.info "#{@id} redirected as #{@content_type}"
-      redirect_to @media_url, status: 303 and return
+      # return status information from target URL
+      if params.has_key? :status
+        render json: get_media_url_info(id: @media_url, media_type: @content_type) and return
+      else
+        response.set_header("Accept", @content_type)
+        Rails.logger.info "#{@id} redirected as #{@content_type}"
+        redirect_to @media_url, status: 303 and return
+      end
     end
 
     # content-type available in content negotiation
