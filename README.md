@@ -3,7 +3,7 @@
 [![Identifier](https://img.shields.io/badge/doi-10.5438%2Ft1jg--hvhn-fca709.svg)](https://doi.org/10.5438/t1jg-hvhn)
 [![Build Status](https://travis-ci.org/crosscite/content-negotiation.svg?branch=master)](https://travis-ci.org/crosscite/content-negotiation) [![Code Climate](https://codeclimate.com/github/crosscite/content-negotiation/badges/gpa.svg)](https://codeclimate.com/github/crosscite/content-negotiation) [![Test Coverage](https://codeclimate.com/github/crosscite/content-negotiation/badges/coverage.svg)](https://codeclimate.com/github/crosscite/content-negotiation/coverage)
 
-Rails web application for conversion of DOI metadata into different metadata formats, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) library for metadata conversion.
+Rails API application for conversion of DOI metadata form/to other metadata formats, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) library for metadata conversion.
 
 ## Installation
 
@@ -35,4 +35,4 @@ Follow along via [Github Issues](https://github.com/crosscite/content-negotiatio
 * Commit, push and make a pull request. Bonus points for topical branches.
 
 ## License
-**Content Resolver** is released under the [MIT License](https://github.com/crosscite/content-negotiation/blob/master/LICENSE).
+**Content Negotiation** is released under the [MIT License](https://github.com/crosscite/content-negotiation/blob/master/LICENSE).
