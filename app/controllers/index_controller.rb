@@ -36,7 +36,7 @@ class IndexController < ApplicationController
       else
         @metadata = Metadata.new(input: @id, from: from, format: format, sandbox: !Rails.env.production?)
       end
-      fail AbstractController::ActionNotFound unless @metadata.present?
+      fail AbstractController::ActionNotFound unless @metadata.exists?
 
       if format == :citation
         # set style and locale later so that we can take advantage of caching

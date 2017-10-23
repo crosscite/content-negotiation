@@ -35,23 +35,23 @@ describe 'content negotiation', type: :api, vcr: true do
   end
 
   context "application/vnd.datacite.datacite+xml" do
-  #   it "header" do
-  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
-  #
-  #     expect(last_response.status).to eq(200)
-  #     response = Maremma.from_xml(last_response.body).fetch("resource", {})
-  #     expect(response.dig("resourceType", "resourceTypeGeneral")).to eq("Dataset")
-  #     expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
-  #   end
-  #
-  #   it "link" do
-  #     get "/application/vnd.datacite.datacite+xml/#{doi}"
-  #
-  #     expect(last_response.status).to eq(200)
-  #     response = Maremma.from_xml(last_response.body).fetch("resource", {})
-  #     expect(response.dig("resourceType", "resourceTypeGeneral")).to eq("Dataset")
-  #     expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
-  #   end
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
+
+      expect(last_response.status).to eq(200)
+      response = Maremma.from_xml(last_response.body).fetch("resource", {})
+      expect(response.dig("publisher")).to eq("Dryad Digital Repository")
+      expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
+    end
+
+    it "link" do
+      get "/application/vnd.datacite.datacite+xml/#{doi}"
+
+      expect(last_response.status).to eq(200)
+      response = Maremma.from_xml(last_response.body).fetch("resource", {})
+      expect(response.dig("publisher")).to eq("Dryad Digital Repository")
+      expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
+    end
 
     it "no metadata" do
       doi = "10.15146/R34015"
