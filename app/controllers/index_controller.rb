@@ -28,8 +28,15 @@ class IndexController < ApplicationController
       from = find_from_format(id: @id)
       format = Mime::Type.lookup(@content_type.split(";").first).to_sym
 
-      @metadata = Metadata.new(input: @id, from: from, format: format, sandbox: !Rails.env.production?)
-      fail AbstractController::ActionNotFound unless @metadata.exists?
+      @metadata = nil
+      if Rails.logger.level < 2
+        Librato.timing "doi.generate_item" do
+          @metadata = Metadata.new(input: @id, from: from, format: format, sandbox: !Rails.env.production?)
+        end
+      else
+        @metadata = Metadata.new(input: @id, from: from, format: format, sandbox: !Rails.env.production?)
+      end
+      fail AbstractController::ActionNotFound unless @metadata.present?
 
       if format == :citation
         # set style and locale later so that we can take advantage of caching
