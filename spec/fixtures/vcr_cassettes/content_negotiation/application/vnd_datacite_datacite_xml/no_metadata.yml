@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://36d2129ec727
+      - Maremma - http://cfacf0b2c02e
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,117 +17,13 @@ http_interactions:
       message: ''
     headers:
       Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
       Access-Control-Allow-Origin:
       - "*"
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 23 Aug 2017 08:40:01 GMT
-      Server:
-      - openresty/1.11.2.2
-      Content-Length:
-      - '88'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":0,"start":0,"docs":[]}}
-
-'
-    http_version: 
-  recorded_at: Wed, 23 Aug 2017 08:40:01 GMT
-- request:
-    method: get
-    uri: https://api.datacite.org/prefixes/10.15146
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Maremma - http://36d2129ec727
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-  response:
-    status:
-      code: 200
-      message: ''
-    headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Accept,Accept-Encoding,Origin,User-Agent,Cache-Control,Keep-Alive
-      Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Max-Age:
-      - '1728000'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Content-Type:
-      - application/vnd.api+json; charset=utf-8
-      Date:
-      - Wed, 23 Aug 2017 08:40:03 GMT
-      Etag:
-      - W/"0039d785db4ccf293534abeec75ea56f"
-      Server:
-      - openresty/1.11.2.2
-      Status:
-      - 200 OK
-      Vary:
-      - Accept-Encoding
-      Via:
-      - kong/0.10.3
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Kong-Proxy-Latency:
-      - '1'
-      X-Kong-Upstream-Latency:
-      - '1165'
-      X-Powered-By:
-      - Phusion Passenger 5.1.6
-      X-Ratelimit-Limit-Hour:
-      - '100000'
-      X-Ratelimit-Remaining-Hour:
-      - '99926'
-      X-Request-Id:
-      - de839ee5-e238-41fd-916c-fa0c2f24dd44
-      X-Runtime:
-      - '0.242124'
-      X-Xss-Protection:
-      - 1; mode=block
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"10.15146","type":"prefixes","attributes":{"registration-agency":"DataCite","updated":"2016-09-21T20:24:32Z"}}}'
-    http_version: 
-  recorded_at: Wed, 23 Aug 2017 08:40:03 GMT
-- request:
-    method: get
-    uri: https://search.test.datacite.org/api?fl=doi,xml,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.15146/r34015&wt=json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Maremma - http://36d2129ec727
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-  response:
-    status:
-      code: 200
-      message: ''
-    headers:
-      Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Wed, 23 Aug 2017 08:40:03 GMT
+      - Sat, 28 Oct 2017 17:58:16 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -140,5 +36,106 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Wed, 23 Aug 2017 08:40:03 GMT
+  recorded_at: Sat, 28 Oct 2017 17:58:01 GMT
+- request:
+    method: get
+    uri: https://api.datacite.org/prefixes/10.15146
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://cfacf0b2c02e
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
+      Date:
+      - Sat, 28 Oct 2017 17:58:16 GMT
+      Etag:
+      - W/"dee519659b6971d8818febf84d26735b"
+      Server:
+      - openresty/1.11.2.2
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Via:
+      - kong/0.10.3
+      X-Anonymous-Consumer:
+      - 'true'
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '22'
+      X-Powered-By:
+      - Phusion Passenger 5.1.11
+      X-Request-Id:
+      - 07fadb59-1755-4190-be9b-4bcceba961b3
+      X-Runtime:
+      - '0.020487'
+      Content-Length:
+      - '1056'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.15146","type":"prefixes","attributes":{"registration-agency":"DataCite","created":"2014-02-07T09:06:33.000Z","updated":null},"relationships":{"clients":{"data":[{"id":"cdl.unmlib","type":"clients"}]},"providers":{"data":[{"id":"cdl","type":"providers"}]}}},"included":[{"id":"cdl.unmlib","type":"clients","attributes":{"name":"University
+        of New Mexico Libraries","symbol":"CDL.UNMLIB","year":2014,"contact-name":"Greg
+        Janee","contact-email":"gjanee@ucop.edu","domains":"*","is-active":true,"created":"2014-09-24T23:51:51Z","updated":"2017-09-24T01:44:45Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"cdl","type":"providers","attributes":{"name":"California
+        Digital Library","symbol":"CDL","year":2010,"contact-name":"Greg Janee","contact-email":"gjanee@ucop.edu","logo-url":"https://assets.datacite.org/images/members/cdl.png","is-active":true,"created":"2010-01-01T00:00:00.000Z","updated":"2017-09-27T16:30:44.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+    http_version: 
+  recorded_at: Sat, 28 Oct 2017 17:58:01 GMT
+- request:
+    method: get
+    uri: https://search.test.datacite.org/api?fl=doi,url,xml,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.15146/r34015&wt=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://cfacf0b2c02e
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 28 Oct 2017 17:58:16 GMT
+      Server:
+      - openresty/1.11.2.2
+      Content-Length:
+      - '88'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":0,"start":0,"docs":[]}}
+
+'
+    http_version: 
+  recorded_at: Sat, 28 Oct 2017 17:58:01 GMT
 recorded_with: VCR 3.0.3

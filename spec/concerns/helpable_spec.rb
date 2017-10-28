@@ -25,6 +25,7 @@ describe Help do
         "application/vnd.crosscite.crosscite+json" => :crosscite,
         "application/vnd.crossref.unixref+xml"=>:crossref,
         "application/vnd.datacite.datacite+xml"=>:datacite,
+        "application/vnd.jats+xml" => :jats,
         "application/x-datacite+xml"=>:datacite,
         "application/vnd.datacite.datacite+json"=>:datacite_json,
         "application/vnd.schemaorg.ld+json"=>:schema_org,

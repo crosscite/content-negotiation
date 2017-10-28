@@ -16,6 +16,7 @@ Mime::Type.register "application/vnd.datacite.datacite+json", :datacite_json
 Mime::Type.register "application/vnd.schemaorg.ld+json", :schema_org
 Mime::Type.register "application/rdf+xml", :rdf_xml
 Mime::Type.register "text/turtle", :turtle
+Mime::Type.register "application/vnd.jats+xml", :jats
 Mime::Type.register "application/vnd.citationstyles.csl+json", :citeproc, %w( application/citeproc+json )
 Mime::Type.register "application/vnd.codemeta.ld+json", :codemeta
 Mime::Type.register "application/x-bibtex", :bibtex
@@ -32,7 +33,7 @@ Mime::Type.register "text/x-bibliography", :citation
 end
 
 # these Mime types send a file for download. We give proper filename and extension
-%w(crossref datacite rdf_xml).each do |f|
+%w(crossref datacite rdf_xml jats).each do |f|
   ActionController::Renderers.add f.to_sym do |obj, options|
     uri = Addressable::URI.parse(obj.id)
     filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, '_')

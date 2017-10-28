@@ -34,6 +34,26 @@ describe 'content negotiation', type: :api, vcr: true do
     end
   end
 
+  context "application/vnd.jats+xml" do
+    let(:doi) { "10.7554/elife.01567" }
+
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.jats+xml" }
+
+      expect(last_response.status).to eq(200)
+      response = Maremma.from_xml(last_response.body).dig("element_citation")
+      expect(response.dig("pub_id")).to eq("pub_id_type"=>"doi", "__content__"=>"10.7554/elife.01567")
+    end
+
+    it "link" do
+      get "/application/vnd.jats+xml/#{doi}"
+
+      expect(last_response.status).to eq(200)
+      response = Maremma.from_xml(last_response.body).dig("element_citation")
+      expect(response.dig("pub_id")).to eq("pub_id_type"=>"doi", "__content__"=>"10.7554/elife.01567")
+    end
+  end
+
   context "application/vnd.datacite.datacite+xml" do
     it "header" do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }

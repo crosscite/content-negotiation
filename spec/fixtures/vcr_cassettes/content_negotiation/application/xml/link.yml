@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://36d2129ec727
+      - Maremma - http://cfacf0b2c02e
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,13 +17,13 @@ http_interactions:
       message: ''
     headers:
       Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
       Access-Control-Allow-Origin:
       - "*"
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 23 Aug 2017 08:40:15 GMT
+      - Sat, 28 Oct 2017 17:58:25 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -36,5 +36,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Wed, 23 Aug 2017 08:40:15 GMT
+  recorded_at: Sat, 28 Oct 2017 17:58:11 GMT
 recorded_with: VCR 3.0.3
