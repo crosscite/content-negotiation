@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ba01423f7919
+      - Maremma - http://908f85cd1a6c
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,13 +17,13 @@ http_interactions:
       message: ''
     headers:
       Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
       Access-Control-Allow-Origin:
       - "*"
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Mon, 28 Aug 2017 08:35:26 GMT
+      - Fri, 24 Nov 2017 23:09:03 GMT
       Location:
       - https://hdl.handle.net/21.T11998/0000-0001-DDB8-7
       Server:
@@ -34,7 +34,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 28 Aug 2017 08:35:26 GMT
+  recorded_at: Fri, 24 Nov 2017 23:09:03 GMT
 - request:
     method: head
     uri: https://hdl.handle.net/21.T11998/0000-0001-DDB8-7
@@ -43,7 +43,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ba01423f7919
+      - Maremma - http://908f85cd1a6c
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -56,18 +56,18 @@ http_interactions:
       Location:
       - https://cdstar.de.dariah.eu/test/public/EAEA0-A51E-A71F-5B08-0
       Expires:
-      - Tue, 29 Aug 2017 08:35:26 GMT
+      - Sat, 25 Nov 2017 23:09:04 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
       - '209'
       Date:
-      - Mon, 28 Aug 2017 08:35:26 GMT
+      - Fri, 24 Nov 2017 23:09:03 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 28 Aug 2017 08:35:26 GMT
+  recorded_at: Fri, 24 Nov 2017 23:09:04 GMT
 - request:
     method: head
     uri: https://cdstar.de.dariah.eu/test/public/EAEA0-A51E-A71F-5B08-0
@@ -76,7 +76,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ba01423f7919
+      - Maremma - http://908f85cd1a6c
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -87,7 +87,7 @@ http_interactions:
       Server:
       - nginx/1.10.3 (Ubuntu)
       Date:
-      - Mon, 28 Aug 2017 08:35:27 GMT
+      - Fri, 24 Nov 2017 23:09:04 GMT
       Content-Type:
       - application/x-zip-compressed
       Content-Length:
@@ -98,15 +98,15 @@ http_interactions:
       - Tue, 22 Aug 2017 17:17:17 GMT
       Etag:
       - '"MD5:078f7ff054b76671b1e67930775d829d"'
-      Vary:
-      - Accept-Charset, Accept-Encoding, Accept-Language, Accept
       Accept-Ranges:
       - bytes
+      Vary:
+      - Accept-Charset, Accept-Encoding, Accept-Language, Accept
       Front-End-Https:
       - 'on'
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 28 Aug 2017 08:35:27 GMT
+  recorded_at: Fri, 24 Nov 2017 23:09:04 GMT
 recorded_with: VCR 3.0.3

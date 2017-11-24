@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://36d2129ec727
+      - Maremma - http://908f85cd1a6c
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,13 +17,13 @@ http_interactions:
       message: ''
     headers:
       Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
       Access-Control-Allow-Origin:
       - "*"
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 23 Aug 2017 08:39:56 GMT
+      - Fri, 24 Nov 2017 23:08:41 GMT
       Server:
       - openresty/1.11.2.2
       Content-Length:
@@ -36,7 +36,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Wed, 23 Aug 2017 08:39:56 GMT
+  recorded_at: Fri, 24 Nov 2017 23:08:41 GMT
 - request:
     method: head
     uri: https://handle.test.datacite.org/10.5061/dryad.8515
@@ -45,7 +45,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://36d2129ec727
+      - Maremma - http://908f85cd1a6c
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -54,13 +54,13 @@ http_interactions:
       message: ''
     headers:
       Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
       Access-Control-Allow-Origin:
       - "*"
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Wed, 23 Aug 2017 08:39:56 GMT
+      - Fri, 24 Nov 2017 23:08:42 GMT
       Location:
       - http://datadryad.org/handle/10255/dryad.8515
       Server:
@@ -71,5 +71,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 23 Aug 2017 08:39:56 GMT
+  recorded_at: Fri, 24 Nov 2017 23:08:42 GMT
 recorded_with: VCR 3.0.3

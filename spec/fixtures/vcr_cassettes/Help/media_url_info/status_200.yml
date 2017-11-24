@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ba01423f7919
+      - Maremma - http://908f85cd1a6c
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Aug 2017 08:35:27 GMT
+      - Fri, 24 Nov 2017 23:09:04 GMT
       Content-Type:
       - application/pdf
       Content-Length:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=86400
       Expires:
-      - Tue, 29 Aug 2017 08:35:27 GMT
+      - Sat, 25 Nov 2017 23:09:04 GMT
       X-Proxy-Pass:
       - DEFAULT-PASSTHRU
       Accept-Ranges:
@@ -42,5 +42,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 28 Aug 2017 08:35:27 GMT
+  recorded_at: Fri, 24 Nov 2017 23:09:04 GMT
 recorded_with: VCR 3.0.3

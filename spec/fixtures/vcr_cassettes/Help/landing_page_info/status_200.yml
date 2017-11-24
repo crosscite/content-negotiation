@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ba01423f7919
+      - Maremma - http://908f85cd1a6c
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -23,18 +23,18 @@ http_interactions:
       Location:
       - http://datadryad.org/resource/doi:10.5061/dryad.8515
       Expires:
-      - Mon, 28 Aug 2017 09:02:09 GMT
+      - Fri, 24 Nov 2017 23:47:09 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
       - '189'
       Date:
-      - Mon, 28 Aug 2017 08:35:24 GMT
+      - Fri, 24 Nov 2017 23:09:01 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 28 Aug 2017 08:35:25 GMT
+  recorded_at: Fri, 24 Nov 2017 23:09:02 GMT
 - request:
     method: head
     uri: http://datadryad.org/resource/doi:10.5061/dryad.8515
@@ -43,7 +43,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ba01423f7919
+      - Maremma - http://908f85cd1a6c
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -52,24 +52,24 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 28 Aug 2017 08:35:25 GMT
+      - Fri, 24 Nov 2017 23:09:02 GMT
       Set-Cookie:
-      - JSESSIONID=7BBD912D8CCCFC75E38073ADFE3BA887; Path=/
+      - JSESSIONID=140ABE708E05E4A9C45F198EE62436A0; Path=/
       X-Cocoon-Version:
       - 2.2.0
       Last-Modified:
-      - Fri, 02 Sep 2011 15:35:45 EDT
+      - Wed, 30 Aug 2017 22:59:51 EDT
       Content-Type:
       - text/html;charset=utf-8
       Content-Language:
       - en-US
       Content-Length:
-      - '36072'
+      - '35212'
       Vary:
       - Accept-Encoding
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 28 Aug 2017 08:35:25 GMT
+  recorded_at: Fri, 24 Nov 2017 23:09:02 GMT
 recorded_with: VCR 3.0.3
