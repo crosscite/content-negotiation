@@ -23,7 +23,6 @@ script:
   - bundle exec codeclimate-test-reporter || true
 
 after_success:
-  - set -e
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
   - REPO=crosscite/content-negotiation;
   - AUTO_DEPLOY=false;
