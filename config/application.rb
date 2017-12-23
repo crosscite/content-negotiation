@@ -39,7 +39,7 @@ ENV['SITE_TITLE'] ||= "Content Resolver"
 ENV['LOG_LEVEL'] ||= "info"
 ENV['GITHUB_URL'] ||= "https://github.com/crosscite/content-negotiation"
 ENV['SEARCH_URL'] ||= "https://search.datacite.org/"
-ENV['CITEPROC_URL'] ||= "https://citation.datacite.org/format"
+ENV['CITEPROC_URL'] ||= "https://citation.crosscite.org/format"
 ENV['TRUSTED_IP'] ||= "10.0.0.0/8"
 
 module ContentNegotiation
@@ -56,8 +56,11 @@ module ContentNegotiation
     # secret_key_base is not used by Rails API, as there are no sessions
     config.secret_key_base = 'blipblapblup'
 
+    # serve assets via web server
+    config.public_file_server.enabled = false
+
     # configure logging
-    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
     config.log_level = ENV['LOG_LEVEL'].to_sym
@@ -78,6 +81,6 @@ module ContentNegotiation
     config.middleware.use Rack::Deflater
 
     # Use memcached as cache store
-    config.cache_store = :dalli_store, nil, { expires_in: 7.days }
+    config.cache_store = :dalli_store, nil, { :namespace => ENV['APPLICATION'] }
   end
 end
