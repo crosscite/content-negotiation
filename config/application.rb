@@ -71,9 +71,6 @@ module ContentNegotiation
     # Previous versions had false.
     config.active_support.to_time_preserves_timezone = true
 
-    # Do not halt callback chains when a callback returns false. Previous versions had true.
-    config.active_support.halt_callback_chains_on_return_false = false
-
     # Configure SSL options to enable HSTS with subdomains. Previous versions had false.
     config.ssl_options = { hsts: { subdomains: true } }
 
