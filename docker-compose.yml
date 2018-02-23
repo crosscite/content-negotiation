@@ -4,7 +4,6 @@ services:
   content-negotiation:
     image: crosscite/content-negotiation
     environment:
-      - SEARCH_URL=https://search.test.datacite.org/
       - CITEPROC_URL="https://citation.test.datacite.org/format"
     build: .
     ports:

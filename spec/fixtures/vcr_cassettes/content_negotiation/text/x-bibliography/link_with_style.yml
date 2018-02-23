@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://search.test.datacite.org/api?fl=doi,media&q=doi:10.5061/dryad.8515&wt=json
+    uri: https://app.test.datacite.org/media?doi-id=10.4124/ccnwxhx
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ebcdbbd9e10f
+      - Maremma - http://c6505041b7fc
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,46 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 16 Feb 2018 09:35:31 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Connection:
-      - keep-alive
-      Server:
-      - nginx/1.10.3 (Ubuntu)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-      Access-Control-Expose-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-    body:
-      encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
-
-'
-    http_version: 
-  recorded_at: Fri, 16 Feb 2018 09:35:35 GMT
-- request:
-    method: get
-    uri: https://app.datacite.org/prefixes/10.5061
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Maremma - http://ebcdbbd9e10f
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-  response:
-    status:
-      code: 200
-      message: ''
-    headers:
-      Date:
-      - Fri, 16 Feb 2018 09:35:31 GMT
+      - Fri, 23 Feb 2018 10:16:00 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -70,31 +31,29 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 474ddc52-2b47-43e3-ab19-0cf1c32b7415
+      - 29fd6c9b-7c13-4079-80b5-9089e1d87d99
       Etag:
-      - W/"f1fa2aed08582266e5e2dcb8ec6863d9"
+      - W/"ca5c1ddbb33a0cde28379ad7d4cc7aa5"
       X-Runtime:
-      - '0.016132'
+      - '0.007353'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
       - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5061","type":"prefixes","attributes":{"registration-agency":"DataCite","created":"2010-01-01T00:00:00.000Z","updated":null},"relationships":{"clients":{"data":[{"id":"cdl.dryad","type":"clients"}]},"providers":{"data":[{"id":"cdl","type":"providers"}]}}},"included":[{"id":"cdl.dryad","type":"clients","attributes":{"name":"Dryad","symbol":"CDL.DRYAD","year":2013,"contact-name":"Greg
-        Janee","contact-email":"gjanee@ucop.edu","domains":"*","url":null,"is-active":true,"has-password":false,"created":"2013-02-19T17:42:03Z","updated":"2018-02-16T02:30:11Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"cdl","type":"providers","attributes":{"name":"California
-        Digital Library","symbol":"CDL","year":2010,"contact-name":"Greg Janee","contact-email":"gjanee@ucop.edu","logo-url":"https://assets.datacite.org/images/members/cdl.png","is-active":true,"has-password":true,"created":"2010-01-01T00:00:00.000Z","updated":"2018-02-16T02:25:51.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+      string: '{"data":[],"meta":{"total":0,"total-pages":0,"page":1}}'
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 09:35:35 GMT
+  recorded_at: Fri, 23 Feb 2018 10:16:19 GMT
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.5061/dryad.8515?include=client,provider
+    uri: https://app.datacite.org/prefixes/10.4124
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ebcdbbd9e10f
+      - Maremma - http://c6505041b7fc
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -103,7 +62,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 16 Feb 2018 09:35:31 GMT
+      - Fri, 23 Feb 2018 10:16:00 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -117,22 +76,69 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 93e528b4-10ea-4949-92bb-4d163f6f297f
+      - a4a82690-8a41-4666-9efc-792eb1fd80c0
       Etag:
-      - W/"7079628b6f9484f9030f56a86c35ab4a"
+      - W/"582d4aa441ee40d820eb031bc89f06e5"
       X-Runtime:
-      - '0.018626'
+      - '0.017017'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
       - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5061/dryad.8515","type":"dois","attributes":{"doi":"10.5061/dryad.8515","identifier":"https://handle.test.datacite.org/10.5061/dryad.8515","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":1,"related-identifier":null,"schema-version":null,"state":"inactive","reason":null,"xml":null,"published":null,"registered":"2011-02-01T17:32:02.000Z","updated":"2012-03-27T06:47:29.000Z"},"relationships":{"client":{"data":{"id":"cdl.cdl","type":"clients"}},"provider":{"data":{"id":"cdl","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"cdl.cdl","type":"clients","attributes":{"name":"CDL","symbol":"CDL.CDL","year":2011,"contact-name":"Greg
-        Janee","contact-email":"gjanee@ucop.edu","domains":"*","url":null,"is-active":true,"has-password":false,"created":"2011-03-02T19:09:27Z","updated":"2018-02-16T01:30:23Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"cdl","type":"providers","attributes":{"name":"California
-        Digital Library","symbol":"CDL","year":2010,"contact-name":"Greg Janee","contact-email":"gjanee@ucop.edu","logo-url":"https://assets.datacite.org/images/members/cdl.png","is-active":true,"has-password":true,"created":"2010-01-01T00:00:00.000Z","updated":"2018-02-16T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+      string: '{"data":{"id":"10.4124","type":"prefixes","attributes":{"registration-agency":"DataCite","created":"2010-01-01T00:00:00.000Z","updated":null},"relationships":{"clients":{"data":[{"id":"bl.old-api","type":"clients"}]},"providers":{"data":[{"id":"bl","type":"providers"}]}}},"included":[{"id":"bl.old-api","type":"clients","attributes":{"name":"BL''s
+        DOI service prototype","symbol":"BL.OLD-API","year":2012,"contact-name":"Rachael
+        Kotarski","contact-email":"datasets@bl.uk","domains":"bl.uk","url":null,"is-active":true,"has-password":false,"created":"2012-01-10T16:41:12Z","updated":"2018-02-23T02:30:09Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"bl","type":"providers","attributes":{"name":"The
+        British Library","symbol":"BL","year":2010,"contact-name":"Rachael Kotarski","contact-email":"datasets@bl.uk","logo-url":"https://assets.datacite.org/images/members/bl.png","is-active":true,"has-password":true,"created":"2010-01-01T00:00:00.000Z","updated":"2018-02-23T02:25:50.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 09:35:35 GMT
+  recorded_at: Fri, 23 Feb 2018 10:16:20 GMT
+- request:
+    method: get
+    uri: https://app.test.datacite.org/dois/10.4124/ccnwxhx?include=client,provider
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://c6505041b7fc
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 10:16:01 GMT
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 5f766e60-1168-497f-b0e5-1e6b0a2869a8
+      Etag:
+      - W/"5323940cf18929a74fafb3a7eefb751a"
+      X-Runtime:
+      - '0.098616'
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7ImlkIjoiMTAuNDEyNC9jY253eGh4IiwidHlwZSI6ImRvaXMiLCJhdHRyaWJ1dGVzIjp7ImRvaSI6IjEwLjQxMjQvY2Nud3hoeCIsImlkZW50aWZpZXIiOiJodHRwczovL2hhbmRsZS50ZXN0LmRhdGFjaXRlLm9yZy8xMC40MTI0L2Njbnd4aHgiLCJ1cmwiOm51bGwsImF1dGhvciI6W3sidHlwZSI6IlBlcnNvbiIsIm5hbWUiOiJDLiBLcmVtcG5lciIsImdpdmVuLW5hbWUiOiJDLiIsImZhbWlseS1uYW1lIjoiS3JlbXBuZXIifSx7InR5cGUiOiJQZXJzb24iLCJuYW1lIjoiSC4gUmVpbmtlIiwiZ2l2ZW4tbmFtZSI6IkguIiwiZmFtaWx5LW5hbWUiOiJSZWlua2UifSx7InR5cGUiOiJQZXJzb24iLCJuYW1lIjoiSy4gV2VpY2hlcnQiLCJnaXZlbi1uYW1lIjoiSy4iLCJmYW1pbHktbmFtZSI6IldlaWNoZXJ0In1dLCJ0aXRsZSI6IkNDREMgNjIyNjUwOiBFeHBlcmltZW50YWwgQ3J5c3RhbCBTdHJ1Y3R1cmUgRGV0ZXJtaW5hdGlvbiIsImNvbnRhaW5lci10aXRsZSI6IkNhbWJyaWRnZSBDcnlzdGFsbG9ncmFwaGljIERhdGEgQ2VudHJlIiwiZGVzY3JpcHRpb24iOlt7InR5cGUiOiJPdGhlciIsInRleHQiOiJSZWxhdGVkIEFydGljbGU6IEMuS3JlbXBuZXIsIEguUmVpbmtlLCBLLldlaWNoZXJ0fDIwMDd8RXVyLkouSW5vcmcuQ2hlbS58fDEwNjd8ZG9pOjEwLjEwMDIvZWppYy4yMDA2MDA5NTcifSx7InR5cGUiOiJBYnN0cmFjdCIsInRleHQiOiJBbiBlbnRyeSBmcm9tIHRoZSBDYW1icmlkZ2UgU3RydWN0dXJhbCBEYXRhYmFzZSwgdGhlIHdvcmxk4oCZcyByZXBvc2l0b3J5IGZvciBzbWFsbCBtb2xlY3VsZSBjcnlzdGFsIHN0cnVjdHVyZXMuIFRoZSBlbnRyeSBjb250YWlucyBleHBlcmltZW50YWwgZGF0YSBmcm9tIGEgY3J5c3RhbCBkaWZmcmFjdGlvbiBzdHVkeS4gVGhlIGRlcG9zaXRlZCBkYXRhc2V0IGZvciB0aGlzIGVudHJ5IGlzIGZyZWVseSBhdmFpbGFibGUgZnJvbSB0aGUgQ0NEQyBhbmQgdHlwaWNhbGx5IGluY2x1ZGVzIDNEIGNvb3JkaW5hdGVzLCBjZWxsIHBhcmFtZXRlcnMsIHNwYWNlIGdyb3VwLCBleHBlcmltZW50YWwgY29uZGl0aW9ucyBhbmQgcXVhbGl0eSBtZWFzdXJlcy4ifV0sInJlc291cmNlLXR5cGUtc3VidHlwZSI6IkRhdGFzZXQiLCJsaWNlbnNlIjpudWxsLCJ2ZXJzaW9uIjoyLCJyZWxhdGVkLWlkZW50aWZpZXIiOlt7InR5cGUiOiJDcmVhdGl2ZVdvcmsiLCJpZCI6Imh0dHBzOi8vZG9pLm9yZy8xMC4xMDAyL2VqaWMuMjAwNjAwOTU3IiwicmVsYXRpb24tdHlwZSI6IklzU3VwcGxlbWVudFRvIn1dLCJzY2hlbWEtdmVyc2lvbiI6Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC0zIiwic3RhdGUiOiJpbmFjdGl2ZSIsInJlYXNvbiI6bnVsbCwieG1sIjoiUEQ5NGJXd2dkbVZ5YzJsdmJqMGlNUzR3SWlCbGJtTnZaR2x1WnowaWRYUm1MVGdpUHo0TkNqeHlaWE52ZFhKalpTQjRiV3h1Y3pwNGMyUTlJbWgwZEhBNkx5OTNkM2N1ZHpNdWIzSm5Mekl3TURFdldFMU1VMk5vWlcxaElpQjRiV3h1Y3pwNGMyazlJbWgwZEhBNkx5OTNkM2N1ZHpNdWIzSm5Mekl3TURFdldFMU1VMk5vWlcxaExXbHVjM1JoYm1ObElpQjRjMms2YzJOb1pXMWhURzlqWVhScGIyNDlJbWgwZEhBNkx5OWtZWFJoWTJsMFpTNXZjbWN2YzJOb1pXMWhMMnRsY201bGJDMHpJR2gwZEhBNkx5OXpZMmhsYldFdVpHRjBZV05wZEdVdWIzSm5MMjFsZEdFdmEyVnlibVZzTFRNdmJXVjBZV1JoZEdFdWVITmtJaUI0Yld4dWN6MGlhSFIwY0RvdkwyUmhkR0ZqYVhSbExtOXlaeTl6WTJobGJXRXZhMlZ5Ym1Wc0xUTWlQZzBLSUNBOGFXUmxiblJwWm1sbGNpQnBaR1Z1ZEdsbWFXVnlWSGx3WlQwaVJFOUpJajR4TUM0ME1USTBMMk5qYm5kNGFIZzhMMmxrWlc1MGFXWnBaWEkrRFFvZ0lEeGpjbVZoZEc5eWN6NE5DaUFnSUNBOFkzSmxZWFJ2Y2o0TkNpQWdJQ0FnSUR4amNtVmhkRzl5VG1GdFpUNUxjbVZ0Y0c1bGNpd2dReTQ4TDJOeVpXRjBiM0pPWVcxbFBnMEtJQ0FnSUR3dlkzSmxZWFJ2Y2o0TkNpQWdJQ0E4WTNKbFlYUnZjajROQ2lBZ0lDQWdJRHhqY21WaGRHOXlUbUZ0WlQ1U1pXbHVhMlVzSUVndVBDOWpjbVZoZEc5eVRtRnRaVDROQ2lBZ0lDQThMMk55WldGMGIzSStEUW9nSUNBZ1BHTnlaV0YwYjNJK0RRb2dJQ0FnSUNBOFkzSmxZWFJ2Y2s1aGJXVStWMlZwWTJobGNuUXNJRXN1UEM5amNtVmhkRzl5VG1GdFpUNE5DaUFnSUNBOEwyTnlaV0YwYjNJK0RRb2dJRHd2WTNKbFlYUnZjbk0rRFFvZ0lEeDBhWFJzWlhNK0RRb2dJQ0FnUEhScGRHeGxQa05EUkVNZ05qSXlOalV3T2lCRmVIQmxjbWx0Wlc1MFlXd2dRM0o1YzNSaGJDQlRkSEoxWTNSMWNtVWdSR1YwWlhKdGFXNWhkR2x2Ymp3dmRHbDBiR1UrRFFvZ0lEd3ZkR2wwYkdWelBnMEtJQ0E4Y0hWaWJHbHphR1Z5UGtOaGJXSnlhV1JuWlNCRGNubHpkR0ZzYkc5bmNtRndhR2xqSUVSaGRHRWdRMlZ1ZEhKbFBDOXdkV0pzYVhOb1pYSStEUW9nSUR4d2RXSnNhV05oZEdsdmJsbGxZWEkrTWpBd056d3ZjSFZpYkdsallYUnBiMjVaWldGeVBnMEtJQ0E4YzNWaWFtVmpkSE0rRFFvZ0lDQWdQSE4xWW1wbFkzUStRM0o1YzNSaGJDQlRkSEoxWTNSMWNtVThMM04xWW1wbFkzUStEUW9nSUNBZ1BITjFZbXBsWTNRK1JYaHdaWEpwYldWdWRHRnNJRE5FSUVOdmIzSmthVzVoZEdWelBDOXpkV0pxWldOMFBnMEtJQ0FnSUR4emRXSnFaV04wUGtOeWVYTjBZV3dnVTNsemRHVnRQQzl6ZFdKcVpXTjBQZzBLSUNBZ0lEeHpkV0pxWldOMFBsTndZV05sSUVkeWIzVndQQzl6ZFdKcVpXTjBQZzBLSUNBZ0lEeHpkV0pxWldOMFBrTmxiR3dnVUdGeVlXMWxkR1Z5Y3p3dmMzVmlhbVZqZEQ0TkNpQWdJQ0E4YzNWaWFtVmpkRDVEY25semRHRnNiRzluY21Gd2FIazhMM04xWW1wbFkzUStEUW9nSUNBZ1BITjFZbXBsWTNRK1ltbHpLRzExZmpOK0xURXNNU3d5TERJdGRHVjBjbUZyYVhNb1ZISnBiV1YwYUhsc2MybHNlV3dwWkdsemFXeGhibVV0TVN3eUxXUnBiMnhoZEc4dFR5eFBMRThuTEU4bktTMWthVzFsZEdoNWJDMTBjbWt0ZW1sdVl5aHBhU2s4TDNOMVltcGxZM1ErRFFvZ0lEd3ZjM1ZpYW1WamRITStEUW9nSUR4c1lXNW5kV0ZuWlQ1bGJtYzhMMnhoYm1kMVlXZGxQZzBLSUNBOGNtVnpiM1Z5WTJWVWVYQmxJSEpsYzI5MWNtTmxWSGx3WlVkbGJtVnlZV3c5SWtSaGRHRnpaWFFpSUM4K0RRb2dJRHhoYkhSbGNtNWhkR1ZKWkdWdWRHbG1hV1Z5Y3o0TkNpQWdJQ0E4WVd4MFpYSnVZWFJsU1dSbGJuUnBabWxsY2lCaGJIUmxjbTVoZEdWSlpHVnVkR2xtYVdWeVZIbHdaVDBpUTBORVF5SStOakl5TmpVd1BDOWhiSFJsY201aGRHVkpaR1Z1ZEdsbWFXVnlQZzBLSUNBOEwyRnNkR1Z5Ym1GMFpVbGtaVzUwYVdacFpYSnpQZzBLSUNBOGNtVnNZWFJsWkVsa1pXNTBhV1pwWlhKelBnMEtJQ0FnSUR4eVpXeGhkR1ZrU1dSbGJuUnBabWxsY2lCeVpXeGhkR1ZrU1dSbGJuUnBabWxsY2xSNWNHVTlJa1JQU1NJZ2NtVnNZWFJwYjI1VWVYQmxQU0pKYzFOMWNIQnNaVzFsYm5SVWJ5SStNVEF1TVRBd01pOWxhbWxqTGpJd01EWXdNRGsxTnp3dmNtVnNZWFJsWkVsa1pXNTBhV1pwWlhJK0RRb2dJRHd2Y21Wc1lYUmxaRWxrWlc1MGFXWnBaWEp6UGcwS0lDQThabTl5YldGMGN6NE5DaUFnSUNBOFptOXliV0YwUGtOSlJqd3ZabTl5YldGMFBnMEtJQ0E4TDJadmNtMWhkSE0rRFFvZ0lEeGtaWE5qY21sd2RHbHZibk0rRFFvZ0lDQWdQR1JsYzJOeWFYQjBhVzl1SUdSbGMyTnlhWEIwYVc5dVZIbHdaVDBpVDNSb1pYSWlQbEpsYkdGMFpXUWdRWEowYVdOc1pUb2dReTVMY21WdGNHNWxjaXdnU0M1U1pXbHVhMlVzSUVzdVYyVnBZMmhsY25SOE1qQXdOM3hGZFhJdVNpNUpibTl5Wnk1RGFHVnRMbng4TVRBMk4zeGtiMms2TVRBdU1UQXdNaTlsYW1sakxqSXdNRFl3TURrMU56d3ZaR1Z6WTNKcGNIUnBiMjQrRFFvZ0lDQWdQR1JsYzJOeWFYQjBhVzl1SUdSbGMyTnlhWEIwYVc5dVZIbHdaVDBpUVdKemRISmhZM1FpUGtGdUlHVnVkSEo1SUdaeWIyMGdkR2hsSUVOaGJXSnlhV1JuWlNCVGRISjFZM1IxY21Gc0lFUmhkR0ZpWVhObExDQjBhR1VnZDI5eWJHVGlnSmx6SUhKbGNHOXphWFJ2Y25rZ1ptOXlJSE50WVd4c0lHMXZiR1ZqZFd4bElHTnllWE4wWVd3Z2MzUnlkV04wZFhKbGN5NGdWR2hsSUdWdWRISjVJR052Ym5SaGFXNXpJR1Y0Y0dWeWFXMWxiblJoYkNCa1lYUmhJR1p5YjIwZ1lTQmpjbmx6ZEdGc0lHUnBabVp5WVdOMGFXOXVJSE4wZFdSNUxpQlVhR1VnWkdWd2IzTnBkR1ZrSUdSaGRHRnpaWFFnWm05eUlIUm9hWE1nWlc1MGNua2dhWE1nWm5KbFpXeDVJR0YyWVdsc1lXSnNaU0JtY205dElIUm9aU0JEUTBSRElHRnVaQ0IwZVhCcFkyRnNiSGtnYVc1amJIVmtaWE1nTTBRZ1kyOXZjbVJwYm1GMFpYTXNJR05sYkd3Z2NHRnlZVzFsZEdWeWN5d2djM0JoWTJVZ1ozSnZkWEFzSUdWNGNHVnlhVzFsYm5SaGJDQmpiMjVrYVhScGIyNXpJR0Z1WkNCeGRXRnNhWFI1SUcxbFlYTjFjbVZ6TGp3dlpHVnpZM0pwY0hScGIyNCtEUW9nSUR3dlpHVnpZM0pwY0hScGIyNXpQZzBLUEM5eVpYTnZkWEpqWlQ0PSIsInB1Ymxpc2hlZCI6IjIwMDciLCJyZWdpc3RlcmVkIjoiMjAxOC0wMi0wNFQxNjo0MTo0MC4wMDBaIiwidXBkYXRlZCI6IjIwMTgtMDItMDRUMTY6NDE6NDAuMDAwWiJ9LCJyZWxhdGlvbnNoaXBzIjp7ImNsaWVudCI6eyJkYXRhIjp7ImlkIjoiYmwuY2NkYyIsInR5cGUiOiJjbGllbnRzIn19LCJwcm92aWRlciI6eyJkYXRhIjp7ImlkIjoiYmwiLCJ0eXBlIjoicHJvdmlkZXJzIn19LCJyZXNvdXJjZS10eXBlIjp7Im1ldGEiOnt9fSwibWVkaWEiOnsibWV0YSI6e319fX0sImluY2x1ZGVkIjpbeyJpZCI6ImJsLmNjZGMiLCJ0eXBlIjoiY2xpZW50cyIsImF0dHJpYnV0ZXMiOnsibmFtZSI6IlRoZSBDYW1icmlkZ2UgU3RydWN0dXJhbCBEYXRhYmFzZSIsInN5bWJvbCI6IkJMLkNDREMiLCJ5ZWFyIjoyMDEzLCJjb250YWN0LW5hbWUiOiJJYW4gQnJ1bm8iLCJjb250YWN0LWVtYWlsIjoiYnJ1bm9AY2NkYy5jYW0uYWMudWsiLCJkb21haW5zIjoiY2NkYy5jYW0uYWMudWsiLCJ1cmwiOm51bGwsImlzLWFjdGl2ZSI6dHJ1ZSwiaGFzLXBhc3N3b3JkIjp0cnVlLCJjcmVhdGVkIjoiMjAxMy0wOS0yNFQxMjoyMDoxMVoiLCJ1cGRhdGVkIjoiMjAxOC0wMi0yM1QwMTozMDoyNloifSwicmVsYXRpb25zaGlwcyI6eyJwcmVmaXhlcyI6eyJtZXRhIjp7fX0sInByb3ZpZGVyIjp7Im1ldGEiOnt9fSwicmVwb3NpdG9yeSI6eyJtZXRhIjp7fX19fSx7ImlkIjoiYmwiLCJ0eXBlIjoicHJvdmlkZXJzIiwiYXR0cmlidXRlcyI6eyJuYW1lIjoiVGhlIEJyaXRpc2ggTGlicmFyeSIsInN5bWJvbCI6IkJMIiwieWVhciI6MjAxMCwiY29udGFjdC1uYW1lIjoiUmFjaGFlbCBLb3RhcnNraSIsImNvbnRhY3QtZW1haWwiOiJkYXRhc2V0c0BibC51ayIsImxvZ28tdXJsIjoiaHR0cHM6Ly9hc3NldHMuZGF0YWNpdGUub3JnL2ltYWdlcy9tZW1iZXJzL2JsLnBuZyIsImlzLWFjdGl2ZSI6dHJ1ZSwiaGFzLXBhc3N3b3JkIjp0cnVlLCJjcmVhdGVkIjoiMjAxMC0wMS0wMVQwMDowMDowMC4wMDBaIiwidXBkYXRlZCI6IjIwMTgtMDItMjNUMDE6MjU6MzkuMDAwWiJ9LCJyZWxhdGlvbnNoaXBzIjp7ImNsaWVudHMiOnsibWV0YSI6e319LCJwcmVmaXhlcyI6eyJtZXRhIjp7fX19fV19
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:16:20 GMT
 - request:
     method: post
     uri: https://citation.crosscite.org/format?locale=en-US&style=ieee
@@ -140,14 +146,48 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "type": "article",
-          "id": "https://handle.test.datacite.org/10.5061/dryad.8515",
-          "DOI": "10.5061/dryad.8515",
-          "page": "-"
+          "type": "dataset",
+          "id": "https://handle.test.datacite.org/10.4124/ccnwxhx",
+          "categories": [
+            "Crystal Structure",
+            "Experimental 3D Coordinates",
+            "Crystal System",
+            "Space Group",
+            "Cell Parameters",
+            "Crystallography",
+            "bis(mu~3~-1,1,2,2-tetrakis(Trimethylsilyl)disilane-1,2-diolato-O,O,O',O')-dimethyl-tri-zinc(ii)"
+          ],
+          "language": "eng",
+          "author": [
+            {
+              "family": "Krempner",
+              "given": "C."
+            },
+            {
+              "family": "Reinke",
+              "given": "H."
+            },
+            {
+              "family": "Weichert",
+              "given": "K."
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2007
+              ]
+            ]
+          },
+          "abstract": "Related Article: C.Krempner, H.Reinke, K.Weichert|2007|Eur.J.Inorg.Chem.||1067|doi:10.1002/ejic.200600957",
+          "DOI": "10.4124/ccnwxhx",
+          "page": "-",
+          "publisher": "Cambridge Crystallographic Data Centre",
+          "title": "CCDC 622650: Experimental Crystal Structure Determination"
         }
     headers:
       User-Agent:
-      - Maremma - http://ebcdbbd9e10f
+      - Maremma - http://c6505041b7fc
       Content-Type:
       - application/json
       Accept:
@@ -158,7 +198,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 16 Feb 2018 09:35:31 GMT
+      - Fri, 23 Feb 2018 10:16:01 GMT
       Content-Type:
       - text/plain
       Connection:
@@ -174,8 +214,9 @@ http_interactions:
       Access-Control-Allow-Headers:
       - Content-Type,Accept,Accept-Encoding,Origin,User-Agent,Cache-Control,Keep-Alive
     body:
-      encoding: UTF-8
-      string: "[1]p. .\n"
+      encoding: ASCII-8BIT
+      string: !binary |-
+        WzFdQy4gS3JlbXBuZXIsIEguIFJlaW5rZSwgYW5kIEsuIFdlaWNoZXJ0LCDigJhDQ0RDIDYyMjY1MDogRXhwZXJpbWVudGFsIENyeXN0YWwgU3RydWN0dXJlIERldGVybWluYXRpb27igJkuIENhbWJyaWRnZSBDcnlzdGFsbG9ncmFwaGljIERhdGEgQ2VudHJlLCBwLiAsIDIwMDcuCg==
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 09:35:35 GMT
+  recorded_at: Fri, 23 Feb 2018 10:16:20 GMT
 recorded_with: VCR 3.0.3

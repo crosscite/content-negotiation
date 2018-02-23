@@ -2,43 +2,46 @@
 http_interactions:
 - request:
     method: get
-    uri: https://search.test.datacite.org/api?fl=doi,media&q=doi:10.15146/r34015&wt=json
+    uri: https://app.test.datacite.org/media?doi-id=10.15146/r34015
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ebcdbbd9e10f
+      - Maremma - http://c6505041b7fc
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
     status:
-      code: 200
+      code: 422
       message: ''
     headers:
       Date:
-      - Fri, 16 Feb 2018 09:35:22 GMT
+      - Fri, 23 Feb 2018 10:15:51 GMT
       Content-Type:
-      - application/json;charset=UTF-8
+      - application/json; charset=utf-8
       Connection:
       - keep-alive
+      Status:
+      - 422 Unprocessable Entity
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - d7e98cd2-d928-450f-98bd-e510ebf83dce
+      X-Runtime:
+      - '0.005161'
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
       Server:
-      - nginx/1.10.3 (Ubuntu)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-      Access-Control-Expose-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":0,"start":0,"docs":[]}}
-
-'
+      string: '{"errors":[{"status":"422","title":"undefined method `cached_media_count''
+        for nil:NilClass"}]}'
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 09:35:27 GMT
+  recorded_at: Fri, 23 Feb 2018 10:16:11 GMT
 - request:
     method: get
     uri: https://app.datacite.org/prefixes/10.15146
@@ -47,7 +50,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ebcdbbd9e10f
+      - Maremma - http://c6505041b7fc
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -56,7 +59,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 16 Feb 2018 09:35:22 GMT
+      - Fri, 23 Feb 2018 10:15:52 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -70,11 +73,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - be8a6385-8a6e-4b9a-bd93-2bf4c2ec4c2e
+      - a330529a-bb88-4f88-ad65-d21fe740de22
       Etag:
-      - W/"71d17ea01bedab9250caacd653168943"
+      - W/"e5ca4b48b198071feba6eb49a70ae121"
       X-Runtime:
-      - '0.017374'
+      - '0.016555'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
@@ -83,10 +86,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"10.15146","type":"prefixes","attributes":{"registration-agency":"DataCite","created":"2014-02-07T09:06:33.000Z","updated":null},"relationships":{"clients":{"data":[{"id":"cdl.unmlib","type":"clients"}]},"providers":{"data":[{"id":"cdl","type":"providers"}]}}},"included":[{"id":"cdl.unmlib","type":"clients","attributes":{"name":"University
         of New Mexico Libraries","symbol":"CDL.UNMLIB","year":2014,"contact-name":"Greg
-        Janee","contact-email":"gjanee@ucop.edu","domains":"*","url":null,"is-active":true,"has-password":false,"created":"2014-09-24T23:51:51Z","updated":"2018-02-16T02:30:16Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"cdl","type":"providers","attributes":{"name":"California
-        Digital Library","symbol":"CDL","year":2010,"contact-name":"Greg Janee","contact-email":"gjanee@ucop.edu","logo-url":"https://assets.datacite.org/images/members/cdl.png","is-active":true,"has-password":true,"created":"2010-01-01T00:00:00.000Z","updated":"2018-02-16T02:25:51.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+        Janee","contact-email":"gjanee@ucop.edu","domains":"*","url":null,"is-active":true,"has-password":false,"created":"2014-09-24T23:51:51Z","updated":"2018-02-23T02:30:16Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"cdl","type":"providers","attributes":{"name":"California
+        Digital Library","symbol":"CDL","year":2010,"contact-name":"Greg Janee","contact-email":"gjanee@ucop.edu","logo-url":"https://assets.datacite.org/images/members/cdl.png","is-active":true,"has-password":true,"created":"2010-01-01T00:00:00.000Z","updated":"2018-02-23T02:25:50.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 09:35:27 GMT
+  recorded_at: Fri, 23 Feb 2018 10:16:11 GMT
 - request:
     method: get
     uri: https://app.test.datacite.org/dois/10.15146/r34015?include=client,provider
@@ -95,7 +98,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ebcdbbd9e10f
+      - Maremma - http://c6505041b7fc
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -104,7 +107,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 16 Feb 2018 09:35:23 GMT
+      - Fri, 23 Feb 2018 10:15:52 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -116,9 +119,9 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 9e29344e-02d1-4b60-a8a5-275e93c3860d
+      - 4fd6bfac-8527-49d4-bde5-bce2b0a91057
       X-Runtime:
-      - '0.003548'
+      - '0.003682'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
@@ -128,5 +131,5 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 09:35:27 GMT
+  recorded_at: Fri, 23 Feb 2018 10:16:11 GMT
 recorded_with: VCR 3.0.3

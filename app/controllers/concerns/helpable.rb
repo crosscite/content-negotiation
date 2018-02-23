@@ -59,18 +59,15 @@ module Helpable
     # content-types registered for that DOI
     def get_registered_content_types(id)
       doi = doi_from_url(id)
-      media_url = ENV['SEARCH_URL'] + "api?q=doi:#{doi}&fl=doi,media&wt=json"
+      media_url = Rails.env.production? ? "https://app.datacite.org" : "https://app.test.datacite.org"
+      media_url += "/media?doi-id=#{doi}"
       response = Maremma.get media_url
-      doc = response.body.dig("data", "response", "docs").first
-      if doc.present?
-        doc.fetch("media", []).reduce({}) do|sum, i|
-          content_type, url = i.split(":", 2)
-          sum[content_type] = url
-          sum
-        end.to_h
-      else
-        {}
-      end
+      response.body.fetch("data", []).reduce({}) do|sum, media|
+        content_type = media.dig("attributes", "media-type")
+        url = media.dig("attributes", "url")
+        sum[content_type] = url
+        sum
+      end.to_h
     end
 
     def available_content_types

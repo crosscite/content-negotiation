@@ -38,7 +38,6 @@ ENV['MEMCACHE_SERVERS'] ||= "memcached:11211"
 ENV['SITE_TITLE'] ||= "Content Resolver"
 ENV['LOG_LEVEL'] ||= "info"
 ENV['GITHUB_URL'] ||= "https://github.com/crosscite/content-negotiation"
-ENV['SEARCH_URL'] ||= "https://search.datacite.org/"
 ENV['CITEPROC_URL'] ||= "https://citation.crosscite.org/format"
 ENV['TRUSTED_IP'] ||= "10.0.0.0/8"
 

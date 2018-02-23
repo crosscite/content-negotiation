@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://search.test.datacite.org/api?fl=doi,media&q=doi:10.5438/0000-03vc&wt=json
+    uri: https://app.test.datacite.org/media?doi-id=10.5438/0000-03vc
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ebcdbbd9e10f
+      - Maremma - http://c6505041b7fc
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,26 +17,32 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 16 Feb 2018 09:35:33 GMT
+      - Fri, 23 Feb 2018 10:16:03 GMT
       Content-Type:
-      - application/json;charset=UTF-8
+      - application/vnd.api+json; charset=utf-8
       Connection:
       - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - fdd53ed3-8f97-4794-b418-8c663bf5af95
+      Etag:
+      - W/"b69745059e6bf77f7b620511f554d6dc"
+      X-Runtime:
+      - '0.011991'
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
       Server:
-      - nginx/1.10.3 (Ubuntu)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-      Access-Control-Expose-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5438/0000-03VC","media":["application/pdf:http://www.datacite.org/cirneco-test.pdf","application/xml:https://blog.datacite.org/cool-dois/cool-dois.xml"]}]}}
-
-'
+      string: '{"data":[{"id":"0000-0000-0000-mzmg","type":"media","attributes":{"version":17,"url":"https://blog.datacite.org/cool-dois/cool-dois.xml","media-type":"application/xml","created":"2017-07-21T17:36:58.000Z","updated":"2017-07-21T17:43:58.000Z"},"relationships":{"doi":{"meta":{}}}},{"id":"0000-0000-0000-mzmf","type":"media","attributes":{"version":1,"url":"http://www.datacite.org/cirneco-test.pdf","media-type":"application/pdf","created":"2017-07-21T17:36:05.000Z","updated":"2017-07-21T17:43:39.000Z"},"relationships":{"doi":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 09:35:37 GMT
+  recorded_at: Fri, 23 Feb 2018 10:16:22 GMT
 recorded_with: VCR 3.0.3

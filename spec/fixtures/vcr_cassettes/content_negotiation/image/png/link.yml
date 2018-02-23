@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://search.test.datacite.org/api?fl=doi,media&q=doi:10.4124/12345678987654321&wt=json
+    uri: https://app.test.datacite.org/media?doi-id=10.4124/12345678987654321
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://ebcdbbd9e10f
+      - Maremma - http://c6505041b7fc
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,26 +17,32 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 16 Feb 2018 09:35:33 GMT
+      - Fri, 23 Feb 2018 10:16:03 GMT
       Content-Type:
-      - application/json;charset=UTF-8
+      - application/vnd.api+json; charset=utf-8
       Connection:
       - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 1f415fb4-fa9a-40a3-ab55-0d785fa88897
+      Etag:
+      - W/"4304d998093cb55192cb136d6532ceac"
+      X-Runtime:
+      - '0.010070'
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
       Server:
-      - nginx/1.10.3 (Ubuntu)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-      Access-Control-Expose-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.4124/12345678987654321","media":["application/pdf:http://www.bl.uk/aboutus/stratpolprog/digi/datasets/  WorkingWithDataCite_2013.pdf","image/jpg:http://www.bl.uk/reshelp/experthelp/science/inspiringscience/2014/NASAPerpetualOcean_lrg.jpg"]}]}}
-
-'
+      string: '{"data":[{"id":"0000-0000-0000-000w","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/reshelp/experthelp/science/inspiringscience/2014/NASAPerpetualOcean_lrg.jpg","media-type":"image/jpg","created":"2014-06-13T13:14:55.000Z","updated":"2014-06-13T13:14:55.000Z"},"relationships":{"doi":{"meta":{}}}},{"id":"0000-0000-0000-000s","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/aboutus/stratpolprog/digi/datasets/  WorkingWithDataCite_2013.pdf","media-type":"application/pdf","created":"2014-06-13T13:13:33.000Z","updated":"2014-06-13T13:13:33.000Z"},"relationships":{"doi":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 09:35:37 GMT
+  recorded_at: Fri, 23 Feb 2018 10:16:22 GMT
 recorded_with: VCR 3.0.3
