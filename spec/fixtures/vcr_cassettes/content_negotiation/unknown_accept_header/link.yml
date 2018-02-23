@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://908f85cd1a6c
+      - Maremma - http://ebcdbbd9e10f
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -16,27 +16,29 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      Access-Control-Allow-Methods:
-      - GET, POST, PATCH, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
+      Date:
+      - Fri, 16 Feb 2018 09:35:34 GMT
       Content-Type:
       - application/json;charset=UTF-8
-      Date:
-      - Fri, 24 Nov 2017 23:09:00 GMT
-      Server:
-      - openresty/1.11.2.2
-      Content-Length:
-      - '116'
       Connection:
       - keep-alive
+      Server:
+      - nginx/1.10.3 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      Access-Control-Expose-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.5061/DRYAD.8515"}]}}
 
 '
     http_version: 
-  recorded_at: Fri, 24 Nov 2017 23:09:00 GMT
+  recorded_at: Fri, 16 Feb 2018 09:35:38 GMT
 - request:
     method: head
     uri: https://handle.test.datacite.org/10.5061/dryad.8515
@@ -45,7 +47,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://908f85cd1a6c
+      - Maremma - http://ebcdbbd9e10f
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -53,23 +55,17 @@ http_interactions:
       code: 302
       message: ''
     headers:
-      Access-Control-Allow-Methods:
-      - GET, POST, PATCH, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
+      Date:
+      - Fri, 16 Feb 2018 09:35:34 GMT
       Content-Type:
       - text/html; charset=utf-8
-      Date:
-      - Fri, 24 Nov 2017 23:09:00 GMT
-      Location:
-      - http://datadryad.org/handle/10255/dryad.8515
-      Server:
-      - openresty/1.11.2.2
       Connection:
       - keep-alive
+      Location:
+      - http://datadryad.org/handle/10255/dryad.8515
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 24 Nov 2017 23:09:00 GMT
+  recorded_at: Fri, 16 Feb 2018 09:35:38 GMT
 recorded_with: VCR 3.0.3

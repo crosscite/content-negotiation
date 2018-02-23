@@ -58,9 +58,9 @@ describe 'content negotiation', type: :api, vcr: true do
     it "header" do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
 
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).fetch("resource", {})
-      expect(response.dig("publisher")).to eq("Dryad Digital Repository")
+      expect(last_response).to eq(200)
+      response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
+      expect(response).to eq("Dryad Digital Repository")
       expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
     end
 
@@ -68,7 +68,7 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/application/vnd.datacite.datacite+xml/#{doi}"
 
       expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).fetch("resource", {})
+      response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
       expect(response.dig("publisher")).to eq("Dryad Digital Repository")
       expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
     end
