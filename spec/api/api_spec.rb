@@ -73,7 +73,7 @@ describe 'content negotiation', type: :api, vcr: true do
       expect(response.dig("titles", "title")).to eq("CCDC 622650: Experimental Crystal Structure Determination")
     end
 
-    it "no metadata" do
+    it "not found" do
       doi = "10.15146/R34015"
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
 

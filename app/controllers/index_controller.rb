@@ -91,9 +91,9 @@ class IndexController < ApplicationController
     elsif params[:text_accept].present?
       @accept_headers = ["text/" + params[:text_accept].gsub('+', '')]
     elsif params[:image_accept].present?
-        @accept_headers = ["image/" + params[:image_accept]]
+      @accept_headers = ["image/" + params[:image_accept]]
     elsif params[:chemical_accept].present?
-        @accept_headers = ["chemical/" + params[:chemical_accept]]
+      @accept_headers = ["chemical/" + params[:chemical_accept]]
     else
       # get all accept headers provided by client
       @accept_headers = request.accepts.map { |i| i.to_s }
