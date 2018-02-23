@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://search.test.datacite.org/api?fl=doi,media&q=doi:10.0042/foobar3&wt=json
+    uri: https://app.test.datacite.org/media?doi-id=10.0042/foobar3
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://908f85cd1a6c
+      - Maremma - http://c6505041b7fc
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -16,25 +16,33 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      Access-Control-Allow-Methods:
-      - GET, POST, PATCH, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json;charset=UTF-8
       Date:
-      - Fri, 24 Nov 2017 23:09:00 GMT
-      Server:
-      - openresty/1.11.2.2
-      Content-Length:
-      - '153'
+      - Fri, 23 Feb 2018 10:16:04 GMT
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
       Connection:
       - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 6567d781-289b-4c06-8418-7d1d31cf0ced
+      Etag:
+      - W/"6e42b5b51c13793a8952691feb7fa424"
+      X-Runtime:
+      - '0.008260'
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"doi":"10.0042/FOOBAR3","media":["text/csv:http://example.com"]}]}}
-
-'
+      string: '{"data":[{"id":"0000-0000-0000-0006","type":"media","attributes":{"version":0,"url":"http://example.com","media-type":"text/csv","created":"2012-12-12T13:35:33.000Z","updated":"2012-12-12T13:35:33.000Z"},"relationships":{"doi":{"meta":{}}}}],"meta":{"total":1,"total-pages":1,"page":1}}'
     http_version: 
-  recorded_at: Fri, 24 Nov 2017 23:09:00 GMT
+  recorded_at: Fri, 23 Feb 2018 10:16:23 GMT
 recorded_with: VCR 3.0.3

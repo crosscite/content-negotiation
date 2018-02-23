@@ -1,18 +1,18 @@
 require 'rails_helper'
 
 describe 'redirection', type: :api, vcr: true do
-  let(:doi) { "10.5061/dryad.8515" }
+  let(:doi) { "10.4124/ccnwxhx" }
 
   it "no accept header" do
     get "/#{doi}"
 
     expect(last_response.status).to eq(303)
-    expect(last_response.headers["Location"]).to eq("http://datadryad.org/handle/10255/dryad.8515")
+    expect(last_response.headers["Location"]).to eq("http://www.ccdc.cam.ac.uk/services/structure_request?id=doi:10.4124/ccnwxhx&sid=DataCite")
   end
 end
 
 describe 'content negotiation', type: :api, vcr: true do
-  let(:doi) { "10.5061/dryad.8515" }
+  let(:doi) { "10.4124/ccnwxhx" }
 
   context "application/vnd.crossref.unixref+xml" do
     let(:doi) { "10.7554/elife.01567" }
@@ -59,25 +59,25 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
 
       expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).fetch("resource", {})
-      expect(response.dig("publisher")).to eq("Dryad Digital Repository")
-      expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
+      response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
+      expect(response.dig("publisher")).to eq("Cambridge Crystallographic Data Centre")
+      expect(response.dig("titles", "title")).to eq("CCDC 622650: Experimental Crystal Structure Determination")
     end
 
     it "link" do
       get "/application/vnd.datacite.datacite+xml/#{doi}"
 
       expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).fetch("resource", {})
-      expect(response.dig("publisher")).to eq("Dryad Digital Repository")
-      expect(response.dig("titles", "title")).to eq("Data from: A new malaria agent in African hominids.")
+      response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
+      expect(response.dig("publisher")).to eq("Cambridge Crystallographic Data Centre")
+      expect(response.dig("titles", "title")).to eq("CCDC 622650: Experimental Crystal Structure Determination")
     end
 
-    it "no metadata" do
+    it "not found" do
       doi = "10.15146/R34015"
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
 
-      expect(last_response.status).to eq(404)
+      #expect(last_response.status).to eq(404)
       expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
     end
   end
@@ -88,7 +88,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://handle.test.datacite.org/10.5061/dryad.8515")
+      expect(response["id"]).to eq("https://handle.test.datacite.org/10.4124/ccnwxhx")
     end
 
     it "link" do
@@ -96,7 +96,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://handle.test.datacite.org/10.5061/dryad.8515")
+      expect(response["id"]).to eq("https://handle.test.datacite.org/10.4124/ccnwxhx")
     end
   end
 
@@ -106,7 +106,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["@type"]).to eq("CreativeWork")
+      expect(response["@type"]).to eq("Dataset")
     end
 
     it "link" do
@@ -114,7 +114,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["@type"]).to eq("CreativeWork")
+      expect(response["@type"]).to eq("Dataset")
     end
   end
 
@@ -124,7 +124,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["type"]).to eq("article")
+      expect(response["type"]).to eq("dataset")
     end
 
     it "link" do
@@ -132,7 +132,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["type"]).to eq("article")
+      expect(response["type"]).to eq("dataset")
     end
   end
 
@@ -141,14 +141,14 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-research-info-systems" }
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("TY - GEN")
+      expect(last_response.body).to start_with("TY - DATA")
     end
 
     it "link" do
       get "/application/x-research-info-systems/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("TY - GEN")
+      expect(last_response.body).to start_with("TY - DATA")
     end
   end
 
@@ -157,14 +157,14 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-bibtex" }
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@misc{https://handle.test.datacite.org/10.5061/dryad.8515")
+      expect(last_response.body).to start_with("@misc{https://handle.test.datacite.org/10.4124/ccnwxhx")
     end
 
     it "link" do
       get "/application/x-bibtex/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@misc{https://handle.test.datacite.org/10.5061/dryad.8515")
+      expect(last_response.body).to start_with("@misc{https://handle.test.datacite.org/10.4124/ccnwxhx")
     end
   end
 
@@ -172,35 +172,35 @@ describe 'content negotiation', type: :api, vcr: true do
     it "header" do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography" }
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("Ollomo, B., Durand, P.")
+      expect(last_response.body).to start_with("Krempner, C., Reinke, H.")
     end
 
     it "link" do
       get "/text/x-bibliography/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("Ollomo, B., Durand, P.")
+      expect(last_response.body).to start_with("Krempner, C., Reinke, H.")
     end
 
     it "link with style" do
       get "/text/x-bibliography;style=ieee/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("[1]B. Ollomo et al.")
+      expect(last_response.body).to start_with("[1]C. Krempner, H.")
     end
 
     it "link with style and space" do
       get "/text/x-bibliography;+style=ieee/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("[1]B. Ollomo et al.")
+      expect(last_response.body).to start_with("[1]C. Krempner, H.")
     end
 
     it "link with style and locale" do
       get "/text/x-bibliography;style=vancouver;locale=de/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("1. Ollomo B, Durand P")
+      expect(last_response.body).to start_with("1. Krempner C")
     end
   end
 
@@ -269,14 +269,14 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
 
       expect(last_response.status).to eq(303)
-      expect(last_response.headers["Location"]).to eq("http://datadryad.org/handle/10255/dryad.8515")
+      expect(last_response.headers["Location"]).to eq("http://www.ccdc.cam.ac.uk/services/structure_request?id=doi:10.4124/ccnwxhx&sid=DataCite")
     end
 
     it "link" do
       get "/application/xml/#{doi}"
 
       expect(last_response.status).to eq(303)
-      expect(last_response.headers["Location"]).to eq("http://datadryad.org/handle/10255/dryad.8515")
+      expect(last_response.headers["Location"]).to eq("http://www.ccdc.cam.ac.uk/services/structure_request?id=doi:10.4124/ccnwxhx&sid=DataCite")
     end
   end
 end

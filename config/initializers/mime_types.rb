@@ -27,8 +27,11 @@ Mime::Type.register "text/x-bibliography", :citation
 # :citation is handled differently
 %w(crosscite datacite_json schema_org turtle citeproc codemeta).each do |f|
   ActionController::Renderers.add f.to_sym do |obj, options|
+    data = obj.send(f)
+    fail AbstractController::ActionNotFound unless data.present?
+
     self.content_type ||= Mime[f.to_sym]
-    self.response_body = obj.send(f)
+    self.response_body = data
   end
 end
 
@@ -36,27 +39,39 @@ end
 %w(crossref datacite rdf_xml jats).each do |f|
   ActionController::Renderers.add f.to_sym do |obj, options|
     uri = Addressable::URI.parse(obj.id)
+    data = obj.send(f)
+    fail AbstractController::ActionNotFound unless data.present?
+
     filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, '_')
-    send_data obj.send(f), type: Mime[f.to_sym],
+    send_data data, type: Mime[f.to_sym],
       disposition: "attachment; filename=#{filename}.xml"
   end
 end
 
 ActionController::Renderers.add :bibtex do |obj, options|
   uri = Addressable::URI.parse(obj.id)
+  data = obj.send("bibtex")
+  fail AbstractController::ActionNotFound unless data.present?
+
   filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, '_')
-  send_data obj.send("bibtex"), type: Mime[:bibtex],
+  send_data data, type: Mime[:bibtex],
     disposition: "attachment; filename=#{filename}.bib"
 end
 
 ActionController::Renderers.add :ris do |obj, options|
   uri = Addressable::URI.parse(obj.id)
+  data = obj.send("ris")
+  fail AbstractController::ActionNotFound unless data.present?
+
   filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, '_')
-  send_data obj.send("ris"), type: Mime[:ris],
+  send_data data, type: Mime[:ris],
     disposition: "attachment; filename=#{filename}.ris"
 end
 
 ActionController::Renderers.add :citation do |obj, options|
+  data = obj.send("citation")
+  fail AbstractController::ActionNotFound unless data.present?
+
   self.content_type ||= "text/plain"
-  self.response_body = obj.send("citation")
+  self.response_body = data
 end

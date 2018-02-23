@@ -1,0 +1,138 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.test.datacite.org/media?doi-id=10.15146/r34015
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://c6505041b7fc
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 12:20:03 GMT
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - a0a054a6-2cbb-4274-8208-1853808c47fd
+      Etag:
+      - W/"ca5c1ddbb33a0cde28379ad7d4cc7aa5"
+      X-Runtime:
+      - '0.004029'
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
+    body:
+      encoding: UTF-8
+      string: '{"data":[],"meta":{"total":0,"total-pages":0,"page":1}}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 12:20:31 GMT
+- request:
+    method: get
+    uri: https://app.datacite.org/prefixes/10.15146
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://c6505041b7fc
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 12:20:04 GMT
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 13fedbb3-eb34-4020-90aa-c0f4e3621d0b
+      Etag:
+      - W/"e5ca4b48b198071feba6eb49a70ae121"
+      X-Runtime:
+      - '0.016829'
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.15146","type":"prefixes","attributes":{"registration-agency":"DataCite","created":"2014-02-07T09:06:33.000Z","updated":null},"relationships":{"clients":{"data":[{"id":"cdl.unmlib","type":"clients"}]},"providers":{"data":[{"id":"cdl","type":"providers"}]}}},"included":[{"id":"cdl.unmlib","type":"clients","attributes":{"name":"University
+        of New Mexico Libraries","symbol":"CDL.UNMLIB","year":2014,"contact-name":"Greg
+        Janee","contact-email":"gjanee@ucop.edu","domains":"*","url":null,"is-active":true,"has-password":false,"created":"2014-09-24T23:51:51Z","updated":"2018-02-23T02:30:16Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"cdl","type":"providers","attributes":{"name":"California
+        Digital Library","symbol":"CDL","year":2010,"contact-name":"Greg Janee","contact-email":"gjanee@ucop.edu","logo-url":"https://assets.datacite.org/images/members/cdl.png","is-active":true,"has-password":true,"created":"2010-01-01T00:00:00.000Z","updated":"2018-02-23T02:25:50.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 12:20:31 GMT
+- request:
+    method: get
+    uri: https://app.test.datacite.org/dois/10.15146/r34015?include=client,provider
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://c6505041b7fc
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 12:20:04 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 3a215abe-e51f-4c46-bc21-f88557c8f466
+      X-Runtime:
+      - '0.003231'
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"404","title":"The resource you are looking for
+        doesn''t exist."}]}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 12:20:32 GMT
+recorded_with: VCR 3.0.3
