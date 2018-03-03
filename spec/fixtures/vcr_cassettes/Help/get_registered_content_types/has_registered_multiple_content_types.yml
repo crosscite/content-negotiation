@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c6505041b7fc
+      - Maremma - http://731af65f5c13
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 23 Feb 2018 10:16:04 GMT
+      - Sat, 03 Mar 2018 07:46:33 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -30,19 +30,19 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - 3aad6de0-07b4-496d-a4bd-63ead0aea84f
       Etag:
       - W/"77877ca6c82b422e07ecfcc54d167a1d"
       X-Runtime:
-      - '0.009016'
+      - '0.008695'
+      X-Request-Id:
+      - 9dfb2743-7ca3-4098-aa22-3d9e852fb6b6
       X-Powered-By:
-      - Phusion Passenger 5.2.0
+      - Phusion Passenger 5.2.1
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.0
+      - nginx/1.12.2 + Phusion Passenger 5.2.1
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"0000-0000-0000-000k","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/reshelp/experthelp/science/sciencetechnologymedicinecollections/researchdatasets/SearchMovieTN.jpg","media-type":"image/jpeg","created":"2014-04-30T08:49:16.000Z","updated":"2014-04-30T08:49:16.000Z"},"relationships":{"doi":{"meta":{}}}},{"id":"0000-0000-0000-000j","type":"media","attributes":{"version":1,"url":"http://www.bl.uk/aboutus/stratpolprog/digi/datasets/WorkingWithDataCite_2013.pdf","media-type":"application/pdf","created":"2014-04-30T08:45:37.000Z","updated":"2014-04-30T08:45:48.000Z"},"relationships":{"doi":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
     http_version: 
-  recorded_at: Fri, 23 Feb 2018 10:16:23 GMT
+  recorded_at: Sat, 03 Mar 2018 07:46:36 GMT
 recorded_with: VCR 3.0.3

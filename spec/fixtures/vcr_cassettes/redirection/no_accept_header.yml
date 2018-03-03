@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c6505041b7fc
+      - Maremma - http://731af65f5c13
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 23 Feb 2018 10:15:45 GMT
+      - Sat, 03 Mar 2018 07:46:12 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -30,21 +30,21 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - 0d841f7f-5674-4561-a9d1-0f61458efdd8
       Etag:
       - W/"ca5c1ddbb33a0cde28379ad7d4cc7aa5"
       X-Runtime:
-      - '0.008736'
+      - '0.068514'
+      X-Request-Id:
+      - 9e5de9fc-5bdc-41fe-b6cf-8c8573555ed6
       X-Powered-By:
-      - Phusion Passenger 5.2.0
+      - Phusion Passenger 5.2.1
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.0
+      - nginx/1.12.2 + Phusion Passenger 5.2.1
     body:
       encoding: UTF-8
       string: '{"data":[],"meta":{"total":0,"total-pages":0,"page":1}}'
     http_version: 
-  recorded_at: Fri, 23 Feb 2018 10:16:05 GMT
+  recorded_at: Sat, 03 Mar 2018 07:46:15 GMT
 - request:
     method: head
     uri: https://handle.test.datacite.org/10.4124/ccnwxhx
@@ -53,7 +53,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c6505041b7fc
+      - Maremma - http://731af65f5c13
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -62,7 +62,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 23 Feb 2018 10:15:46 GMT
+      - Sat, 03 Mar 2018 07:46:12 GMT
       Content-Type:
       - text/html; charset=utf-8
       Connection:
@@ -73,5 +73,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 23 Feb 2018 10:16:05 GMT
+  recorded_at: Sat, 03 Mar 2018 07:46:15 GMT
 recorded_with: VCR 3.0.3

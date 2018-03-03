@@ -13,14 +13,9 @@ class IndexController < ApplicationController
   def show
     # content-type registered for specific DOI
     if @media_url.present?
-      # return status information from target URL
-      if params.has_key? :status
-        render json: get_media_url_info(id: @media_url, media_type: @content_type) and return
-      else
-        response.set_header("Accept", @content_type)
-        Rails.logger.info "#{@id} redirected as #{@content_type}"
-        redirect_to @media_url, status: 303 and return
-      end
+      response.set_header("Accept", @content_type)
+      Rails.logger.info "#{@id} redirected as #{@content_type}"
+      redirect_to @media_url, status: 303 and return
     end
 
     # content-type available in content negotiation
@@ -55,20 +50,15 @@ class IndexController < ApplicationController
     end
 
     # no content-type found
-    # return status information from target URL
-    if params.has_key? :status
-      render json: get_landing_page_info(id: @id)
-    else
-      # passed on to URL registered in handle system
+    # passed on to URL registered in handle system
 
-      handle_url = get_handle_url(id: @id)
-      fail AbstractController::ActionNotFound unless handle_url.present?
+    handle_url = get_handle_url(id: @id)
+    fail AbstractController::ActionNotFound unless handle_url.present?
 
-      accept_headers = @accept_headers.join(', ').presence || "*/*"
-      response.set_header("Accept", accept_headers)
-      Rails.logger.info "#{@id} passed on as #{accept_headers}"
-      redirect_to handle_url, status: 303
-    end
+    accept_headers = @accept_headers.join(', ').presence || "*/*"
+    response.set_header("Accept", accept_headers)
+    Rails.logger.info "#{@id} passed on as #{accept_headers}"
+    redirect_to handle_url, status: 303
   end
 
   def routing_error
