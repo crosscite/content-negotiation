@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://731af65f5c13
+      - Maremma - http://f775b88252e0
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 03 Mar 2018 07:46:31 GMT
+      - Sun, 01 Apr 2018 09:31:37 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -30,19 +30,19 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
+      X-Request-Id:
+      - 4dbd0520-2a3b-42d7-a778-adc7ae75f07c
       Etag:
       - W/"4304d998093cb55192cb136d6532ceac"
       X-Runtime:
-      - '0.016503'
-      X-Request-Id:
-      - 16e2653d-224a-45cb-87dd-79d9122e3cbb
+      - '0.019355'
       X-Powered-By:
-      - Phusion Passenger 5.2.1
+      - Phusion Passenger 5.2.2
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.1
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"0000-0000-0000-000w","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/reshelp/experthelp/science/inspiringscience/2014/NASAPerpetualOcean_lrg.jpg","media-type":"image/jpg","created":"2014-06-13T13:14:55.000Z","updated":"2014-06-13T13:14:55.000Z"},"relationships":{"doi":{"meta":{}}}},{"id":"0000-0000-0000-000s","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/aboutus/stratpolprog/digi/datasets/  WorkingWithDataCite_2013.pdf","media-type":"application/pdf","created":"2014-06-13T13:13:33.000Z","updated":"2014-06-13T13:13:33.000Z"},"relationships":{"doi":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
     http_version: 
-  recorded_at: Sat, 03 Mar 2018 07:46:34 GMT
+  recorded_at: Sun, 01 Apr 2018 09:32:45 GMT
 recorded_with: VCR 3.0.3

@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://731af65f5c13
+      - Maremma - http://f775b88252e0
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 03 Mar 2018 07:46:20 GMT
+      - Sun, 01 Apr 2018 09:31:28 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -30,21 +30,21 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
+      X-Request-Id:
+      - 6b165c59-e7f5-449e-84c5-ac1fae43fa88
       Etag:
       - W/"ca5c1ddbb33a0cde28379ad7d4cc7aa5"
       X-Runtime:
-      - '0.003812'
-      X-Request-Id:
-      - 275d76ce-7cc0-4387-9404-60c32732b946
+      - '0.003822'
       X-Powered-By:
-      - Phusion Passenger 5.2.1
+      - Phusion Passenger 5.2.2
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.1
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
     body:
       encoding: UTF-8
       string: '{"data":[],"meta":{"total":0,"total-pages":0,"page":1}}'
     http_version: 
-  recorded_at: Sat, 03 Mar 2018 07:46:23 GMT
+  recorded_at: Sun, 01 Apr 2018 09:32:35 GMT
 - request:
     method: get
     uri: https://app.datacite.org/prefixes/10.15146
@@ -53,7 +53,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://731af65f5c13
+      - Maremma - http://f775b88252e0
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -62,7 +62,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 03 Mar 2018 07:46:20 GMT
+      - Sun, 01 Apr 2018 09:31:28 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -76,63 +76,69 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - c9ba2032-570e-4480-9f6d-1b9101106f1a
+      - 895a76c8-0c01-477c-974e-fc4e00f5095f
       Etag:
-      - W/"2095903736b16fcefacfa0a1a9c12a2a"
+      - W/"8adb217363440c91cb0c3e45990e17bf"
       X-Runtime:
-      - '0.014017'
+      - '0.013564'
       X-Powered-By:
-      - Phusion Passenger 5.2.1
+      - Phusion Passenger 5.2.2
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.1
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
     body:
       encoding: UTF-8
       string: '{"data":{"id":"10.15146","type":"prefixes","attributes":{"registration-agency":"DataCite","created":"2014-02-07T09:06:33.000Z","updated":null},"relationships":{"clients":{"data":[{"id":"cdl.unmlib","type":"clients"}]},"providers":{"data":[{"id":"cdl","type":"providers"}]}}},"included":[{"id":"cdl.unmlib","type":"clients","attributes":{"name":"University
         of New Mexico Libraries","symbol":"CDL.UNMLIB","year":2014,"contact-name":"Greg
-        Janee","contact-email":"gjanee@ucop.edu","domains":"*","url":null,"is-active":true,"has-password":false,"created":"2014-09-24T23:51:51Z","updated":"2018-03-03T02:30:25Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"cdl","type":"providers","attributes":{"name":"California
-        Digital Library","symbol":"CDL","year":2010,"contact-name":"Greg Janee","contact-email":"gjanee@ucop.edu","logo-url":"https://assets.datacite.org/images/members/cdl.png","is-active":true,"has-password":true,"created":"2010-01-01T00:00:00.000Z","updated":"2018-03-03T02:25:51.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+        Janee","contact-email":"gjanee@ucop.edu","domains":"*","url":null,"is-active":true,"has-password":false,"created":"2014-09-24T23:51:51Z","updated":"2018-04-01T02:30:23Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"cdl","type":"providers","attributes":{"name":"California
+        Digital Library","symbol":"CDL","website":"http://ezid.cdlib.org","contact-name":"Greg
+        Janee","contact-email":"gjanee@ucop.edu","phone":"+1-510-987-0469","description":"California
+        Digital Library (CDL) handles scholarly information at every stage of its
+        life. CDL provides technology and expertise to help the University of California
+        (UC) collect, publish, access, and preserve its full range of information
+        resources. CDL partners with organizations outside the UCs on far-reaching
+        problems.\n\nCDL offers DataCite DOIs to University of California scholars
+        and researchers via the EZID service. EZID is also available as a general
+        identifier service to help educational, non-profit, governmental and commercial
+        clients create and manage globally unique identifiers for data and other sources.","country":"US","logo-url":"https://assets.datacite.org/images/members/cdl.png","institution-type":null,"is-active":true,"has-password":true,"joined":"2009-12-01","created":"2010-01-01T00:00:00.000Z","updated":"2018-04-01T02:25:51.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Sat, 03 Mar 2018 07:46:23 GMT
+  recorded_at: Sun, 01 Apr 2018 09:32:35 GMT
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.15146/r34015?include=client,provider
+    uri: https://search.test.datacite.org/api?fl=doi,url,xml,state,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.15146/r34015&wt=json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://731af65f5c13
+      - Maremma - http://f775b88252e0
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
     status:
-      code: 404
+      code: 200
       message: ''
     headers:
       Date:
-      - Sat, 03 Mar 2018 07:46:20 GMT
+      - Sun, 01 Apr 2018 09:31:28 GMT
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json;charset=UTF-8
       Connection:
       - keep-alive
-      Status:
-      - 404 Not Found
-      Cache-Control:
-      - no-cache
-      Vary:
-      - Accept-Encoding, Origin
-      X-Runtime:
-      - '0.003684'
-      X-Request-Id:
-      - 4f42d536-530e-4ad7-8935-9cb407480f4b
-      X-Powered-By:
-      - Phusion Passenger 5.2.1
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.1
+      - nginx/1.10.3 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      Access-Control-Expose-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
     body:
       encoding: UTF-8
-      string: '{"errors":[{"status":"404","title":"The resource you are looking for
-        doesn''t exist."}]}'
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":0,"start":0,"docs":[]}}
+
+'
     http_version: 
-  recorded_at: Sat, 03 Mar 2018 07:46:23 GMT
+  recorded_at: Sun, 01 Apr 2018 09:32:36 GMT
 recorded_with: VCR 3.0.3
