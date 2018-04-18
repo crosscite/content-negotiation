@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://034d63899cf6
+      - Maremma - http://9d8c7de356f1
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 18 Apr 2018 11:34:47 GMT
+      - Wed, 18 Apr 2018 13:33:18 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,11 +31,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - bba2aaf8-9c35-4999-9efa-abcef4066ef3
+      - 50614e5e-3ca6-4cc7-ac74-6a5769c390a6
       Etag:
       - W/"ca5c1ddbb33a0cde28379ad7d4cc7aa5"
       X-Runtime:
-      - '0.038379'
+      - '0.003921'
       X-Powered-By:
       - Phusion Passenger 5.2.3
       Server:
@@ -44,7 +44,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[],"meta":{"total":0,"total-pages":0,"page":1}}'
     http_version: 
-  recorded_at: Wed, 18 Apr 2018 11:35:07 GMT
+  recorded_at: Wed, 18 Apr 2018 13:33:46 GMT
 - request:
     method: get
     uri: https://app.datacite.org/prefixes/10.5060
@@ -53,7 +53,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://034d63899cf6
+      - Maremma - http://9d8c7de356f1
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -62,7 +62,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 18 Apr 2018 11:34:47 GMT
+      - Wed, 18 Apr 2018 13:33:18 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -76,11 +76,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 5ecb9b1b-cbe7-41a6-96d2-dfec0fc4ef4b
+      - 37e74a8a-12b8-4413-9b85-eda03bc58cf8
       Etag:
       - W/"874d2f518fd3704973d63623eb47181a"
       X-Runtime:
-      - '0.017009'
+      - '0.012626'
       X-Powered-By:
       - Phusion Passenger 5.2.3
       Server:
@@ -100,7 +100,7 @@ http_interactions:
         identifier service to help educational, non-profit, governmental and commercial
         clients create and manage globally unique identifiers for data and other sources.","country":"US","logo-url":"https://assets.datacite.org/images/members/cdl.png","institution-type":null,"is-active":true,"has-password":true,"joined":"2009-12-01","created":"2010-01-01T00:00:00.000Z","updated":"2018-04-18T02:25:51.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Wed, 18 Apr 2018 11:35:08 GMT
+  recorded_at: Wed, 18 Apr 2018 13:33:46 GMT
 - request:
     method: get
     uri: https://search.test.datacite.org/api?fl=doi,url,xml,state,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.5060/xcv8http:/dev.tdar.org/confluence/display/tdar/tdar%20xml%20namespace&wt=json
@@ -109,7 +109,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://034d63899cf6
+      - Maremma - http://9d8c7de356f1
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -118,7 +118,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 18 Apr 2018 11:34:48 GMT
+      - Wed, 18 Apr 2018 13:33:18 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -139,5 +139,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Wed, 18 Apr 2018 11:35:08 GMT
+  recorded_at: Wed, 18 Apr 2018 13:33:47 GMT
 recorded_with: VCR 3.0.3
