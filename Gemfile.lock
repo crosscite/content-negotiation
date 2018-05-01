@@ -312,7 +312,7 @@ DEPENDENCIES
   multi_json
   nokogiri (~> 1.8.1)
   oj (~> 2.18, >= 2.18.1)
-  rack-cors
+  rack-cors (~> 1.0, >= 1.0.2)
   rails (~> 5.1)
   rspec-rails (~> 3.5, >= 3.5.2)
   simplecov

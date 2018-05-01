@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1'
-gem 'rack-cors'
 gem 'dotenv'
 gem 'multi_json'
 gem 'json', '~> 1.8', '>= 1.8.5'
@@ -16,6 +15,7 @@ gem 'lograge', '~> 0.7.1'
 gem 'bugsnag', '~> 5.3'
 gem 'librato-rails', '~> 1.4.2'
 gem 'gender_detector', '~> 0.1.2'
+gem 'rack-cors', '~> 1.0', '>= 1.0.2', :require => 'rack/cors'
 
 group :development do
   gem "better_errors"
