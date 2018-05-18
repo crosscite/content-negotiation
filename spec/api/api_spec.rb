@@ -134,15 +134,6 @@ describe 'content negotiation', type: :api, vcr: true do
       response = JSON.parse(last_response.body)
       expect(response["type"]).to eq("dataset")
     end
-
-    it "special characters in doi" do
-      doi = "10.5060/XCV8HTTP://DEV.TDAR.ORG/CONFLUENCE/DISPLAY/TDAR/TDAR+XML+NAMESPACE"
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["type"]).to eq("article")
-    end
   end
 
   context "application/x-research-info-systems" do
@@ -150,14 +141,14 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-research-info-systems" }
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("TY - DATA")
+      expect(last_response.body).to start_with("TY  - DATA")
     end
 
     it "link" do
       get "/application/x-research-info-systems/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("TY - DATA")
+      expect(last_response.body).to start_with("TY  - DATA")
     end
   end
 
