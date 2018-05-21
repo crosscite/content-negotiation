@@ -134,6 +134,15 @@ describe 'content negotiation', type: :api, vcr: true do
       response = JSON.parse(last_response.body)
       expect(response["type"]).to eq("dataset")
     end
+
+    # it "doi with + character" do
+    #   doi = "10.14454/terra+aqua/ceres/cldtyphist_l3.004"
+    #   get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
+
+    #   expect(last_response.status).to eq(200)
+    #   response = JSON.parse(last_response.body)
+    #   expect(response["type"]).to eq("dataset")
+    # end
   end
 
   context "application/x-research-info-systems" do
