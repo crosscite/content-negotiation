@@ -58,14 +58,6 @@ module ContentNegotiation
     # serve assets via web server
     config.public_file_server.enabled = false
 
-    # configure logging
-    logger = ActiveSupport::Logger.new(STDOUT)
-    logger.formatter = config.log_formatter
-    config.logger = ActiveSupport::TaggedLogging.new(logger)
-    config.log_level = ENV['LOG_LEVEL'].to_sym
-    config.lograge.enabled = true
-    config.lograge.ignore_actions = ['HeartbeatController#index']
-
     # Make Ruby 2.4 preserve the timezone of the receiver when calling `to_time`.
     # Previous versions had false.
     config.active_support.to_time_preserves_timezone = true

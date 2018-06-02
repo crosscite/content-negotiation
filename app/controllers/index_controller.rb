@@ -24,13 +24,7 @@ class IndexController < ApplicationController
       format = Mime::Type.lookup(@content_type.split(";").first).to_sym
 
       @metadata = nil
-      if Rails.logger.level < 2
-        Librato.timing "doi.generate_item" do
-          @metadata = Metadata.new(input: @id, from: from, format: format, sandbox: !Rails.env.production?)
-        end
-      else
-        @metadata = Metadata.new(input: @id, from: from, format: format, sandbox: !Rails.env.production?)
-      end
+      @metadata = Metadata.new(input: @id, from: from, format: format, sandbox: !Rails.env.production?)
       fail AbstractController::ActionNotFound unless @metadata.exists?
 
       if format == :citation
