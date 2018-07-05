@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/media?doi-id=10.4124/ccnwxhx
+    uri: https://app.test.datacite.org/dois/10.4124/ccnwxhx/media
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fa8c5f05f5f6
+      - Maremma - http://e5d99ff25666
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 21 May 2018 15:49:01 GMT
+      - Thu, 05 Jul 2018 08:41:59 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,18 +31,18 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 6d68cc89-b027-47c5-b280-2ee709ebd807
+      - d559d20e-97b0-4aa1-b746-7176a44f8ccc
       Etag:
       - W/"ca5c1ddbb33a0cde28379ad7d4cc7aa5"
       X-Runtime:
-      - '0.006967'
+      - '0.011686'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: UTF-8
       string: '{"data":[],"meta":{"total":0,"total-pages":0,"page":1}}'
     http_version: 
-  recorded_at: Mon, 21 May 2018 15:49:09 GMT
+  recorded_at: Thu, 05 Jul 2018 08:41:59 GMT
 recorded_with: VCR 3.0.3

@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/media?doi-id=10.4124/ccnwxhx
+    uri: https://app.test.datacite.org/dois/10.4124/ccnwxhx/media
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fa8c5f05f5f6
+      - Maremma - http://e5d99ff25666
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 21 May 2018 15:48:47 GMT
+      - Thu, 05 Jul 2018 08:41:37 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,20 +31,20 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - f83a3ba5-f3de-4494-befc-20427a6aa202
+      - ce6aeb03-f32e-429a-a9f8-6748baa50598
       Etag:
       - W/"ca5c1ddbb33a0cde28379ad7d4cc7aa5"
       X-Runtime:
-      - '0.007801'
+      - '0.008805'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: UTF-8
       string: '{"data":[],"meta":{"total":0,"total-pages":0,"page":1}}'
     http_version: 
-  recorded_at: Mon, 21 May 2018 15:48:55 GMT
+  recorded_at: Thu, 05 Jul 2018 08:41:37 GMT
 - request:
     method: get
     uri: https://app.datacite.org/prefixes/10.4124
@@ -53,7 +53,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fa8c5f05f5f6
+      - Maremma - http://e5d99ff25666
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -62,7 +62,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 21 May 2018 15:48:47 GMT
+      - Thu, 05 Jul 2018 08:41:37 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -76,21 +76,21 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 0e2c3dea-587f-4a13-914e-e4c8d22cfd2b
+      - 7e681dfe-2edb-4673-8c97-6f6546847413
       Etag:
-      - W/"8b3a06108ddcd5892d90ba41c5b057a6"
+      - W/"a62d265acab1ed031c124fef6f6f725a"
       X-Runtime:
-      - '0.011221'
+      - '0.013693'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJkYXRhIjp7ImlkIjoiMTAuNDEyNCIsInR5cGUiOiJwcmVmaXhlcyIsImF0dHJpYnV0ZXMiOnsicmVnaXN0cmF0aW9uLWFnZW5jeSI6IkRhdGFDaXRlIiwiY3JlYXRlZCI6IjIwMTAtMDEtMDFUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWQiOm51bGx9LCJyZWxhdGlvbnNoaXBzIjp7ImNsaWVudHMiOnsiZGF0YSI6W3siaWQiOiJibC5vbGQtYXBpIiwidHlwZSI6ImNsaWVudHMifV19LCJwcm92aWRlcnMiOnsiZGF0YSI6W3siaWQiOiJibCIsInR5cGUiOiJwcm92aWRlcnMifV19fX0sImluY2x1ZGVkIjpbeyJpZCI6ImJsLm9sZC1hcGkiLCJ0eXBlIjoiY2xpZW50cyIsImF0dHJpYnV0ZXMiOnsibmFtZSI6IkJMJ3MgRE9JIHNlcnZpY2UgcHJvdG90eXBlIiwic3ltYm9sIjoiQkwuT0xELUFQSSIsInllYXIiOjIwMTIsImNvbnRhY3QtbmFtZSI6IlJhY2hhZWwgS290YXJza2kiLCJjb250YWN0LWVtYWlsIjoiZGF0YXNldHNAYmwudWsiLCJkb21haW5zIjoiYmwudWsiLCJ1cmwiOm51bGwsImlzLWFjdGl2ZSI6dHJ1ZSwiaGFzLXBhc3N3b3JkIjpmYWxzZSwiY3JlYXRlZCI6IjIwMTItMDEtMTBUMTY6NDE6MTJaIiwidXBkYXRlZCI6IjIwMTgtMDUtMjFUMDI6MzA6MDlaIn0sInJlbGF0aW9uc2hpcHMiOnsicHJlZml4ZXMiOnsibWV0YSI6e319LCJwcm92aWRlciI6eyJtZXRhIjp7fX0sInJlcG9zaXRvcnkiOnsibWV0YSI6e319fX0seyJpZCI6ImJsIiwidHlwZSI6InByb3ZpZGVycyIsImF0dHJpYnV0ZXMiOnsibmFtZSI6IkJyaXRpc2ggTGlicmFyeSIsInN5bWJvbCI6IkJMIiwid2Vic2l0ZSI6Imh0dHA6Ly93d3cuYmwudWsvZGF0YXNldHMiLCJjb250YWN0LW5hbWUiOiJSYWNoYWVsIEtvdGFyc2tpIiwiY29udGFjdC1lbWFpbCI6ImRhdGFzZXRzQGJsLnVrIiwicGhvbmUiOiIrNDQgKDApIDIwNyA0MTIgNzE2NyIsImRlc2NyaXB0aW9uIjoiVGhlIEJyaXRpc2ggTGlicmFyeSBpcyB0aGUgbmF0aW9uYWwgbGlicmFyeSBvZiB0aGUgVW5pdGVkIEtpbmdkb20gYW5kIGEgZm91bmRpbmcgbWVtYmVyIG9mIERhdGFDaXRlLiBBcyBEYXRhQ2l0ZeKAmXMgb25seSBtZW1iZXIgaW4gdGhlIFVuaXRlZCBLaW5nZG9tLCB3ZSBhcmUgd29ya2luZyB3aXRoIFVLIG9yZ2FuaXNhdGlvbnMgdG8gZW5zdXJlIHRoYXQgZGF0YSBnZW5lcmF0ZWQgYnkgcmVzZWFyY2hlcnMgaXMgZmluZGFibGUgYW5kIGNpdGFibGUgc28gdGhhdCBpdHMgaW1wYWN0IG9uIHRoZSBnbG9iYWwgcmVzZWFyY2ggbGFuZHNjYXBlIGlzIHJlY29nbmlzZWQuIFdlIHdvcmsgd2l0aCBhIHJhbmdlIG9mIG9yZ2FuaXNhdGlvbnMgd2hvIG1hbmFnZSBhbmQgYXJjaGl2ZSBkYXRhLCBmcm9tIGdvdmVybm1lbnQgYm9kaWVzIHRvIGNoYXJpdGllcywgdW5pdmVyc2l0aWVzIGFuZCBwdWJsaXNoZXJzLiBJZiB5b3UgbWFuYWdlIGRhdGEgaW4gdGhlIFVLIGFuZCB3b3VsZCBsaWtlIHRvIGZpbmQgb3V0IG1vcmUgYWJvdXQgRGF0YUNpdGUsIHBsZWFzZSBjb250YWN0IHVzIGRpcmVjdGx5LiIsImNvdW50cnkiOiJHQiIsImxvZ28tdXJsIjoiaHR0cHM6Ly9hc3NldHMuZGF0YWNpdGUub3JnL2ltYWdlcy9tZW1iZXJzL2JsLnBuZyIsImluc3RpdHV0aW9uLXR5cGUiOm51bGwsImlzLWFjdGl2ZSI6dHJ1ZSwiaGFzLXBhc3N3b3JkIjp0cnVlLCJqb2luZWQiOiIyMDA5LTEyLTAxIiwiY3JlYXRlZCI6IjIwMTAtMDEtMDFUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWQiOiIyMDE4LTA1LTIxVDAyOjI1OjUxLjAwMFoifSwicmVsYXRpb25zaGlwcyI6eyJjbGllbnRzIjp7Im1ldGEiOnt9fSwicHJlZml4ZXMiOnsibWV0YSI6e319fX1dfQ==
+        eyJkYXRhIjp7ImlkIjoiMTAuNDEyNCIsInR5cGUiOiJwcmVmaXhlcyIsImF0dHJpYnV0ZXMiOnsicmVnaXN0cmF0aW9uLWFnZW5jeSI6IkRhdGFDaXRlIiwiY3JlYXRlZCI6IjIwMTAtMDEtMDFUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWQiOm51bGx9LCJyZWxhdGlvbnNoaXBzIjp7ImNsaWVudHMiOnsiZGF0YSI6W3siaWQiOiJibC5vbGQtYXBpIiwidHlwZSI6ImNsaWVudHMifV19LCJwcm92aWRlcnMiOnsiZGF0YSI6W3siaWQiOiJibCIsInR5cGUiOiJwcm92aWRlcnMifV19fX0sImluY2x1ZGVkIjpbeyJpZCI6ImJsLm9sZC1hcGkiLCJ0eXBlIjoiY2xpZW50cyIsImF0dHJpYnV0ZXMiOnsibmFtZSI6IkJMJ3MgRE9JIHNlcnZpY2UgcHJvdG90eXBlIiwic3ltYm9sIjoiQkwuT0xELUFQSSIsInllYXIiOjIwMTIsImNvbnRhY3QtbmFtZSI6IlJhY2hhZWwgS290YXJza2kiLCJjb250YWN0LWVtYWlsIjoiZGF0YXNldHNAYmwudWsiLCJkb21haW5zIjoiYmwudWsiLCJ1cmwiOm51bGwsImlzLWFjdGl2ZSI6dHJ1ZSwiaGFzLXBhc3N3b3JkIjpmYWxzZSwiY3JlYXRlZCI6IjIwMTItMDEtMTBUMTY6NDE6MTJaIiwidXBkYXRlZCI6IjIwMTgtMDctMDVUMDI6MzA6MTFaIn0sInJlbGF0aW9uc2hpcHMiOnsicHJlZml4ZXMiOnsibWV0YSI6e319LCJwcm92aWRlciI6eyJtZXRhIjp7fX0sInJlcG9zaXRvcnkiOnsibWV0YSI6e319fX0seyJpZCI6ImJsIiwidHlwZSI6InByb3ZpZGVycyIsImF0dHJpYnV0ZXMiOnsibmFtZSI6IkJyaXRpc2ggTGlicmFyeSIsInN5bWJvbCI6IkJMIiwid2Vic2l0ZSI6Imh0dHA6Ly93d3cuYmwudWsvZGF0YXNldHMiLCJjb250YWN0LW5hbWUiOiJSYWNoYWVsIEtvdGFyc2tpIiwiY29udGFjdC1lbWFpbCI6ImRhdGFzZXRzQGJsLnVrIiwicGhvbmUiOiIrNDQgKDApIDIwNyA0MTIgNzE2NyIsImRlc2NyaXB0aW9uIjoiVGhlIEJyaXRpc2ggTGlicmFyeSBpcyB0aGUgbmF0aW9uYWwgbGlicmFyeSBvZiB0aGUgVW5pdGVkIEtpbmdkb20gYW5kIGEgZm91bmRpbmcgbWVtYmVyIG9mIERhdGFDaXRlLiBBcyBEYXRhQ2l0ZeKAmXMgb25seSBtZW1iZXIgaW4gdGhlIFVuaXRlZCBLaW5nZG9tLCB3ZSBhcmUgd29ya2luZyB3aXRoIFVLIG9yZ2FuaXNhdGlvbnMgdG8gZW5zdXJlIHRoYXQgZGF0YSBnZW5lcmF0ZWQgYnkgcmVzZWFyY2hlcnMgaXMgZmluZGFibGUgYW5kIGNpdGFibGUgc28gdGhhdCBpdHMgaW1wYWN0IG9uIHRoZSBnbG9iYWwgcmVzZWFyY2ggbGFuZHNjYXBlIGlzIHJlY29nbmlzZWQuIFdlIHdvcmsgd2l0aCBhIHJhbmdlIG9mIG9yZ2FuaXNhdGlvbnMgd2hvIG1hbmFnZSBhbmQgYXJjaGl2ZSBkYXRhLCBmcm9tIGdvdmVybm1lbnQgYm9kaWVzIHRvIGNoYXJpdGllcywgdW5pdmVyc2l0aWVzIGFuZCBwdWJsaXNoZXJzLiBJZiB5b3UgbWFuYWdlIGRhdGEgaW4gdGhlIFVLIGFuZCB3b3VsZCBsaWtlIHRvIGZpbmQgb3V0IG1vcmUgYWJvdXQgRGF0YUNpdGUsIHBsZWFzZSBjb250YWN0IHVzIGRpcmVjdGx5LiIsImNvdW50cnkiOiJHQiIsImxvZ28tdXJsIjoiaHR0cHM6Ly9hc3NldHMuZGF0YWNpdGUub3JnL2ltYWdlcy9tZW1iZXJzL2JsLnBuZyIsImluc3RpdHV0aW9uLXR5cGUiOm51bGwsImlzLWFjdGl2ZSI6dHJ1ZSwiaGFzLXBhc3N3b3JkIjp0cnVlLCJqb2luZWQiOiIyMDA5LTEyLTAxIiwiY3JlYXRlZCI6IjIwMTAtMDEtMDFUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWQiOiIyMDE4LTA3LTA1VDAyOjI1OjUwLjAwMFoifSwicmVsYXRpb25zaGlwcyI6eyJjbGllbnRzIjp7Im1ldGEiOnt9fSwicHJlZml4ZXMiOnsibWV0YSI6e319fX1dfQ==
     http_version: 
-  recorded_at: Mon, 21 May 2018 15:48:55 GMT
+  recorded_at: Thu, 05 Jul 2018 08:41:38 GMT
 - request:
     method: get
     uri: https://search.test.datacite.org/api?defType=edismax&fl=doi,url,xml,state,allocator_symbol,datacentre_symbol,media,minted,updated&q=10.4124/ccnwxhx&wt=json
@@ -99,7 +99,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fa8c5f05f5f6
+      - Maremma - http://e5d99ff25666
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -108,7 +108,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 21 May 2018 15:48:47 GMT
+      - Thu, 05 Jul 2018 08:41:38 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -129,5 +129,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Mon, 21 May 2018 15:48:55 GMT
+  recorded_at: Thu, 05 Jul 2018 08:41:38 GMT
 recorded_with: VCR 3.0.3

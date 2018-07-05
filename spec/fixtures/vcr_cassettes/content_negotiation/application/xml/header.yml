@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/media?doi-id=10.5438/0000-03vc
+    uri: https://app.test.datacite.org/dois/10.5438/0000-03vc/media
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fa8c5f05f5f6
+      - Maremma - http://e5d99ff25666
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 21 May 2018 15:49:00 GMT
+      - Thu, 05 Jul 2018 08:41:57 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,18 +31,18 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - c22016fd-a6fb-48a3-a2ff-268f8bb32a8c
+      - fb716a22-83ca-45a9-9e5c-dce1cf34f8e2
       Etag:
-      - W/"b69745059e6bf77f7b620511f554d6dc"
+      - W/"bd6eea36693fef7c05f804eaf1e0c702"
       X-Runtime:
-      - '0.010347'
+      - '0.012712'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"0000-0000-0000-mzmg","type":"media","attributes":{"version":17,"url":"https://blog.datacite.org/cool-dois/cool-dois.xml","media-type":"application/xml","created":"2017-07-21T17:36:58.000Z","updated":"2017-07-21T17:43:58.000Z"},"relationships":{"doi":{"meta":{}}}},{"id":"0000-0000-0000-mzmf","type":"media","attributes":{"version":1,"url":"http://www.datacite.org/cirneco-test.pdf","media-type":"application/pdf","created":"2017-07-21T17:36:05.000Z","updated":"2017-07-21T17:43:39.000Z"},"relationships":{"doi":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
+      string: '{"data":[{"id":"0000-0000-0000-mzmg","type":"media","attributes":{"version":17,"url":"https://blog.datacite.org/cool-dois/cool-dois.xml","media-type":"application/xml","created":"2017-07-21T17:36:58.000Z","updated":"2017-07-21T17:43:58.000Z"},"relationships":{"doi":{"data":{"id":"10.5438/0000-03vc","type":"dois"}}}},{"id":"0000-0000-0000-mzmf","type":"media","attributes":{"version":1,"url":"http://www.datacite.org/cirneco-test.pdf","media-type":"application/pdf","created":"2017-07-21T17:36:05.000Z","updated":"2017-07-21T17:43:39.000Z"},"relationships":{"doi":{"data":{"id":"10.5438/0000-03vc","type":"dois"}}}}],"included":[{"id":"10.5438/0000-03vc","type":"dois","attributes":{"doi":"10.5438/0000-03vc","prefix":"10.5438","suffix":"0000-03vc","identifier":"https://handle.test.datacite.org/10.5438/0000-03vc","url":null,"author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"registered","is-active":false,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":null,"published":null,"registered":"2017-07-21T17:36:04.000Z","updated":"2017-08-10T16:06:46.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
     http_version: 
-  recorded_at: Mon, 21 May 2018 15:49:08 GMT
+  recorded_at: Thu, 05 Jul 2018 08:41:57 GMT
 recorded_with: VCR 3.0.3

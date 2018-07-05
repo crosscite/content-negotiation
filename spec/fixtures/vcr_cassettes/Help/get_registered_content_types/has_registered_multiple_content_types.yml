@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/media?doi-id=10.4124/demodataset4
+    uri: https://app.test.datacite.org/dois/10.4124/demodataset4/media
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fa8c5f05f5f6
+      - Maremma - http://e5d99ff25666
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 21 May 2018 15:49:01 GMT
+      - Thu, 05 Jul 2018 08:41:59 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,18 +31,18 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 5a4bced9-a76b-4e29-b848-99b25a6ad50c
+      - 5d9afd42-b11d-45b7-9bd0-b43207167b69
       Etag:
-      - W/"77877ca6c82b422e07ecfcc54d167a1d"
+      - W/"380c3db1cfd7448b9f5357df0c5506bc"
       X-Runtime:
-      - '0.011949'
+      - '0.030413'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"0000-0000-0000-000k","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/reshelp/experthelp/science/sciencetechnologymedicinecollections/researchdatasets/SearchMovieTN.jpg","media-type":"image/jpeg","created":"2014-04-30T08:49:16.000Z","updated":"2014-04-30T08:49:16.000Z"},"relationships":{"doi":{"meta":{}}}},{"id":"0000-0000-0000-000j","type":"media","attributes":{"version":1,"url":"http://www.bl.uk/aboutus/stratpolprog/digi/datasets/WorkingWithDataCite_2013.pdf","media-type":"application/pdf","created":"2014-04-30T08:45:37.000Z","updated":"2014-04-30T08:45:48.000Z"},"relationships":{"doi":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
+      string: '{"data":[{"id":"0000-0000-0000-000k","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/reshelp/experthelp/science/sciencetechnologymedicinecollections/researchdatasets/SearchMovieTN.jpg","media-type":"image/jpeg","created":"2014-04-30T08:49:16.000Z","updated":"2014-04-30T08:49:16.000Z"},"relationships":{"doi":{"data":{"id":"10.4124/demodataset4","type":"dois"}}}},{"id":"0000-0000-0000-000j","type":"media","attributes":{"version":1,"url":"http://www.bl.uk/aboutus/stratpolprog/digi/datasets/WorkingWithDataCite_2013.pdf","media-type":"application/pdf","created":"2014-04-30T08:45:37.000Z","updated":"2014-04-30T08:45:48.000Z"},"relationships":{"doi":{"data":{"id":"10.4124/demodataset4","type":"dois"}}}}],"included":[{"id":"10.4124/demodataset4","type":"dois","attributes":{"doi":"10.4124/demodataset4","prefix":"10.4124","suffix":"demodataset4","identifier":"https://handle.test.datacite.org/10.4124/demodataset4","url":"http://bl.uk/datasets","author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"findable","is-active":true,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":null,"published":null,"registered":"2014-04-07T09:57:04.000Z","updated":"2014-04-07T09:57:04.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
     http_version: 
-  recorded_at: Mon, 21 May 2018 15:49:09 GMT
+  recorded_at: Thu, 05 Jul 2018 08:41:59 GMT
 recorded_with: VCR 3.0.3
