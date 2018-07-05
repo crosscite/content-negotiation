@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/media?doi-id=10.4124/12345678987654321
+    uri: https://app.test.datacite.org/dois/10.4124/12345678987654321/media
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fa8c5f05f5f6
+      - Maremma - http://e5d99ff25666
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 21 May 2018 15:48:59 GMT
+      - Thu, 05 Jul 2018 08:41:57 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,18 +31,18 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 7d75c851-3abf-470c-b0ad-156b70c94ed2
+      - f6124dbc-34a7-4314-8d63-f8c7d95bc714
       Etag:
-      - W/"4304d998093cb55192cb136d6532ceac"
+      - W/"b257cc698745188363d53b21ddc1275f"
       X-Runtime:
-      - '0.022078'
+      - '0.018503'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"0000-0000-0000-000w","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/reshelp/experthelp/science/inspiringscience/2014/NASAPerpetualOcean_lrg.jpg","media-type":"image/jpg","created":"2014-06-13T13:14:55.000Z","updated":"2014-06-13T13:14:55.000Z"},"relationships":{"doi":{"meta":{}}}},{"id":"0000-0000-0000-000s","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/aboutus/stratpolprog/digi/datasets/  WorkingWithDataCite_2013.pdf","media-type":"application/pdf","created":"2014-06-13T13:13:33.000Z","updated":"2014-06-13T13:13:33.000Z"},"relationships":{"doi":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
+      string: '{"data":[{"id":"0000-0000-0000-000w","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/reshelp/experthelp/science/inspiringscience/2014/NASAPerpetualOcean_lrg.jpg","media-type":"image/jpg","created":"2014-06-13T13:14:55.000Z","updated":"2014-06-13T13:14:55.000Z"},"relationships":{"doi":{"data":{"id":"10.4124/12345678987654321","type":"dois"}}}},{"id":"0000-0000-0000-000s","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/aboutus/stratpolprog/digi/datasets/  WorkingWithDataCite_2013.pdf","media-type":"application/pdf","created":"2014-06-13T13:13:33.000Z","updated":"2014-06-13T13:13:33.000Z"},"relationships":{"doi":{"data":{"id":"10.4124/12345678987654321","type":"dois"}}}}],"included":[{"id":"10.4124/12345678987654321","type":"dois","attributes":{"doi":"10.4124/12345678987654321","prefix":"10.4124","suffix":"12345678987654321","identifier":"https://handle.test.datacite.org/10.4124/12345678987654321","url":"http://st-andrews.ac.uk","author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"findable","is-active":true,"reason":null,"landing-page":{"status":200,"content-type":"text/html","checked":"2018-07-05T08:33:18.000Z"},"xml":null,"published":null,"registered":"2014-06-13T12:43:33.000Z","updated":"2014-06-13T12:57:30.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
     http_version: 
-  recorded_at: Mon, 21 May 2018 15:49:08 GMT
+  recorded_at: Thu, 05 Jul 2018 08:41:57 GMT
 recorded_with: VCR 3.0.3
