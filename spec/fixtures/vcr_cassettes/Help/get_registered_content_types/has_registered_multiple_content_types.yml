@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/media?doi-id=10.4124/demodataset4
+    uri: https://app.test.datacite.org/dois/10.4124/demodataset4/media
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://fa8c5f05f5f6
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,9 +17,9 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 21 May 2018 15:49:01 GMT
+      - Sat, 25 Aug 2018 18:21:18 GMT
       Content-Type:
-      - application/vnd.api+json; charset=utf-8
+      - application/json; charset=utf-8
       Connection:
       - keep-alive
       Status:
@@ -31,18 +31,18 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 5a4bced9-a76b-4e29-b848-99b25a6ad50c
+      - 6d62bfd2-6ba4-40ca-8f03-951b1e831147
       Etag:
-      - W/"77877ca6c82b422e07ecfcc54d167a1d"
+      - W/"b1190a6380ebfab7fdb254216d6fb6ea"
       X-Runtime:
-      - '0.011949'
+      - '0.024865'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.4
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.4
     body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"0000-0000-0000-000k","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/reshelp/experthelp/science/sciencetechnologymedicinecollections/researchdatasets/SearchMovieTN.jpg","media-type":"image/jpeg","created":"2014-04-30T08:49:16.000Z","updated":"2014-04-30T08:49:16.000Z"},"relationships":{"doi":{"meta":{}}}},{"id":"0000-0000-0000-000j","type":"media","attributes":{"version":1,"url":"http://www.bl.uk/aboutus/stratpolprog/digi/datasets/WorkingWithDataCite_2013.pdf","media-type":"application/pdf","created":"2014-04-30T08:45:37.000Z","updated":"2014-04-30T08:45:48.000Z"},"relationships":{"doi":{"meta":{}}}}],"meta":{"total":2,"total-pages":1,"page":1}}'
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"0000-0000-0000-000k","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/reshelp/experthelp/science/sciencetechnologymedicinecollections/researchdatasets/SearchMovieTN.jpg","media-type":"image/jpeg","created":"2014-04-30T08:49:16.000Z","updated":"2014-04-30T08:49:16.000Z"},"relationships":{"doi":{"data":{"id":"10.4124/DEMODATASET4","type":"dois"}}}},{"id":"0000-0000-0000-000j","type":"media","attributes":{"version":1,"url":"http://www.bl.uk/aboutus/stratpolprog/digi/datasets/WorkingWithDataCite_2013.pdf","media-type":"application/pdf","created":"2014-04-30T08:45:37.000Z","updated":"2014-04-30T08:45:48.000Z"},"relationships":{"doi":{"data":{"id":"10.4124/DEMODATASET4","type":"dois"}}}}],"included":[{"id":"10.4124/demodataset4","type":"dois","attributes":{"doi":"10.4124/demodataset4","identifier":"https://handle.test.datacite.org/10.4124/demodataset4","url":"http://bl.uk/datasets","prefix":"10.4124","suffix":"demodataset4","author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":null,"state":"findable","is-active":true,"landing-page":{"status":null,"content-type":null,"checked":null},"published":null,"created":"2014-04-07T09:57:04.000Z","registered":"2014-04-07T09:57:04.000Z","updated":"2014-04-07T09:57:04.000Z","xml":null},"relationships":{"client":{"data":{"id":"bl.jisc-mrd","type":"clients"}},"resource-type":{"data":null},"media":{"data":[{"id":"0000-0000-0000-000k","type":"media"},{"id":"0000-0000-0000-000j","type":"media"}]}}}],"meta":{"total":2,"total-pages":1,"page":1},"links":{"self":"https://app.test.datacite.org/dois/10.4124/demodataset4/media","next":"https://app.test.datacite.org/media?page%5Bnumber%5D=1"}}'
     http_version: 
-  recorded_at: Mon, 21 May 2018 15:49:09 GMT
+  recorded_at: Sat, 25 Aug 2018 18:21:18 GMT
 recorded_with: VCR 3.0.3
