@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 25 Aug 2018 18:21:17 GMT
+      - Thu, 06 Sep 2018 08:26:45 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -30,12 +30,12 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
+      X-Request-Id:
+      - 1dcdc705-77b5-4b9f-8844-d8d750acca66
       Etag:
       - W/"54f27f5b8e8394a42b2ddefa236e1731"
       X-Runtime:
-      - '0.026526'
-      X-Request-Id:
-      - ceb840fc-5ce2-4a5f-9b84-b7e108d42ff9
+      - '0.035094'
       X-Powered-By:
       - Phusion Passenger 5.3.4
       Server:
@@ -44,5 +44,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"data":[{"id":"0000-0000-0000-0006","type":"media","attributes":{"version":0,"url":"http://example.com","media-type":"text/csv","created":"2012-12-12T13:35:33.000Z","updated":"2012-12-12T13:35:33.000Z"},"relationships":{"doi":{"data":{"id":"10.0042/FOOBAR3","type":"dois"}}}}],"included":[{"id":"10.0042/foobar3","type":"dois","attributes":{"doi":"10.0042/foobar3","identifier":"https://handle.test.datacite.org/10.0042/foobar3","url":"http://example.com","prefix":"10.0042","suffix":"foobar3","author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":null,"state":"findable","is-active":true,"landing-page":{"status":null,"content-type":null,"checked":null},"published":null,"created":"2012-12-12T13:29:26.000Z","registered":"2012-12-12T13:30:01.000Z","updated":"2018-08-20T10:04:07.000Z","xml":null},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":null},"media":{"data":[{"id":"0000-0000-0000-0006","type":"media"}]}}}],"meta":{"total":1,"total-pages":1,"page":1},"links":{"self":"https://app.test.datacite.org/dois/10.0042/foobar3/media","next":"https://app.test.datacite.org/media?page%5Bnumber%5D=1"}}'
     http_version: 
-  recorded_at: Sat, 25 Aug 2018 18:21:17 GMT
+  recorded_at: Thu, 06 Sep 2018 08:26:45 GMT
 recorded_with: VCR 3.0.3

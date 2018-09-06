@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 25 Aug 2018 18:19:54 GMT
+      - Thu, 06 Sep 2018 08:26:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -31,11 +31,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - c90af8f7-0940-4ace-a1a2-306e898e172d
+      - 17fd3283-2fce-49eb-af47-7d053495d8f0
       Etag:
       - W/"9f7413ee00f87121e7286aeebafde08c"
       X-Runtime:
-      - '0.007963'
+      - '0.008151'
       X-Powered-By:
       - Phusion Passenger 5.3.4
       Server:
@@ -44,7 +44,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"data":[],"included":[],"meta":{"total":0,"total-pages":0,"page":1},"links":{"self":"https://app.test.datacite.org/dois/10.4124/ccnwxhx/media"}}'
     http_version: 
-  recorded_at: Sat, 25 Aug 2018 18:19:54 GMT
+  recorded_at: Thu, 06 Sep 2018 08:26:20 GMT
 - request:
     method: head
     uri: https://handle.test.datacite.org/10.4124/ccnwxhx
@@ -62,7 +62,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 25 Aug 2018 18:19:54 GMT
+      - Thu, 06 Sep 2018 08:26:20 GMT
       Content-Type:
       - text/html;charset=UTF-8
       Content-Length:
@@ -72,10 +72,10 @@ http_interactions:
       Location:
       - http://www.ccdc.cam.ac.uk/services/structure_request?id=doi:10.4124/ccnwxhx&sid=DataCite
       Expires:
-      - Sun, 26 Aug 2018 18:19:54 GMT
+      - Fri, 07 Sep 2018 08:26:20 GMT
     body:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Sat, 25 Aug 2018 18:19:54 GMT
+  recorded_at: Thu, 06 Sep 2018 08:26:20 GMT
 recorded_with: VCR 3.0.3
