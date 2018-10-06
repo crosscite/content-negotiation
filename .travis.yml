@@ -50,11 +50,22 @@ after_success:
       export GIT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1));
       git clone "https://${TRAVIS_SECURE_TOKEN}@github.com/datacite/mastino.git";
       ./dockerize -template vendor/docker/_content-negotiation.auto.tfvars.tmpl:mastino/stage/services/data/_content-negotiation.auto.tfvars;
+      
+      if [ "${TRAVIS_TAG?}" ]; then
+        ./dockerize -template vendor/docker/_content-negotiation.auto.tfvars.tmpl:mastino/prod-eu-west/services/data/_content-negotiation.auto.tfvars;
+      fi
+
       cd mastino;
       git remote;
       git config user.email ${DOCKER_EMAIL};
       git config user.name ${DOCKER_USERNAME};
-      git add stage/services/data/_content-negotiation.auto.tfvars;
+      
+      if [ "${TRAVIS_TAG?}" ]; then
+        git add prod-eu-west/services/data/_content-negotiation.auto.tfvars;
+      else
+        git add stage/services/data/_content-negotiation.auto.tfvars;
+      fi
+
       git commit -m "Adding content-negotiation git variables for latest commit";
       git push "https://${TRAVIS_SECURE_TOKEN}@github.com/datacite/mastino.git" master;
     fi
