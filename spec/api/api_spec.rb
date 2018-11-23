@@ -195,21 +195,21 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/text/x-bibliography;style=ieee/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("[1]C. Krempner, H.")
+      expect(last_response.body).to start_with("C. Krempner, H.")
     end
 
     it "link with style and space" do
       get "/text/x-bibliography;+style=ieee/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("[1]C. Krempner, H.")
+      expect(last_response.body).to start_with("C. Krempner, H.")
     end
 
     it "link with style and locale" do
       get "/text/x-bibliography;style=vancouver;locale=de/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("1. Krempner C")
+      expect(last_response.body).to start_with("Krempner C")
     end
   end
 
