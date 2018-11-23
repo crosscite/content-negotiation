@@ -47,7 +47,7 @@ http_interactions:
   recorded_at: Thu, 06 Sep 2018 08:26:31 GMT
 - request:
     method: get
-    uri: https://app.datacite.org/prefixes/10.4124
+    uri: https://api.datacite.org/prefixes/10.4124
     body:
       encoding: US-ASCII
       string: ''
