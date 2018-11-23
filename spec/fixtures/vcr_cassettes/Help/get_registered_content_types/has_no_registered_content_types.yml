@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.4124/ccnwxhx/media
+    uri: https://api.test.datacite.org/dois/10.4124/ccnwxhx/media
     body:
       encoding: US-ASCII
       string: ''
@@ -42,7 +42,7 @@ http_interactions:
       - nginx/1.14.0 + Phusion Passenger 5.3.4
     body:
       encoding: ASCII-8BIT
-      string: '{"data":[],"included":[],"meta":{"total":0,"total-pages":0,"page":1},"links":{"self":"https://app.test.datacite.org/dois/10.4124/ccnwxhx/media"}}'
-    http_version: 
+      string: '{"data":[],"included":[],"meta":{"total":0,"total-pages":0,"page":1},"links":{"self":"https://api.test.datacite.org/dois/10.4124/ccnwxhx/media"}}'
+    http_version:
   recorded_at: Thu, 06 Sep 2018 08:26:46 GMT
 recorded_with: VCR 3.0.3
