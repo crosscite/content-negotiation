@@ -14,7 +14,7 @@ gem "dalli", "~> 2.7.6"
 gem 'lograge', '~> 0.10.0'
 gem 'logstash-event', '~> 1.2', '>= 1.2.02'
 gem 'logstash-logger', '~> 0.26.1'
-gem 'bugsnag', '~> 5.3'
+gem 'bugsnag', '~> 6.10'
 gem 'gender_detector', '~> 0.1.2'
 gem 'rack-cors', '~> 1.0', '>= 1.0.2', :require => 'rack/cors'
 
