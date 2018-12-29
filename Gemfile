@@ -9,7 +9,7 @@ gem 'equivalent-xml', '~> 0.6.0'
 gem 'nokogiri', '~> 1.8.1'
 gem 'iso8601', '~> 0.9.0'
 gem 'maremma', '>= 4.1'
-gem 'bolognese', '~> 0.9', '>= 0.10'
+gem 'bolognese', '~> 1.0'
 gem "dalli", "~> 2.7.6"
 gem 'lograge', '~> 0.10.0'
 gem 'logstash-event', '~> 1.2', '>= 1.2.02'
@@ -34,6 +34,3 @@ group :test do
   gem 'codeclimate-test-reporter', '~> 1.0.0'
   gem 'simplecov'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

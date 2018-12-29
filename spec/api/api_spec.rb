@@ -88,7 +88,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://handle.test.datacite.org/10.4124/ccnwxhx")
+      expect(response["id"]).to eq("https://doi.org/10.4124/ccnwxhx")
     end
 
     it "link" do
@@ -96,7 +96,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://handle.test.datacite.org/10.4124/ccnwxhx")
+      expect(response["id"]).to eq("https://doi.org/10.4124/ccnwxhx")
     end
   end
 
@@ -166,14 +166,14 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-bibtex" }
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@misc{https://handle.test.datacite.org/10.4124/ccnwxhx")
+      expect(last_response.body).to start_with("@misc{https://doi.org/10.4124/ccnwxhx")
     end
 
     it "link" do
       get "/application/x-bibtex/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@misc{https://handle.test.datacite.org/10.4124/ccnwxhx")
+      expect(last_response.body).to start_with("@misc{https://doi.org/10.4124/ccnwxhx")
     end
   end
 
@@ -195,21 +195,21 @@ describe 'content negotiation', type: :api, vcr: true do
       get "/text/x-bibliography;style=ieee/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("[1]C. Krempner, H.")
+      expect(last_response.body).to start_with("C. Krempner, H.")
     end
 
     it "link with style and space" do
       get "/text/x-bibliography;+style=ieee/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("[1]C. Krempner, H.")
+      expect(last_response.body).to start_with("C. Krempner, H.")
     end
 
     it "link with style and locale" do
       get "/text/x-bibliography;style=vancouver;locale=de/#{doi}"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("1. Krempner C")
+      expect(last_response.body).to start_with("Krempner C")
     end
   end
 
@@ -241,7 +241,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(303)
       response = Maremma.from_xml(last_response.body)
-      expect(response.dig("html", "body", "a", "href")).to eq("http://www.bl.uk/reshelp/experthelp/science/inspiringscience/2014/NASAPerpetualOcean_lrg.jpg")
+      expect(response.dig("html", "body", "a", "href")).to eq("http://st-andrews.ac.uk")
     end
 
     it "link" do
@@ -249,7 +249,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(303)
       response = Maremma.from_xml(last_response.body)
-      expect(response.dig("html", "body", "a", "href")).to eq("http://www.bl.uk/reshelp/experthelp/science/inspiringscience/2014/NASAPerpetualOcean_lrg.jpg")
+      expect(response.dig("html", "body", "a", "href")).to eq("http://st-andrews.ac.uk")
     end
   end
 
@@ -261,7 +261,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(303)
       response = Maremma.from_xml(last_response.body)
-      expect(response.dig("html", "body", "a", "href")).to eq("https://blog.datacite.org/cool-dois/cool-dois.xml")
+      expect(response.dig("html", "body", "a", "href")).to eq("http://www.datacite.org")
     end
 
     it "link" do
@@ -269,7 +269,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       expect(last_response.status).to eq(303)
       response = Maremma.from_xml(last_response.body)
-      expect(response.dig("html", "body", "a", "href")).to eq("https://blog.datacite.org/cool-dois/cool-dois.xml")
+      expect(response.dig("html", "body", "a", "href")).to eq("http://www.datacite.org")
     end
   end
 

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.4124/12345678987654321/media
+    uri: https://api.test.datacite.org/dois/10.4124/12345678987654321
     body:
       encoding: US-ASCII
       string: ''
@@ -13,36 +13,66 @@ http_interactions:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
     status:
-      code: 200
+      code: 404
       message: ''
     headers:
       Date:
-      - Thu, 06 Sep 2018 08:26:44 GMT
+      - Sat, 29 Dec 2018 13:09:05 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
       - keep-alive
       Status:
-      - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
+      - 404 Not Found
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       Vary:
       - Accept-Encoding, Origin
-      Etag:
-      - W/"2d569c739890ea71a2024a5dbac0e66f"
       X-Runtime:
-      - '0.016455'
+      - '0.005448'
       X-Request-Id:
-      - 0db01b63-9e52-426b-acb8-d4c2e50709b4
+      - c3d06778-52b5-4f0b-9e1c-783a5cfeb39c
       X-Powered-By:
-      - Phusion Passenger 5.3.4
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.4
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
-      string: '{"data":[{"id":"0000-0000-0000-000w","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/reshelp/experthelp/science/inspiringscience/2014/NASAPerpetualOcean_lrg.jpg","media-type":"image/jpg","created":"2014-06-13T13:14:55.000Z","updated":"2014-06-13T13:14:55.000Z"},"relationships":{"doi":{"data":{"id":"10.4124/12345678987654321","type":"dois"}}}},{"id":"0000-0000-0000-000s","type":"media","attributes":{"version":0,"url":"http://www.bl.uk/aboutus/stratpolprog/digi/datasets/  WorkingWithDataCite_2013.pdf","media-type":"application/pdf","created":"2014-06-13T13:13:33.000Z","updated":"2014-06-13T13:13:33.000Z"},"relationships":{"doi":{"data":{"id":"10.4124/12345678987654321","type":"dois"}}}}],"included":[{"id":"10.4124/12345678987654321","type":"dois","attributes":{"doi":"10.4124/12345678987654321","identifier":"https://handle.test.datacite.org/10.4124/12345678987654321","url":"http://st-andrews.ac.uk","prefix":"10.4124","suffix":"12345678987654321","author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":null,"state":"findable","is-active":true,"landing-page":{"status":200,"content-type":"text/html","checked":"2018-07-05T08:33:18.000Z"},"published":null,"created":"2014-06-13T12:43:33.000Z","registered":"2014-06-13T12:43:33.000Z","updated":"2014-06-13T12:57:30.000Z","xml":null},"relationships":{"client":{"data":{"id":"bl.jisc-mrd","type":"clients"}},"resource-type":{"data":null},"media":{"data":[{"id":"0000-0000-0000-000w","type":"media"},{"id":"0000-0000-0000-000s","type":"media"}]}}}],"meta":{"total":2,"total-pages":1,"page":1},"links":{"self":"https://app.test.datacite.org/dois/10.4124/12345678987654321/media","next":"https://app.test.datacite.org/media?page%5Bnumber%5D=1"}}'
+      string: '{"errors":[{"status":"404","title":"The resource you are looking for
+        doesn''t exist."}]}'
     http_version: 
-  recorded_at: Thu, 06 Sep 2018 08:26:44 GMT
+  recorded_at: Sat, 29 Dec 2018 13:09:05 GMT
+- request:
+    method: head
+    uri: https://handle.test.datacite.org/10.4124/12345678987654321
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 302
+      message: ''
+    headers:
+      Date:
+      - Sat, 29 Dec 2018 13:09:05 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Length:
+      - '131'
+      Connection:
+      - keep-alive
+      Location:
+      - http://st-andrews.ac.uk
+      Expires:
+      - Sun, 30 Dec 2018 13:09:05 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Sat, 29 Dec 2018 13:09:05 GMT
 recorded_with: VCR 3.0.3

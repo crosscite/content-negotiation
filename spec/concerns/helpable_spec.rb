@@ -3,14 +3,13 @@ require 'rails_helper'
 describe Help do
   describe "get_registered_content_types", vcr: true do
     it 'has registered one content_type' do
-      id = "10.0042/FOOBAR3"
-      expect(subject.get_registered_content_types(id)).to eq("text/csv" => "http://example.com")
+      id = "10.70043/4K3M-NYVG7"
+      expect(subject.get_registered_content_types(id)).to eq("image/jpeg"=>"https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg")
     end
 
     it 'has registered multiple content_types' do
-      id = "10.4124/DEMODATASET4"
-      expect(subject.get_registered_content_types(id)).to eq( +"application/pdf" => "http://www.bl.uk/aboutus/stratpolprog/digi/datasets/WorkingWithDataCite_2013.pdf",
-        "image/jpeg" => "http://www.bl.uk/reshelp/experthelp/science/sciencetechnologymedicinecollections/researchdatasets/SearchMovieTN.jpg")
+      id = "10.4224/CRM.2010E.NIMS-1"
+      expect(subject.get_registered_content_types(id)).to eq("application/pdf"=>"http://dr-dn.cisti-icist.nrc-cnrc.gc.ca", "text/csv"=>"http://dr-dn.cisti-icist.nrc-cnrc.gc.ca/eng/view/object/?id=cf5ae3c0-f74a-4a4b-bda9-e9b83c239430")
     end
 
     it 'has no registered content_types' do

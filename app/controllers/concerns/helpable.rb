@@ -16,13 +16,12 @@ module Helpable
     # content-types registered for that DOI
     def get_registered_content_types(id)
       doi = doi_from_url(id)
-      media_url = Rails.env.production? ? "https://app.datacite.org" : "https://app.test.datacite.org"
-      media_url += "/dois/#{doi}/media"
-      response = Maremma.get media_url
-      response.body.fetch("data", []).reduce({}) do|sum, media|
-        content_type = media.dig("attributes", "media-type")
+      url = Rails.env.production? ? "https://api.datacite.org/dois/#{doi}" : "https://api.test.datacite.org/dois/#{doi}"
+      response = Maremma.get url
+      Array.wrap(response.body.fetch("included", nil)).select { |m| m["type"] == "media" }.reduce({}) do|sum, media|
+        content_type = media.dig("attributes", "mediaType")
         url = media.dig("attributes", "url")
-        sum[content_type] = url
+        sum[content_type.strip] = url.strip if content_type.present? && url.present? 
         sum
       end.to_h
     end

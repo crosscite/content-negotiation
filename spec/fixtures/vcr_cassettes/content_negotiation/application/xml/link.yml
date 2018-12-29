@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.5438/0000-03vc/media
+    uri: https://api.test.datacite.org/dois/10.5438/0000-03vc
     body:
       encoding: US-ASCII
       string: ''
@@ -13,36 +13,66 @@ http_interactions:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
     status:
-      code: 200
+      code: 404
       message: ''
     headers:
       Date:
-      - Thu, 06 Sep 2018 08:26:44 GMT
+      - Sat, 29 Dec 2018 13:09:06 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
       - keep-alive
       Status:
-      - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
+      - 404 Not Found
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - 1084ed7f-fa40-41fc-acd9-8aa19fe7f035
-      Etag:
-      - W/"2f61be26ecb0116417ca0531e90ce923"
       X-Runtime:
-      - '0.016866'
+      - '0.006791'
+      X-Request-Id:
+      - 95376ebf-3b88-41a4-a743-011843a727f5
       X-Powered-By:
-      - Phusion Passenger 5.3.4
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.4
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
-      string: '{"data":[{"id":"0000-0000-0000-mzmg","type":"media","attributes":{"version":17,"url":"https://blog.datacite.org/cool-dois/cool-dois.xml","media-type":"application/xml","created":"2017-07-21T17:36:58.000Z","updated":"2017-07-21T17:43:58.000Z"},"relationships":{"doi":{"data":{"id":"10.5438/0000-03VC","type":"dois"}}}},{"id":"0000-0000-0000-mzmf","type":"media","attributes":{"version":1,"url":"http://www.datacite.org/cirneco-test.pdf","media-type":"application/pdf","created":"2017-07-21T17:36:05.000Z","updated":"2017-07-21T17:43:39.000Z"},"relationships":{"doi":{"data":{"id":"10.5438/0000-03VC","type":"dois"}}}}],"included":[{"id":"10.5438/0000-03vc","type":"dois","attributes":{"doi":"10.5438/0000-03vc","identifier":"https://handle.test.datacite.org/10.5438/0000-03vc","url":null,"prefix":"10.5438","suffix":"0000-03vc","author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":null,"state":"registered","is-active":false,"landing-page":{"status":null,"content-type":null,"checked":null},"published":null,"created":"2017-07-21T17:36:03.000Z","registered":"2017-07-21T17:36:04.000Z","updated":"2018-08-20T10:04:17.000Z","xml":null},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":null},"media":{"data":[{"id":"0000-0000-0000-mzmg","type":"media"},{"id":"0000-0000-0000-mzmf","type":"media"}]}}}],"meta":{"total":2,"total-pages":1,"page":1},"links":{"self":"https://app.test.datacite.org/dois/10.5438/0000-03vc/media","next":"https://app.test.datacite.org/media?page%5Bnumber%5D=1"}}'
+      string: '{"errors":[{"status":"404","title":"The resource you are looking for
+        doesn''t exist."}]}'
     http_version: 
-  recorded_at: Thu, 06 Sep 2018 08:26:44 GMT
+  recorded_at: Sat, 29 Dec 2018 13:09:06 GMT
+- request:
+    method: head
+    uri: https://handle.test.datacite.org/10.5438/0000-03vc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 302
+      message: ''
+    headers:
+      Date:
+      - Sat, 29 Dec 2018 13:09:06 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Content-Length:
+      - '131'
+      Connection:
+      - keep-alive
+      Location:
+      - http://www.datacite.org
+      Expires:
+      - Sun, 30 Dec 2018 13:09:06 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Sat, 29 Dec 2018 13:09:06 GMT
 recorded_with: VCR 3.0.3

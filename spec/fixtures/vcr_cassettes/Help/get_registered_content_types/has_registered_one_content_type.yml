@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.0042/foobar3/media
+    uri: https://api.test.datacite.org/dois/10.70043/4k3m-nyvg7
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 06 Sep 2018 08:26:45 GMT
+      - Sat, 29 Dec 2018 13:09:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -30,19 +30,21 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - 1dcdc705-77b5-4b9f-8844-d8d750acca66
       Etag:
-      - W/"54f27f5b8e8394a42b2ddefa236e1731"
+      - W/"3bf0ee90680774b1d8233d5bdee81d51"
       X-Runtime:
-      - '0.035094'
+      - '0.022246'
+      X-Request-Id:
+      - 24eb67aa-f2bb-454f-8b1b-7adec71573bd
       X-Powered-By:
-      - Phusion Passenger 5.3.4
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.4
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
-      string: '{"data":[{"id":"0000-0000-0000-0006","type":"media","attributes":{"version":0,"url":"http://example.com","media-type":"text/csv","created":"2012-12-12T13:35:33.000Z","updated":"2012-12-12T13:35:33.000Z"},"relationships":{"doi":{"data":{"id":"10.0042/FOOBAR3","type":"dois"}}}}],"included":[{"id":"10.0042/foobar3","type":"dois","attributes":{"doi":"10.0042/foobar3","identifier":"https://handle.test.datacite.org/10.0042/foobar3","url":"http://example.com","prefix":"10.0042","suffix":"foobar3","author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":null,"state":"findable","is-active":true,"landing-page":{"status":null,"content-type":null,"checked":null},"published":null,"created":"2012-12-12T13:29:26.000Z","registered":"2012-12-12T13:30:01.000Z","updated":"2018-08-20T10:04:07.000Z","xml":null},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":null},"media":{"data":[{"id":"0000-0000-0000-0006","type":"media"}]}}}],"meta":{"total":1,"total-pages":1,"page":1},"links":{"self":"https://app.test.datacite.org/dois/10.0042/foobar3/media","next":"https://app.test.datacite.org/media?page%5Bnumber%5D=1"}}'
+      string: '{"data":{"id":"10.70043/4k3m-nyvg7","type":"dois","attributes":{"doi":"10.70043/4k3m-nyvg7","prefix":"10.70043","suffix":"4k3m-nyvg7","identifiers":[{"identifier":null,"identifierType":"DOI"}],"creators":[],"titles":[],"publisher":null,"container":{},"publicationYear":null,"subjects":[],"contributors":[],"dates":[],"language":null,"types":{"ris":"GEN","bibtex":"misc","citeproc":"article","schemaOrg":"CreativeWork"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":null,"url":"http://example.org/","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"created":"2018-12-13T18:45:10.000Z","registered":"2018-12-13T18:45:13.000Z","updated":"2018-12-13T18:45:13.000Z"},"relationships":{"client":{"data":{"id":"demo.datacite","type":"clients"}},"media":{"data":[{"id":"0000-0000-0000-n08f","type":"media"}]}}},"included":[{"id":"demo.datacite","type":"clients","attributes":{"name":"DataCite
+        Staff Demo Client","symbol":"DEMO.DATACITE","year":2018,"contactName":"DataCite
+        Support","contactEmail":"support@datacite.org","description":null,"domains":"*","url":null,"created":"2018-04-08T09:31:38.000Z","updated":"2018-08-26T01:31:12.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"demo","type":"providers"}},"prefixes":{"data":[{"id":"10.5072","type":"prefixes"},{"id":"10.70043","type":"prefixes"}]}}},{"id":"0000-0000-0000-n08f","type":"media","attributes":{"version":0,"url":"https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg\n","mediaType":"image/jpeg","created":"2018-12-13T18:45:13.000Z","updated":"2018-12-13T18:45:13.000Z"},"relationships":{"doi":{"data":{"id":"10.70043/4K3M-NYVG7","type":"dois"}}}}]}'
     http_version: 
-  recorded_at: Thu, 06 Sep 2018 08:26:45 GMT
+  recorded_at: Sat, 29 Dec 2018 13:09:08 GMT
 recorded_with: VCR 3.0.3
