@@ -62,12 +62,13 @@ after_success:
       
       if [ "${TRAVIS_TAG?}" ]; then
         git add prod-eu-west/services/data/_content-negotiation.auto.tfvars;
+        git commit -m "Adding content-negotiation git variables for commit tagged ${TRAVIS_TAG?}";
+        git push "https://${TRAVIS_SECURE_TOKEN}@github.com/datacite/mastino.git" master;
       else
         git add stage/services/data/_content-negotiation.auto.tfvars;
+        git commit -m "Adding content-negotiation git variables for latest commit";
+        git push "https://${TRAVIS_SECURE_TOKEN}@github.com/datacite/mastino.git" master;
       fi
-
-      git commit -m "Adding content-negotiation git variables for latest commit";
-      git push "https://${TRAVIS_SECURE_TOKEN}@github.com/datacite/mastino.git" master;
     fi
 
 notifications:
