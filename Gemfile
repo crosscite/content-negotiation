@@ -14,9 +14,10 @@ gem "dalli", "~> 2.7.6"
 gem 'lograge', '~> 0.10.0'
 gem 'logstash-event', '~> 1.2', '>= 1.2.02'
 gem 'logstash-logger', '~> 0.26.1'
-gem 'bugsnag', '~> 6.10'
+gem 'sentry-raven', '~> 2.9'
 gem 'gender_detector', '~> 0.1.2'
 gem 'rack-cors', '~> 1.0', '>= 1.0.2', :require => 'rack/cors'
+gem 'git', '~> 1.5'
 
 group :development do
   gem "better_errors"

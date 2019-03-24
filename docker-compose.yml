@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  content-negotiation:
+  web:
     image: crosscite/content-negotiation
     environment:
       - CITEPROC_URL="https://citation.test.datacite.org/format"

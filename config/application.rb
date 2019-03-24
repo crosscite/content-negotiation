@@ -28,6 +28,7 @@ end
 env_json_file = "/etc/container_environment.json"
 if File.exist?(env_json_file)
   env_vars = JSON.parse(File.read(env_json_file))
+  puts env_vars.inspect
   env_vars.each { |k, v| ENV[k] = v }
 end
 
