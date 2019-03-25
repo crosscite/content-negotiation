@@ -211,6 +211,13 @@ describe 'content negotiation', type: :api, vcr: true do
       expect(last_response.status).to eq(200)
       expect(last_response.body).to start_with("Krempner C")
     end
+
+    it "link with style not found" do
+      get "/text/x-bibliography;style=mla/#{doi}"
+
+      expect(last_response.status).to eq(404)
+      expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
+    end
   end
 
   # context "chemical/x-gaussian-log" do

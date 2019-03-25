@@ -51,7 +51,7 @@ end
 ActionController::Renderers.add :bibtex do |obj, options|
   uri = Addressable::URI.parse(obj.id)
   data = obj.send("bibtex")
-  fail AbstractController::ActionNotFound unless data.present?
+  raise AbstractController::ActionNotFound unless data.present?
 
   filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, '_')
   send_data data, type: Mime[:bibtex],
@@ -61,7 +61,7 @@ end
 ActionController::Renderers.add :ris do |obj, options|
   uri = Addressable::URI.parse(obj.id)
   data = obj.send("ris")
-  fail AbstractController::ActionNotFound unless data.present?
+  raise AbstractController::ActionNotFound unless data.present?
 
   filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, '_')
   send_data data, type: Mime[:ris],
@@ -69,9 +69,11 @@ ActionController::Renderers.add :ris do |obj, options|
 end
 
 ActionController::Renderers.add :citation do |obj, options|
-  data = obj.send("citation")
-  fail AbstractController::ActionNotFound unless data.present?
-
-  self.content_type ||= "text/plain"
-  self.response_body = data
+  begin
+    data = obj.send("citation")
+    self.content_type ||= "text/plain"
+    self.response_body = data
+  rescue CSL::ParseError
+    raise AbstractController::ActionNotFound
+  end
 end
