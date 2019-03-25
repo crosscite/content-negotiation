@@ -288,4 +288,22 @@ describe 'content negotiation', type: :api, vcr: true do
       expect(last_response.headers["Location"]).to eq("http://www.ccdc.cam.ac.uk/services/structure_request?id=doi:10.4124/ccnwxhx&sid=DataCite")
     end
   end
+
+  context "registration agency op" do
+    let (:doi) { "10.2788/011817" }
+
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
+
+      expect(last_response.status).to eq(404)
+      expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
+    end
+
+    it "link" do
+      get "/application/xml/#{doi}"
+
+      expect(last_response.status).to eq(404)
+      expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
+    end
+  end
 end

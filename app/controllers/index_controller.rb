@@ -21,6 +21,8 @@ class IndexController < ApplicationController
     # content-type available in content negotiation
     if available_content_types.keys.include?(@content_type.to_s.split(";").first)
       from = find_from_format(id: @id)
+      fail AbstractController::ActionNotFound unless from.present?
+
       format = Mime::Type.lookup(@content_type.split(";").first).to_sym
 
       @metadata = nil
