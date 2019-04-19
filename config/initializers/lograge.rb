@@ -5,7 +5,6 @@ Rails.application.configure do
 
   config.lograge.ignore_actions = ['HeartbeatController#index']
   config.lograge.base_controller_class = 'ActionController::API'
-  config.log_level = ENV['LOG_LEVEL'].to_sym
 
   config.lograge.custom_options = lambda do |event|
     exceptions = %w(controller action format id)
