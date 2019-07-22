@@ -28,14 +28,14 @@ describe Help do
         "application/x-datacite+xml"=>:datacite,
         "application/vnd.datacite.datacite+json"=>:datacite_json,
         "application/vnd.schemaorg.ld+json"=>:schema_org,
-        "application/rdf+xml"=>:rdf_xml,
-        "text/turtle"=>:turtle,
         "application/vnd.citationstyles.csl+json"=>:citeproc,
         "application/citeproc+json"=>:citeproc,
         "application/vnd.codemeta.ld+json"=>:codemeta,
-        "application/x-bibtex"=>:bibtex,
+        "application/x-bibtex" => :bibtex,
         "application/x-research-info-systems"=>:ris,
-        "text/x-bibliography"=>:citation })
+        "application/rdf+xml" => :rdf_xml,
+        "application/x-turtle" => :turtle,
+        "text/x-bibliography" =>:citation })
     end
   end
 end

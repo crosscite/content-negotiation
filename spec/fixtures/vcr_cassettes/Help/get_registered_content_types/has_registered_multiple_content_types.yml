@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 29 Dec 2018 13:09:08 GMT
+      - Mon, 22 Jul 2019 17:50:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -30,20 +30,21 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      Etag:
-      - W/"759dccb0f75ab5d7ec613008d3375cdd"
-      X-Runtime:
-      - '0.024177'
       X-Request-Id:
-      - 1024ec73-ac1a-41e1-864b-918b0d53e29a
+      - 49f825d6-6e54-4b2f-978b-03c10459548d
+      Etag:
+      - W/"30c3369abd7e8068c0135de871f9bfff"
+      X-Runtime:
+      - '0.036339'
       X-Powered-By:
-      - Phusion Passenger 6.0.0
+      - Phusion Passenger 6.0.2
       Server:
-      - nginx/1.15.7 + Phusion Passenger 6.0.0
+      - nginx/1.15.8 + Phusion Passenger 6.0.2
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.4224/crm.2010e.nims-1","type":"dois","attributes":{"doi":"10.4224/crm.2010e.nims-1","prefix":"10.4224","suffix":"crm.2010e.nims-1","identifiers":[{"identifier":null,"identifierType":"DOI"}],"creators":[],"titles":[],"publisher":null,"container":{},"publicationYear":null,"subjects":[],"contributors":[],"dates":[],"language":null,"types":{"ris":"GEN","bibtex":"misc","citeproc":"article","schemaOrg":"CreativeWork"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":null,"url":"http://tdr2.web-t.cisti.nrc.ca/eng/view/object/?id=5582d3a1-c7de-4bed-be9d-396d0e807df0","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":null,"isActive":true,"state":"findable","reason":null,"created":"2014-02-17T13:15:53.000Z","registered":"2014-02-17T13:37:30.000Z","updated":"2018-05-14T19:23:59.000Z"},"relationships":{"client":{"data":{"id":"cisti.nrc","type":"clients"}},"media":{"data":[{"id":"0000-0000-0000-0009","type":"media"},{"id":"0000-0000-0000-0008","type":"media"}]}}},"included":[{"id":"cisti.nrc","type":"clients","attributes":{"name":"National
-        Research Council","symbol":"CISTI.NRC","year":2011,"contactName":"Karen Morgenroth","contactEmail":"karen.morgenroth@nrc-cnrc.gc.ca","description":null,"domains":"nrc-cnrc.gc.ca,cisti.nrc.ca","url":null,"created":"2011-10-19T17:45:53.000Z","updated":"2018-08-26T01:30:26.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"cisti","type":"providers"}},"prefixes":{"data":[{"id":"10.4224","type":"prefixes"},{"id":"10.5072","type":"prefixes"}]}}},{"id":"0000-0000-0000-0009","type":"media","attributes":{"version":0,"url":"http://dr-dn.cisti-icist.nrc-cnrc.gc.ca/eng/view/object/?id=cf5ae3c0-f74a-4a4b-bda9-e9b83c239430","mediaType":"text/csv","created":"2014-02-24T14:07:15.000Z","updated":"2014-02-24T14:07:15.000Z"},"relationships":{"doi":{"data":{"id":"10.4224/CRM.2010E.NIMS-1","type":"dois"}}}},{"id":"0000-0000-0000-0008","type":"media","attributes":{"version":2,"url":"http://dr-dn.cisti-icist.nrc-cnrc.gc.ca","mediaType":"application/pdf","created":"2014-02-24T14:06:02.000Z","updated":"2014-02-24T14:36:51.000Z"},"relationships":{"doi":{"data":{"id":"10.4224/CRM.2010E.NIMS-1","type":"dois"}}}}]}'
+      string: '{"data":{"id":"10.4224/crm.2010e.nims-1","type":"dois","attributes":{"doi":"10.4224/crm.2010e.nims-1","prefix":"10.4224","suffix":"crm.2010e.nims-1","identifiers":[{"identifier":null,"identifierType":"DOI"}],"creators":[],"titles":[],"publisher":null,"container":{},"publicationYear":null,"subjects":[],"contributors":[],"dates":[],"language":null,"types":{"ris":"GEN","bibtex":"misc","citeproc":"article","schemaOrg":"CreativeWork"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":null,"url":"http://tdr2.web-t.cisti.nrc.ca/eng/view/object/?id=5582d3a1-c7de-4bed-be9d-396d0e807df0","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":null,"isActive":true,"state":"findable","reason":null,"created":"2014-02-17T13:15:53.000Z","registered":"2014-02-17T13:37:30.000Z","published":"","updated":"2018-05-14T19:23:59.000Z"},"relationships":{"client":{"data":{"id":"cisti.nrc","type":"clients"}},"media":{"data":[{"id":"0000-0000-0000-0009","type":"media"},{"id":"0000-0000-0000-0008","type":"media"}]}}},"included":[{"id":"cisti.nrc","type":"clients","attributes":{"name":"National
+        Research Council","symbol":"CISTI.NRC","year":2011,"contactName":"Chantal
+        Ripp","contactEmail":"chantal.ripp@nrc-cnrc.gc.ca","description":null,"domains":"nrc-cnrc.gc.ca,cisti.nrc.ca","url":null,"created":"2011-10-19T17:45:53.000Z","updated":"2019-05-23T15:13:40.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"cisti","type":"providers"}},"prefixes":{"data":[{"id":"10.4224","type":"prefixes"}]}}},{"id":"0000-0000-0000-0009","type":"media","attributes":{"version":0,"url":"http://dr-dn.cisti-icist.nrc-cnrc.gc.ca/eng/view/object/?id=cf5ae3c0-f74a-4a4b-bda9-e9b83c239430","mediaType":"text/csv","created":"2014-02-24T14:07:15.000Z","updated":"2014-02-24T14:07:15.000Z"},"relationships":{"doi":{"data":{"id":"10.4224/CRM.2010E.NIMS-1","type":"dois"}}}},{"id":"0000-0000-0000-0008","type":"media","attributes":{"version":2,"url":"http://dr-dn.cisti-icist.nrc-cnrc.gc.ca","mediaType":"application/pdf","created":"2014-02-24T14:06:02.000Z","updated":"2014-02-24T14:36:51.000Z"},"relationships":{"doi":{"data":{"id":"10.4224/CRM.2010E.NIMS-1","type":"dois"}}}}]}'
     http_version: 
-  recorded_at: Sat, 29 Dec 2018 13:09:08 GMT
+  recorded_at: Mon, 22 Jul 2019 17:50:16 GMT
 recorded_with: VCR 3.0.3

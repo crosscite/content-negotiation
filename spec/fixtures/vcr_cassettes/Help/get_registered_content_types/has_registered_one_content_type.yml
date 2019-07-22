@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 29 Dec 2018 13:09:08 GMT
+      - Mon, 22 Jul 2019 17:50:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -30,21 +30,21 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      Etag:
-      - W/"3bf0ee90680774b1d8233d5bdee81d51"
-      X-Runtime:
-      - '0.022246'
       X-Request-Id:
-      - 24eb67aa-f2bb-454f-8b1b-7adec71573bd
+      - 51e695a3-6367-494d-9cd2-54636e33fcf4
+      Etag:
+      - W/"2a035a9a3af91e8f01211ef1ecdd5d1f"
+      X-Runtime:
+      - '0.036740'
       X-Powered-By:
-      - Phusion Passenger 6.0.0
+      - Phusion Passenger 6.0.2
       Server:
-      - nginx/1.15.7 + Phusion Passenger 6.0.0
+      - nginx/1.15.8 + Phusion Passenger 6.0.2
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.70043/4k3m-nyvg7","type":"dois","attributes":{"doi":"10.70043/4k3m-nyvg7","prefix":"10.70043","suffix":"4k3m-nyvg7","identifiers":[{"identifier":null,"identifierType":"DOI"}],"creators":[],"titles":[],"publisher":null,"container":{},"publicationYear":null,"subjects":[],"contributors":[],"dates":[],"language":null,"types":{"ris":"GEN","bibtex":"misc","citeproc":"article","schemaOrg":"CreativeWork"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":null,"url":"http://example.org/","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"created":"2018-12-13T18:45:10.000Z","registered":"2018-12-13T18:45:13.000Z","updated":"2018-12-13T18:45:13.000Z"},"relationships":{"client":{"data":{"id":"demo.datacite","type":"clients"}},"media":{"data":[{"id":"0000-0000-0000-n08f","type":"media"}]}}},"included":[{"id":"demo.datacite","type":"clients","attributes":{"name":"DataCite
+      string: '{"data":{"id":"10.70043/4k3m-nyvg7","type":"dois","attributes":{"doi":"10.70043/4k3m-nyvg7","prefix":"10.70043","suffix":"4k3m-nyvg7","identifiers":[{"identifier":null,"identifierType":"DOI"}],"creators":[],"titles":[],"publisher":null,"container":{},"publicationYear":null,"subjects":[],"contributors":[],"dates":[],"language":null,"types":{"ris":"GEN","bibtex":"misc","citeproc":"article","schemaOrg":"CreativeWork"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":null,"url":"http://example.org/","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"created":"2018-12-13T18:45:10.000Z","registered":"2018-12-13T18:45:13.000Z","published":"","updated":"2018-12-13T18:45:13.000Z"},"relationships":{"client":{"data":{"id":"demo.datacite","type":"clients"}},"media":{"data":[{"id":"0000-0000-0000-n08f","type":"media"}]}}},"included":[{"id":"demo.datacite","type":"clients","attributes":{"name":"DataCite
         Staff Demo Client","symbol":"DEMO.DATACITE","year":2018,"contactName":"DataCite
-        Support","contactEmail":"support@datacite.org","description":null,"domains":"*","url":null,"created":"2018-04-08T09:31:38.000Z","updated":"2018-08-26T01:31:12.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"demo","type":"providers"}},"prefixes":{"data":[{"id":"10.5072","type":"prefixes"},{"id":"10.70043","type":"prefixes"}]}}},{"id":"0000-0000-0000-n08f","type":"media","attributes":{"version":0,"url":"https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg\n","mediaType":"image/jpeg","created":"2018-12-13T18:45:13.000Z","updated":"2018-12-13T18:45:13.000Z"},"relationships":{"doi":{"data":{"id":"10.70043/4K3M-NYVG7","type":"dois"}}}}]}'
+        Support","contactEmail":"support@datacite.org","description":null,"domains":"*","url":null,"created":"2018-04-08T09:31:38.000Z","updated":"2019-07-16T16:30:29.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"demo","type":"providers"}},"prefixes":{"data":[{"id":"10.70043","type":"prefixes"}]}}},{"id":"0000-0000-0000-n08f","type":"media","attributes":{"version":0,"url":"https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg\n","mediaType":"image/jpeg","created":"2018-12-13T18:45:13.000Z","updated":"2018-12-13T18:45:13.000Z"},"relationships":{"doi":{"data":{"id":"10.70043/4K3M-NYVG7","type":"dois"}}}}]}'
     http_version: 
-  recorded_at: Sat, 29 Dec 2018 13:09:08 GMT
+  recorded_at: Mon, 22 Jul 2019 17:50:16 GMT
 recorded_with: VCR 3.0.3

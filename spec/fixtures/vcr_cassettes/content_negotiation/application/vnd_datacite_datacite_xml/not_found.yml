@@ -2,55 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.test.datacite.org/dois/10.15146/r34015
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-  response:
-    status:
-      code: 404
-      message: ''
-    headers:
-      Date:
-      - Sat, 29 Dec 2018 13:08:53 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Connection:
-      - keep-alive
-      Status:
-      - 404 Not Found
-      Cache-Control:
-      - no-cache
-      Vary:
-      - Accept-Encoding, Origin
-      X-Runtime:
-      - '0.005917'
-      X-Request-Id:
-      - 7c1f6d67-dc4b-42e4-83c2-9ce37e3f7c61
-      X-Powered-By:
-      - Phusion Passenger 6.0.0
-      Server:
-      - nginx/1.15.7 + Phusion Passenger 6.0.0
-    body:
-      encoding: ASCII-8BIT
-      string: '{"errors":[{"status":"404","title":"The resource you are looking for
-        doesn''t exist."}]}'
-    http_version: 
-  recorded_at: Sat, 29 Dec 2018 13:08:53 GMT
-- request:
-    method: get
     uri: https://doi.org/ra/10.15146
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -59,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 29 Dec 2018 13:08:53 GMT
+      - Mon, 22 Jul 2019 16:58:12 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -67,14 +25,16 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=ddf887b7954e049048b42a365efb0a5fe1546088933; expires=Sun, 29-Dec-19
-        13:08:53 GMT; path=/; domain=.doi.org; HttpOnly
+      - __cfduid=d3c6fc0fd2e36ca7c1ac230accf7b3be51563814692; expires=Tue, 21-Jul-20
+        16:58:12 GMT; path=/; domain=.doi.org; HttpOnly
+      Strict-Transport-Security:
+      - max-age=3600; includeSubDomains
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 490c7f7ce90c650b-FRA
+      - 4fa6f544de609760-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -85,7 +45,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sat, 29 Dec 2018 13:08:54 GMT
+  recorded_at: Mon, 22 Jul 2019 16:58:12 GMT
 - request:
     method: get
     uri: https://api.test.datacite.org/dois/10.15146/r34015
@@ -94,16 +54,16 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
       Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - application/vnd.datacite.datacite+json
   response:
     status:
       code: 404
       message: ''
     headers:
       Date:
-      - Sat, 29 Dec 2018 13:08:54 GMT
+      - Mon, 22 Jul 2019 16:58:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -114,18 +74,18 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Runtime:
-      - '0.004327'
       X-Request-Id:
-      - 1259dcfd-3aff-47f6-93c8-2ef0bd9a6859
+      - 1813f0c7-c878-4fa2-8da6-9334b439ac4a
+      X-Runtime:
+      - '0.018631'
       X-Powered-By:
-      - Phusion Passenger 6.0.0
+      - Phusion Passenger 6.0.2
       Server:
-      - nginx/1.15.7 + Phusion Passenger 6.0.0
+      - nginx/1.15.8 + Phusion Passenger 6.0.2
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Sat, 29 Dec 2018 13:08:54 GMT
+  recorded_at: Mon, 22 Jul 2019 16:58:12 GMT
 recorded_with: VCR 3.0.3

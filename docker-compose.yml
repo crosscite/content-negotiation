@@ -3,8 +3,6 @@ version: '2'
 services:
   web:
     image: crosscite/content-negotiation
-    environment:
-      - CITEPROC_URL="https://citation.test.datacite.org/format"
     build: .
     ports:
       - "8090:80"

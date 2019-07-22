@@ -14,66 +14,35 @@ Mime::Type.register "application/vnd.crosscite.crosscite+json", :crosscite
 Mime::Type.register "application/vnd.datacite.datacite+xml", :datacite, %w( application/x-datacite+xml )
 Mime::Type.register "application/vnd.datacite.datacite+json", :datacite_json
 Mime::Type.register "application/vnd.schemaorg.ld+json", :schema_org
-Mime::Type.register "application/rdf+xml", :rdf_xml
-Mime::Type.register "text/turtle", :turtle
 Mime::Type.register "application/vnd.jats+xml", :jats
 Mime::Type.register "application/vnd.citationstyles.csl+json", :citeproc, %w( application/citeproc+json )
 Mime::Type.register "application/vnd.codemeta.ld+json", :codemeta
 Mime::Type.register "application/x-bibtex", :bibtex
 Mime::Type.register "application/x-research-info-systems", :ris
 Mime::Type.register "text/x-bibliography", :citation
+Mime::Type.register "application/rdf+xml", :rdf_xml
+Mime::Type.register "application/x-turtle", :turtle
 
 # register renderers for these Mime types
-# :citation is handled differently
-%w(crosscite datacite_json schema_org turtle citeproc codemeta).each do |f|
-  ActionController::Renderers.add f.to_sym do |obj, options|
-    data = obj.send(f)
-    fail AbstractController::ActionNotFound unless data.present?
-
-    self.content_type ||= Mime[f.to_sym]
-    self.response_body = data
-  end
-end
-
-# these Mime types send a file for download. We give proper filename and extension
-%w(crossref datacite rdf_xml jats).each do |f|
-  ActionController::Renderers.add f.to_sym do |obj, options|
-    uri = Addressable::URI.parse(obj.id)
-    data = obj.send(f)
-    fail AbstractController::ActionNotFound unless data.present?
-
-    filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, '_')
-    send_data data, type: Mime[f.to_sym],
-      disposition: "attachment; filename=#{filename}.xml"
-  end
-end
-
-ActionController::Renderers.add :bibtex do |obj, options|
-  uri = Addressable::URI.parse(obj.id)
-  data = obj.send("bibtex")
-  raise AbstractController::ActionNotFound unless data.present?
-
-  filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, '_')
-  send_data data, type: Mime[:bibtex],
-    disposition: "attachment; filename=#{filename}.bib"
-end
-
-ActionController::Renderers.add :ris do |obj, options|
-  uri = Addressable::URI.parse(obj.id)
-  data = obj.send("ris")
-  raise AbstractController::ActionNotFound unless data.present?
-
-  filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, '_')
-  send_data data, type: Mime[:ris],
-    disposition: "attachment; filename=#{filename}.ris"
+# :citation and :datacite is handled differently
+ActionController::Renderers.add :datacite do |obj, options|
+  obj.datacite
 end
 
 ActionController::Renderers.add :citation do |obj, options|
   begin
-    data = obj.send("citation")
-    self.content_type ||= "text/plain"
-    self.response_body = data
-  rescue CSL::ParseError
-    raise AbstractController::ActionNotFound
+    obj.style = options[:style] || "apa"
+    obj.locale = options[:locale] || "en-US"
+    obj.citation
+  rescue CSL::ParseError # unknown style and/or location
+    obj.style = "apa"
+    obj.locale = "en-US"
+    obj.citation
+  end
+end
+
+%w(datacite_json crossref schema_org crosscite citeproc codemeta jats bibtex ris rdf_xml turtle).each do |f|
+  ActionController::Renderers.add f.to_sym do |obj, options|
+    obj.send(f)
   end
 end
