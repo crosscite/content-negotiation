@@ -1,7 +1,7 @@
 ---
 layout: index
-title: DataCite Content Negotiation
-description: DataCite metadata in multiple formats.
+title: Crosscite Content Negotiation
+description: DOI metadata from DataCite and Crossref in multiple formats.
 ---
 
 ### Content Negotiation
@@ -15,7 +15,3 @@ For details on how to use DOI Content Negotiation please be sure to check [our d
 ### Link-based Content Type Requests
 
 This method can be used with a regular web browser. In order to get a specific format please construct a URL following this pattern: `https://data.datacite.org/MIME_TYPE/DOI`.
-
-This method allows DataCite data centers to link additional metadata and data itself using custom URLs, and using the primary URL for the DOI to point to the landing page of a data set.
-
-[https://doi.org/10.5284/1015681](https://doi.org/10.5284/1015681) is for example a report in PDF format, and can be downloaded without first going to the landing page using: `https://data.datacite.org/application/pdf/10.5284/1015681`.
