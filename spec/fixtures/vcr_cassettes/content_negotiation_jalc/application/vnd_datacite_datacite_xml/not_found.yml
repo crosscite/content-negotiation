@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.15146
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 23 Jul 2019 07:48:44 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '55'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=de78b86b9556bb2ae00de03802cb0097b1563868124; expires=Wed, 22-Jul-20
+        07:48:44 GMT; path=/; domain=.doi.org; HttpOnly
+      Strict-Transport-Security:
+      - max-age=3600; includeSubDomains
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4fac0dc03d1f97ea-FRA
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "DOI": "10.15146",
+            "RA": "DataCite"
+          }
+        ]
+    http_version: 
+  recorded_at: Tue, 23 Jul 2019 07:48:44 GMT
+- request:
+    method: get
+    uri: https://api.test.datacite.org/dois/10.15146/r34015
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      Accept:
+      - application/vnd.datacite.datacite+json
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Date:
+      - Tue, 23 Jul 2019 07:48:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding, Origin
+      X-Runtime:
+      - '0.036970'
+      X-Request-Id:
+      - e6c018cc-6bb5-4ef0-a562-dc635ebe297d
+      X-Powered-By:
+      - Phusion Passenger 6.0.2
+      Server:
+      - nginx/1.15.8 + Phusion Passenger 6.0.2
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"status":"404","title":"The resource you are looking for
+        doesn''t exist."}]}'
+    http_version: 
+  recorded_at: Tue, 23 Jul 2019 07:48:44 GMT
+recorded_with: VCR 3.0.3

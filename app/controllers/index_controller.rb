@@ -23,6 +23,14 @@ class IndexController < ApplicationController
       string = response.body.fetch("data", nil)
       string = Nokogiri::XML(string, nil, 'UTF-8', &:noblanks).to_s if string.present?
       @metadata = Bolognese::Metadata.new(input: string, from: "crossref")
+    elsif %w(mEDRA JaLC).include?(ra)
+      # we fetch the Citeproc JSON from DOI content negotiation for the other RAs that support this
+      url = "https://doi.org/#{@doi}"
+      response = Maremma.get(url, accept: "application/vnd.citationstyles.csl+json", raw: true)
+      fail AbstractController::ActionNotFound if response.status != 200
+      
+      string = response.body.fetch("data", nil)
+      @metadata = Bolognese::Metadata.new(input: string, from: "citeproc")
     else
       fail AbstractController::ActionNotFound
     end
