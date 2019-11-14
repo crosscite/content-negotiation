@@ -10,7 +10,7 @@ class IndexController < ApplicationController
   def show
     ra = get_doi_ra(@doi)
     if ra == "DataCite"
-      url = Rails.env.production? ? "https://api.datacite.org/dois/#{@doi}" : "https://api.test.datacite.org/dois/#{@doi}"
+      url = "#{ENV['API_URL']}/dois/#{@doi}"
       response = Maremma.get(url, accept: "application/vnd.datacite.datacite+json", raw: true)
       fail AbstractController::ActionNotFound if response.status != 200
 

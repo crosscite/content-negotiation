@@ -35,6 +35,7 @@ end
 # default values for some ENV variables
 ENV['APPLICATION'] ||= "content-negotiation"
 ENV['HOSTNAME'] ||= "data.local"
+ENV['API_URL'] ||= "https://api.test.datacite.org"
 ENV['MEMCACHE_SERVERS'] ||= "memcached:11211"
 ENV['SITE_TITLE'] ||= "Content Resolver"
 ENV['LOG_LEVEL'] ||= "info"
