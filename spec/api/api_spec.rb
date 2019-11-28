@@ -246,6 +246,28 @@ describe 'content negotiation', type: :api, vcr: true do
     end
   end
 
+  context "registration agency op in datacite index" do
+    let (:doi) { "10.2899/caricom/1" }
+
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
+
+      expect(last_response.status).to eq(200)
+      response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
+      expect(response.dig("publisher")).to eq("Publications Office")
+      expect(response.dig("titles", "title")).to eq("__content__"=>"OP DOI RA Test", "xml:lang"=>"en")
+    end
+
+    it "link" do
+      get "/application/vnd.datacite.datacite+xml/#{doi}"
+
+      expect(last_response.status).to eq(200)
+      response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
+      expect(response.dig("publisher")).to eq("Publications Office")
+      expect(response.dig("titles", "title")).to eq("__content__"=>"OP DOI RA Test", "xml:lang"=>"en")
+    end
+  end
+
   context "registration agency op" do
     let (:doi) { "10.2788/011817" }
 

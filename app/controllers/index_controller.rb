@@ -8,31 +8,34 @@ class IndexController < ApplicationController
   end
 
   def show
-    ra = get_doi_ra(@doi)
-    if ra == "DataCite"
-      url = "#{ENV['API_URL']}/dois/#{@doi}"
-      response = Maremma.get(url, accept: "application/vnd.datacite.datacite+json", raw: true)
-      fail AbstractController::ActionNotFound if response.status != 200
-
+    url = "#{ENV['API_URL']}/dois/#{@doi}"
+    response = Maremma.get(url, accept: "application/vnd.datacite.datacite+json", raw: true)
+    
+    if response.status == 200
       @metadata = Bolognese::Metadata.new(input: response.body.fetch("data", nil), from: "datacite_json")
-    elsif ra == "Crossref"
+    else
       url = "https://api.crossref.org/works/#{@doi}/transform/application/vnd.crossref.unixsd+xml"
       response = Maremma.get(url, accept: "text/xml", raw: true)
-      fail AbstractController::ActionNotFound if response.status != 200
       
-      string = response.body.fetch("data", nil)
-      string = Nokogiri::XML(string, nil, 'UTF-8', &:noblanks).to_s if string.present?
-      @metadata = Bolognese::Metadata.new(input: string, from: "crossref")
-    elsif %w(mEDRA JaLC).include?(ra)
-      # we fetch the Citeproc JSON from DOI content negotiation for the other RAs that support this
-      url = "https://doi.org/#{@doi}"
-      response = Maremma.get(url, accept: "application/vnd.citationstyles.csl+json", raw: true)
-      fail AbstractController::ActionNotFound if response.status != 200
-      
-      string = response.body.fetch("data", nil)
-      @metadata = Bolognese::Metadata.new(input: string, from: "citeproc")
-    else
-      fail AbstractController::ActionNotFound
+      if response.status == 200
+        string = response.body.fetch("data", nil)
+        string = Nokogiri::XML(string, nil, 'UTF-8', &:noblanks).to_s if string.present?
+        @metadata = Bolognese::Metadata.new(input: string, from: "crossref")
+      else
+        ra = get_doi_ra(@doi)
+
+        if %w(mEDRA JaLC).include?(ra)
+          # we fetch the Citeproc JSON from DOI content negotiation for the other RAs that support this
+          url = "https://doi.org/#{@doi}"
+          response = Maremma.get(url, accept: "application/vnd.citationstyles.csl+json", raw: true)
+          fail AbstractController::ActionNotFound if response.status != 200
+          
+          string = response.body.fetch("data", nil)
+          @metadata = Bolognese::Metadata.new(input: string, from: "citeproc")
+        else
+          fail AbstractController::ActionNotFound
+        end
+      end
     end
 
     fail AbstractController::ActionNotFound unless @metadata.exists?
