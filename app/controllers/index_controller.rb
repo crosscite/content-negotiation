@@ -53,6 +53,11 @@ class IndexController < ApplicationController
     redirect_to @metadata.url, status: 303
   end
 
+  def method_not_allowed_error
+    response.headers["Allow"] = "HEAD, GET, OPTIONS"
+    render plain: "Method not allowed.", status: :method_not_allowed
+  end
+
   def routing_error
     fail AbstractController::ActionNotFound
   end

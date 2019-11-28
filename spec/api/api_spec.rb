@@ -55,7 +55,7 @@ describe 'content negotiation', type: :api, vcr: true do
       doi = "10.15146/R34015"
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
 
-      #expect(last_response.status).to eq(404)
+      expect(last_response.status).to eq(404)
       expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
     end
   end
@@ -331,7 +331,7 @@ describe 'content negotiation crossref', type: :api, vcr: true do
       doi = "10.15146/R34015"
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
 
-      #expect(last_response.status).to eq(404)
+      expect(last_response.status).to eq(404)
       expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
     end
   end
@@ -568,7 +568,7 @@ describe 'content negotiation medra', type: :api, vcr: true do
       doi = "10.15146/R34015"
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
 
-      #expect(last_response.status).to eq(404)
+      expect(last_response.status).to eq(404)
       expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
     end
   end
@@ -805,7 +805,7 @@ describe 'content negotiation jalc', type: :api, vcr: true do
       doi = "10.15146/R34015"
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
 
-      #expect(last_response.status).to eq(404)
+      expect(last_response.status).to eq(404)
       expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
     end
   end
@@ -993,6 +993,17 @@ describe 'content negotiation jalc', type: :api, vcr: true do
 
       expect(last_response.status).to eq(404)
       expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
+    end
+  end
+
+  describe 'rmethod not allowed error', type: :api do
+    let(:doi) { "10.14454/cne7-ar31" }
+  
+    it "post" do
+      post "/#{doi}"
+  
+      expect(last_response.status).to eq(405)
+      expect(last_response.body).to eq("Method not allowed.")
     end
   end
 end

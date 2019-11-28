@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   resources :index, path: '/', only: [:show, :index], constraints: { id: /.+/, format: false }
   root :to => 'index#index'
 
+  # rescue method not allowed errors
+  match "*path", to: "index#method_not_allowed_error", via: [:post, :put, :patch, :delete]
+
   # rescue routing errors
-  # match "*path", to: "index#routing_error", via: :all
+  match "*path", to: "index#routing_error", via: :all
 end
