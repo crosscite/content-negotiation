@@ -2,6 +2,87 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.test.datacite.org/dois/10.1393/ncc/i2016-16378-6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      Accept:
+      - application/vnd.datacite.datacite+json
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Date:
+      - Thu, 28 Nov 2019 06:47:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - b1208080-fc6c-4019-b5ba-2e3d3f1dc946
+      X-Runtime:
+      - '0.005591'
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"status":"404","title":"The resource you are looking for
+        doesn''t exist."}]}'
+    http_version: 
+  recorded_at: Thu, 28 Nov 2019 06:47:51 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1393/ncc/i2016-16378-6/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      Accept:
+      - text/xml
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - text/plain
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Content-Length:
+      - '19'
+      Server:
+      - http-kit
+      Date:
+      - Thu, 28 Nov 2019 06:47:52 GMT
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: Resource not found.
+    http_version: 
+  recorded_at: Thu, 28 Nov 2019 06:47:52 GMT
+- request:
+    method: get
     uri: https://doi.org/ra/10.1393
     body:
       encoding: US-ASCII
@@ -17,24 +98,24 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 23 Jul 2019 07:16:46 GMT
+      - Thu, 28 Nov 2019 06:47:52 GMT
       Content-Type:
       - application/json;charset=UTF-8
-      Content-Length:
-      - '51'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=da11696c16556327a4b266eda312ef1a11563866206; expires=Wed, 22-Jul-20
-        07:16:46 GMT; path=/; domain=.doi.org; HttpOnly
+      - __cfduid=d022b7c34a446e019cf7be63a47151ea41574923672; expires=Sat, 28-Dec-19
+        06:47:52 GMT; path=/; domain=.doi.org; HttpOnly; Secure
+      Cf-Cache-Status:
+      - DYNAMIC
       Strict-Transport-Security:
-      - max-age=3600; includeSubDomains
+      - max-age=31536000; includeSubDomains
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 4fabdeec2bc86461-FRA
+      - 53ca6497eb3abdeb-AMS
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -45,7 +126,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Tue, 23 Jul 2019 07:16:46 GMT
+  recorded_at: Thu, 28 Nov 2019 06:47:52 GMT
 - request:
     method: get
     uri: https://doi.org/10.1393/ncc/i2016-16378-6
@@ -63,7 +144,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 23 Jul 2019 07:16:46 GMT
+      - Thu, 28 Nov 2019 06:47:52 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -71,29 +152,31 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d1a6c2c2df40cbc8added771135cd49951563866206; expires=Wed, 22-Jul-20
-        07:16:46 GMT; path=/; domain=.doi.org; HttpOnly
+      - __cfduid=d1049ac7f524b9ce416ec5f9d46356d5a1574923672; expires=Sat, 28-Dec-19
+        06:47:52 GMT; path=/; domain=.doi.org; HttpOnly; Secure
       Vary:
       - Accept
       Location:
       - https://data.medra.org/10.1393%2Fncc%2Fi2016-16378-6
       Expires:
-      - Tue, 23 Jul 2019 08:04:18 GMT
+      - Thu, 28 Nov 2019 07:14:02 GMT
+      Cf-Cache-Status:
+      - DYNAMIC
       Strict-Transport-Security:
-      - max-age=3600; includeSubDomains
+      - max-age=31536000; includeSubDomains
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 4fabdeed0e2063f5-FRA
+      - 53ca6498ad1b9c51-AMS
     body:
       encoding: ASCII-8BIT
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.medra.org/10.1393%2Fncc%2Fi2016-16378-6">https://data.medra.org/10.1393%2Fncc%2Fi2016-16378-6</a></body></html>
     http_version: 
-  recorded_at: Tue, 23 Jul 2019 07:16:46 GMT
+  recorded_at: Thu, 28 Nov 2019 06:47:52 GMT
 - request:
     method: get
     uri: https://data.medra.org/10.1393%2Fncc%2Fi2016-16378-6
@@ -111,7 +194,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 23 Jul 2019 07:16:46 GMT
+      - Thu, 28 Nov 2019 06:47:52 GMT
       Server:
       - Apache-Coyote/1.1
       Cache-Control:
@@ -128,5 +211,5 @@ http_interactions:
         Nuovo Cimento C","DOI":"10.1393\/ncc\/i2016-16378-6","ISSN":"0390-5551","issue":"6","page":"1-10","page-first":"1","publisher":"SIF","title":"Probing
         the nuclear symmetry energy at high densities with nuclear reactions","URL":"http:\/\/doi.org\/10.1393\/ncc\/i2016-16378-6","volume":"39"}'
     http_version: 
-  recorded_at: Tue, 23 Jul 2019 07:16:46 GMT
+  recorded_at: Thu, 28 Nov 2019 06:47:52 GMT
 recorded_with: VCR 3.0.3

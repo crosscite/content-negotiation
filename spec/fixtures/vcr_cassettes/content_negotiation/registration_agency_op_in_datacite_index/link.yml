@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.test.datacite.org/dois/10.2899/caricom/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      Accept:
+      - application/vnd.datacite.datacite+json
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Thu, 28 Nov 2019 06:53:35 GMT
+      Content-Type:
+      - application/vnd.datacite.datacite+json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - b4b7377b-66b9-4aff-b940-7d57cbd7aaf9
+      Etag:
+      - W/"68cb05008696f87662648c4e093c68b5"
+      X-Runtime:
+      - '0.020234'
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "https://doi.org/10.2899/caricom/1",
+          "doi": "10.2899/CARICOM/1",
+          "types": {
+            "ris": "DATA",
+            "bibtex": "misc",
+            "citeproc": "dataset",
+            "schemaOrg": "Dataset",
+            "resourceType": "Dataset",
+            "resourceTypeGeneral": "Dataset"
+          },
+          "creators": [
+            {
+              "name": "Caribbean Community",
+              "affiliation": []
+            }
+          ],
+          "titles": [
+            {
+              "lang": "en",
+              "title": "OP DOI RA Test"
+            }
+          ],
+          "publisher": "Publications Office",
+          "container": {},
+          "subjects": [
+            {
+              "subject": "Economy and finance",
+              "valueUri": "http://publications.europa.eu/resource/authority/data-theme/ECON",
+              "schemeUri": "http://publications.europa.eu/resource/authority/data-theme",
+              "subjectScheme": "MDR Data Themes"
+            }
+          ],
+          "contributors": [],
+          "dates": [
+            {
+              "date": "2018/10/10",
+              "dateType": "Issued"
+            }
+          ],
+          "publicationYear": 2018,
+          "identifiers": [
+            {
+              "identifier": "https://handle.test.datacite.org/10.2899/caricom/1",
+              "identifierType": "DOI"
+            }
+          ],
+          "sizes": [],
+          "formats": [],
+          "rightsList": [],
+          "descriptions": [
+            {
+              "lang": "fr",
+              "description": "french description",
+              "descriptionType": "Abstract"
+            },
+            {
+              "lang": "en",
+              "description": "english description",
+              "descriptionType": "Abstract"
+            }
+          ],
+          "geoLocations": [],
+          "fundingReferences": [],
+          "relatedIdentifiers": [],
+          "schemaVersion": "http://datacite.org/schema/kernel-4",
+          "providerId": "europ",
+          "clientId": "europ.test",
+          "agency": "DataCite",
+          "state": "findable"
+        }
+    http_version: 
+  recorded_at: Thu, 28 Nov 2019 06:53:35 GMT
+recorded_with: VCR 3.0.3

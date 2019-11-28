@@ -2,52 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doi.org/ra/10.15146
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-  response:
-    status:
-      code: 200
-      message: ''
-    headers:
-      Date:
-      - Mon, 22 Jul 2019 17:25:48 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '55'
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=db400ccb4466fda7a51f485b65c4fdf051563816347; expires=Tue, 21-Jul-20
-        17:25:47 GMT; path=/; domain=.doi.org; HttpOnly
-      Strict-Transport-Security:
-      - max-age=3600; includeSubDomains
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 4fa71dae694cc281-FRA
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        [
-          {
-            "DOI": "10.15146",
-            "RA": "DataCite"
-          }
-        ]
-    http_version: 
-  recorded_at: Mon, 22 Jul 2019 17:25:48 GMT
-- request:
-    method: get
     uri: https://api.test.datacite.org/dois/10.15146/r34015
     body:
       encoding: US-ASCII
@@ -63,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 22 Jul 2019 17:25:48 GMT
+      - Thu, 28 Nov 2019 06:47:03 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -75,17 +29,102 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - e4c590a0-0798-4785-9055-90312d44dc24
+      - 54bbe812-3770-4b63-ade6-9931249ebb00
       X-Runtime:
-      - '0.040416'
+      - '0.008497'
       X-Powered-By:
-      - Phusion Passenger 6.0.2
+      - Phusion Passenger 6.0.4
       Server:
-      - nginx/1.15.8 + Phusion Passenger 6.0.2
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Mon, 22 Jul 2019 17:25:48 GMT
+  recorded_at: Thu, 28 Nov 2019 06:47:03 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.15146/r34015/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      Accept:
+      - text/xml
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - text/plain
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Content-Length:
+      - '19'
+      Server:
+      - http-kit
+      Date:
+      - Thu, 28 Nov 2019 06:47:03 GMT
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: Resource not found.
+    http_version: 
+  recorded_at: Thu, 28 Nov 2019 06:47:03 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.15146
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Thu, 28 Nov 2019 06:47:03 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4156b21f3869b25cac46a48d4ce710321574923623; expires=Sat, 28-Dec-19
+        06:47:03 GMT; path=/; domain=.doi.org; HttpOnly; Secure
+      Cf-Cache-Status:
+      - DYNAMIC
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 53ca6367abfec857-AMS
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "DOI": "10.15146",
+            "RA": "DataCite"
+          }
+        ]
+    http_version: 
+  recorded_at: Thu, 28 Nov 2019 06:47:03 GMT
 recorded_with: VCR 3.0.3
