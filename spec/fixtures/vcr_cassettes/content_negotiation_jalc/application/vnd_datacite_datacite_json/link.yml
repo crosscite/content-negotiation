@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 28 Nov 2019 06:48:09 GMT
+      - Sun, 15 Dec 2019 22:42:07 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -29,9 +29,9 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 0c95fdad-0d20-4340-af77-59803354d705
+      - 4df12d3d-0a2c-4de2-be1d-2fb709cf9e25
       X-Runtime:
-      - '0.006416'
+      - '0.004835'
       X-Powered-By:
       - Phusion Passenger 6.0.4
       Server:
@@ -41,7 +41,7 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Thu, 28 Nov 2019 06:48:09 GMT
+  recorded_at: Sun, 15 Dec 2019 22:42:08 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.18942/apg.201812/transform/application/vnd.crossref.unixsd+xml
@@ -50,7 +50,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - text/xml
   response:
@@ -69,7 +69,7 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Thu, 28 Nov 2019 06:48:10 GMT
+      - Sun, 15 Dec 2019 22:42:08 GMT
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -80,7 +80,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version: 
-  recorded_at: Thu, 28 Nov 2019 06:48:10 GMT
+  recorded_at: Sun, 15 Dec 2019 22:42:08 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.18942
@@ -89,7 +89,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -98,24 +98,24 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 28 Nov 2019 06:48:10 GMT
+      - Sun, 15 Dec 2019 22:42:08 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d65eb30c58e1c524635cb73629003d5d61574923690; expires=Sat, 28-Dec-19
-        06:48:10 GMT; path=/; domain=.doi.org; HttpOnly; Secure
+      - __cfduid=db36e7a86c0977d6d708481dcbedfa69e1576449728; expires=Tue, 14-Jan-20
+        22:42:08 GMT; path=/; domain=.doi.org; HttpOnly; Secure
       Cf-Cache-Status:
       - DYNAMIC
       Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains
+      - max-age=31536000; includeSubDomains; preload
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 53ca65095a46bf6e-AMS
+      - 545bedd47bc19bcd-AMS
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -126,7 +126,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Thu, 28 Nov 2019 06:48:10 GMT
+  recorded_at: Sun, 15 Dec 2019 22:42:08 GMT
 - request:
     method: get
     uri: https://doi.org/10.18942/apg.201812
@@ -135,7 +135,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - application/vnd.citationstyles.csl+json
   response:
@@ -144,7 +144,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 28 Nov 2019 06:48:10 GMT
+      - Sun, 15 Dec 2019 22:42:08 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -152,31 +152,31 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d9107e44a2add4a181612252cc48b3cb51574923690; expires=Sat, 28-Dec-19
-        06:48:10 GMT; path=/; domain=.doi.org; HttpOnly; Secure
+      - __cfduid=d8014db8a027ba69174b7acc66c8f42131576449728; expires=Tue, 14-Jan-20
+        22:42:08 GMT; path=/; domain=.doi.org; HttpOnly; Secure
       Vary:
       - Accept
       Location:
       - https://japanlinkcenter.org/data/10.18942/apg.201812
       Expires:
-      - Thu, 28 Nov 2019 07:21:20 GMT
+      - Sun, 15 Dec 2019 23:38:35 GMT
       Cf-Cache-Status:
       - DYNAMIC
       Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains
+      - max-age=31536000; includeSubDomains; preload
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 53ca650a0f0dc79d-AMS
+      - 545bedd52fddd8b9-AMS
     body:
       encoding: ASCII-8BIT
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://japanlinkcenter.org/data/10.18942/apg.201812">https://japanlinkcenter.org/data/10.18942/apg.201812</a></body></html>
     http_version: 
-  recorded_at: Thu, 28 Nov 2019 06:48:10 GMT
+  recorded_at: Sun, 15 Dec 2019 22:42:08 GMT
 - request:
     method: get
     uri: https://japanlinkcenter.org/data/10.18942/apg.201812
@@ -185,7 +185,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - application/vnd.citationstyles.csl+json
   response:
@@ -194,7 +194,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 28 Nov 2019 06:48:11 GMT
+      - Sun, 15 Dec 2019 22:42:09 GMT
       X-Frame-Options:
       - SAMEORIGIN, SAMEORIGIN, SAMEORIGIN
       Content-Security-Policy:
@@ -204,7 +204,7 @@ http_interactions:
       Content-Language:
       - ja-JP
       Set-Cookie:
-      - BIGipServerPOOL_TSC016_004=1112689312.20480.0000; path=/; Httponly, TS01ab0e97=0192d11667a41fc79bc156933d334b94f023e2670de37e047be7dfa6cd0d9bb092b2b9ada36367a6593e542a2911cc847269e03dbec8aa31b0f32b6de997ed1957bdf6c9d5;
+      - BIGipServerPOOL_TSC016_004=1112689312.20480.0000; path=/; Httponly, TS01ab0e97=0192d11667fc1ca476c6f3092f9fb1ff378c0a3e8e601ffc5174f3646ce2b9c1b93893397f667dd2fb86fec46110b2686506b73e42708986e176916531a0114f9488b6a97c;
         Path=/; Secure
       X-Content-Type-Options:
       - nosniff
@@ -224,5 +224,5 @@ http_interactions:
         Japanese Society for Plant Systematics\",\r\n\t\"issued\":{\r\n\t\t\"date-parts\":\r\n\t\t\t[\r\n\t\t\t\t[2019,2,28]\r\n\t\t\t]\r\n\t},\r\n\t\"volume\":\"70\",\r\n\t\"number\":\"1\",\r\n\t\"page\":\"19-28\",\r\n\t\"ISSN\":\r\n\t\t[\"13467565\",\"21897042\"],\r\n\t\"container-title\":\"Acta
         phytotaxonomica et geobotanica\"\r\n}"
     http_version: 
-  recorded_at: Thu, 28 Nov 2019 06:48:11 GMT
+  recorded_at: Sun, 15 Dec 2019 22:42:10 GMT
 recorded_with: VCR 3.0.3

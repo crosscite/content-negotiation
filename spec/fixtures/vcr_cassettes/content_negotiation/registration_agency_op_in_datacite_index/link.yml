@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 28 Nov 2019 06:53:35 GMT
+      - Sun, 15 Dec 2019 22:41:04 GMT
       Content-Type:
       - application/vnd.datacite.datacite+json; charset=utf-8
       Connection:
@@ -31,11 +31,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - b4b7377b-66b9-4aff-b940-7d57cbd7aaf9
+      - ddaacb54-5106-4661-861a-609beffa462a
       Etag:
       - W/"68cb05008696f87662648c4e093c68b5"
       X-Runtime:
-      - '0.020234'
+      - '0.013326'
       X-Powered-By:
       - Phusion Passenger 6.0.4
       Server:
@@ -115,5 +115,5 @@ http_interactions:
           "state": "findable"
         }
     http_version: 
-  recorded_at: Thu, 28 Nov 2019 06:53:35 GMT
+  recorded_at: Sun, 15 Dec 2019 22:41:04 GMT
 recorded_with: VCR 3.0.3

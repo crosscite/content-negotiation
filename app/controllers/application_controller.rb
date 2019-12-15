@@ -5,7 +5,6 @@ class ApplicationController < ActionController::API
                           ActionController::RoutingError,
                           ActionController::ParameterMissing,
                           ActionController::UnpermittedParameters,
-                          JSON::LD::JsonLdError::LoadingDocumentFailed,
                           NoMethodError]
 
   unless Rails.env.development?

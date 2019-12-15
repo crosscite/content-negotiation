@@ -1,16 +1,9 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
-# require "active_job/railtie"
-# require "active_record/railtie"
 require "action_controller/railtie"
-# require "action_mailer/railtie"
-# require "action_view/railtie"
-# require "action_cable/engine"
-# require "sprockets/railtie"
-# require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -55,12 +48,6 @@ module ContentNegotiation
 
     # secret_key_base is not used by Rails API, as there are no sessions
     config.secret_key_base = 'blipblapblup'
-
-    # Write all logs to STDOUT instead of file
-    logger           = ActiveSupport::Logger.new(STDOUT)
-    logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
-    config.log_level = ENV['LOG_LEVEL'].to_sym
 
     # serve assets via web server
     config.public_file_server.enabled = false

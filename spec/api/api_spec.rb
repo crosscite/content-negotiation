@@ -155,43 +155,43 @@ describe 'content negotiation', type: :api, vcr: true do
     end
   end
 
-  context "application/rdf+xml" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
+  # context "application/rdf+xml" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
 
-      expect(last_response.status).to eq(200)
-      rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-      expect(rdfxml.dig("BlogPosting", "rdf:about")).to eq("https://doi.org/10.14454/cne7-ar31")   
-    end
+  #     expect(last_response.status).to eq(200)
+  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+  #     expect(rdfxml.dig("BlogPosting", "rdf:about")).to eq("https://doi.org/10.14454/cne7-ar31")   
+  #   end
 
-    it "link" do
-      get "/application/rdf+xml/#{doi}"
+  #   it "link" do
+  #     get "/application/rdf+xml/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-      expect(rdfxml.dig("BlogPosting", "rdf:about")).to eq("https://doi.org/10.14454/cne7-ar31")   
-    end
-  end
+  #     expect(last_response.status).to eq(200)
+  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+  #     expect(rdfxml.dig("BlogPosting", "rdf:about")).to eq("https://doi.org/10.14454/cne7-ar31")   
+  #   end
+  # end
 
-  context "application/x-turtle" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
+  # context "application/x-turtle" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
 
-      expect(last_response.status).to eq(200)
-      ttl = last_response.body.split("\n")
-      expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-      expect(ttl[2]).to eq("<https://doi.org/10.14454/cne7-ar31> a schema:BlogPosting;")
-    end
+  #     expect(last_response.status).to eq(200)
+  #     ttl = last_response.body.split("\n")
+  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+  #     expect(ttl[2]).to eq("<https://doi.org/10.14454/cne7-ar31> a schema:BlogPosting;")
+  #   end
 
-    it "link" do
-      get "/application/x-turtle/#{doi}"
+  #   it "link" do
+  #     get "/application/x-turtle/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      ttl = last_response.body.split("\n")
-      expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-      expect(ttl[2]).to eq("<https://doi.org/10.14454/cne7-ar31> a schema:BlogPosting;")
-    end
-  end
+  #     expect(last_response.status).to eq(200)
+  #     ttl = last_response.body.split("\n")
+  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+  #     expect(ttl[2]).to eq("<https://doi.org/10.14454/cne7-ar31> a schema:BlogPosting;")
+  #   end
+  # end
 
   context "text/x-bibliography" do
     it "header" do
@@ -453,43 +453,43 @@ describe 'content negotiation crossref', type: :api, vcr: true do
     end
   end
 
-  context "application/rdf+xml" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
+  # context "application/rdf+xml" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
 
-      expect(last_response.status).to eq(200)
-      rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-      expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.7554/elife.01567")   
-    end
+  #     expect(last_response.status).to eq(200)
+  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+  #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.7554/elife.01567")   
+  #   end
 
-    it "link" do
-      get "/application/rdf+xml/#{doi}"
+  #   it "link" do
+  #     get "/application/rdf+xml/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-      expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.7554/elife.01567")   
-    end
-  end
+  #     expect(last_response.status).to eq(200)
+  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+  #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.7554/elife.01567")   
+  #   end
+  # end
 
-  context "application/x-turtle" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
+  # context "application/x-turtle" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
 
-      expect(last_response.status).to eq(200)
-      ttl = last_response.body.split("\n")
-      expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-      expect(ttl[2]).to eq("<https://doi.org/10.7554/elife.01567> a schema:ScholarlyArticle;")
-    end
+  #     expect(last_response.status).to eq(200)
+  #     ttl = last_response.body.split("\n")
+  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+  #     expect(ttl[2]).to eq("<https://doi.org/10.7554/elife.01567> a schema:ScholarlyArticle;")
+  #   end
 
-    it "link" do
-      get "/application/x-turtle/#{doi}"
+  #   it "link" do
+  #     get "/application/x-turtle/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      ttl = last_response.body.split("\n")
-      expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-      expect(ttl[2]).to eq("<https://doi.org/10.7554/elife.01567> a schema:ScholarlyArticle;")
-    end
-  end
+  #     expect(last_response.status).to eq(200)
+  #     ttl = last_response.body.split("\n")
+  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+  #     expect(ttl[2]).to eq("<https://doi.org/10.7554/elife.01567> a schema:ScholarlyArticle;")
+  #   end
+  # end
 
   context "text/x-bibliography" do
     it "header" do
@@ -690,43 +690,43 @@ describe 'content negotiation medra', type: :api, vcr: true do
     end
   end
 
-  context "application/rdf+xml" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
+  # context "application/rdf+xml" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
 
-      expect(last_response.status).to eq(200)
-      rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-      expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.1393/ncc/i2016-16378-6")   
-    end
+  #     expect(last_response.status).to eq(200)
+  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+  #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.1393/ncc/i2016-16378-6")   
+  #   end
 
-    it "link" do
-      get "/application/rdf+xml/#{doi}"
+  #   it "link" do
+  #     get "/application/rdf+xml/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-      expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.1393/ncc/i2016-16378-6")   
-    end
-  end
+  #     expect(last_response.status).to eq(200)
+  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+  #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.1393/ncc/i2016-16378-6")   
+  #   end
+  # end
 
-  context "application/x-turtle" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
+  # context "application/x-turtle" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
 
-      expect(last_response.status).to eq(200)
-      ttl = last_response.body.split("\n")
-      expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-      expect(ttl[2]).to eq("<https://doi.org/10.1393/ncc/i2016-16378-6> a schema:ScholarlyArticle;")
-    end
+  #     expect(last_response.status).to eq(200)
+  #     ttl = last_response.body.split("\n")
+  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+  #     expect(ttl[2]).to eq("<https://doi.org/10.1393/ncc/i2016-16378-6> a schema:ScholarlyArticle;")
+  #   end
 
-    it "link" do
-      get "/application/x-turtle/#{doi}"
+  #   it "link" do
+  #     get "/application/x-turtle/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      ttl = last_response.body.split("\n")
-      expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-      expect(ttl[2]).to eq("<https://doi.org/10.1393/ncc/i2016-16378-6> a schema:ScholarlyArticle;")
-    end
-  end
+  #     expect(last_response.status).to eq(200)
+  #     ttl = last_response.body.split("\n")
+  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+  #     expect(ttl[2]).to eq("<https://doi.org/10.1393/ncc/i2016-16378-6> a schema:ScholarlyArticle;")
+  #   end
+  # end
 
   context "text/x-bibliography" do
     it "header" do
@@ -927,43 +927,43 @@ describe 'content negotiation jalc', type: :api, vcr: true do
     end
   end
 
-  context "application/rdf+xml" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
+  # context "application/rdf+xml" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
 
-      expect(last_response.status).to eq(200)
-      rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-      expect(rdfxml.dig("CreativeWork", "rdf:about")).to eq("https://doi.org/10.18942/apg.201812")   
-    end
+  #     expect(last_response.status).to eq(200)
+  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+  #     expect(rdfxml.dig("CreativeWork", "rdf:about")).to eq("https://doi.org/10.18942/apg.201812")   
+  #   end
 
-    it "link" do
-      get "/application/rdf+xml/#{doi}"
+  #   it "link" do
+  #     get "/application/rdf+xml/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-      expect(rdfxml.dig("CreativeWork", "rdf:about")).to eq("https://doi.org/10.18942/apg.201812")   
-    end
-  end
+  #     expect(last_response.status).to eq(200)
+  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+  #     expect(rdfxml.dig("CreativeWork", "rdf:about")).to eq("https://doi.org/10.18942/apg.201812")   
+  #   end
+  # end
 
-  context "application/x-turtle" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
+  # context "application/x-turtle" do
+  #   it "header" do
+  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
 
-      expect(last_response.status).to eq(200)
-      ttl = last_response.body.split("\n")
-      expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-      expect(ttl[2]).to eq("<https://doi.org/10.18942/apg.201812> a schema:CreativeWork;")
-    end
+  #     expect(last_response.status).to eq(200)
+  #     ttl = last_response.body.split("\n")
+  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+  #     expect(ttl[2]).to eq("<https://doi.org/10.18942/apg.201812> a schema:CreativeWork;")
+  #   end
 
-    it "link" do
-      get "/application/x-turtle/#{doi}"
+  #   it "link" do
+  #     get "/application/x-turtle/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      ttl = last_response.body.split("\n")
-      expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-      expect(ttl[2]).to eq("<https://doi.org/10.18942/apg.201812> a schema:CreativeWork;")
-    end
-  end
+  #     expect(last_response.status).to eq(200)
+  #     ttl = last_response.body.split("\n")
+  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+  #     expect(ttl[2]).to eq("<https://doi.org/10.18942/apg.201812> a schema:CreativeWork;")
+  #   end
+  # end
 
   context "text/x-bibliography" do
     it "header" do

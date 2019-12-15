@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.2.6; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 28 Nov 2019 06:45:49 GMT
+      - Sun, 15 Dec 2019 22:42:41 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -31,11 +31,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 184ba51c-e8e3-4392-8df7-3ace5cd9b5c7
+      - 71d3d3ea-8cb9-4639-b262-27b5fb152cc7
       Etag:
       - W/"1d2d677609deeed973a7d93fd433f2ad"
       X-Runtime:
-      - '0.043909'
+      - '0.025825'
       X-Powered-By:
       - Phusion Passenger 6.0.4
       Server:
@@ -45,5 +45,5 @@ http_interactions:
       string: '{"data":{"id":"10.4224/crm.2010e.nims-1","type":"dois","attributes":{"doi":"10.4224/crm.2010e.nims-1","prefix":"10.4224","suffix":"crm.2010e.nims-1","identifiers":[{"identifier":null,"identifierType":"DOI"}],"creators":[],"titles":[],"publisher":null,"container":{},"publicationYear":null,"subjects":[],"contributors":[],"dates":[],"language":null,"types":{"ris":"GEN","bibtex":"misc","citeproc":"article","schemaOrg":"CreativeWork"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":null,"url":"http://tdr2.web-t.cisti.nrc.ca/eng/view/object/?id=5582d3a1-c7de-4bed-be9d-396d0e807df0","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":null,"isActive":true,"state":"findable","reason":null,"created":"2014-02-17T13:15:53.000Z","registered":"2014-02-17T13:37:30.000Z","published":"","updated":"2018-05-14T19:23:59.000Z"},"relationships":{"client":{"data":{"id":"cisti.nrc","type":"clients"}},"media":{"data":{"id":"10.4224/crm.2010e.nims-1","type":"media"}}}},"included":[{"id":"cisti.nrc","type":"clients","attributes":{"name":"National
         Research Council","symbol":"CISTI.NRC","year":2011,"contactEmail":"chantal.ripp@nrc-cnrc.gc.ca","alternateName":null,"description":null,"language":null,"clientType":"repository","domains":"nrc-cnrc.gc.ca,cisti.nrc.ca","re3data":null,"opendoar":null,"issn":null,"url":null,"created":"2011-10-19T17:45:53.000Z","updated":"2019-05-23T15:13:40.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"cisti","type":"providers"}},"prefixes":{"data":[{"id":"10.4224","type":"prefixes"}]}}},{"id":"0000-0000-0000-0009","type":"media","attributes":{"version":0,"url":"http://dr-dn.cisti-icist.nrc-cnrc.gc.ca/eng/view/object/?id=cf5ae3c0-f74a-4a4b-bda9-e9b83c239430","mediaType":"text/csv","created":"2014-02-24T14:07:15.000Z","updated":"2014-02-24T14:07:15.000Z"},"relationships":{"doi":{"data":{"id":"10.4224/CRM.2010E.NIMS-1","type":"dois"}}}},{"id":"0000-0000-0000-0008","type":"media","attributes":{"version":2,"url":"http://dr-dn.cisti-icist.nrc-cnrc.gc.ca","mediaType":"application/pdf","created":"2014-02-24T14:06:02.000Z","updated":"2014-02-24T14:36:51.000Z"},"relationships":{"doi":{"data":{"id":"10.4224/CRM.2010E.NIMS-1","type":"dois"}}}}]}'
     http_version: 
-  recorded_at: Thu, 28 Nov 2019 06:45:49 GMT
+  recorded_at: Sun, 15 Dec 2019 22:42:41 GMT
 recorded_with: VCR 3.0.3
