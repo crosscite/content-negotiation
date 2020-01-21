@@ -37,6 +37,5 @@ group :test do
   gem "capybara"
   gem "webmock", "~> 1.20.0"
   gem "vcr", "~> 3.0.3"
-  gem "codeclimate-test-reporter", "~> 1.0.0"
-  gem "simplecov"
+  gem 'simplecov', '~> 0.17.1'
 end

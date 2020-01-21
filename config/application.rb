@@ -34,6 +34,7 @@ ENV['SITE_TITLE'] ||= "Content Resolver"
 ENV['LOG_LEVEL'] ||= "info"
 ENV['GITHUB_URL'] ||= "https://github.com/crosscite/content-negotiation"
 ENV['TRUSTED_IP'] ||= "10.0.0.0/8"
+ENV["RAILS_LOG_TO_STDOUT"] = "enabled"
 
 module ContentNegotiation
   class Application < Rails::Application

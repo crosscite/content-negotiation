@@ -46,8 +46,15 @@ class IndexController < ApplicationController
         redirect_to @metadata.url, status: 303
       end
       format.citation do
+        # extract optional style and locale from header
+        headers = request.headers["HTTP_ACCEPT"].to_s.gsub(/\s+/, "").split(";", 3).reduce({}) do |sum, item|
+          sum[:style] = item.split("=").last if item.start_with?("style")
+          sum[:locale] = item.split("=").last if item.start_with?("locale")
+          sum
+        end
+
         # fetch formatted citation
-        render citation: @metadata, style: params[:style] || "apa", locale: params[:locale] || "en-US"
+        render citation: @metadata, style: params[:style] || headers[:style] || "apa", locale: params[:locale] || headers[:locale] || "en-US"
       end
       format.any(:bibtex, :citeproc, :codemeta, :crosscite, :datacite, :datacite_json, :crossref, :jats, :ris, :schema_org, :rdf_xml, :turtle) { render request.format.to_sym => @metadata }
     end

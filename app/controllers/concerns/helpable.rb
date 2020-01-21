@@ -18,7 +18,7 @@ module Helpable
       doi = doi_from_url(id)
       url = "#{ENV['API_URL']}/dois/#{doi}"
       response = Maremma.get url
-      Array.wrap(response.body.fetch("included", nil)).select { |m| m["type"] == "media" }.reduce({}) do|sum, media|
+      Array.wrap(response.body.fetch("included", nil)).select { |m| m["type"] == "media" }.reduce({}) do |sum, media|
         content_type = media.dig("attributes", "mediaType")
         url = media.dig("attributes", "url")
         sum[content_type.strip] = url.strip if content_type.present? && url.present? 
