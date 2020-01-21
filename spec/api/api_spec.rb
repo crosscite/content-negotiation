@@ -226,7 +226,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
       # falling back to default APA style
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to eq("Dasler, R., &amp; de Smaele, M. (2019, March 20). Announcing schema 4.2. https://doi.org/10.14454/CNE7-AR31")
+      expect(last_response.body).to eq("Dasler, R., &amp; de Smaele, M. (2019, March 20). <i>Announcing schema 4.2</i>. https://doi.org/10.14454/CNE7-AR31")
     end
   end
 
@@ -498,6 +498,18 @@ describe 'content negotiation crossref', type: :api, vcr: true do
       expect(last_response.body).to start_with("Sankar, M., Nieminen, K.")
     end
 
+    it "header with style" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography; style=ieee" }
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to start_with("M. Sankar, K. Nieminen")
+    end
+
+    it "header with style and locale" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography; style=vancouver; locale=de" }
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to start_with("Sankar M")
+    end
+
     it "link" do
       get "/text/x-bibliography/#{doi}"
 
@@ -746,7 +758,7 @@ describe 'content negotiation medra', type: :api, vcr: true do
       get "/text/x-bibliography/#{doi}?style=ieee"
 
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to eq("“Probing the nuclear symmetry energy at high densities with nuclear reactions,” <i>Il Nuovo Cimento C</i>, vol. 39, no. 6, pp. 1–10, Mar. 2017.")
+      expect(last_response.body).to eq("“Probing the nuclear symmetry energy at high densities with nuclear reactions,” <i>Il Nuovo Cimento C</i>, vol. 39, no. 6, pp. 1–10, Mar. 2017, doi: 10.1393/ncc/i2016-16378-6.")
     end
 
     it "link with style and locale" do
@@ -998,7 +1010,7 @@ describe 'content negotiation jalc', type: :api, vcr: true do
 
       # falling back to default APA style
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to eq("Ebihara, A., Nakato, N., Kuo, L.-Y., Miyazaki, H., &amp; Serizawa, S. (2019). Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales). <i>Acta phytotaxonomica et geobotanica</i>. The Japanese Society for Plant Systematics. https://doi.org/10.18942/apg.201812")
+      expect(last_response.body).to eq("Ebihara, A., Nakato, N., Kuo, L.-Y., Miyazaki, H., &amp; Serizawa, S. (2019). Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales). In <i>Acta phytotaxonomica et geobotanica</i> (Vol. 70, pp. 19–28). The Japanese Society for Plant Systematics. https://doi.org/10.18942/apg.201812")
     end
   end
 
