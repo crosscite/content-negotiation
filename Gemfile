@@ -5,7 +5,7 @@ gem "dotenv"
 gem "oj", ">= 3.1.0"
 gem "oj_mimic_json", "~> 1.0", ">= 1.0.1"
 gem "equivalent-xml", "~> 0.6.0"
-gem "nokogiri", ">= 1.10.4"
+gem "nokogiri", ">= 1.10.8"
 gem "iso8601", "~> 0.9.0"
 gem "maremma", ">= 4.1"
 gem "faraday", "0.17.0"
@@ -19,7 +19,6 @@ gem "gender_detector", "~> 0.1.2"
 gem "rack-cors", "~> 1.0", require: "rack/cors"
 gem "git", "~> 1.5"
 gem "sprockets", "~> 3.7", ">= 3.7.2"
-gem 'json-ld-preloaded', '~> 3.0', '>= 3.0.2'
 
 group :development do
   gem "better_errors"
@@ -35,7 +34,7 @@ end
 group :test do
   gem "rspec-rails", "~> 3.5", ">= 3.5.2"
   gem "capybara"
-  gem "webmock", "~> 1.20.0"
+  gem "webmock", "~> 3.8", ">= 3.8.2"
   gem "vcr", "~> 3.0.3"
   gem 'simplecov', '~> 0.17.1'
 end
