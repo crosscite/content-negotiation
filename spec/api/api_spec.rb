@@ -96,6 +96,24 @@ describe 'content negotiation', type: :api, vcr: true do
     end
   end
 
+  context "application/ld-json" do
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/ld-json" }
+
+      expect(last_response.status).to eq(200)
+      response = JSON.parse(last_response.body)
+      expect(response["@type"]).to eq("BlogPosting")
+    end
+
+    it "link" do
+      get "/application/ld-json/#{doi}"
+
+      expect(last_response.status).to eq(200)
+      response = JSON.parse(last_response.body)
+      expect(response["@type"]).to eq("BlogPosting")
+    end
+  end
+
   context "application/vnd.citationstyles.csl+json" do
     it "header" do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
@@ -387,6 +405,24 @@ describe 'content negotiation crossref', type: :api, vcr: true do
 
     it "link" do
       get "/application/vnd.schemaorg.ld+json/#{doi}"
+
+      expect(last_response.status).to eq(200)
+      response = JSON.parse(last_response.body)
+      expect(response["@type"]).to eq("ScholarlyArticle")
+    end
+  end
+
+  context "application/ld-json" do
+    it "header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/ld-json" }
+
+      expect(last_response.status).to eq(200)
+      response = JSON.parse(last_response.body)
+      expect(response["@type"]).to eq("ScholarlyArticle")
+    end
+
+    it "link" do
+      get "/application/ld-json/#{doi}"
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)

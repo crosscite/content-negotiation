@@ -30,6 +30,7 @@ describe Help do
         "application/vnd.schemaorg.ld+json"=>:schema_org,
         "application/vnd.citationstyles.csl+json"=>:citeproc,
         "application/citeproc+json"=>:citeproc,
+        "application/ld-json" => :schema_org,
         "application/vnd.codemeta.ld+json"=>:codemeta,
         "application/x-bibtex" => :bibtex,
         "application/x-research-info-systems"=>:ris,
