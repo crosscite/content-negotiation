@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/application/vnd.datacite.datacite+json/:id', :to => 'index#show', constraints: { :id => /.+/ }, defaults: { format: :datacite_json }
   get '/application/vnd.crosscite.crosscite+json/:id', :to => 'index#show', constraints: { :id => /.+/ }, defaults: { format: :crosscite }
   get '/application/vnd.schemaorg.ld+json/:id', :to => 'index#show', constraints: { :id => /.+/ }, defaults: { format: :schema_org }
-  get '/application/ld-json/:id', :to => 'index#show', constraints: { :id => /.+/ }, defaults: { format: :schema_org }
+  get '/application/ld+json/:id', :to => 'index#show', constraints: { :id => /.+/ }, defaults: { format: :schema_org }
   get '/application/vnd.codemeta.ld+json/:id', :to => 'index#show', constraints: { :id => /.+/ }, defaults: { format: :codemeta }
   get '/application/vnd.citationstyles.csl+json/:id', :to => 'index#show', constraints: { :id => /.+/ }, defaults: { format: :citeproc }
   get '/application/vnd.jats+xml/:id', :to => 'index#show', constraints: { :id => /.+/ }, defaults: { format: :jats }

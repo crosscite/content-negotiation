@@ -96,9 +96,9 @@ describe 'content negotiation', type: :api, vcr: true do
     end
   end
 
-  context "application/ld-json" do
+  context "application/ld+json" do
     it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/ld-json" }
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/ld+json" }
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
@@ -106,7 +106,7 @@ describe 'content negotiation', type: :api, vcr: true do
     end
 
     it "link" do
-      get "/application/ld-json/#{doi}"
+      get "/application/ld+json/#{doi}"
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
@@ -412,9 +412,9 @@ describe 'content negotiation crossref', type: :api, vcr: true do
     end
   end
 
-  context "application/ld-json" do
+  context "application/ld+json" do
     it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/ld-json" }
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/ld+json" }
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
@@ -422,7 +422,7 @@ describe 'content negotiation crossref', type: :api, vcr: true do
     end
 
     it "link" do
-      get "/application/ld-json/#{doi}"
+      get "/application/ld+json/#{doi}"
 
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
