@@ -7,10 +7,6 @@ services:
   - docker
   - memcached
 
-addons:
-  code_climate:
-    repo_token: $CODECLIMATE_REPO_TOKEN
-
 install:
   - travis_retry bundle install
   - curl -sL https://sentry.io/get-cli/ | bash
