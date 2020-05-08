@@ -8,16 +8,18 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.6.1; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
+      Accept-Encoding:
+      - gzip
   response:
     status:
       code: 404
-      message: ''
+      message: Not Found
     headers:
       Date:
-      - Sun, 15 Dec 2019 22:41:04 GMT
+      - Fri, 08 May 2020 13:41:53 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -28,20 +30,22 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
+      Content-Encoding:
+      - gzip
       X-Request-Id:
-      - dc3c5cbb-f93a-4444-a903-552f66339610
+      - 6fd751c0-7afb-404a-8e52-d03c5cb433a0
       X-Runtime:
-      - '0.004784'
+      - '0.015963'
       X-Powered-By:
       - Phusion Passenger 6.0.4
       Server:
-      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      - nginx/1.14.0 + Phusion Passenger 6.0.4
     body:
       encoding: ASCII-8BIT
-      string: '{"errors":[{"status":"404","title":"The resource you are looking for
-        doesn''t exist."}]}'
+      string: !binary |-
+        H4sIAKFhtV4AAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:41:04 GMT
+  recorded_at: Fri, 08 May 2020 13:41:53 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.2788/011817/transform/application/vnd.crossref.unixsd+xml
@@ -50,13 +54,15 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.6.1; mailto:info@datacite.org)
       Accept:
       - text/xml
+      Accept-Encoding:
+      - gzip,deflate
   response:
     status:
       code: 404
-      message: ''
+      message: Not Found
     headers:
       Content-Type:
       - text/plain
@@ -69,7 +75,7 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sun, 15 Dec 2019 22:41:04 GMT
+      - Fri, 08 May 2020 13:41:54 GMT
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -80,7 +86,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:41:05 GMT
+  recorded_at: Fri, 08 May 2020 13:41:54 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.2788
@@ -89,42 +95,43 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.6.1; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Sun, 15 Dec 2019 22:41:05 GMT
+      - Fri, 08 May 2020 13:41:54 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d6080baf9f5f8adbbe0a3a36a5020022f1576449665; expires=Tue, 14-Jan-20
-        22:41:05 GMT; path=/; domain=.doi.org; HttpOnly; Secure
+      - __cfduid=dd2df9acd8a3fcb9f8a55df510b64e0461588945314; expires=Sun, 07-Jun-20
+        13:41:54 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
+      Content-Encoding:
+      - gzip
       Cf-Cache-Status:
       - DYNAMIC
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Server:
       - cloudflare
       Cf-Ray:
-      - 545bec46e94fc765-AMS
+      - 590399d5cfa7177a-FRA
+      Cf-Request-Id:
+      - '02961e799a0000177ab8b36200000001'
     body:
       encoding: ASCII-8BIT
-      string: |-
-        [
-          {
-            "DOI": "10.2788",
-            "RA": "OP"
-          }
-        ]
+      string: !binary |-
+        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9I3MLCyUdiGiQI0jQP0AJyK3ligUAt5t7gTAAAAA=
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:41:05 GMT
+  recorded_at: Fri, 08 May 2020 13:41:54 GMT
 recorded_with: VCR 3.0.3
