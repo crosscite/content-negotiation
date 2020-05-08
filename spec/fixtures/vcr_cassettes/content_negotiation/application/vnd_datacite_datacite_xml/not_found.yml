@@ -8,16 +8,16 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
   response:
     status:
       code: 404
-      message: ''
+      message: Not Found
     headers:
       Date:
-      - Sun, 15 Dec 2019 22:40:59 GMT
+      - Fri, 08 May 2020 11:23:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -29,19 +29,19 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 3b855834-889e-417d-8ac9-a565400f2c94
+      - b676da68-4f1c-4589-9c70-991222a562db
       X-Runtime:
-      - '0.004703'
+      - '0.014669'
       X-Powered-By:
       - Phusion Passenger 6.0.4
       Server:
-      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      - nginx/1.14.0 + Phusion Passenger 6.0.4
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:40:59 GMT
+  recorded_at: Fri, 08 May 2020 11:23:44 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.15146/r34015/transform/application/vnd.crossref.unixsd+xml
@@ -50,13 +50,13 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7; mailto:info@datacite.org)
       Accept:
       - text/xml
   response:
     status:
       code: 404
-      message: ''
+      message: Not Found
     headers:
       Content-Type:
       - text/plain
@@ -69,7 +69,7 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sun, 15 Dec 2019 22:41:00 GMT
+      - Fri, 08 May 2020 11:23:44 GMT
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -80,7 +80,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:41:00 GMT
+  recorded_at: Fri, 08 May 2020 11:23:45 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.15146
@@ -89,7 +89,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -98,24 +98,26 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 15 Dec 2019 22:41:00 GMT
+      - Fri, 08 May 2020 11:23:45 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d5253fcf29d9ca6792a4999476c61e7fa1576449660; expires=Tue, 14-Jan-20
-        22:41:00 GMT; path=/; domain=.doi.org; HttpOnly; Secure
+      - __cfduid=d726de7377cfa1a0a2d6541c88a15f2af1588937025; expires=Sun, 07-Jun-20
+        11:23:45 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
       Cf-Cache-Status:
       - DYNAMIC
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Server:
       - cloudflare
       Cf-Ray:
-      - 545bec28d808bd96-AMS
+      - 5902cf7709b505c8-FRA
+      Cf-Request-Id:
+      - '02959ffe68000005c86ea7a200000001'
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -126,5 +128,5 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:41:00 GMT
+  recorded_at: Fri, 08 May 2020 11:23:45 GMT
 recorded_with: VCR 3.0.3
