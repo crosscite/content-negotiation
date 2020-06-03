@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.test.datacite.org/dois/10.70043/4k3m-nyvg7
+    uri: https://api.stage.datacite.org/dois/10.70043/4k3m-nyvg7
     body:
       encoding: US-ASCII
       string: ''
