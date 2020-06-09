@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.test.datacite.org/dois/10.7554/elife.01567
+    uri: https://api.stage.datacite.org/dois/10.7554/elife.01567
     body:
       encoding: US-ASCII
       string: ''

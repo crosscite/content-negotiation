@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.test.datacite.org/dois/10.2899/caricom/1
+    uri: https://api.stage.datacite.org/dois/10.2899/caricom/1
     body:
       encoding: US-ASCII
       string: ''
