@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.stage.datacite.org/dois/10.21373/1572872428618
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.6.1; mailto:info@datacite.org)
+      Accept:
+      - application/vnd.datacite.datacite+json
+      Accept-Encoding:
+      - gzip
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 24 Jun 2020 06:27:28 GMT
+      Content-Type:
+      - application/vnd.datacite.datacite+json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Content-Encoding:
+      - gzip
+      Etag:
+      - W/"d3e177ecadf2cfe521e4aeec2fba63e5"
+      X-Runtime:
+      - '0.029754'
+      X-Request-Id:
+      - 2896ef99-c562-46c5-a1f3-553f682d9752
+      X-Powered-By:
+      - Phusion Passenger 6.0.5
+      Server:
+      - nginx/1.14.0 + Phusion Passenger 6.0.5
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAFDy8l4AA9RYW2/bNhR+768Q/LroZidx3LfFabcMzgVxAnQY+kBJRzZbShRIyolT5L/3kLqYUhQn61YMM2DA4jk8l+9c5W/vHGdEk9F7Z7RWqpDvfT/h1ONi5YeBNw4n04kfHk3HJ9Px4fjkODwZHegbyKOv7GMpBbOlyngNGfESokhMFRgNGSjifwWRA3MPvcCneQIP3lplrBKhtgVIFPINH/BRUP0wml9dXBs6HkU0UvCgTzMq4+ZUKygEj/U5EYrGDBpSZcaVWGnakqfqnghY8lLEMOdJyyZAmrNbtEBzfrpYDJF+gxwEYbasEXI9GetjAURxoW3+y1yt3EBKTjIj9YIyBuLA+cDoI4lArWsdNUuj/BqE5DlhO+qKbiC/rKUM3E5JRtn2sqNmRyVpShklivK8tc22r2PjGQZsjniOWuJT/etzx9jzBHJFUwqWw8+EGvThTlA7M7iIaaLzobVwQOjgBT/Aj4vf0D2qf033CVka9VrU1c38/GzApXfN0+cqAaliMBBARnKTQJC7d8sdsIZdn38sGXMa5BxMHufDA8kKVqP4dPD3xJ1BxnOphAmZw9Od6GvBC8AMB+n17jXJsyyjSk7PtaKMGJXrCtk2yFXi8lwRmhvStyqXZRl9gVi9HYr6gqZgVJyYZ0WpQDgyppDHYDH2U0J3ILiHrUfzlPvPJO5iaLj6bmnbBY3K/YW3VERg3f3BSf5DJde92K02I/sHi21OGE25yClxzuiKKsKcBY0EEdt95Wf53NovuAZrASSxK/8/L9Sxi3PiyA3G00//aqHiWBmqU32spYyDcOoGMzec7LDQtAauu0I/JV3iOeafyJrINTzOPVVr59AbO0Vbe8NVbSk/HFZ7LmWJWocqMzZ6/wSiAdUSDEkXW0lW0C04nN/PQ9qaQQdDsyZ5wsBD1FR3Ju8Z6T1xjRdnV+fDAAxrfn0RGPtQdUu/YXLrAzfFxupukMV7yNg+o+5uFn1cJX20cmR06Hw9HbXEKtQWmRRFEwVf62o5N4hynRJoRxUAQVdrJRdUqjc3yOpKt++ZjQH7DHZL3fANNFU2JDzDjuw/guB+6AV91xKQsaCFNvbtLdq6VK84Tg2zHjHEnmAXGB8dC8cUJnE23fz3BoU2ofg10qMLZ0HP6BXwBa8QHjDaop7yh3YJNDQgUp3yMk8WPMcuWSZGj3t8gqkbWn1llHOh1hUnSmoYD8feyWxi8+FGN8SHSM8Cm+8eBhVPkXEybrrU08GAD9eMxBUaCsOBK6lzFYM9RGxeTnPV9bjQR7Ztk9AbTzo+VCxdQKbeJHjFLs62q32jqagYnts0bBdiNpuFnd4+bFsXsyYzepb+Q1v6cX4Rp5l3PP7JtrwVlzqJf7It3bz+P+CyN19e2ApSrFSar24gBaG3zoE2Q/CdLbl9fW/fLXsoE0Sz7F2aIsI1bVnttc5H3R2qneGgo+OyzKJqEM5PP9y6YXDclzm8Q1lv4+EkmMzwR/UJX77fdN654FIKSJ2PhsFpNqkdQgKYXmqGdsIWosFdECOzLiMPJ5WPA9o47Eq1xRHd7Cj1oPcFufczbNgg/FgyV48R74u08TFGWAPjdyKbgdNjsi3tgKSFdjYKe3w3fwf8otVqII+CabtjmJVijxp7oehzNVbu1tWOquGtqO/tubyBDcV3meR0+4q7RHyim/fBNDj2ugnwwn8St/Cg3uCaEftsCxV8Q01WaZZVRNP65ZBhoqvdqbcjYdDzeGtezepQVOdS1ZtwSrE2Iv0u+vQdAAD//wMADD0Lf3gSAAA=
+    http_version: 
+  recorded_at: Wed, 24 Jun 2020 06:27:28 GMT
+recorded_with: VCR 3.0.3

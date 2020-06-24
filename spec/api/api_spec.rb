@@ -544,6 +544,13 @@ describe 'content negotiation crossref', type: :api, vcr: true do
       expect(last_response.body).to start_with("M. Sankar, K. Nieminen")
     end
 
+    it "header with style software apa" do
+      doi = "10.21373/1572872428618"
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography; style=apa" }
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to eq("Miller, E. (2014). <i>Full DataCite XML Example</i> (Version 4.2) [Computer software]. DataCite. https://doi.org/10.21373/1572872428618")
+    end
+
     it "header with style and locale" do
       get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography; style=vancouver; locale=de" }
       expect(last_response.status).to eq(200)
@@ -1051,6 +1058,13 @@ describe 'content negotiation jalc', type: :api, vcr: true do
       # falling back to default APA style
       expect(last_response.status).to eq(200)
       expect(last_response.body).to eq("Ebihara, A., Nakato, N., Kuo, L.-Y., Miyazaki, H., &amp; Serizawa, S. (2019). Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales). In <i>Acta phytotaxonomica et geobotanica</i> (Vol. 70, pp. 19–28). The Japanese Society for Plant Systematics. https://doi.org/10.18942/apg.201812")
+    end
+
+    it "link with style" do
+      get "/text/x-bibliography/#{doi}?style=ieee"
+
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to start_with("A. Ebihara, N. Nakato")
     end
   end
 
