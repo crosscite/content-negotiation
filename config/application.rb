@@ -60,9 +60,6 @@ module ContentNegotiation
     # Configure SSL options to enable HSTS with subdomains. Previous versions had false.
     config.ssl_options = { hsts: { subdomains: true } }
 
-    # make sure all input is UTF-8
-    config.middleware.insert 0, Rack::UTF8Sanitizer, additional_content_types: ['application/vnd.api+json', 'application/xml']
-
     # compress responses with deflate or gzip
     config.middleware.use Rack::Deflater
 
