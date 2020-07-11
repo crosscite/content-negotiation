@@ -8,18 +8,16 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.6.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
-      Accept-Encoding:
-      - gzip
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 08 May 2020 13:41:47 GMT
+      - Sat, 11 Jul 2020 14:10:06 GMT
       Content-Type:
       - application/vnd.datacite.datacite+json; charset=utf-8
       Connection:
@@ -32,22 +30,92 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      Content-Encoding:
-      - gzip
       X-Request-Id:
-      - 7b2a0c0d-93ab-4e87-9cf3-29fd13609580
+      - d5184b74-4dc6-4e9b-95e0-3b06aaabc9f3
       Etag:
-      - W/"7d7165112b382996c34ac880d5a8fe21"
+      - W/"8b80da34e1632f39bbb2661b6ae33ffa"
       X-Runtime:
-      - '0.024487'
+      - '0.021345'
       X-Powered-By:
-      - Phusion Passenger 6.0.4
+      - Phusion Passenger 6.0.5
       Server:
-      - nginx/1.14.0 + Phusion Passenger 6.0.4
+      - nginx/1.14.0 + Phusion Passenger 6.0.5
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAJthtV4AA3xUTW/bMAy991cYOSe2U6womlvQDkOGDgGKZNgw5CBLdMzOlgyJKpoV/e/Thx07WbqbRT4+ko+k366SZIJiskgmFVFrFlkmFKZK77N5nuZ5Pr/OrM3ns5rg+fZ1MvV4h/ABR8B26wCPm89fb39EgNX1mHH+6Sad53l6c5de36TG6nJWKUMgUllnByXYjMBQoMkiTVpRU0cuOrRgHNube7inRv+YPCw3y+B3pgILgldvbdDw3sqRoNWKe7tgxAxQ7zK8goat9T4wnfo0GGU1h41L691PYIBpXiUedwn0BSRoVo+pHOg91M41MFLaV/wrRMYmnEeyJtB/Q4mNbRbJfYQm6zJkahn/zfbQJXQBrCyxRkao5JFtzHjCuiUNvKJkK/EFtEE6TI6w9+5rNx3XshIgCUuEWOzuqofu4hCQarjQRs1kEBHkUGnAnvS2CZYzytYWNZoK9AcFRwGVJIYygN6ipsYWz8AplnkEaSxsr3S0uplfqtibfcbrfH431Oyt/cRXxlgQF8vlQf+fbiEc0DMElxfB+mENQriTOtHztIbBOb6SiklRQ+pPIfUL6xf4/4d4RtY38LBenVdv8A+MtCmVbthYwiB62Kxhat87WwBo3FdkHtHQv+1En4+9t4ZU0yWffoRatyCTJedgzNBGdG91+LOgLNUC7ExDqzLjbtV1yE2mXGAXd9afAMM1tn46l2Y+eE86fBjZpxfAvaDLwpBmnM6z7kE9qrgTY3GtFCj3T1CCBsnHumuo3aKJ82OLC6bVi5ulXoWfsYC6pO4GanTwkTm1Nnrczkl+6P88925fot1Qt+QlSsEKf3vvfwEAAP//AwAQilN36QUAAA==
+      string: |-
+        {
+          "id": "https://doi.org/10.00012/uu01-ltej7x",
+          "doi": "10.00012/UU01-LTEJ7X",
+          "url": "https://145.100.59.25.surf-hosted.nl/yoda-test/UU01/LTEJ7X.html",
+          "types": {
+            "ris": "DATA",
+            "bibtex": "misc",
+            "citeproc": "dataset",
+            "schemaOrg": "Dataset",
+            "resourceType": "Research Data",
+            "resourceTypeGeneral": "Dataset"
+          },
+          "creators": [
+            {
+              "name": "Minimum: Creator Of Datapackage",
+              "affiliation": [
+                {
+                  "name": "Utrecht University"
+                }
+              ],
+              "nameIdentifiers": []
+            }
+          ],
+          "titles": [
+            {
+              "lang": "en",
+              "title": "Minimum: Title"
+            }
+          ],
+          "publisher": "Utrecht University",
+          "container": {},
+          "subjects": [],
+          "contributors": [],
+          "dates": [
+            {
+              "date": "2019",
+              "dateType": "Issued"
+            }
+          ],
+          "publicationYear": 2019,
+          "language": "en",
+          "identifiers": [
+            {
+              "identifier": "https://handle.test.datacite.org/10.00012/uu01-ltej7x",
+              "identifierType": "DOI"
+            }
+          ],
+          "sizes": [],
+          "formats": [],
+          "version": "Minimum: Version",
+          "rightsList": [
+            {
+              "rights": "Custom"
+            },
+            {
+              "rights": "Open Access",
+              "rightsUri": "info:eu-repo/semantics/openAccess"
+            }
+          ],
+          "descriptions": [
+            {
+              "description": "Minimum: Description",
+              "descriptionType": "Abstract"
+            }
+          ],
+          "geoLocations": [],
+          "fundingReferences": [],
+          "relatedIdentifiers": [],
+          "providerId": "delft",
+          "clientId": "delft.uu",
+          "agency": "datacite",
+          "state": "findable"
+        }
     http_version: 
-  recorded_at: Fri, 08 May 2020 13:41:47 GMT
+  recorded_at: Sat, 11 Jul 2020 14:10:06 GMT
 recorded_with: VCR 3.0.3

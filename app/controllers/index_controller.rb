@@ -9,7 +9,7 @@ class IndexController < ApplicationController
 
   def show
     url = "#{ENV['API_URL']}/dois/#{@doi}"
-    response = Maremma.get(url, accept: "application/vnd.datacite.datacite+json", raw: true, headers: { "Accept-Encoding"=> "gzip" })
+    response = Maremma.get(url, accept: "application/vnd.datacite.datacite+json", raw: true)
     
     if response.status == 200
       @metadata = Bolognese::Metadata.new(input: response.body.fetch("data", nil), from: "datacite_json")

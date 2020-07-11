@@ -8,18 +8,16 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.6.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
-      Accept-Encoding:
-      - gzip
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 08 May 2020 13:41:53 GMT
+      - Sat, 11 Jul 2020 14:10:15 GMT
       Content-Type:
       - application/vnd.datacite.datacite+json; charset=utf-8
       Connection:
@@ -32,22 +30,90 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      Content-Encoding:
-      - gzip
       X-Request-Id:
-      - e485d000-84f4-4824-9980-82f51fd9e30d
+      - 7d7cbcb6-d9e5-427d-bb92-0d1b7a4571b7
       Etag:
-      - W/"117b8ecae4f750afa5a4e7845cdc721a"
+      - W/"5f537130fa016a3f1a149a51ea0d3e00"
       X-Runtime:
-      - '0.022317'
+      - '0.021992'
       X-Powered-By:
-      - Phusion Passenger 6.0.4
+      - Phusion Passenger 6.0.5
       Server:
-      - nginx/1.14.0 + Phusion Passenger 6.0.4
+      - nginx/1.14.0 + Phusion Passenger 6.0.5
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAKFhtV4AA6xUUWvbMBB+768QeU7jpuyh7Vtwygi0c8mywSh9kOWzrc2WjCSXZSH/fXeS3SghW2EMSoq+7/zd6b477S4Ym8hicscmtXOdvUuSQsuZNlUyv5pd39zeJoIbKXSbzCdTCkaaokc2XaxXafY4sm7bgUV+hwc8GkmHyXKxWXgeoVzmDn4S2korRlRIB53RgvCCO27BjZQVNbQ8M5VXOuYMWN0bARtM+w79ERQY3sRRGLT3VQsD3GlDtT77L0P5yCjeeuEUm5DnwBVLddv2SrrtkASDeFnKRnIntSKFF4/v8fcl9ES6Bs5oN1z5O4E6SPlYArMntsxWbL1gG7C+1Fiy6/NG2hoMhT7RQfj0lmVYi4BghtDKcal81C7c1Pb5dxDuTDUDQ4L3+KFut4yrgpVScTUI+rhX3vTwxchxZHBiuqiAGfRGdxz/JWP3E967WhtsWULWXjr0E5L7NPt0UPUm/wfZSDHc57MXJtXH5ZqR82xDiD1tKTULPe7HOQgoKp+zjmDSvL6a3+Ci4N8hMXHjPK6s7aE461642Dfg5A7pTMMqgnKylHBuGA9kvK812tTADOt0M2oErdJfFvhE6W1zstVpmVb+gqgVpTYtdxFgZFU7+yCti/oFVhjZec/+PPGlidp1+CJQoETNYvRc6Fj2IrfOcDEuyPT9DTvJB6qiTfrXhG/NqkA/6GFYo571qpCqWkMJdK+4nQYaHJRidWz40Hn/5H1FbKhy2Igje0NQ8gOMgubyQ1h5fENf0Vyz8k+6X5rhLWgkJopgPzCB4xXWth1fxhQTBNy6YczxESh4jg/Txf43AAAA//8DAFBV1u0xBgAA
+      string: |-
+        {
+          "id": "https://doi.org/10.2899/caricom/1",
+          "doi": "10.2899/CARICOM/1",
+          "types": {
+            "ris": "DATA",
+            "bibtex": "misc",
+            "citeproc": "dataset",
+            "schemaOrg": "Dataset",
+            "resourceType": "Dataset",
+            "resourceTypeGeneral": "Dataset"
+          },
+          "creators": [
+            {
+              "name": "Caribbean Community",
+              "affiliation": []
+            }
+          ],
+          "titles": [
+            {
+              "lang": "en",
+              "title": "OP DOI RA Test"
+            }
+          ],
+          "publisher": "Publications Office",
+          "container": {},
+          "subjects": [
+            {
+              "subject": "Economy and finance",
+              "valueUri": "http://publications.europa.eu/resource/authority/data-theme/ECON",
+              "schemeUri": "http://publications.europa.eu/resource/authority/data-theme",
+              "subjectScheme": "MDR Data Themes"
+            }
+          ],
+          "contributors": [],
+          "dates": [
+            {
+              "date": "2018/10/10",
+              "dateType": "Issued"
+            }
+          ],
+          "publicationYear": 2018,
+          "identifiers": [
+            {
+              "identifier": "https://handle.test.datacite.org/10.2899/caricom/1",
+              "identifierType": "DOI"
+            }
+          ],
+          "sizes": [],
+          "formats": [],
+          "rightsList": [],
+          "descriptions": [
+            {
+              "lang": "fr",
+              "description": "french description",
+              "descriptionType": "Abstract"
+            },
+            {
+              "lang": "en",
+              "description": "english description",
+              "descriptionType": "Abstract"
+            }
+          ],
+          "geoLocations": [],
+          "fundingReferences": [],
+          "relatedIdentifiers": [],
+          "schemaVersion": "http://datacite.org/schema/kernel-4",
+          "providerId": "europ",
+          "clientId": "europ.test",
+          "agency": "datacite",
+          "state": "findable"
+        }
     http_version: 
-  recorded_at: Fri, 08 May 2020 13:41:53 GMT
+  recorded_at: Sat, 11 Jul 2020 14:10:15 GMT
 recorded_with: VCR 3.0.3

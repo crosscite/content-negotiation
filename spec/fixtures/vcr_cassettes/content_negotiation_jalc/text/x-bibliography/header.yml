@@ -8,16 +8,16 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
   response:
     status:
       code: 404
-      message: ''
+      message: Not Found
     headers:
       Date:
-      - Sun, 15 Dec 2019 22:42:27 GMT
+      - Sat, 11 Jul 2020 14:11:28 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -29,19 +29,19 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 18a057bd-fdf9-4274-baf0-b96a01742907
+      - 6db50021-23f3-4ad8-9695-6f706e14072a
       X-Runtime:
-      - '0.004820'
+      - '0.016918'
       X-Powered-By:
-      - Phusion Passenger 6.0.4
+      - Phusion Passenger 6.0.5
       Server:
-      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      - nginx/1.14.0 + Phusion Passenger 6.0.5
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:42:27 GMT
+  recorded_at: Sat, 11 Jul 2020 14:11:28 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.18942/apg.201812/transform/application/vnd.crossref.unixsd+xml
@@ -50,13 +50,13 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - text/xml
   response:
     status:
       code: 404
-      message: ''
+      message: Not Found
     headers:
       Content-Type:
       - text/plain
@@ -69,7 +69,7 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sun, 15 Dec 2019 22:42:28 GMT
+      - Sat, 11 Jul 2020 14:11:28 GMT
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -80,7 +80,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:42:28 GMT
+  recorded_at: Sat, 11 Jul 2020 14:11:28 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.18942
@@ -89,7 +89,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -98,24 +98,26 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 15 Dec 2019 22:42:28 GMT
+      - Sat, 11 Jul 2020 14:11:28 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d10fdb76890fbc4d7e575aa31586c8b301576449748; expires=Tue, 14-Jan-20
-        22:42:28 GMT; path=/; domain=.doi.org; HttpOnly; Secure
+      - __cfduid=dbc8db8f481f86ea2f4d7983f2f891df41594476688; expires=Mon, 10-Aug-20
+        14:11:28 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
       Cf-Cache-Status:
       - DYNAMIC
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
+      Cf-Request-Id:
+      - 03dfd08dce000016eedb104200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Server:
       - cloudflare
       Cf-Ray:
-      - 545bee4f7925d921-AMS
+      - 5b131d29492c16ee-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -126,7 +128,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:42:28 GMT
+  recorded_at: Sat, 11 Jul 2020 14:11:28 GMT
 - request:
     method: get
     uri: https://doi.org/10.18942/apg.201812
@@ -135,7 +137,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - application/vnd.citationstyles.csl+json
   response:
@@ -144,7 +146,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 15 Dec 2019 22:42:28 GMT
+      - Sat, 11 Jul 2020 14:11:29 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -152,31 +154,33 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d282c557cf491b0873f8d584cb42b8d481576449748; expires=Tue, 14-Jan-20
-        22:42:28 GMT; path=/; domain=.doi.org; HttpOnly; Secure
+      - __cfduid=dbc3dd4edf8bdd3dca289120bcd9947931594476689; expires=Mon, 10-Aug-20
+        14:11:29 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
       Vary:
       - Accept
       Location:
       - https://japanlinkcenter.org/data/10.18942/apg.201812
       Expires:
-      - Sun, 15 Dec 2019 23:31:01 GMT
+      - Sat, 11 Jul 2020 14:47:30 GMT
       Cf-Cache-Status:
       - DYNAMIC
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
+      Cf-Request-Id:
+      - 03dfd08e61000016eed59ce200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Server:
       - cloudflare
       Cf-Ray:
-      - 545bee503c89d8f9-AMS
+      - 5b131d2a3b8316ee-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://japanlinkcenter.org/data/10.18942/apg.201812">https://japanlinkcenter.org/data/10.18942/apg.201812</a></body></html>
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:42:28 GMT
+  recorded_at: Sat, 11 Jul 2020 14:11:29 GMT
 - request:
     method: get
     uri: https://japanlinkcenter.org/data/10.18942/apg.201812
@@ -185,26 +189,27 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - application/vnd.citationstyles.csl+json
   response:
     status:
       code: 200
-      message: ''
+      message: '200'
     headers:
       Date:
-      - Sun, 15 Dec 2019 22:42:29 GMT
+      - Sat, 11 Jul 2020 14:11:30 GMT
       X-Frame-Options:
       - SAMEORIGIN, SAMEORIGIN, SAMEORIGIN
       Content-Security-Policy:
-      - 'default-src ''self'' ''unsafe-inline'' ''unsafe-eval'' data: ;'
+      - 'default-src ''self'' ''unsafe-inline'' ''unsafe-eval'' japanlinkcenter.org
+        jlc.jst.go.jp assets.crossref.org data: ;'
       Content-Type:
       - application/vnd.citationstyles.csl+json;charset=UTF-8
       Content-Language:
       - ja-JP
       Set-Cookie:
-      - BIGipServerPOOL_TSC016_004=1095912096.20480.0000; path=/; Httponly, TS01ab0e97=0192d116670cd7da075605e840440325fd5ad218c24129a5f6dd0c3f3c7f5f35b2d69538ea1e6b57ac41ceaa3b9e19159735a5e7c5719f4c6de692e7abb56a3c67bebf34b6;
+      - BIGipServerPOOL_TSC016_004=1112689312.20480.0000; path=/; Httponly, TS01ab0e97=0192d116678b71e2886a4ffe01eaa30bab5a2e54b73faeae60fbf91e6ed557d27a068a67a8667f61ab8a1c2ff665cb55278291226d7c2cb917ce3d9238a9577bdb33a042bd;
         Path=/; Secure
       X-Content-Type-Options:
       - nosniff
@@ -224,5 +229,5 @@ http_interactions:
         Japanese Society for Plant Systematics\",\r\n\t\"issued\":{\r\n\t\t\"date-parts\":\r\n\t\t\t[\r\n\t\t\t\t[2019,2,28]\r\n\t\t\t]\r\n\t},\r\n\t\"volume\":\"70\",\r\n\t\"number\":\"1\",\r\n\t\"page\":\"19-28\",\r\n\t\"ISSN\":\r\n\t\t[\"13467565\",\"21897042\"],\r\n\t\"container-title\":\"Acta
         phytotaxonomica et geobotanica\"\r\n}"
     http_version: 
-  recorded_at: Sun, 15 Dec 2019 22:42:29 GMT
+  recorded_at: Sat, 11 Jul 2020 14:11:30 GMT
 recorded_with: VCR 3.0.3

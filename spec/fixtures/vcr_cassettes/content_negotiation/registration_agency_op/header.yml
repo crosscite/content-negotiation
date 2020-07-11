@@ -8,18 +8,16 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.6.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
-      Accept-Encoding:
-      - gzip
   response:
     status:
       code: 404
       message: Not Found
     headers:
       Date:
-      - Fri, 08 May 2020 13:41:53 GMT
+      - Sat, 11 Jul 2020 14:10:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -30,22 +28,20 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      Content-Encoding:
-      - gzip
       X-Request-Id:
-      - 6fd751c0-7afb-404a-8e52-d03c5cb433a0
+      - f4262090-4573-4fd2-9dd0-d5d78a7e5167
       X-Runtime:
-      - '0.015963'
+      - '0.016386'
       X-Powered-By:
-      - Phusion Passenger 6.0.4
+      - Phusion Passenger 6.0.5
       Server:
-      - nginx/1.14.0 + Phusion Passenger 6.0.4
+      - nginx/1.14.0 + Phusion Passenger 6.0.5
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAKFhtV4AAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
+      string: '{"errors":[{"status":"404","title":"The resource you are looking for
+        doesn''t exist."}]}'
     http_version: 
-  recorded_at: Fri, 08 May 2020 13:41:53 GMT
+  recorded_at: Sat, 11 Jul 2020 14:10:16 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.2788/011817/transform/application/vnd.crossref.unixsd+xml
@@ -54,11 +50,9 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.6.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - text/xml
-      Accept-Encoding:
-      - gzip,deflate
   response:
     status:
       code: 404
@@ -75,7 +69,7 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Fri, 08 May 2020 13:41:54 GMT
+      - Sat, 11 Jul 2020 14:10:16 GMT
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -86,7 +80,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version: 
-  recorded_at: Fri, 08 May 2020 13:41:54 GMT
+  recorded_at: Sat, 11 Jul 2020 14:10:16 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.2788
@@ -95,29 +89,27 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.6.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Fri, 08 May 2020 13:41:54 GMT
+      - Sat, 11 Jul 2020 14:10:17 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dd2df9acd8a3fcb9f8a55df510b64e0461588945314; expires=Sun, 07-Jun-20
-        13:41:54 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
-      Content-Encoding:
-      - gzip
+      - __cfduid=d63fcad2eccf57192aee72022e8ab01f51594476616; expires=Mon, 10-Aug-20
+        14:10:16 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
       Cf-Cache-Status:
       - DYNAMIC
+      Cf-Request-Id:
+      - 03dfcf74e30000d6c5f00bf200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Strict-Transport-Security:
@@ -125,13 +117,16 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 590399d5cfa7177a-FRA
-      Cf-Request-Id:
-      - '02961e799a0000177ab8b36200000001'
+      - 5b131b67dcc4d6c5-FRA
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9I3MLCyUdiGiQI0jQP0AJyK3ligUAt5t7gTAAAAA=
+      string: |-
+        [
+          {
+            "DOI": "10.2788",
+            "RA": "OP"
+          }
+        ]
     http_version: 
-  recorded_at: Fri, 08 May 2020 13:41:54 GMT
+  recorded_at: Sat, 11 Jul 2020 14:10:17 GMT
 recorded_with: VCR 3.0.3

@@ -8,18 +8,16 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.6.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
-      Accept-Encoding:
-      - gzip
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Wed, 24 Jun 2020 06:27:28 GMT
+      - Sat, 11 Jul 2020 14:10:45 GMT
       Content-Type:
       - application/vnd.datacite.datacite+json; charset=utf-8
       Connection:
@@ -32,22 +30,211 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      Content-Encoding:
-      - gzip
-      Etag:
-      - W/"d3e177ecadf2cfe521e4aeec2fba63e5"
-      X-Runtime:
-      - '0.029754'
       X-Request-Id:
-      - 2896ef99-c562-46c5-a1f3-553f682d9752
+      - f2047b41-60c9-4fc6-a4da-cfd94fd75a35
+      Etag:
+      - W/"9468b4ad3924c91f87bdd8ea54cdfd8d"
+      X-Runtime:
+      - '0.025151'
       X-Powered-By:
       - Phusion Passenger 6.0.5
       Server:
       - nginx/1.14.0 + Phusion Passenger 6.0.5
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAFDy8l4AA9RYW2/bNhR+768Q/LroZidx3LfFabcMzgVxAnQY+kBJRzZbShRIyolT5L/3kLqYUhQn61YMM2DA4jk8l+9c5W/vHGdEk9F7Z7RWqpDvfT/h1ONi5YeBNw4n04kfHk3HJ9Px4fjkODwZHegbyKOv7GMpBbOlyngNGfESokhMFRgNGSjifwWRA3MPvcCneQIP3lplrBKhtgVIFPINH/BRUP0wml9dXBs6HkU0UvCgTzMq4+ZUKygEj/U5EYrGDBpSZcaVWGnakqfqnghY8lLEMOdJyyZAmrNbtEBzfrpYDJF+gxwEYbasEXI9GetjAURxoW3+y1yt3EBKTjIj9YIyBuLA+cDoI4lArWsdNUuj/BqE5DlhO+qKbiC/rKUM3E5JRtn2sqNmRyVpShklivK8tc22r2PjGQZsjniOWuJT/etzx9jzBHJFUwqWw8+EGvThTlA7M7iIaaLzobVwQOjgBT/Aj4vf0D2qf033CVka9VrU1c38/GzApXfN0+cqAaliMBBARnKTQJC7d8sdsIZdn38sGXMa5BxMHufDA8kKVqP4dPD3xJ1BxnOphAmZw9Od6GvBC8AMB+n17jXJsyyjSk7PtaKMGJXrCtk2yFXi8lwRmhvStyqXZRl9gVi9HYr6gqZgVJyYZ0WpQDgyppDHYDH2U0J3ILiHrUfzlPvPJO5iaLj6bmnbBY3K/YW3VERg3f3BSf5DJde92K02I/sHi21OGE25yClxzuiKKsKcBY0EEdt95Wf53NovuAZrASSxK/8/L9Sxi3PiyA3G00//aqHiWBmqU32spYyDcOoGMzec7LDQtAauu0I/JV3iOeafyJrINTzOPVVr59AbO0Vbe8NVbSk/HFZ7LmWJWocqMzZ6/wSiAdUSDEkXW0lW0C04nN/PQ9qaQQdDsyZ5wsBD1FR3Ju8Z6T1xjRdnV+fDAAxrfn0RGPtQdUu/YXLrAzfFxupukMV7yNg+o+5uFn1cJX20cmR06Hw9HbXEKtQWmRRFEwVf62o5N4hynRJoRxUAQVdrJRdUqjc3yOpKt++ZjQH7DHZL3fANNFU2JDzDjuw/guB+6AV91xKQsaCFNvbtLdq6VK84Tg2zHjHEnmAXGB8dC8cUJnE23fz3BoU2ofg10qMLZ0HP6BXwBa8QHjDaop7yh3YJNDQgUp3yMk8WPMcuWSZGj3t8gqkbWn1llHOh1hUnSmoYD8feyWxi8+FGN8SHSM8Cm+8eBhVPkXEybrrU08GAD9eMxBUaCsOBK6lzFYM9RGxeTnPV9bjQR7Ztk9AbTzo+VCxdQKbeJHjFLs62q32jqagYnts0bBdiNpuFnd4+bFsXsyYzepb+Q1v6cX4Rp5l3PP7JtrwVlzqJf7It3bz+P+CyN19e2ApSrFSar24gBaG3zoE2Q/CdLbl9fW/fLXsoE0Sz7F2aIsI1bVnttc5H3R2qneGgo+OyzKJqEM5PP9y6YXDclzm8Q1lv4+EkmMzwR/UJX77fdN654FIKSJ2PhsFpNqkdQgKYXmqGdsIWosFdECOzLiMPJ5WPA9o47Eq1xRHd7Cj1oPcFufczbNgg/FgyV48R74u08TFGWAPjdyKbgdNjsi3tgKSFdjYKe3w3fwf8otVqII+CabtjmJVijxp7oehzNVbu1tWOquGtqO/tubyBDcV3meR0+4q7RHyim/fBNDj2ugnwwn8St/Cg3uCaEftsCxV8Q01WaZZVRNP65ZBhoqvdqbcjYdDzeGtezepQVOdS1ZtwSrE2Iv0u+vQdAAD//wMADD0Lf3gSAAA=
+      string: |-
+        {
+          "id": "https://doi.org/10.21373/1572872428618",
+          "doi": "10.21373/1572872428618",
+          "url": "https://schema.datacite.org/meta/kernel-4.0/index.html",
+          "types": {
+            "ris": "COMP",
+            "bibtex": "misc",
+            "citeproc": "article",
+            "schemaOrg": "SoftwareSourceCode",
+            "resourceType": "XML",
+            "resourceTypeGeneral": "Software"
+          },
+          "creators": [
+            {
+              "name": "Miller, Elizabeth",
+              "nameType": "Personal",
+              "givenName": "Elizabeth",
+              "familyName": "Miller",
+              "affiliation": [
+                {
+                  "name": "DataCite"
+                }
+              ],
+              "nameIdentifiers": [
+                {
+                  "schemeUri": "https://orcid.org",
+                  "nameIdentifier": "https://orcid.org/0000-0001-5000-0007",
+                  "nameIdentifierScheme": "ORCID"
+                }
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "lang": "en-US",
+              "title": "Full DataCite XML Example"
+            },
+            {
+              "lang": "en-US",
+              "title": "Demonstration of DataCite Properties.",
+              "titleType": "Subtitle"
+            }
+          ],
+          "publisher": "DataCite",
+          "container": {},
+          "subjects": [
+            {
+              "lang": "en-US",
+              "subject": "000 computer science",
+              "subjectScheme": "dewey"
+            }
+          ],
+          "contributors": [
+            {
+              "name": "Starr, Joan",
+              "nameType": "Personal",
+              "givenName": "Joan",
+              "familyName": "Starr",
+              "affiliation": [
+                {
+                  "name": "California Digital Library"
+                }
+              ],
+              "contributorType": "ProjectLeader",
+              "nameIdentifiers": [
+                {
+                  "schemeUri": "https://orcid.org",
+                  "nameIdentifier": "https://orcid.org/0000-0002-7285-027X",
+                  "nameIdentifierScheme": "ORCID"
+                }
+              ]
+            }
+          ],
+          "dates": [
+            {
+              "date": "2017-09-13",
+              "dateType": "Updated",
+              "dateInformation": "Updated with 4.2 properties"
+            },
+            {
+              "date": "2014",
+              "dateType": "Issued"
+            }
+          ],
+          "publicationYear": 2014,
+          "language": "en",
+          "identifiers": [
+            {
+              "identifier": "https://handle.test.datacite.org/10.21373/1572872428618",
+              "identifierType": "DOI"
+            },
+            {
+              "identifier": "https://schema.datacite.org/meta/kernel-4.2/example/datacite-example-full-v4.2.xml",
+              "identifierType": "URL"
+            }
+          ],
+          "sizes": [
+            "4 kB"
+          ],
+          "formats": [
+            "application/xml"
+          ],
+          "version": "4.2",
+          "rightsList": [
+            {
+              "lang": "en-US",
+              "rightsUri": "http://creativecommons.org/publicdomain/zero/1.0"
+            }
+          ],
+          "descriptions": [
+            {
+              "lang": "en-US",
+              "description": "XML example of all DataCite Metadata Schema v4.2 properties.",
+              "descriptionType": "Abstract"
+            }
+          ],
+          "geoLocations": [
+            {
+              "geoLocationBox": {
+                "eastBoundLongitude": "-68.211",
+                "northBoundLatitude": "42.893",
+                "southBoundLatitude": "41.090",
+                "westBoundLongitude": "-71.032"
+              },
+              "geoLocationPlace": "Atlantic Ocean",
+              "geoLocationPoint": {
+                "pointLatitude": "31.233",
+                "pointLongitude": "-67.302"
+              },
+              "geoLocationPolygon": [
+                {
+                  "polygonPoint": {
+                    "pointLatitude": "41.991",
+                    "pointLongitude": "-71.032"
+                  }
+                },
+                {
+                  "polygonPoint": {
+                    "pointLatitude": "42.893",
+                    "pointLongitude": "-69.622"
+                  }
+                },
+                {
+                  "polygonPoint": {
+                    "pointLatitude": "41.991",
+                    "pointLongitude": "-68.211"
+                  }
+                },
+                {
+                  "polygonPoint": {
+                    "pointLatitude": "41.090",
+                    "pointLongitude": "-69.622"
+                  }
+                },
+                {
+                  "polygonPoint": {
+                    "pointLatitude": "41.991",
+                    "pointLongitude": "-71.032"
+                  }
+                }
+              ]
+            }
+          ],
+          "fundingReferences": [
+            {
+              "awardTitle": "Full DataCite XML Example",
+              "funderName": "National Science Foundation",
+              "awardNumber": "CBET-106",
+              "funderIdentifier": "https://doi.org/10.13039/100000001",
+              "funderIdentifierType": "Crossref Funder ID"
+            }
+          ],
+          "relatedIdentifiers": [
+            {
+              "schemeUri": "https://github.com/citation-style-language/schema/raw/master/csl-data.json",
+              "relationType": "HasMetadata",
+              "relatedIdentifier": "https://data.datacite.org/application/citeproc+json/10.5072/example-full",
+              "relatedIdentifierType": "URL",
+              "relatedMetadataScheme": "citeproc+json"
+            },
+            {
+              "relationType": "IsReviewedBy",
+              "relatedIdentifier": "arXiv:0706.0001",
+              "resourceTypeGeneral": "Text",
+              "relatedIdentifierType": "arXiv"
+            }
+          ],
+          "providerId": "gbif",
+          "clientId": "gbif.gbif",
+          "agency": "datacite",
+          "state": "findable"
+        }
     http_version: 
-  recorded_at: Wed, 24 Jun 2020 06:27:28 GMT
+  recorded_at: Sat, 11 Jul 2020 14:10:45 GMT
 recorded_with: VCR 3.0.3
