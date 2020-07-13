@@ -17,7 +17,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Sat, 11 Jul 2020 14:11:12 GMT
+      - Sun, 12 Jul 2020 13:33:45 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -29,9 +29,9 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - f3fe15ef-224b-48f1-92a4-9f3fffb321f7
+      - 6864b5c9-77b5-453c-bb01-009f441a58fd
       X-Runtime:
-      - '0.014919'
+      - '0.015716'
       X-Powered-By:
       - Phusion Passenger 6.0.5
       Server:
@@ -41,7 +41,7 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Sat, 11 Jul 2020 14:11:12 GMT
+  recorded_at: Sun, 12 Jul 2020 13:33:45 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.18942/apg.201812/transform/application/vnd.crossref.unixsd+xml
@@ -69,7 +69,7 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sat, 11 Jul 2020 14:11:12 GMT
+      - Sun, 12 Jul 2020 13:33:45 GMT
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -80,7 +80,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version: 
-  recorded_at: Sat, 11 Jul 2020 14:11:12 GMT
+  recorded_at: Sun, 12 Jul 2020 13:33:45 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.18942
@@ -98,18 +98,18 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 11 Jul 2020 14:11:12 GMT
+      - Sun, 12 Jul 2020 13:33:46 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=ddc14962cf533c9fa0459b21c8297461c1594476672; expires=Mon, 10-Aug-20
-        14:11:12 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d2feafdcb3dee6a123ab4ee1c085a4f861594560825; expires=Tue, 11-Aug-20
+        13:33:45 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 03dfd04ec600001456c49a0200000001
+      - 03e4d4627e000005bbda8b0200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Strict-Transport-Security:
@@ -117,7 +117,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 5b131cc47dff1456-FRA
+      - 5b1b234a6d2705bb-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -128,7 +128,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sat, 11 Jul 2020 14:11:12 GMT
+  recorded_at: Sun, 12 Jul 2020 13:33:46 GMT
 - request:
     method: get
     uri: https://doi.org/10.18942/apg.201812
@@ -146,7 +146,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 11 Jul 2020 14:11:12 GMT
+      - Sun, 12 Jul 2020 13:33:46 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -154,18 +154,18 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=df4aa904467e699e8196862be80c4c5b61594476672; expires=Mon, 10-Aug-20
-        14:11:12 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d0b696f83fafdf656579d865030e1fd7d1594560826; expires=Tue, 11-Aug-20
+        13:33:46 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
       Vary:
       - Accept
       Location:
       - https://japanlinkcenter.org/data/10.18942/apg.201812
       Expires:
-      - Sat, 11 Jul 2020 14:47:30 GMT
+      - Sun, 12 Jul 2020 13:57:46 GMT
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 03dfd04f43000063b3043ed200000001
+      - 03e4d463410000c2f4a0943200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Strict-Transport-Security:
@@ -173,14 +173,14 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 5b131cc53d8b63b3-FRA
+      - 5b1b234b9aa4c2f4-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://japanlinkcenter.org/data/10.18942/apg.201812">https://japanlinkcenter.org/data/10.18942/apg.201812</a></body></html>
     http_version: 
-  recorded_at: Sat, 11 Jul 2020 14:11:12 GMT
+  recorded_at: Sun, 12 Jul 2020 13:33:46 GMT
 - request:
     method: get
     uri: https://japanlinkcenter.org/data/10.18942/apg.201812
@@ -198,7 +198,7 @@ http_interactions:
       message: '200'
     headers:
       Date:
-      - Sat, 11 Jul 2020 14:11:13 GMT
+      - Sun, 12 Jul 2020 13:33:50 GMT
       X-Frame-Options:
       - SAMEORIGIN, SAMEORIGIN, SAMEORIGIN
       Content-Security-Policy:
@@ -209,7 +209,7 @@ http_interactions:
       Content-Language:
       - ja-JP
       Set-Cookie:
-      - BIGipServerPOOL_TSC016_004=1112689312.20480.0000; path=/; Httponly, TS01ab0e97=0192d1166797134032a11d635b926b9b3e7e785f945ae98d86df16ea44a7b51215ade64f3303c9302f0d9eb0a170d7158c69c0fcae17dce8129ae7571faa180f84012d2b93;
+      - BIGipServerPOOL_TSC016_004=1095912096.20480.0000; path=/; Httponly, TS01ab0e97=0192d11667ea5f3d48bc7441c1e7cab74da6aad2aeb880a59061b6b4838f19f86e05ca699a81d82360a9c84f4b6ec57ef139b15b735b6fd06b0ef949a98ce77f2349127468;
         Path=/; Secure
       X-Content-Type-Options:
       - nosniff
@@ -229,5 +229,5 @@ http_interactions:
         Japanese Society for Plant Systematics\",\r\n\t\"issued\":{\r\n\t\t\"date-parts\":\r\n\t\t\t[\r\n\t\t\t\t[2019,2,28]\r\n\t\t\t]\r\n\t},\r\n\t\"volume\":\"70\",\r\n\t\"number\":\"1\",\r\n\t\"page\":\"19-28\",\r\n\t\"ISSN\":\r\n\t\t[\"13467565\",\"21897042\"],\r\n\t\"container-title\":\"Acta
         phytotaxonomica et geobotanica\"\r\n}"
     http_version: 
-  recorded_at: Sat, 11 Jul 2020 14:11:14 GMT
+  recorded_at: Sun, 12 Jul 2020 13:33:50 GMT
 recorded_with: VCR 3.0.3

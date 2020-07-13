@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 11 Jul 2020 14:10:07 GMT
+      - Sun, 12 Jul 2020 13:32:34 GMT
       Content-Type:
       - application/vnd.datacite.datacite+json; charset=utf-8
       Connection:
@@ -31,11 +31,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 7c6113d1-9f94-4387-9a5b-7dd05a79a6f2
+      - fbce5414-aaa6-4b8f-8cf4-879227ed504a
       Etag:
       - W/"8b80da34e1632f39bbb2661b6ae33ffa"
       X-Runtime:
-      - '0.020746'
+      - '0.021009'
       X-Powered-By:
       - Phusion Passenger 6.0.5
       Server:
@@ -117,5 +117,5 @@ http_interactions:
           "state": "findable"
         }
     http_version: 
-  recorded_at: Sat, 11 Jul 2020 14:10:07 GMT
+  recorded_at: Sun, 12 Jul 2020 13:32:34 GMT
 recorded_with: VCR 3.0.3

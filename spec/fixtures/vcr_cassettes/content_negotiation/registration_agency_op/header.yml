@@ -17,7 +17,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Sat, 11 Jul 2020 14:10:16 GMT
+      - Sun, 12 Jul 2020 13:32:41 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -29,9 +29,9 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - f4262090-4573-4fd2-9dd0-d5d78a7e5167
+      - d7fb1e62-8ce8-4c46-999f-8922e1f02fc4
       X-Runtime:
-      - '0.016386'
+      - '0.015463'
       X-Powered-By:
       - Phusion Passenger 6.0.5
       Server:
@@ -41,7 +41,7 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Sat, 11 Jul 2020 14:10:16 GMT
+  recorded_at: Sun, 12 Jul 2020 13:32:41 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.2788/011817/transform/application/vnd.crossref.unixsd+xml
@@ -69,7 +69,7 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sat, 11 Jul 2020 14:10:16 GMT
+      - Sun, 12 Jul 2020 13:32:42 GMT
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -80,7 +80,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version: 
-  recorded_at: Sat, 11 Jul 2020 14:10:16 GMT
+  recorded_at: Sun, 12 Jul 2020 13:32:42 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.2788
@@ -98,18 +98,18 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 11 Jul 2020 14:10:17 GMT
+      - Sun, 12 Jul 2020 13:32:42 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d63fcad2eccf57192aee72022e8ab01f51594476616; expires=Mon, 10-Aug-20
-        14:10:16 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=df196e46ae49ee8a0dd1607746a5959d01594560762; expires=Tue, 11-Aug-20
+        13:32:42 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 03dfcf74e30000d6c5f00bf200000001
+      - 03e4d36aa20000dfbb43256200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Strict-Transport-Security:
@@ -117,7 +117,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 5b131b67dcc4d6c5-FRA
+      - 5b1b21bddfbadfbb-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -128,5 +128,5 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sat, 11 Jul 2020 14:10:17 GMT
+  recorded_at: Sun, 12 Jul 2020 13:32:42 GMT
 recorded_with: VCR 3.0.3
