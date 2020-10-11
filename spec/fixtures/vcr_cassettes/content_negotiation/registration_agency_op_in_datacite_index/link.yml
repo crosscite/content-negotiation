@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 12 Jul 2020 13:32:41 GMT
+      - Sun, 11 Oct 2020 06:53:01 GMT
       Content-Type:
       - application/vnd.datacite.datacite+json; charset=utf-8
       Connection:
@@ -30,16 +30,18 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - 980a97ed-a70b-4391-8f11-e5cdd2fd02dd
       Etag:
       - W/"5f537130fa016a3f1a149a51ea0d3e00"
       X-Runtime:
-      - '0.021712'
+      - '0.023121'
+      X-Rack-Cors:
+      - miss; no-origin
+      X-Request-Id:
+      - 034e1318-47eb-421d-a2ba-fc046e0f5c19
       X-Powered-By:
-      - Phusion Passenger 6.0.5
+      - Phusion Passenger 6.0.6
       Server:
-      - nginx/1.14.0 + Phusion Passenger 6.0.5
+      - nginx/1.14.0 + Phusion Passenger 6.0.6
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -115,5 +117,5 @@ http_interactions:
           "state": "findable"
         }
     http_version: 
-  recorded_at: Sun, 12 Jul 2020 13:32:41 GMT
+  recorded_at: Sun, 11 Oct 2020 06:53:01 GMT
 recorded_with: VCR 3.0.3

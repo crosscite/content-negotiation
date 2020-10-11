@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Sun, 12 Jul 2020 13:33:40 GMT
+      - Sun, 11 Oct 2020 06:54:06 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -28,20 +28,22 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - 036c2a7b-c090-4130-8154-fd363db05d8f
       X-Runtime:
-      - '0.014784'
+      - '0.016238'
+      X-Rack-Cors:
+      - miss; no-origin
+      X-Request-Id:
+      - bc623ed2-0cc7-4294-a90b-ba36285f786b
       X-Powered-By:
-      - Phusion Passenger 6.0.5
+      - Phusion Passenger 6.0.6
       Server:
-      - nginx/1.14.0 + Phusion Passenger 6.0.5
+      - nginx/1.14.0 + Phusion Passenger 6.0.6
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Sun, 12 Jul 2020 13:33:40 GMT
+  recorded_at: Sun, 11 Oct 2020 06:54:06 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.18942/apg.201812/transform/application/vnd.crossref.unixsd+xml
@@ -50,7 +52,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
       Accept:
       - text/xml
   response:
@@ -69,7 +71,7 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sun, 12 Jul 2020 13:33:41 GMT
+      - Sun, 11 Oct 2020 06:54:07 GMT
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -80,7 +82,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version: 
-  recorded_at: Sun, 12 Jul 2020 13:33:41 GMT
+  recorded_at: Sun, 11 Oct 2020 06:54:07 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.18942
@@ -89,7 +91,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -98,26 +100,32 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 12 Jul 2020 13:33:41 GMT
+      - Sun, 11 Oct 2020 06:54:07 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d690c0a899b6612909aeb349cf18fbbfd1594560821; expires=Tue, 11-Aug-20
-        13:33:41 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=de0c67209123436d86372969192acad801602399247; expires=Tue, 10-Nov-20
+        06:54:07 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 03e4d4509500001f31e812b200000001
+      - 05b80935d60000d715da821200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=71&lkg-time=1602399248"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Server:
       - cloudflare
       Cf-Ray:
-      - 5b1b232dbd9e1f31-FRA
+      - 5e06ab02fe6ed715-FRA
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -128,7 +136,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sun, 12 Jul 2020 13:33:41 GMT
+  recorded_at: Sun, 11 Oct 2020 06:54:07 GMT
 - request:
     method: get
     uri: https://doi.org/10.18942/apg.201812
@@ -137,7 +145,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
       Accept:
       - application/vnd.citationstyles.csl+json
   response:
@@ -146,7 +154,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 12 Jul 2020 13:33:41 GMT
+      - Sun, 11 Oct 2020 06:54:07 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -154,33 +162,39 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=db5dd6064f7d3a41c74782514f4750c1b1594560821; expires=Tue, 11-Aug-20
-        13:33:41 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d039500b82aba1cdbf36a71ffd88f98f31602399247; expires=Tue, 10-Nov-20
+        06:54:07 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
       Vary:
       - Accept
       Location:
       - https://japanlinkcenter.org/data/10.18942/apg.201812
       Expires:
-      - Sun, 12 Jul 2020 13:57:46 GMT
+      - Sun, 11 Oct 2020 07:03:01 GMT
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 03e4d4511e00000742c7b96200000001
+      - 05b809364b0000176af418d200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=71&lkg-time=1602399248"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Server:
       - cloudflare
       Cf-Ray:
-      - 5b1b232e9e480742-FRA
+      - 5e06ab03ae41176a-FRA
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://japanlinkcenter.org/data/10.18942/apg.201812">https://japanlinkcenter.org/data/10.18942/apg.201812</a></body></html>
     http_version: 
-  recorded_at: Sun, 12 Jul 2020 13:33:41 GMT
+  recorded_at: Sun, 11 Oct 2020 06:54:08 GMT
 - request:
     method: get
     uri: https://japanlinkcenter.org/data/10.18942/apg.201812
@@ -189,7 +203,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
       Accept:
       - application/vnd.citationstyles.csl+json
   response:
@@ -198,7 +212,7 @@ http_interactions:
       message: '200'
     headers:
       Date:
-      - Sun, 12 Jul 2020 13:33:42 GMT
+      - Sun, 11 Oct 2020 06:54:08 GMT
       X-Frame-Options:
       - SAMEORIGIN, SAMEORIGIN, SAMEORIGIN
       Content-Security-Policy:
@@ -209,7 +223,7 @@ http_interactions:
       Content-Language:
       - ja-JP
       Set-Cookie:
-      - BIGipServerPOOL_TSC016_004=1112689312.20480.0000; path=/; Httponly, TS01ab0e97=0192d1166795cff245f32efe4cb53abee5abe44564172cfe8943e64f951e87089fcd64e56e596a9f65702e9b994de01cb7090cbccfccc2dc6142dddd8599342d63c1fbc43a;
+      - BIGipServerPOOL_TSC016_004=1112689312.20480.0000; path=/; Httponly, TS01ab0e97=0192d1166772e89fa7786cd97d6302f0f02950c96acd5678766e302f9cda7adf21a51846496ec22c33951b0ec234b90b4f7a528c889235f8261c8db7b85e2d11a2fe8bb525;
         Path=/; Secure
       X-Content-Type-Options:
       - nosniff
@@ -229,5 +243,5 @@ http_interactions:
         Japanese Society for Plant Systematics\",\r\n\t\"issued\":{\r\n\t\t\"date-parts\":\r\n\t\t\t[\r\n\t\t\t\t[2019,2,28]\r\n\t\t\t]\r\n\t},\r\n\t\"volume\":\"70\",\r\n\t\"number\":\"1\",\r\n\t\"page\":\"19-28\",\r\n\t\"ISSN\":\r\n\t\t[\"13467565\",\"21897042\"],\r\n\t\"container-title\":\"Acta
         phytotaxonomica et geobotanica\"\r\n}"
     http_version: 
-  recorded_at: Sun, 12 Jul 2020 13:33:42 GMT
+  recorded_at: Sun, 11 Oct 2020 06:54:09 GMT
 recorded_with: VCR 3.0.3

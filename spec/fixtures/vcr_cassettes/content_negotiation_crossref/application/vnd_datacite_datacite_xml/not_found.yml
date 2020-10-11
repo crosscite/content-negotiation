@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Sun, 12 Jul 2020 13:32:52 GMT
+      - Sun, 11 Oct 2020 06:53:13 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -28,20 +28,22 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - 1dd23bb8-2a74-42d6-b45b-2f7c697c7be1
       X-Runtime:
-      - '0.014870'
+      - '0.015964'
+      X-Rack-Cors:
+      - miss; no-origin
+      X-Request-Id:
+      - f50ffaf5-eaa5-4af1-a942-e4822945a899
       X-Powered-By:
-      - Phusion Passenger 6.0.5
+      - Phusion Passenger 6.0.6
       Server:
-      - nginx/1.14.0 + Phusion Passenger 6.0.5
+      - nginx/1.14.0 + Phusion Passenger 6.0.6
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Sun, 12 Jul 2020 13:32:52 GMT
+  recorded_at: Sun, 11 Oct 2020 06:53:13 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.15146/r34015/transform/application/vnd.crossref.unixsd+xml
@@ -50,7 +52,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
       Accept:
       - text/xml
   response:
@@ -69,7 +71,7 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sun, 12 Jul 2020 13:32:53 GMT
+      - Sun, 11 Oct 2020 06:53:14 GMT
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -80,7 +82,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version: 
-  recorded_at: Sun, 12 Jul 2020 13:32:53 GMT
+  recorded_at: Sun, 11 Oct 2020 06:53:14 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.15146
@@ -89,7 +91,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -98,26 +100,32 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 12 Jul 2020 13:32:53 GMT
+      - Sun, 11 Oct 2020 06:53:14 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=df1f66a49a75e906ebbd20fb881f779461594560773; expires=Tue, 11-Aug-20
-        13:32:53 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d59c9ef3e9fdf835daba1dccf25c6950c1602399194; expires=Tue, 10-Nov-20
+        06:53:14 GMT; path=/; domain=.doi.org; HttpOnly; SameSite=Lax; Secure
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 03e4d396990000dfbb4101d200000001
+      - 05b808648700000eaf74010200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=71&lkg-time=1602399194"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Server:
       - cloudflare
       Cf-Ray:
-      - 5b1b22042e9adfbb-FRA
+      - 5e06a9b40a280eaf-FRA
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -128,5 +136,5 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sun, 12 Jul 2020 13:32:53 GMT
+  recorded_at: Sun, 11 Oct 2020 06:53:14 GMT
 recorded_with: VCR 3.0.3

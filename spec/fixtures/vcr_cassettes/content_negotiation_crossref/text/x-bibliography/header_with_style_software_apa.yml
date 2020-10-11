@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.1; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
       Accept:
       - application/vnd.datacite.datacite+json
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 12 Jul 2020 13:33:15 GMT
+      - Sun, 11 Oct 2020 06:53:38 GMT
       Content-Type:
       - application/vnd.datacite.datacite+json; charset=utf-8
       Connection:
@@ -30,16 +30,18 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - 3edb3e7d-ad04-496c-9a22-3adb272889c2
       Etag:
-      - W/"9468b4ad3924c91f87bdd8ea54cdfd8d"
+      - W/"ff089f2d3bb42292a00cdae61a397a6c"
       X-Runtime:
-      - '0.020933'
+      - '0.025900'
+      X-Rack-Cors:
+      - miss; no-origin
+      X-Request-Id:
+      - 1c8fd2a1-54b8-49d9-85c6-60b4e8ec306e
       X-Powered-By:
-      - Phusion Passenger 6.0.5
+      - Phusion Passenger 6.0.6
       Server:
-      - nginx/1.14.0 + Phusion Passenger 6.0.5
+      - nginx/1.14.0 + Phusion Passenger 6.0.6
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -130,10 +132,6 @@ http_interactions:
           "publicationYear": 2014,
           "language": "en",
           "identifiers": [
-            {
-              "identifier": "https://handle.test.datacite.org/10.21373/1572872428618",
-              "identifierType": "DOI"
-            },
             {
               "identifier": "https://schema.datacite.org/meta/kernel-4.2/example/datacite-example-full-v4.2.xml",
               "identifierType": "URL"
@@ -236,5 +234,5 @@ http_interactions:
           "state": "findable"
         }
     http_version: 
-  recorded_at: Sun, 12 Jul 2020 13:33:15 GMT
+  recorded_at: Sun, 11 Oct 2020 06:53:38 GMT
 recorded_with: VCR 3.0.3

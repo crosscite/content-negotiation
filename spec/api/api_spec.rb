@@ -451,6 +451,24 @@ describe 'content negotiation crossref', type: :api, vcr: true do
       expect(response["type"]).to eq("article-journal")
     end
 
+    it "header crossref" do
+      get "/10.1186/1471-2164-7-187", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
+
+      expect(last_response.status).to eq(200)
+      response = JSON.parse(last_response.body)
+      expect(response["type"]).to eq("article-journal")
+      expect(response["title"]).to eq("Finding function: evaluation methods for functional genomic data")
+    end
+
+    it "link crossref" do
+      get "/application/vnd.citationstyles.csl+json/10.1186/1471-2164-7-187"
+
+      expect(last_response.status).to eq(200)
+      response = JSON.parse(last_response.body)
+      expect(response["type"]).to eq("article-journal")
+      expect(response["title"]).to eq("Finding function: evaluation methods for functional genomic data")
+    end
+
     # it "doi with + character" do
     #   doi = "10.14454/terra+aqua/ceres/cldtyphist_l3.004"
     #   get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
