@@ -601,7 +601,7 @@ describe 'content negotiation crossref', type: :api, vcr: true do
 
       # falling back to default APA style
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to eq("Sankar, M., Nieminen, K., Ragni, L., Xenarios, I., &amp; Hardtke, C. S. (2014). Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth. <i>ELife</i>, <i>3</i>. https://doi.org/10.7554/elife.01567")
+      expect(last_response.body).to eq("Sankar, M., Nieminen, K., Ragni, L., Xenarios, I., &amp; Hardtke, C. S. (2014). Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth. <i>ELife</i>, <i>3</i>, e01567. https://doi.org/10.7554/elife.01567")
     end
   end
 
