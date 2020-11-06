@@ -5,17 +5,15 @@
 
 Rails API application for conversion of DOI metadata form/to other metadata formats, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) library for metadata conversion.
 
-
 ## Installation
-
 
 Using Docker. There is no required configuration file.
 
 ```
-docker run -p 8090:80 crosscite/content-negotiation
+docker run -p 8085:80 crosscite/content-negotiation
 ```
 
-You can now point your browser to `http://localhost:8090` and use the application.
+You can now point your browser to `http://localhost:8085` and use the application.
 This is an API with no user interface.
 
 ## Development

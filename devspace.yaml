@@ -1,0 +1,47 @@
+version: v1beta9
+images:
+  app:
+    image: crosscite/content-negotiation
+    preferSyncOverRebuild: true
+    injectRestartHelper: true
+    appendDockerfileInstructions:
+    - USER root
+deployments:
+- name: content-negotiation
+  helm:
+    componentChart: true
+    values:
+      containers:
+      - image: crosscite/content-negotiation
+      service:
+        ports:
+        - port: 80
+dev:
+  ports:
+  - imageName: app
+    forward:
+    - port: 8085
+      remotePort: 80
+  open:
+  - url: http://localhost:8085
+  sync:
+  - imageName: app
+    excludePaths:
+    - .git/
+    uploadExcludePaths:
+    - .env
+    - .env.*
+    - .bundle
+    - log/*
+    - tmp/*
+    - vendor/bundle/*
+    - devspace.yaml
+    onUpload:
+      restartContainer: true
+profiles:
+- name: production
+  patches:
+  - op: remove
+    path: images.app.injectRestartHelper
+  - op: remove
+    path: images.app.appendDockerfileInstructions
