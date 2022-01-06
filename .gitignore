@@ -25,7 +25,7 @@ vendor/bundle/*
 .env
 .env.*
 !.env.example
-!.env.travis
+!.env.build
 
 
 # Ignore DevSpace cache and log folder
