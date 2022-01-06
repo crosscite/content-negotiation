@@ -26,19 +26,19 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6.x'
-      - uses: actions/cache@v2
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+      # - uses: actions/cache@v2
+      #   with:
+      #     path: vendor/bundle
+      #     key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-gems-
       - name: Install
         env:
           MYSQL_PORT: ${{ job.services.mysql.ports[3306] }}
         run: |
           cp .env.build .env
           gem install bundler
-          bundle config path vendor/bundle
+      # bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
       - name: Lint and Test
         env:
