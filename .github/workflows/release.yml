@@ -14,12 +14,6 @@ jobs:
     env:
       MEMCACHE_SERVERS: "localhost:11211"
       SECRET_KEY_BASE: ${{ secrets.SECRET_KEY_BASE }}
-      SESSION_ENCRYPTED_COOKIE_SALT: ${{ secrets.SESSION_ENCRYPTED_COOKIE_SALT }}
-      JWT_PRIVATE_KEY: ${{ secrets.JWT_PRIVATE_KEY }}
-      JWT_PUBLIC_KEY: ${{ secrets.JWT_PUBLIC_KEY }}
-      MDS_USERNAME: ${{ secrets.MDS_USERNAME }}
-      MDS_PASSWORD: ${{ secrets.MDS_PASSWORD }}
-      AWS_REGION: ${{ secrets.AWS_REGION }}
     steps:
       - uses: actions/checkout@v2
       - name: Set up Ruby 2.6
@@ -43,9 +37,7 @@ jobs:
       - name: Lint and Test
         env:
           MEMCACHE_SERVERS: "localhost:11211"
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
+        run: |1
           # Run the tests in subsets instead of all at once.
           bundle exec rspec spec
 
