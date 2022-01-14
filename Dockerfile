@@ -20,7 +20,8 @@ RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" &&
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Remove unused SSH keys
-RUN rm -rf /etc/my_init.d/00_regen_ssh_host_keys.sh
+RUN rm -f /etc/service/sshd/down && \
+    /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 # Enable Passenger and Nginx and remove the default site
 # Preserve env variables for nginx
