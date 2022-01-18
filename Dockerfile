@@ -56,7 +56,7 @@ RUN rm -f /etc/service/sshd/down && \
 RUN mkdir -p /etc/my_init.d
 
 # install custom ssh key during startup
-COPY vendor/docker/10_ssh.sh /etc/my_init.d/10_ssh.sh
+COPY vendor/docker/10_enable_ssh.sh /etc/my_init.d/10_enable_ssh.sh
 
 # Expose web
 EXPOSE 80
