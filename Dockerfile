@@ -19,10 +19,6 @@ RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" &&
     apt-get install ntp wget tzdata -y && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Remove unused SSH keys
-RUN rm -f /etc/service/sshd/down && \
-    /etc/my_init.d/00_regen_ssh_host_keys.sh
-
 # Enable Passenger and Nginx and remove the default site
 # Preserve env variables for nginx
 RUN rm -f /etc/service/nginx/down && \
@@ -51,9 +47,16 @@ RUN mkdir -p tmp/pids && \
     chown -R app:app /home/app/webapp && \
     chmod -R 755 /home/app/webapp
 
+
+# enable SSH
+RUN rm -f /etc/service/sshd/down && \
+    /etc/my_init.d/00_regen_ssh_host_keys.sh
+
 # Run additional scripts during container startup (i.e. not at build time)
 RUN mkdir -p /etc/my_init.d
-COPY vendor/docker/10_enable_ssh.sh /etc/my_init.d/10_enable_ssh.sh
+
+# install custom ssh key during startup
+COPY vendor/docker/10_ssh.sh /etc/my_init.d/10_ssh.sh
 
 # Expose web
 EXPOSE 80
