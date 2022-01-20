@@ -14,9 +14,8 @@ class IndexController < ApplicationController
     if response.status == 200
       @metadata = Bolognese::Metadata.new(input: response.body.fetch("data", nil), from: "datacite_json")
     else
-      url = "https://api.crossref.org/works/#{@doi}/transform/application/vnd.crossref.unixsd+xml"
-      useragent = "Mozilla/5.0 (compatible; Maremma/#{Maremma::VERSION}; +https://github.com/datacite/maremma; mailto:support@datacite.org)"
-      response = Maremma.get(url, accept: "text/xml", raw: true, timeout: 2, useragent: useragent)
+      url = "https://api.crossref.org/works/#{@doi}/transform/application/vnd.crossref.unixsd+xml?mailto=support@datacite.org"
+      response = Maremma.get(url, accept: "text/xml", raw: true, timeout: 2)
 
       if response.status == 200
         string = response.body.fetch("data", nil)

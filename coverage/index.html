@@ -3,38 +3,38 @@
   <head>
     <title>Code coverage for Content-negotiation</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script src='./assets/0.10.2/application.js' type='text/javascript'></script>
+    <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_red.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
   </head>
-
+  
   <body>
     <div id="loading">
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-23T09:48:32+02:00">2018-04-23T09:48:32+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-01-20T10:54:59+00:00">2022-01-20T10:54:59+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">69.09%</span></span>
+    (<span class="covered_percent"><span class="green">93.17%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.13
+         9.72
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>18</b> files in total.
-    <b>165</b> relevant lines.
-    <span class="green"><b>114</b> lines covered</span> and
-    <span class="red"><b>51</b> lines missed </span>
+    <b>21</b> files in total.
+    <b>205</b> relevant lines. 
+    <span class="green"><b>191</b> lines covered</span> and
+    <span class="red"><b>14</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -49,19 +49,39 @@
       </tr>
     </thead>
     <tbody>
-
+      
       <tr>
-        <td class="strong"><a href="#ba23be3ebb92839098d225d8618a04f47e301f90" class="src_link" title="app/controllers/concerns/helpable.rb">app/controllers/concerns/helpable.rb</a></td>
-        <td class="red strong">43.48 %</td>
-        <td>35</td>
-        <td>23</td>
-        <td>10</td>
+        <td class="strong"><a href="#b2e84d6e978866f24f0070ba1af5a68e2929aba5" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+        <td class="red strong">61.54 %</td>
+        <td>30</td>
         <td>13</td>
-        <td>0.4</td>
+        <td>8</td>
+        <td>5</td>
+        <td>2.2</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#e8fdc6b892402a62ef18b854d011a44848459eec" class="src_link" title="app/models/help.rb">app/models/help.rb</a></td>
+        <td class="strong"><a href="#6061c0f76704a958a838ac19ab089475e608aba6" class="src_link" title="app/controllers/concerns/helpable.rb">app/controllers/concerns/helpable.rb</a></td>
+        <td class="yellow strong">84.62 %</td>
+        <td>21</td>
+        <td>13</td>
+        <td>11</td>
+        <td>2</td>
+        <td>2.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#90bdbcc8de540d85f260b49c401ccf116a88d567" class="src_link" title="app/controllers/index_controller.rb">app/controllers/index_controller.rb</a></td>
+        <td class="green strong">95.56 %</td>
+        <td>81</td>
+        <td>45</td>
+        <td>43</td>
+        <td>2</td>
+        <td>29.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#2178505e74c1e094007759aa931f3348af45f604" class="src_link" title="app/models/help.rb">app/models/help.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>4</td>
         <td>2</td>
@@ -69,19 +89,19 @@
         <td>0</td>
         <td>1.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#345d3c4406835c945b0bca401e2be845756d38a8" class="src_link" title="config/application.rb">config/application.rb</a></td>
-        <td class="green strong">94.44 %</td>
-        <td>82</td>
-        <td>36</td>
-        <td>34</td>
-        <td>2</td>
-        <td>0.9</td>
+        <td class="strong"><a href="#b35d3e95a3b22c480709c85387f2c22102274eaa" class="src_link" title="config/application.rb">config/application.rb</a></td>
+        <td class="yellow strong">84.38 %</td>
+        <td>69</td>
+        <td>32</td>
+        <td>27</td>
+        <td>5</td>
+        <td>0.8</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#3a5eb568ed89078d9213baaeed05e0bd2f92e47a" class="src_link" title="config/boot.rb">config/boot.rb</a></td>
+        <td class="strong"><a href="#6e35a18a6b1e0919ccda113faa9f9929c27ab49d" class="src_link" title="config/boot.rb">config/boot.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>3</td>
         <td>2</td>
@@ -89,9 +109,9 @@
         <td>0</td>
         <td>1.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#9224fffd97166a56d9d2fce4e5f9eac34d45b2a4" class="src_link" title="config/environment.rb">config/environment.rb</a></td>
+        <td class="strong"><a href="#486fd983f8bf98a46fc3537907f74178f525301c" class="src_link" title="config/environment.rb">config/environment.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>5</td>
         <td>2</td>
@@ -99,29 +119,29 @@
         <td>0</td>
         <td>1.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#64bf8374858a517d7cb518a34b5c3cb7b821c4af" class="src_link" title="config/environments/test.rb">config/environments/test.rb</a></td>
+        <td class="strong"><a href="#ac294cce168e54957f5b848f6178c687eff3274b" class="src_link" title="config/environments/test.rb">config/environments/test.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>47</td>
-        <td>11</td>
-        <td>11</td>
+        <td>50</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#75060763a9b8babc208f494789c6b8cbd83d117b" class="src_link" title="config/initializers/application_controller_renderer.rb">config/initializers/application_controller_renderer.rb</a></td>
+        <td class="strong"><a href="#37fbc0044cb9f0e33909e6d77d7b935f79363069" class="src_link" title="config/initializers/_version.rb">config/initializers/_version.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>11</td>
+        <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0.0</td>
+        <td>12.8</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#e1abc49040bda2cdab4298ed0318b74599d94a94" class="src_link" title="config/initializers/backtrace_silencers.rb">config/initializers/backtrace_silencers.rb</a></td>
+        <td class="strong"><a href="#77c2892f46eeecdb6d1c88984de9431004ac67ac" class="src_link" title="config/initializers/backtrace_silencers.rb">config/initializers/backtrace_silencers.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>7</td>
         <td>0</td>
@@ -129,19 +149,19 @@
         <td>0</td>
         <td>0.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#d8a5210285ffd04ea8c1a6fad6ce459cd7242c21" class="src_link" title="config/initializers/bugsnag.rb">config/initializers/bugsnag.rb</a></td>
-        <td class="red strong">25.0 %</td>
-        <td>6</td>
+        <td class="strong"><a href="#932b8122c56a890be7a95805e8de2b2fb46de244" class="src_link" title="config/initializers/cors.rb">config/initializers/cors.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>16</td>
         <td>4</td>
-        <td>1</td>
-        <td>3</td>
-        <td>0.3</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#174733cd1200a3d5633d1fec40a5078fd38f2320" class="src_link" title="config/initializers/filter_parameter_logging.rb">config/initializers/filter_parameter_logging.rb</a></td>
+        <td class="strong"><a href="#fd8ae15be2807e28725c6a52a6c1e43d3b7ae8d7" class="src_link" title="config/initializers/filter_parameter_logging.rb">config/initializers/filter_parameter_logging.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>4</td>
         <td>1</td>
@@ -149,9 +169,9 @@
         <td>0</td>
         <td>1.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#007e9148c1d203e0b57245e4e8a0b6813980ef8a" class="src_link" title="config/initializers/inflections.rb">config/initializers/inflections.rb</a></td>
+        <td class="strong"><a href="#2a80bf9912f5b818c8bb9113a07b8be329b03175" class="src_link" title="config/initializers/inflections.rb">config/initializers/inflections.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>16</td>
         <td>0</td>
@@ -159,29 +179,29 @@
         <td>0</td>
         <td>0.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#2319b22d749686131db46ab0f45f1b5d5bc0317b" class="src_link" title="config/initializers/lograge.rb">config/initializers/lograge.rb</a></td>
+        <td class="strong"><a href="#4655bd7ad3076ea4333997c15ffd3483a11176cc" class="src_link" title="config/initializers/lograge.rb">config/initializers/lograge.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>2</td>
-        <td>2</td>
+        <td>18</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>17.6</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#7ff8c0457c14fc204528ad94c2ab6ba42e2e7168" class="src_link" title="config/initializers/mime_types.rb">config/initializers/mime_types.rb</a></td>
-        <td class="red strong">52.08 %</td>
-        <td>77</td>
+        <td class="strong"><a href="#22f887d023a200ca2bbb1726b644cd074c9e8496" class="src_link" title="config/initializers/mime_types.rb">config/initializers/mime_types.rb</a></td>
+        <td class="green strong">100.0 %</td>
         <td>48</td>
-        <td>25</td>
-        <td>23</td>
-        <td>2.1</td>
+        <td>30</td>
+        <td>30</td>
+        <td>0</td>
+        <td>8.4</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#43cecc98b7ac8ad94c68ad86322024a3554a00ea" class="src_link" title="config/initializers/name_detector.rb">config/initializers/name_detector.rb</a></td>
+        <td class="strong"><a href="#35dd04b4daade997123daebd724ea99bb6c5cb4a" class="src_link" title="config/initializers/name_detector.rb">config/initializers/name_detector.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>3</td>
         <td>2</td>
@@ -189,2679 +209,3280 @@
         <td>0</td>
         <td>1.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#dda20c9bd765da062b27654f5d1308f3e55e8ca0" class="src_link" title="config/initializers/wrap_parameters.rb">config/initializers/wrap_parameters.rb</a></td>
+        <td class="strong"><a href="#39f52199a07af9393def0f0761e26df9a96a013f" class="src_link" title="config/initializers/sentry.rb">config/initializers/sentry.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#19b3acdfc84403c8b9994e5d46bc09c21c4f779e" class="src_link" title="config/initializers/wrap_parameters.rb">config/initializers/wrap_parameters.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>14</td>
         <td>2</td>
         <td>2</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.5</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#aa867b7e371f52f381d65f792a0c80e24e3983d0" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
+        <td class="strong"><a href="#7a29a70ab754edbda0a40d5b138d58fe2431b62e" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>15</td>
-        <td>9</td>
-        <td>9</td>
+        <td>28</td>
+        <td>20</td>
+        <td>20</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#45f53f531160293c940508bc408472326f252313" class="src_link" title="spec/api/heartbeat_spec.rb">spec/api/heartbeat_spec.rb</a></td>
-        <td class="red strong">50.0 %</td>
+        <td class="strong"><a href="#e4762412f421266b3125ce5300f8efbe467963f3" class="src_link" title="spec/api/heartbeat_spec.rb">spec/api/heartbeat_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
         <td>10</td>
-        <td>6</td>
-        <td>3</td>
-        <td>3</td>
-        <td>0.5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
       </tr>
-
+      
       <tr>
-        <td class="strong"><a href="#11caec4e157bb6272728231fabd3332cc38f77be" class="src_link" title="spec/concerns/helpable_spec.rb">spec/concerns/helpable_spec.rb</a></td>
-        <td class="red strong">53.33 %</td>
-        <td>42</td>
-        <td>15</td>
-        <td>8</td>
-        <td>7</td>
-        <td>0.5</td>
+        <td class="strong"><a href="#2b4d59ecbcf695c22d0560340e7f88dd501c7d78" class="src_link" title="spec/concerns/helpable_spec.rb">spec/concerns/helpable_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>25</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
-
+      
     </tbody>
   </table>
 </div>
 
 
-
+        
       </div>
-
+    
       <div id="footer">
-        Generated by <a href="http://github.com/colszowka/simplecov">simplecov</a> v0.13.0
+        Generated by <a href="http://github.com/colszowka/simplecov">simplecov</a> v0.17.1 
         and simplecov-html v0.10.2<br/>
         using RSpec
       </div>
-
+    
       <div class="source_files">
-
-        <div class="source_table" id="ba23be3ebb92839098d225d8618a04f47e301f90">
+      
+        <div class="source_table" id="b2e84d6e978866f24f0070ba1af5a68e2929aba5">
   <div class="header">
-    <h3>app/controllers/concerns/helpable.rb</h3>
-    <h4><span class="red">43.48 %</span> covered</h4>
+    <h3>app/controllers/application_controller.rb</h3>
+    <h4><span class="red">61.54 %</span> covered</h4>
     <div>
-      <b>23</b> relevant lines.
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>13</b> lines missed.</span>
+      <b>13</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
-
-          <code class="ruby">module Helpable</code>
+          
+          <code class="ruby">class ApplicationController &lt; ActionController::API</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
-
-          <code class="ruby">  extend ActiveSupport::Concern</code>
+          
+          <code class="ruby">  include Helpable</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="3">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
-
-          <code class="ruby">  require &quot;bolognese&quot;</code>
+          
+          <code class="ruby">  RESCUABLE_EXCEPTIONS = [AbstractController::ActionNotFound,</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-
-          <code class="ruby">  require &quot;maremma&quot;</code>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">                          ActionController::RoutingError,</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="6">
-
-
+          
+          
+          <code class="ruby">                          ActionController::ParameterMissing,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">                          ActionController::UnpermittedParameters,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">                          NoMethodError]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="7">
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
-
-          <code class="ruby">  included do</code>
+          
+          <code class="ruby">  unless Rails.env.development?</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
-
-          <code class="ruby">    include Bolognese::DoiUtils</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
-
-          <code class="ruby">    include Bolognese::Utils</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="10">
-
-
-          <code class="ruby"></code>
-        </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
-
-          <code class="ruby">    def get_handle_url(id: nil)</code>
+          
+          <code class="ruby">    rescue_from *RESCUABLE_EXCEPTIONS do |exception|</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="12">
-
-
-          <code class="ruby">      response = Maremma.head(id, limit: 0)</code>
+      
+        <li class="covered" data-hits="8" data-linenumber="12">
+          <span class="hits">8</span>
+          
+          <code class="ruby">      status, message = case exception.class.to_s</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="13">
-
-
-          <code class="ruby">      response.headers[&quot;location&quot;]</code>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">                        when &quot;AbstractController::ActionNotFound&quot;</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="14">
-
-
-          <code class="ruby">    end</code>
+      
+        <li class="covered" data-hits="8" data-linenumber="14">
+          <span class="hits">8</span>
+          
+          <code class="ruby">                          [404, &quot;The resource you are looking for doesn&#39;t exist.&quot;]</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="15">
-
-
-          <code class="ruby"></code>
+          
+          
+          <code class="ruby">                        when &quot;ActionController::RoutingError&quot;</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="16">
-
-
-          <code class="ruby">    # content-types registered for that DOI</code>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby">                          [406, &quot;The content type is not recognized.&quot;]</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-
-          <code class="ruby">    def get_registered_content_types(id)</code>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">                        when &quot;ActiveModel::ForbiddenAttributesError&quot;, &quot;ActionController::UnpermittedParameters&quot;, &quot;ActionController::ParameterMissing&quot;</code>
         </li>
-
+      
         <li class="missed" data-hits="0" data-linenumber="18">
-
-
-          <code class="ruby">      doi = doi_from_url(id)</code>
+          
+          
+          <code class="ruby">                          [422, exception.message]</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="19">
-
-
-          <code class="ruby">      media_url = Rails.env.production? ? &quot;https://api.datacite.org&quot; : &quot;https://api.stage.datacite.org&quot;</code>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">                        when &quot;NoMethodError&quot;</code>
         </li>
-
+      
         <li class="missed" data-hits="0" data-linenumber="20">
-
-
-          <code class="ruby">      media_url += &quot;/media?doi-id=#{doi}&quot;</code>
+          
+          
+          <code class="ruby">                          Rails.env.development? || Rails.env.test? ? [422, exception.message] : [422, &quot;The request could not be processed.&quot;]</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="21">
-
-
-          <code class="ruby">      response = Maremma.get media_url</code>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">                        else</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="22">
-
-
-          <code class="ruby">      response.body.fetch(&quot;data&quot;, []).reduce({}) do|sum, media|</code>
+      
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
+          
+          <code class="ruby">                          Raven.capture_exception(exception)</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="23">
-
-
-          <code class="ruby">        content_type = media.dig(&quot;attributes&quot;, &quot;media-type&quot;)</code>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">                          </code>
         </li>
-
+      
         <li class="missed" data-hits="0" data-linenumber="24">
-
-
-          <code class="ruby">        url = media.dig(&quot;attributes&quot;, &quot;url&quot;)</code>
+          
+          
+          <code class="ruby">                          [400, exception.message]</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="25">
-
-
-          <code class="ruby">        sum[content_type] = url</code>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">                        end</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="26">
-
-
-          <code class="ruby">        sum</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="27">
-
-
-          <code class="ruby">      end.to_h</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="28">
-
-
-          <code class="ruby">    end</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="29">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="30">
-          <span class="hits">1</span>
-
-          <code class="ruby">    def available_content_types</code>
+      
+        <li class="covered" data-hits="8" data-linenumber="27">
+          <span class="hits">8</span>
+          
+          <code class="ruby">      render plain: message, status: status, content_type: &quot;text/plain&quot;</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="31">
-
-
-          <code class="ruby">      content_types = Mime::LOOKUP.map { |k, v| [k, v.to_sym] }.to_h</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="32">
-
-
-          <code class="ruby">      content_types.except(&quot;text/html&quot;, &quot;application/xhtml+xml&quot;, &quot;text/plain&quot;, &quot;application/json&quot;, &quot;text/x-json&quot;, &quot;application/jsonrequest&quot;)</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="33">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
           <code class="ruby">    end</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="34">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
           <code class="ruby">  end</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="35">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
           <code class="ruby">end</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
+      
+        <div class="source_table" id="6061c0f76704a958a838ac19ab089475e608aba6">
+  <div class="header">
+    <h3>app/controllers/concerns/helpable.rb</h3>
+    <h4><span class="yellow">84.62 %</span> covered</h4>
+    <div>
+      <b>13</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module Helpable</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  extend ActiveSupport::Concern</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  require &quot;bolognese&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  require &quot;maremma&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  included do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    include Bolognese::DoiUtils</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    include Bolognese::Utils</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    def get_handle_url(id: nil)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
+          
+          <code class="ruby">      response = Maremma.head(id, limit: 0)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">      response.headers[&quot;location&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    def available_content_types</code>
+        </li>
+      
+        <li class="covered" data-hits="23" data-linenumber="17">
+          <span class="hits">23</span>
+          
+          <code class="ruby">      content_types = Mime::LOOKUP.map { |k, v| [k, v.to_sym] }.to_h</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      content_types.except(&quot;text/html&quot;, &quot;application/xhtml+xml&quot;, &quot;text/plain&quot;, &quot;application/json&quot;, &quot;text/x-json&quot;, &quot;application/jsonrequest&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
 
-        <div class="source_table" id="e8fdc6b892402a62ef18b854d011a44848459eec">
+      
+        <div class="source_table" id="90bdbcc8de540d85f260b49c401ccf116a88d567">
+  <div class="header">
+    <h3>app/controllers/index_controller.rb</h3>
+    <h4><span class="green">95.56 %</span> covered</h4>
+    <div>
+      <b>45</b> relevant lines. 
+      <span class="green"><b>43</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class IndexController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  include ActionController::MimeResponds</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before_action :load_doi, only: [:show]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
+          
+          <code class="ruby">    render plain: ENV[&#39;SITE_TITLE&#39;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="covered" data-hits="79" data-linenumber="11">
+          <span class="hits">79</span>
+          
+          <code class="ruby">    url = &quot;#{ENV[&#39;API_URL&#39;]}/dois/#{@doi}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="79" data-linenumber="12">
+          <span class="hits">79</span>
+          
+          <code class="ruby">    response = Maremma.get(url, accept: &quot;application/vnd.datacite.datacite+json&quot;, raw: true)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="79" data-linenumber="14">
+          <span class="hits">79</span>
+          
+          <code class="ruby">    if response.status == 200</code>
+        </li>
+      
+        <li class="covered" data-hits="26" data-linenumber="15">
+          <span class="hits">26</span>
+          
+          <code class="ruby">      @metadata = Bolognese::Metadata.new(input: response.body.fetch(&quot;data&quot;, nil), from: &quot;datacite_json&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="53" data-linenumber="17">
+          <span class="hits">53</span>
+          
+          <code class="ruby">      url = &quot;https://api.crossref.org/works/#{@doi}/transform/application/vnd.crossref.unixsd+xml?mailto=support@datacite.org&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="53" data-linenumber="18">
+          <span class="hits">53</span>
+          
+          <code class="ruby">      response = Maremma.get(url, accept: &quot;text/xml&quot;, raw: true, timeout: 2)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="53" data-linenumber="20">
+          <span class="hits">53</span>
+          
+          <code class="ruby">      if response.status == 200</code>
+        </li>
+      
+        <li class="covered" data-hits="28" data-linenumber="21">
+          <span class="hits">28</span>
+          
+          <code class="ruby">        string = response.body.fetch(&quot;data&quot;, nil)</code>
+        </li>
+      
+        <li class="covered" data-hits="28" data-linenumber="22">
+          <span class="hits">28</span>
+          
+          <code class="ruby">        string = Nokogiri::XML(string, nil, &#39;UTF-8&#39;, &amp;:noblanks).to_s if string.present?</code>
+        </li>
+      
+        <li class="covered" data-hits="28" data-linenumber="23">
+          <span class="hits">28</span>
+          
+          <code class="ruby">        @metadata = Bolognese::Metadata.new(input: string, from: &quot;crossref&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="25" data-linenumber="25">
+          <span class="hits">25</span>
+          
+          <code class="ruby">        ra = get_doi_ra(@doi)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="25" data-linenumber="27">
+          <span class="hits">25</span>
+          
+          <code class="ruby">        if %w(mEDRA JaLC).include?(ra)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">          # we fetch the Citeproc JSON from DOI content negotiation for the other RAs that support this</code>
+        </li>
+      
+        <li class="covered" data-hits="21" data-linenumber="29">
+          <span class="hits">21</span>
+          
+          <code class="ruby">          url = &quot;https://doi.org/#{@doi}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="21" data-linenumber="30">
+          <span class="hits">21</span>
+          
+          <code class="ruby">          response = Maremma.get(url, accept: &quot;application/vnd.citationstyles.csl+json&quot;, raw: true)</code>
+        </li>
+      
+        <li class="covered" data-hits="21" data-linenumber="31">
+          <span class="hits">21</span>
+          
+          <code class="ruby">          fail AbstractController::ActionNotFound if response.status != 200</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="21" data-linenumber="33">
+          <span class="hits">21</span>
+          
+          <code class="ruby">          string = response.body.fetch(&quot;data&quot;, nil)</code>
+        </li>
+      
+        <li class="covered" data-hits="21" data-linenumber="34">
+          <span class="hits">21</span>
+          
+          <code class="ruby">          @metadata = Bolognese::Metadata.new(input: string, from: &quot;citeproc&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">        else</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="36">
+          <span class="hits">4</span>
+          
+          <code class="ruby">          fail AbstractController::ActionNotFound</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="75" data-linenumber="41">
+          <span class="hits">75</span>
+          
+          <code class="ruby">    fail AbstractController::ActionNotFound unless @metadata.exists?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="75" data-linenumber="43">
+          <span class="hits">75</span>
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="75" data-linenumber="44">
+          <span class="hits">75</span>
+          
+          <code class="ruby">      format.html do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">        # forward to URL registered in handle system for no content negotiation</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        redirect_to @metadata.url, status: 303</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="75" data-linenumber="48">
+          <span class="hits">75</span>
+          
+          <code class="ruby">      format.citation do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">        # extract optional style and locale from header</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="50">
+          <span class="hits">19</span>
+          
+          <code class="ruby">        headers = request.headers[&quot;HTTP_ACCEPT&quot;].to_s.gsub(/\s+/, &quot;&quot;).split(&quot;;&quot;, 3).reduce({}) do |sum, item|</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="51">
+          <span class="hits">10</span>
+          
+          <code class="ruby">          sum[:style] = item.split(&quot;=&quot;).last if item.start_with?(&quot;style&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="52">
+          <span class="hits">10</span>
+          
+          <code class="ruby">          sum[:locale] = item.split(&quot;=&quot;).last if item.start_with?(&quot;locale&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="53">
+          <span class="hits">10</span>
+          
+          <code class="ruby">          sum</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">        # fetch formatted citation</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="57">
+          <span class="hits">19</span>
+          
+          <code class="ruby">        render citation: @metadata, style: params[:style] || headers[:style] || &quot;apa&quot;, locale: params[:locale] || headers[:locale] || &quot;en-US&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="127" data-linenumber="59">
+          <span class="hits">127</span>
+          
+          <code class="ruby">      format.any(:bibtex, :citeproc, :codemeta, :crosscite, :datacite, :datacite_json, :crossref, :jats, :ris, :schema_org, :rdf_xml, :turtle) { render request.format.to_sym =&gt; @metadata }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">  rescue ActionController::UnknownFormat, ActionController::RoutingError</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">    # forward to URL registered in handle system for unrecognized format</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="63">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    redirect_to @metadata.url, status: 303</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def method_not_allowed_error</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    response.headers[&quot;Allow&quot;] = &quot;HEAD, GET, OPTIONS&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    render plain: &quot;Method not allowed.&quot;, status: :method_not_allowed</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def routing_error</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="72">
+          
+          
+          <code class="ruby">    fail AbstractController::ActionNotFound</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  protected</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def load_doi</code>
+        </li>
+      
+        <li class="covered" data-hits="83" data-linenumber="78">
+          <span class="hits">83</span>
+          
+          <code class="ruby">    @doi = validate_doi(params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="83" data-linenumber="79">
+          <span class="hits">83</span>
+          
+          <code class="ruby">    fail AbstractController::ActionNotFound unless @doi.present?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="2178505e74c1e094007759aa931f3348af45f604">
   <div class="header">
     <h3>app/models/help.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines.
+      <b>2</b> relevant lines. 
       <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="never" data-hits="" data-linenumber="1">
-
-
+          
+          
           <code class="ruby"># class used for helpable module testing</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
-
+          
           <code class="ruby">class Help</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
-
+          
           <code class="ruby">  include Helpable</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="4">
-
-
+          
+          
           <code class="ruby">end</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="345d3c4406835c945b0bca401e2be845756d38a8">
+      
+        <div class="source_table" id="b35d3e95a3b22c480709c85387f2c22102274eaa">
   <div class="header">
     <h3>config/application.rb</h3>
-    <h4><span class="green">94.44 %</span> covered</h4>
+    <h4><span class="yellow">84.38 %</span> covered</h4>
     <div>
-      <b>36</b> relevant lines.
-      <span class="green"><b>34</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>32</b> relevant lines. 
+      <span class="green"><b>27</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
-
-          <code class="ruby">require_relative &#39;boot&#39;</code>
+          
+          <code class="ruby">require_relative &quot;boot&quot;</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="2">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
-
+          
           <code class="ruby">require &quot;rails&quot;</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="4">
-
-
+          
+          
           <code class="ruby"># Pick the frameworks you want:</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
-
+          
           <code class="ruby">require &quot;active_model/railtie&quot;</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="6">
-
-
-          <code class="ruby"># require &quot;active_job/railtie&quot;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="7">
-
-
-          <code class="ruby"># require &quot;active_record/railtie&quot;</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="8">
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
-
+          
           <code class="ruby">require &quot;action_controller/railtie&quot;</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="9">
-
-
-          <code class="ruby"># require &quot;action_mailer/railtie&quot;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="10">
-
-
-          <code class="ruby"># require &quot;action_view/railtie&quot;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="11">
-
-
-          <code class="ruby"># require &quot;action_cable/engine&quot;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="12">
-
-
-          <code class="ruby"># require &quot;sprockets/railtie&quot;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="13">
-
-
-          <code class="ruby"># require &quot;rails/test_unit/railtie&quot;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="14">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="15">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
           <code class="ruby"># Require the gems listed in Gemfile, including any gems</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="16">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
           <code class="ruby"># you&#39;ve limited to :test, :development, or :production.</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="17">
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
-
+          
           <code class="ruby">Bundler.require(*Rails.groups)</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="18">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="19">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
           <code class="ruby"># load ENV variables from .env file if it exists</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="20">
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
-
+          
           <code class="ruby">env_file = File.expand_path(&quot;../../.env&quot;, __FILE__)</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="21">
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
-
+          
           <code class="ruby">if File.exist?(env_file)</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
           <code class="ruby">  require &#39;dotenv&#39;</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
           <code class="ruby">  Dotenv.load! env_file</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="24">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
           <code class="ruby">end</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="25">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="26">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
           <code class="ruby"># load ENV variables from container environment if json file exists</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="27">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
           <code class="ruby"># see https://github.com/phusion/baseimage-docker#envvar_dumps</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="28">
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
-
+          
           <code class="ruby">env_json_file = &quot;/etc/container_environment.json&quot;</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="29">
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
-
+          
           <code class="ruby">if File.exist?(env_json_file)</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="30">
-
-
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
           <code class="ruby">  env_vars = JSON.parse(File.read(env_json_file))</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="31">
-
-
+      
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
+          
+          <code class="ruby">  puts env_vars.inspect</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
+          
           <code class="ruby">  env_vars.each { |k, v| ENV[k] = v }</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="32">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
           <code class="ruby">end</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="33">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="34">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
           <code class="ruby"># default values for some ENV variables</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="35">
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
-
+          
           <code class="ruby">ENV[&#39;APPLICATION&#39;] ||= &quot;content-negotiation&quot;</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="36">
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
-
+          
           <code class="ruby">ENV[&#39;HOSTNAME&#39;] ||= &quot;data.local&quot;</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="37">
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
-
+          
+          <code class="ruby">ENV[&#39;API_URL&#39;] ||= &quot;https://api.stage.datacite.org&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
           <code class="ruby">ENV[&#39;MEMCACHE_SERVERS&#39;] ||= &quot;memcached:11211&quot;</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="38">
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
-
+          
           <code class="ruby">ENV[&#39;SITE_TITLE&#39;] ||= &quot;Content Resolver&quot;</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="39">
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
-
+          
           <code class="ruby">ENV[&#39;LOG_LEVEL&#39;] ||= &quot;info&quot;</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="40">
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
-
+          
           <code class="ruby">ENV[&#39;GITHUB_URL&#39;] ||= &quot;https://github.com/crosscite/content-negotiation&quot;</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="41">
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
-
-          <code class="ruby">ENV[&#39;CITEPROC_URL&#39;] ||= &quot;https://citation.crosscite.org/format&quot;</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="42">
-          <span class="hits">1</span>
-
+          
           <code class="ruby">ENV[&#39;TRUSTED_IP&#39;] ||= &quot;10.0.0.0/8&quot;</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="43">
-
-
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">ENV[&quot;RAILS_LOG_TO_STDOUT&quot;] = &quot;enabled&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="44">
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
-
+          
           <code class="ruby">module ContentNegotiation</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="45">
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
-
+          
           <code class="ruby">  class Application &lt; Rails::Application</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="46">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
           <code class="ruby">    # Settings in config/environments/* take precedence over those specified here.</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="47">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
           <code class="ruby">    # Application configuration should go into files in config/initializers</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="48">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
           <code class="ruby">    # -- all .rb files in that directory are automatically loaded.</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="49">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="50">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
           <code class="ruby">    # Only loads a smaller set of middleware suitable for API only apps.</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="51">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
           <code class="ruby">    # Middleware like session, flash, cookies can be added back manually.</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="52">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
           <code class="ruby">    # Skip views, helpers and assets when generating a new resource.</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="53">
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
-
+          
           <code class="ruby">    config.api_only = true</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="54">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="55">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
           <code class="ruby">    # secret_key_base is not used by Rails API, as there are no sessions</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="56">
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
-
+          
           <code class="ruby">    config.secret_key_base = &#39;blipblapblup&#39;</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="57">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="58">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
           <code class="ruby">    # serve assets via web server</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="59">
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
-
+          
           <code class="ruby">    config.public_file_server.enabled = false</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="60">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="61">
-
-
-          <code class="ruby">    # configure logging</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="62">
-          <span class="hits">1</span>
-
-          <code class="ruby">    logger = ActiveSupport::Logger.new(STDOUT)</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="63">
-          <span class="hits">1</span>
-
-          <code class="ruby">    logger.formatter = config.log_formatter</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="64">
-          <span class="hits">1</span>
-
-          <code class="ruby">    config.logger = ActiveSupport::TaggedLogging.new(logger)</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="65">
-          <span class="hits">1</span>
-
-          <code class="ruby">    config.log_level = ENV[&#39;LOG_LEVEL&#39;].to_sym</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="66">
-          <span class="hits">1</span>
-
-          <code class="ruby">    config.lograge.enabled = true</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="67">
-          <span class="hits">1</span>
-
-          <code class="ruby">    config.lograge.ignore_actions = [&#39;HeartbeatController#index&#39;]</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="68">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="69">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
           <code class="ruby">    # Make Ruby 2.4 preserve the timezone of the receiver when calling `to_time`.</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="70">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
           <code class="ruby">    # Previous versions had false.</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="71">
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
-
+          
           <code class="ruby">    config.active_support.to_time_preserves_timezone = true</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="72">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="73">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
           <code class="ruby">    # Configure SSL options to enable HSTS with subdomains. Previous versions had false.</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="74">
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
-
+          
           <code class="ruby">    config.ssl_options = { hsts: { subdomains: true } }</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="75">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="76">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
           <code class="ruby">    # compress responses with deflate or gzip</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="77">
+      
+        <li class="covered" data-hits="1" data-linenumber="64">
           <span class="hits">1</span>
-
+          
           <code class="ruby">    config.middleware.use Rack::Deflater</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="78">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="79">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
           <code class="ruby">    # Use memcached as cache store</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="80">
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
           <span class="hits">1</span>
-
+          
           <code class="ruby">    config.cache_store = :dalli_store, nil, { :namespace =&gt; ENV[&#39;APPLICATION&#39;] }</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="81">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
           <code class="ruby">  end</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="82">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
           <code class="ruby">end</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="3a5eb568ed89078d9213baaeed05e0bd2f92e47a">
+      
+        <div class="source_table" id="6e35a18a6b1e0919ccda113faa9f9929c27ab49d">
   <div class="header">
     <h3>config/boot.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines.
+      <b>2</b> relevant lines. 
       <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
-
+          
           <code class="ruby">ENV[&#39;BUNDLE_GEMFILE&#39;] ||= File.expand_path(&#39;../Gemfile&#39;, __dir__)</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="2">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
-
+          
           <code class="ruby">require &#39;bundler/setup&#39; # Set up gems listed in the Gemfile.</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="9224fffd97166a56d9d2fce4e5f9eac34d45b2a4">
+      
+        <div class="source_table" id="486fd983f8bf98a46fc3537907f74178f525301c">
   <div class="header">
     <h3>config/environment.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines.
+      <b>2</b> relevant lines. 
       <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="never" data-hits="" data-linenumber="1">
-
-
+          
+          
           <code class="ruby"># Load the Rails application.</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
-
+          
           <code class="ruby">require_relative &#39;application&#39;</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="3">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="4">
-
-
+          
+          
           <code class="ruby"># Initialize the Rails application.</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
-
+          
           <code class="ruby">Rails.application.initialize!</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="64bf8374858a517d7cb518a34b5c3cb7b821c4af">
+      
+        <div class="source_table" id="ac294cce168e54957f5b848f6178c687eff3274b">
   <div class="header">
     <h3>config/environments/test.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines.
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
-
+          
           <code class="ruby">Rails.application.configure do</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="2">
-
-
+          
+          
           <code class="ruby">  # Settings specified here will take precedence over those in config/application.rb.</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="3">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="4">
-
-
+          
+          
           <code class="ruby">  # The test environment is used exclusively to run your application&#39;s</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="5">
-
-
+          
+          
           <code class="ruby">  # test suite. You never need to work with it otherwise. Remember that</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="6">
-
-
+          
+          
           <code class="ruby">  # your test database is &quot;scratch space&quot; for the test suite and is wiped</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="7">
-
-
+          
+          
           <code class="ruby">  # and recreated between test runs. Don&#39;t rely on the data there!</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
-
+          
           <code class="ruby">  config.cache_classes = true</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="9">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="10">
-
-
+          
+          
           <code class="ruby">  # Do not eager load code on boot. This avoids loading your whole application</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="11">
-
-
+          
+          
           <code class="ruby">  # just for the purpose of running a single test. If you are using a tool that</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="12">
-
-
+          
+          
           <code class="ruby">  # preloads Rails for running tests, you may have to set it to true.</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
-
+          
           <code class="ruby">  config.eager_load = false</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="14">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="15">
-
-
-          <code class="ruby">  # Configure public file server for tests with Cache-Control for performance.</code>
+          
+          
+          <code class="ruby">  # don&#39;t use debug level</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
-
+          
+          <code class="ruby">  config.log_level = :info</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  # Configure public file server for tests with Cache-Control for performance.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
           <code class="ruby">  config.public_file_server.enabled = true</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="17">
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
-
+          
           <code class="ruby">  config.public_file_server.headers = {</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="18">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
           <code class="ruby">    &#39;Cache-Control&#39; =&gt; &#39;public, max-age=3600&#39;</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="19">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
           <code class="ruby">  }</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="20">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="21">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
           <code class="ruby">  # Show full error reports and disable caching.</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-
-          <code class="ruby">  config.consider_all_requests_local = true</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="23">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="24">
-
-
-          <code class="ruby">  # Global enable/disable all memcached usage</code>
-        </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
-
-          <code class="ruby">  config.perform_caching = true</code>
+          
+          <code class="ruby">  config.consider_all_requests_local = true</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="26">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="27">
-
-
-          <code class="ruby">  # Disable/enable fragment and page caching in ActionController</code>
+          
+          
+          <code class="ruby">  # Global enable/disable all memcached usage</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
-
-          <code class="ruby">  config.action_controller.perform_caching = false</code>
+          
+          <code class="ruby">  config.perform_caching = true</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="29">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="30">
-
-
-          <code class="ruby">  # Raise exceptions instead of rendering exception templates.</code>
+          
+          
+          <code class="ruby">  # Disable/enable fragment and page caching in ActionController</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
-
-          <code class="ruby">  config.action_dispatch.show_exceptions = false</code>
+          
+          <code class="ruby">  config.action_controller.perform_caching = false</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="32">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="33">
-
-
-          <code class="ruby">  # Disable request forgery protection in test environment.</code>
+          
+          
+          <code class="ruby">  # Raise exceptions instead of rendering exception templates.</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
-
+          
+          <code class="ruby">  config.action_dispatch.show_exceptions = false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">  # Disable request forgery protection in test environment.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
           <code class="ruby">  config.action_controller.allow_forgery_protection = false</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="35">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
           <code class="ruby">  # config.action_mailer.perform_caching = false</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="36">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="37">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
           <code class="ruby">  # Tell Action Mailer not to deliver emails to the real world.</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="38">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
           <code class="ruby">  # The :test delivery method accumulates sent emails in the</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="39">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
           <code class="ruby">  # ActionMailer::Base.deliveries array.</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="40">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
           <code class="ruby">  # config.action_mailer.delivery_method = :test</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="41">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="42">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
           <code class="ruby">  # Print deprecation notices to the stderr.</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="43">
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
-
+          
           <code class="ruby">  config.active_support.deprecation = :stderr</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="44">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="45">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
           <code class="ruby">  # Raises error for missing translations</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="46">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
           <code class="ruby">  # config.action_view.raise_on_missing_translations = true</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="47">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
           <code class="ruby">end</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="75060763a9b8babc208f494789c6b8cbd83d117b">
+      
+        <div class="source_table" id="37fbc0044cb9f0e33909e6d77d7b935f79363069">
   <div class="header">
-    <h3>config/initializers/application_controller_renderer.rb</h3>
+    <h3>config/initializers/_version.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>0</b> relevant lines.
-      <span class="green"><b>0</b> lines covered</span> and
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
-        <li class="never" data-hits="" data-linenumber="1">
-
-
-          <code class="ruby"># Be sure to restart your server when you modify this file.</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module ContentNegotiation</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="2">
-
-
-          <code class="ruby"></code>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  class Application</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="3">
-
-
-          <code class="ruby"># ApplicationController.renderer.defaults.merge!(</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    g = Git.open(Rails.root)</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="4">
-
-
-          <code class="ruby">#   http_host: &#39;example.org&#39;,</code>
+          
+          
+          <code class="ruby">    begin</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="5">
-
-
-          <code class="ruby">#   https: false</code>
+      
+        <li class="covered" data-hits="72" data-linenumber="5">
+          <span class="hits">72</span>
+          
+          <code class="ruby">      VERSION = g.tags.map { |t| Gem::Version.new(t.name) }.sort.last.to_s</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="6">
-
-
-          <code class="ruby"># )</code>
+          
+          
+          <code class="ruby">    rescue ArgumentError</code>
         </li>
-
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      VERSION = &quot;1.0&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    REVISION = g.object(&#39;HEAD&#39;).sha</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="e1abc49040bda2cdab4298ed0318b74599d94a94">
+      
+        <div class="source_table" id="77c2892f46eeecdb6d1c88984de9431004ac67ac">
   <div class="header">
     <h3>config/initializers/backtrace_silencers.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>0</b> relevant lines.
+      <b>0</b> relevant lines. 
       <span class="green"><b>0</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="never" data-hits="" data-linenumber="1">
-
-
+          
+          
           <code class="ruby"># Be sure to restart your server when you modify this file.</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="2">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="3">
-
-
+          
+          
           <code class="ruby"># You can add backtrace silencers for libraries that you&#39;re using but don&#39;t wish to see in your backtraces.</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="4">
-
-
+          
+          
           <code class="ruby"># Rails.backtrace_cleaner.add_silencer { |line| line =~ /my_noisy_library/ }</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="5">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="6">
-
-
+          
+          
           <code class="ruby"># You can also remove all the silencers if you&#39;re trying to debug a problem that might stem from framework code.</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="7">
-
-
+          
+          
           <code class="ruby"># Rails.backtrace_cleaner.remove_silencers!</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="d8a5210285ffd04ea8c1a6fad6ce459cd7242c21">
+      
+        <div class="source_table" id="932b8122c56a890be7a95805e8de2b2fb46de244">
   <div class="header">
-    <h3>config/initializers/bugsnag.rb</h3>
-    <h4><span class="red">25.0 %</span> covered</h4>
+    <h3>config/initializers/cors.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>4</b> relevant lines.
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-
-          <code class="ruby">if ENV[&quot;BUGSNAG_KEY&quot;]</code>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># Be sure to restart your server when you modify this file.</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="2">
-
-
-          <code class="ruby">  Bugsnag.configure do |config|</code>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="3">
-
-
-          <code class="ruby">    config.api_key = ENV[&quot;BUGSNAG_KEY&quot;]</code>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"># Avoid CORS issues when API is called from the frontend app.</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="4">
-
-
-          <code class="ruby">    config.notify_release_stages = %w(stage production)</code>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"># Handle Cross-Origin Resource Sharing (CORS) in order to accept cross-origin AJAX requests.</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="5">
-
-
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"># Read more: https://github.com/cyu/rack-cors</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Rails.application.config.middleware.insert_before 0, Rack::Cors do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  allow do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    origins &#39;*&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    resource &#39;*&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">      headers: :any,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">      methods: [:get, :post, :put, :patch, :delete, :options, :head]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
           <code class="ruby">  end</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="6">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
           <code class="ruby">end</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="174733cd1200a3d5633d1fec40a5078fd38f2320">
+      
+        <div class="source_table" id="fd8ae15be2807e28725c6a52a6c1e43d3b7ae8d7">
   <div class="header">
     <h3>config/initializers/filter_parameter_logging.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines.
+      <b>1</b> relevant lines. 
       <span class="green"><b>1</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="never" data-hits="" data-linenumber="1">
-
-
+          
+          
           <code class="ruby"># Be sure to restart your server when you modify this file.</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="2">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="3">
-
-
+          
+          
           <code class="ruby"># Configure sensitive parameters which will be filtered from the log file.</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
-
+          
           <code class="ruby">Rails.application.config.filter_parameters += [:password]</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="007e9148c1d203e0b57245e4e8a0b6813980ef8a">
+      
+        <div class="source_table" id="2a80bf9912f5b818c8bb9113a07b8be329b03175">
   <div class="header">
     <h3>config/initializers/inflections.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>0</b> relevant lines.
+      <b>0</b> relevant lines. 
       <span class="green"><b>0</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="never" data-hits="" data-linenumber="1">
-
-
+          
+          
           <code class="ruby"># Be sure to restart your server when you modify this file.</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="2">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="3">
-
-
+          
+          
           <code class="ruby"># Add new inflection rules using the following format. Inflections</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="4">
-
-
+          
+          
           <code class="ruby"># are locale specific, and you may define rules for as many different</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="5">
-
-
+          
+          
           <code class="ruby"># locales as you wish. All of these examples are active by default:</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="6">
-
-
+          
+          
           <code class="ruby"># ActiveSupport::Inflector.inflections(:en) do |inflect|</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="7">
-
-
+          
+          
           <code class="ruby">#   inflect.plural /^(ox)$/i, &#39;\1en&#39;</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="8">
-
-
+          
+          
           <code class="ruby">#   inflect.singular /^(ox)en/i, &#39;\1&#39;</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="9">
-
-
+          
+          
           <code class="ruby">#   inflect.irregular &#39;person&#39;, &#39;people&#39;</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="10">
-
-
+          
+          
           <code class="ruby">#   inflect.uncountable %w( fish sheep )</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="11">
-
-
+          
+          
           <code class="ruby"># end</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="12">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="13">
-
-
+          
+          
           <code class="ruby"># These inflection rules are supported but not enabled by default:</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="14">
-
-
+          
+          
           <code class="ruby"># ActiveSupport::Inflector.inflections(:en) do |inflect|</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="15">
-
-
+          
+          
           <code class="ruby">#   inflect.acronym &#39;RESTful&#39;</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="16">
-
-
+          
+          
           <code class="ruby"># end</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="2319b22d749686131db46ab0f45f1b5d5bc0317b">
+      
+        <div class="source_table" id="4655bd7ad3076ea4333997c15ffd3483a11176cc">
   <div class="header">
     <h3>config/initializers/lograge.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines.
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
-        <li class="covered" data-hits="1" data-linenumber="1">
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># frozen_string_literal: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
-
+          
           <code class="ruby">Rails.application.configure do</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="2">
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
-
-          <code class="ruby">  config.lograge.base_controller_class = &#39;ActionController::API&#39;</code>
+          
+          <code class="ruby">  config.lograge.enabled = true</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="3">
-
-
-          <code class="ruby">end</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.lograge.formatter = Lograge::Formatters::Logstash.new</code>
         </li>
-
-    </ol>
-  </pre>
-</div>
-
-
-        <div class="source_table" id="7ff8c0457c14fc204528ad94c2ab6ba42e2e7168">
-  <div class="header">
-    <h3>config/initializers/mime_types.rb</h3>
-    <h4><span class="red">52.08 %</span> covered</h4>
-    <div>
-      <b>48</b> relevant lines.
-      <span class="green"><b>25</b> lines covered</span> and
-      <span class="red"><b>23</b> lines missed.</span>
-    </div>
-  </div>
-
-  <pre>
-    <ol>
-
-        <li class="never" data-hits="" data-linenumber="1">
-
-
-          <code class="ruby"># unregister all Mime types, keep only :text</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.lograge.logger = LogStashLogger.new(type: :stdout)</code>
         </li>
-
-        <li class="covered" data-hits="35" data-linenumber="2">
-          <span class="hits">35</span>
-
-          <code class="ruby">Mime::EXTENSION_LOOKUP.map { |i| i.first.to_sym }.each do |f|</code>
-        </li>
-
-        <li class="covered" data-hits="34" data-linenumber="3">
-          <span class="hits">34</span>
-
-          <code class="ruby">  Mime::Type.unregister(f)</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="4">
-
-
-          <code class="ruby">end</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="5">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="6">
-
-
-          <code class="ruby"># re-register some default Mime types</code>
-        </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;text/html&quot;, :html, %w( application/xhtml+xml ), %w( xhtml )</code>
+          
+          <code class="ruby">  config.lograge.log_level = ENV[&quot;LOG_LEVEL&quot;].to_sym</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;text/plain&quot;, :text, [], %w(txt)</code>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/json&quot;, :json, %w( text/x-json application/jsonrequest )</code>
+          
+          <code class="ruby">  config.lograge.ignore_actions = [&quot;HeartbeatController#index&quot;]</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="10">
-
-
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.lograge.base_controller_class = &quot;ActionController::API&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="11">
-
-
-          <code class="ruby"># Mime types supported by bolognese gem https://github.com/datacite/bolognese</code>
-        </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/vnd.crossref.unixref+xml&quot;, :crossref</code>
+          
+          <code class="ruby">  config.lograge.custom_options = lambda do |event|</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/vnd.crosscite.crosscite+json&quot;, :crosscite</code>
+      
+        <li class="covered" data-hits="84" data-linenumber="13">
+          <span class="hits">84</span>
+          
+          <code class="ruby">    exceptions = %w(controller action format id)</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/vnd.datacite.datacite+xml&quot;, :datacite, %w( application/x-datacite+xml )</code>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    {</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/vnd.datacite.datacite+json&quot;, :datacite_json</code>
+      
+        <li class="covered" data-hits="84" data-linenumber="15">
+          <span class="hits">84</span>
+          
+          <code class="ruby">      params: event.payload[:params].except(*exceptions),</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/vnd.schemaorg.ld+json&quot;, :schema_org</code>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">    }</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/rdf+xml&quot;, :rdf_xml</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;text/turtle&quot;, :turtle</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/vnd.jats+xml&quot;, :jats</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/vnd.citationstyles.csl+json&quot;, :citeproc, %w( application/citeproc+json )</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/vnd.codemeta.ld+json&quot;, :codemeta</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/x-bibtex&quot;, :bibtex</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;application/x-research-info-systems&quot;, :ris</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-
-          <code class="ruby">Mime::Type.register &quot;text/x-bibliography&quot;, :citation</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="25">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="26">
-
-
-          <code class="ruby"># register renderers for these Mime types</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="27">
-
-
-          <code class="ruby"># :citation is handled differently</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-
-          <code class="ruby">%w(crosscite datacite_json schema_org turtle citeproc codemeta).each do |f|</code>
-        </li>
-
-        <li class="covered" data-hits="6" data-linenumber="29">
-          <span class="hits">6</span>
-
-          <code class="ruby">  ActionController::Renderers.add f.to_sym do |obj, options|</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="30">
-
-
-          <code class="ruby">    data = obj.send(f)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="31">
-
-
-          <code class="ruby">    fail AbstractController::ActionNotFound unless data.present?</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="32">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="33">
-
-
-          <code class="ruby">    self.content_type ||= Mime[f.to_sym]</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="34">
-
-
-          <code class="ruby">    self.response_body = data</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="35">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
           <code class="ruby">  end</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="36">
-
-
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
           <code class="ruby">end</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="37">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="38">
-
-
-          <code class="ruby"># these Mime types send a file for download. We give proper filename and extension</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="39">
-          <span class="hits">1</span>
-
-          <code class="ruby">%w(crossref datacite rdf_xml jats).each do |f|</code>
-        </li>
-
-        <li class="covered" data-hits="4" data-linenumber="40">
-          <span class="hits">4</span>
-
-          <code class="ruby">  ActionController::Renderers.add f.to_sym do |obj, options|</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="41">
-
-
-          <code class="ruby">    uri = Addressable::URI.parse(obj.id)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="42">
-
-
-          <code class="ruby">    data = obj.send(f)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="43">
-
-
-          <code class="ruby">    fail AbstractController::ActionNotFound unless data.present?</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="44">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="45">
-
-
-          <code class="ruby">    filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, &#39;_&#39;)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="46">
-
-
-          <code class="ruby">    send_data data, type: Mime[f.to_sym],</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="47">
-
-
-          <code class="ruby">      disposition: &quot;attachment; filename=#{filename}.xml&quot;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="48">
-
-
-          <code class="ruby">  end</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="49">
-
-
-          <code class="ruby">end</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="50">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
-
-          <code class="ruby">ActionController::Renderers.add :bibtex do |obj, options|</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="52">
-
-
-          <code class="ruby">  uri = Addressable::URI.parse(obj.id)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="53">
-
-
-          <code class="ruby">  data = obj.send(&quot;bibtex&quot;)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="54">
-
-
-          <code class="ruby">  fail AbstractController::ActionNotFound unless data.present?</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="55">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="56">
-
-
-          <code class="ruby">  filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, &#39;_&#39;)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="57">
-
-
-          <code class="ruby">  send_data data, type: Mime[:bibtex],</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="58">
-
-
-          <code class="ruby">    disposition: &quot;attachment; filename=#{filename}.bib&quot;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="59">
-
-
-          <code class="ruby">end</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="60">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="61">
-          <span class="hits">1</span>
-
-          <code class="ruby">ActionController::Renderers.add :ris do |obj, options|</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="62">
-
-
-          <code class="ruby">  uri = Addressable::URI.parse(obj.id)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="63">
-
-
-          <code class="ruby">  data = obj.send(&quot;ris&quot;)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="64">
-
-
-          <code class="ruby">  fail AbstractController::ActionNotFound unless data.present?</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="65">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="66">
-
-
-          <code class="ruby">  filename = uri.path.gsub(/[^0-9A-Za-z.\-]/, &#39;_&#39;)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="67">
-
-
-          <code class="ruby">  send_data data, type: Mime[:ris],</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="68">
-
-
-          <code class="ruby">    disposition: &quot;attachment; filename=#{filename}.ris&quot;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="69">
-
-
-          <code class="ruby">end</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="70">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="71">
-          <span class="hits">1</span>
-
-          <code class="ruby">ActionController::Renderers.add :citation do |obj, options|</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="72">
-
-
-          <code class="ruby">  data = obj.send(&quot;citation&quot;)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="73">
-
-
-          <code class="ruby">  fail AbstractController::ActionNotFound unless data.present?</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="74">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="75">
-
-
-          <code class="ruby">  self.content_type ||= &quot;text/plain&quot;</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="76">
-
-
-          <code class="ruby">  self.response_body = data</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="77">
-
-
-          <code class="ruby">end</code>
-        </li>
-
+      
     </ol>
   </pre>
 </div>
 
+      
+        <div class="source_table" id="22f887d023a200ca2bbb1726b644cd074c9e8496">
+  <div class="header">
+    <h3>config/initializers/mime_types.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>30</b> relevant lines. 
+      <span class="green"><b>30</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># unregister all Mime types, keep only :text</code>
+        </li>
+      
+        <li class="covered" data-hits="53" data-linenumber="2">
+          <span class="hits">53</span>
+          
+          <code class="ruby">Mime::EXTENSION_LOOKUP.map { |i| i.first.to_sym }.each do |f|</code>
+        </li>
+      
+        <li class="covered" data-hits="52" data-linenumber="3">
+          <span class="hits">52</span>
+          
+          <code class="ruby">  Mime::Type.unregister(f)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"># re-register some default Mime types</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;text/html&quot;, :html, %w(application/xhtml+xml), %w(xhtml)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;text/plain&quot;, :text, [], %w(txt)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/json&quot;, :json, %w(text/x-json application/jsonrequest)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"># Mime types supported by bolognese gem https://github.com/datacite/bolognese</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/vnd.crossref.unixref+xml&quot;, :crossref</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/vnd.crosscite.crosscite+json&quot;, :crosscite</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/vnd.datacite.datacite+xml&quot;, :datacite, %w(application/x-datacite+xml)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/vnd.datacite.datacite+json&quot;, :datacite_json</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/vnd.schemaorg.ld+json&quot;, :schema_org, %w(application/ld+json)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/vnd.jats+xml&quot;, :jats</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/vnd.citationstyles.csl+json&quot;, :citeproc, %w(application/citeproc+json)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/vnd.codemeta.ld+json&quot;, :codemeta</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/x-bibtex&quot;, :bibtex</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/x-research-info-systems&quot;, :ris</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;text/x-bibliography&quot;, :citation</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/rdf+xml&quot;, :rdf_xml</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Mime::Type.register &quot;application/x-turtle&quot;, :turtle</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"># register renderers for these Mime types</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"># :citation and :datacite is handled differently</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">ActionController::Renderers.add :datacite do |obj, options|</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="29">
+          <span class="hits">8</span>
+          
+          <code class="ruby">  obj.datacite</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">ActionController::Renderers.add :citation do |obj, options|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  begin</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="34">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    obj.style = options[:style] || &quot;apa&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="35">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    obj.locale = options[:locale] || &quot;en-US&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="36">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    obj.citation</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">  rescue CSL::ParseError # unknown style and/or location</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="38">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    obj.style = &quot;apa&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="39">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    obj.locale = &quot;en-US&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="40">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    obj.citation</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">%w(datacite_json crossref schema_org crosscite citeproc codemeta jats bibtex ris rdf_xml turtle).each do |f|</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="45">
+          <span class="hits">11</span>
+          
+          <code class="ruby">  ActionController::Renderers.add f.to_sym do |obj, options|</code>
+        </li>
+      
+        <li class="covered" data-hits="44" data-linenumber="46">
+          <span class="hits">44</span>
+          
+          <code class="ruby">    obj.send(f)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
 
-        <div class="source_table" id="43cecc98b7ac8ad94c68ad86322024a3554a00ea">
+      
+        <div class="source_table" id="35dd04b4daade997123daebd724ea99bb6c5cb4a">
   <div class="header">
     <h3>config/initializers/name_detector.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines.
+      <b>2</b> relevant lines. 
       <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
-
+          
           <code class="ruby">require &#39;gender_detector&#39;</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="2">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
-
+          
           <code class="ruby">::NameDetector = GenderDetector.new</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
+      
+        <div class="source_table" id="39f52199a07af9393def0f0761e26df9a96a013f">
+  <div class="header">
+    <h3>config/initializers/sentry.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Raven.configure do |config|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.dsn = ENV[&quot;SENTRY_DSN&quot;]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.release = &quot;content-negotiation:&quot; + ContentNegotiation::Application::VERSION</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.sanitize_fields = Rails.application.config.filter_parameters.map(&amp;:to_s)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
 
-        <div class="source_table" id="dda20c9bd765da062b27654f5d1308f3e55e8ca0">
+      
+        <div class="source_table" id="19b3acdfc84403c8b9994e5d46bc09c21c4f779e">
   <div class="header">
     <h3>config/initializers/wrap_parameters.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines.
+      <b>2</b> relevant lines. 
       <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="never" data-hits="" data-linenumber="1">
-
-
+          
+          
           <code class="ruby"># Be sure to restart your server when you modify this file.</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="2">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="3">
-
-
+          
+          
           <code class="ruby"># This file contains settings for ActionController::ParamsWrapper which</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="4">
-
-
+          
+          
           <code class="ruby"># is enabled by default.</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="5">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="6">
-
-
+          
+          
           <code class="ruby"># Enable parameter wrapping for JSON. You can disable this by setting :format to an empty array.</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
-
+          
           <code class="ruby">ActiveSupport.on_load(:action_controller) do</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
-
+      
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
           <code class="ruby">  wrap_parameters format: [:json]</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="9">
-
-
+          
+          
           <code class="ruby">end</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="10">
-
-
+          
+          
           <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="11">
-
-
+          
+          
           <code class="ruby"># To enable root element in JSON for ActiveRecord objects.</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="12">
-
-
+          
+          
           <code class="ruby"># ActiveSupport.on_load(:active_record) do</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="13">
-
-
+          
+          
           <code class="ruby">#   self.include_root_in_json = true</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="14">
-
-
+          
+          
           <code class="ruby"># end</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
-
-        <div class="source_table" id="aa867b7e371f52f381d65f792a0c80e24e3983d0">
+      
+        <div class="source_table" id="7a29a70ab754edbda0a40d5b138d58fe2431b62e">
   <div class="header">
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>20</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
-
+  
   <pre>
     <ol>
-
+      
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
-
+          
           <code class="ruby">Rails.application.routes.draw do</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
-
+          
           <code class="ruby">  resources :heartbeat, only: [:index]</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="3">
-
-
-          <code class="ruby"></code>
+          
+          
+          <code class="ruby">  </code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="4">
-
-
-          <code class="ruby">  # workaround for fetching accept header in path</code>
+          
+          
+          <code class="ruby">  # content negotiation via url</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
-
-          <code class="ruby">  get &#39;/application/*application_accept/:id&#39;, to: &#39;index#show&#39;, constraints: { id: /.+/, format: false }</code>
+          
+          <code class="ruby">  get &#39;/application/vnd.datacite.datacite+xml/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :datacite }</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
-
-          <code class="ruby">  get &#39;/text/*text_accept/:id&#39;, to: &#39;index#show&#39;, constraints: { id: /.+/, format: false }</code>
+          
+          <code class="ruby">  get &#39;/application/vnd.datacite.datacite+json/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :datacite_json }</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
-
-          <code class="ruby">  get &#39;/image/*image_accept/:id&#39;, to: &#39;index#show&#39;, constraints: { id: /.+/, format: false }</code>
+          
+          <code class="ruby">  get &#39;/application/vnd.crosscite.crosscite+json/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :crosscite }</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
-
-          <code class="ruby">  get &#39;/chemical/*chemical_accept/:id&#39;, to: &#39;index#show&#39;, constraints: { id: /.+/, format: false }</code>
+          
+          <code class="ruby">  get &#39;/application/vnd.schemaorg.ld+json/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :schema_org }</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
-
-          <code class="ruby">  resources :index, path: &#39;/&#39;, only: [:show, :index], constraints: { id: /.+/, format: false }</code>
+          
+          <code class="ruby">  get &#39;/application/ld+json/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :schema_org }</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="10">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
-
-          <code class="ruby">  root :to =&gt; &#39;index#index&#39;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="12">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="13">
-
-
-          <code class="ruby">  # rescue routing errors</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-
-          <code class="ruby">  match &quot;*path&quot;, to: &quot;index#routing_error&quot;, via: :all</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="15">
-
-
-          <code class="ruby">end</code>
-        </li>
-
-    </ol>
-  </pre>
-</div>
-
-
-        <div class="source_table" id="45f53f531160293c940508bc408472326f252313">
-  <div class="header">
-    <h3>spec/api/heartbeat_spec.rb</h3>
-    <h4><span class="red">50.0 %</span> covered</h4>
-    <div>
-      <b>6</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
-    </div>
-  </div>
-
-  <pre>
-    <ol>
-
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-
-          <code class="ruby">require &#39;rails_helper&#39;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="2">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-
-          <code class="ruby">describe &#39;/heartbeat&#39;, type: :api do</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-
-          <code class="ruby">  it &quot;get heartbeat&quot; do</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="5">
-
-
-          <code class="ruby">    get &#39;/heartbeat&#39;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="6">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="7">
-
-
-          <code class="ruby">    expect(last_response.status).to eq(200)</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="8">
-
-
-          <code class="ruby">    expect(last_response.body).to eq(&quot;OK&quot;)</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="9">
-
-
-          <code class="ruby">  end</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="10">
-
-
-          <code class="ruby">end</code>
-        </li>
-
-    </ol>
-  </pre>
-</div>
-
-
-        <div class="source_table" id="11caec4e157bb6272728231fabd3332cc38f77be">
-  <div class="header">
-    <h3>spec/concerns/helpable_spec.rb</h3>
-    <h4><span class="red">53.33 %</span> covered</h4>
-    <div>
-      <b>15</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
-    </div>
-  </div>
-
-  <pre>
-    <ol>
-
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-
-          <code class="ruby">require &#39;rails_helper&#39;</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="2">
-
-
-          <code class="ruby"></code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-
-          <code class="ruby">describe Help do</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-
-          <code class="ruby">  describe &quot;get_registered_content_types&quot;, vcr: true do</code>
-        </li>
-
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-
-          <code class="ruby">    it &#39;has registered one content_type&#39; do</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="6">
-
-
-          <code class="ruby">      id = &quot;10.0042/FOOBAR3&quot;</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="7">
-
-
-          <code class="ruby">      expect(subject.get_registered_content_types(id)).to eq(&quot;text/csv&quot; =&gt; &quot;http://example.com&quot;)</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="8">
-
-
-          <code class="ruby">    end</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="9">
-
-
-          <code class="ruby"></code>
-        </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
-
-          <code class="ruby">    it &#39;has registered multiple content_types&#39; do</code>
+          
+          <code class="ruby">  get &#39;/application/vnd.codemeta.ld+json/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :codemeta }</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="11">
-
-
-          <code class="ruby">      id = &quot;10.4124/DEMODATASET4&quot;</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;/application/vnd.citationstyles.csl+json/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :citeproc }</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="12">
-
-
-          <code class="ruby">      expect(subject.get_registered_content_types(id)).to eq( +&quot;application/pdf&quot; =&gt; &quot;http://www.bl.uk/aboutus/stratpolprog/digi/datasets/WorkingWithDataCite_2013.pdf&quot;,</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;/application/vnd.jats+xml/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :jats }</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="13">
-
-
-          <code class="ruby">        &quot;image/jpeg&quot; =&gt; &quot;http://www.bl.uk/reshelp/experthelp/science/sciencetechnologymedicinecollections/researchdatasets/SearchMovieTN.jpg&quot;)</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;/application/x-bibtex/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :bibtex }</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="14">
-
-
-          <code class="ruby">    end</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;/application/x-research-info-systems/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :ris }</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="15">
-
-
-          <code class="ruby"></code>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;/application/vnd.crossref.unixref+xml/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :crossref }</code>
         </li>
-
+      
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
-
-          <code class="ruby">    it &#39;has no registered content_types&#39; do</code>
+          
+          <code class="ruby">  get &#39;/application/rdf+xml/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :rdf_xml }</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="17">
-
-
-          <code class="ruby">      id = &quot;https://doi.org/10.4124/ccnwxhx&quot;</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;/application/x-turtle/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :turtle }</code>
         </li>
-
-        <li class="missed" data-hits="0" data-linenumber="18">
-
-
-          <code class="ruby">      expect(subject.get_registered_content_types(id)).to eq({})</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;/text/x-bibliography/:id&#39;, :to =&gt; &#39;index#show&#39;, constraints: { :id =&gt; /.+/ }, defaults: { format: :citation }</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="19">
-
-
-          <code class="ruby">    end</code>
+          
+          
+          <code class="ruby">  </code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="20">
-
-
-          <code class="ruby">  end</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  resources :index, path: &#39;/&#39;, only: [:show, :index], constraints: { id: /.+/, format: false }</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="21">
-
-
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  root :to =&gt; &#39;index#index&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
           <code class="ruby"></code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="22">
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  # rescue method not allowed errors</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
-
-          <code class="ruby">  describe &quot;available_content_types&quot; do</code>
+          
+          <code class="ruby">  match &quot;*path&quot;, to: &quot;index#method_not_allowed_error&quot;, via: [:post, :put, :patch, :delete]</code>
         </li>
-
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-
-          <code class="ruby">    it &#39;should include all mime types&#39; do</code>
-        </li>
-
-        <li class="missed" data-hits="0" data-linenumber="24">
-
-
-          <code class="ruby">      expect(subject.available_content_types).to eq({</code>
-        </li>
-
+      
         <li class="never" data-hits="" data-linenumber="25">
-
-
-          <code class="ruby">        &quot;application/vnd.crosscite.crosscite+json&quot; =&gt; :crosscite,</code>
+          
+          
+          <code class="ruby"></code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="26">
-
-
-          <code class="ruby">        &quot;application/vnd.crossref.unixref+xml&quot;=&gt;:crossref,</code>
+          
+          
+          <code class="ruby">  # rescue routing errors</code>
         </li>
-
-        <li class="never" data-hits="" data-linenumber="27">
-
-
-          <code class="ruby">        &quot;application/vnd.datacite.datacite+xml&quot;=&gt;:datacite,</code>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  match &quot;*path&quot;, to: &quot;index#routing_error&quot;, via: :all</code>
         </li>
-
+      
         <li class="never" data-hits="" data-linenumber="28">
-
-
-          <code class="ruby">        &quot;application/vnd.jats+xml&quot; =&gt; :jats,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="29">
-
-
-          <code class="ruby">        &quot;application/x-datacite+xml&quot;=&gt;:datacite,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="30">
-
-
-          <code class="ruby">        &quot;application/vnd.datacite.datacite+json&quot;=&gt;:datacite_json,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="31">
-
-
-          <code class="ruby">        &quot;application/vnd.schemaorg.ld+json&quot;=&gt;:schema_org,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="32">
-
-
-          <code class="ruby">        &quot;application/rdf+xml&quot;=&gt;:rdf_xml,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="33">
-
-
-          <code class="ruby">        &quot;text/turtle&quot;=&gt;:turtle,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="34">
-
-
-          <code class="ruby">        &quot;application/vnd.citationstyles.csl+json&quot;=&gt;:citeproc,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="35">
-
-
-          <code class="ruby">        &quot;application/citeproc+json&quot;=&gt;:citeproc,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="36">
-
-
-          <code class="ruby">        &quot;application/vnd.codemeta.ld+json&quot;=&gt;:codemeta,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="37">
-
-
-          <code class="ruby">        &quot;application/x-bibtex&quot;=&gt;:bibtex,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="38">
-
-
-          <code class="ruby">        &quot;application/x-research-info-systems&quot;=&gt;:ris,</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="39">
-
-
-          <code class="ruby">        &quot;text/x-bibliography&quot;=&gt;:citation })</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="40">
-
-
-          <code class="ruby">    end</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="41">
-
-
-          <code class="ruby">  end</code>
-        </li>
-
-        <li class="never" data-hits="" data-linenumber="42">
-
-
+          
+          
           <code class="ruby">end</code>
         </li>
-
+      
     </ol>
   </pre>
 </div>
 
+      
+        <div class="source_table" id="e4762412f421266b3125ce5300f8efbe467963f3">
+  <div class="header">
+    <h3>spec/api/heartbeat_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>0</b> relevant lines. 
+      <span class="green"><b>0</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"># describe &#39;/heartbeat&#39;, type: :api do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">#   it &quot;get heartbeat&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">#     get &#39;/heartbeat&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">#     expect(last_response.status).to eq(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">#     expect(last_response.body).to eq(&quot;OK&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">#   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"># end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
 
+      
+        <div class="source_table" id="2b4d59ecbcf695c22d0560340e7f88dd501c7d78">
+  <div class="header">
+    <h3>spec/concerns/helpable_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Help do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;available_content_types&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should include all mime types&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(subject.available_content_types).to eq({</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">        &quot;application/vnd.crosscite.crosscite+json&quot; =&gt; :crosscite,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">        &quot;application/vnd.crossref.unixref+xml&quot;=&gt;:crossref,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">        &quot;application/vnd.datacite.datacite+xml&quot;=&gt;:datacite,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">        &quot;application/vnd.jats+xml&quot; =&gt; :jats,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">        &quot;application/x-datacite+xml&quot;=&gt;:datacite,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">        &quot;application/vnd.datacite.datacite+json&quot;=&gt;:datacite_json,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">        &quot;application/vnd.schemaorg.ld+json&quot;=&gt;:schema_org,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">        &quot;application/vnd.citationstyles.csl+json&quot;=&gt;:citeproc,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">        &quot;application/citeproc+json&quot;=&gt;:citeproc,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">        &quot;application/ld+json&quot; =&gt; :schema_org,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">        &quot;application/vnd.codemeta.ld+json&quot;=&gt;:codemeta,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">        &quot;application/x-bibtex&quot; =&gt; :bibtex,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">        &quot;application/x-research-info-systems&quot;=&gt;:ris,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">        &quot;application/rdf+xml&quot; =&gt; :rdf_xml,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">        &quot;application/x-turtle&quot; =&gt; :turtle,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">        &quot;text/x-bibliography&quot; =&gt;:citation })</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
       </div>
     </div>
   </body>
