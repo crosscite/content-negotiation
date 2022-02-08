@@ -14,28 +14,10 @@ class IndexController < ApplicationController
     if response.status == 200
       @metadata = Bolognese::Metadata.new(input: response.body.fetch("data", nil), from: "datacite_json")
     else
-      url = "https://api.crossref.org/works/#{@doi}/transform/application/vnd.crossref.unixsd+xml?mailto=support@datacite.org"
-      response = Maremma.get(url, accept: "text/xml", raw: true, timeout: 2)
-
-      if response.status == 200
-        string = response.body.fetch("data", nil)
-        string = Nokogiri::XML(string, nil, 'UTF-8', &:noblanks).to_s if string.present?
-        @metadata = Bolognese::Metadata.new(input: string, from: "crossref")
-      else
-        ra = get_doi_ra(@doi)
-
-        if %w(mEDRA JaLC).include?(ra)
-          # we fetch the Citeproc JSON from DOI content negotiation for the other RAs that support this
-          url = "https://doi.org/#{@doi}"
-          response = Maremma.get(url, accept: "application/vnd.citationstyles.csl+json", raw: true)
-          fail AbstractController::ActionNotFound if response.status != 200
-
-          string = response.body.fetch("data", nil)
-          @metadata = Bolognese::Metadata.new(input: string, from: "citeproc")
-        else
-          fail AbstractController::ActionNotFound
-        end
-      end
+      # Non DataCite DOIs i.e. crossref are not supported.
+      # Requests should go via doi.org to be redirected to the appropriate RA
+      # content negotiation service
+      fail AbstractController::ActionNotFound
     end
 
     fail AbstractController::ActionNotFound unless @metadata.exists?
