@@ -183,7 +183,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
   #     expect(last_response.status).to eq(200)
   #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-  #     expect(rdfxml.dig("BlogPosting", "rdf:about")).to eq("https://doi.org/10.14454/cne7-ar31")   
+  #     expect(rdfxml.dig("BlogPosting", "rdf:about")).to eq("https://doi.org/10.14454/cne7-ar31")
   #   end
 
   #   it "link" do
@@ -191,7 +191,7 @@ describe 'content negotiation', type: :api, vcr: true do
 
   #     expect(last_response.status).to eq(200)
   #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-  #     expect(rdfxml.dig("BlogPosting", "rdf:about")).to eq("https://doi.org/10.14454/cne7-ar31")   
+  #     expect(rdfxml.dig("BlogPosting", "rdf:about")).to eq("https://doi.org/10.14454/cne7-ar31")
   #   end
   # end
 
@@ -309,318 +309,318 @@ describe 'content negotiation', type: :api, vcr: true do
   end
 end
 
-describe 'content negotiation crossref', type: :api, vcr: true do
-  let(:doi) { "10.7554/elife.01567" }
-
-  context "application/vnd.crossref.unixref+xml" do
-    let(:doi) { "10.7554/elife.01567" }
-
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.crossref.unixref+xml" }
-
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).dig("crossref_result", "query_result", "body", "query", "doi_record")
-      expect(response.dig("crossref", "journal", "journal_article", "doi_data", "doi")).to eq("10.7554/eLife.01567")
-    end
-
-    it "link" do
-      get "/application/vnd.crossref.unixref+xml/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).dig("crossref_result", "query_result", "body", "query", "doi_record")
-      expect(response.dig("crossref", "journal", "journal_article", "doi_data", "doi")).to eq("10.7554/eLife.01567")
-    end
-  end
-
-  context "application/vnd.jats+xml" do
-    let(:doi) { "10.7554/elife.01567" }
-
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.jats+xml" }
-
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).dig("element_citation")
-      expect(response.dig("pub_id")).to eq("pub_id_type"=>"doi", "__content__"=>"10.7554/elife.01567")
-    end
-
-    it "link" do
-      get "/application/vnd.jats+xml/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).dig("element_citation")
-      expect(response.dig("pub_id")).to eq("pub_id_type"=>"doi", "__content__"=>"10.7554/elife.01567")
-    end
-  end
-
-  context "application/vnd.datacite.datacite+xml" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
-
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
-      expect(response.dig("publisher")).to eq("eLife Sciences Publications, Ltd")
-      expect(response.dig("titles", "title")).to eq("Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth")
-    end
-
-    it "link" do
-      get "/application/vnd.datacite.datacite+xml/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
-      expect(response.dig("publisher")).to eq("eLife Sciences Publications, Ltd")
-      expect(response.dig("titles", "title")).to eq("Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth")
-    end
-
-    it "not found" do
-      doi = "10.15146/R34015"
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
-
-      expect(last_response.status).to eq(404)
-      expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
-    end
-  end
-
-  context "application/vnd.datacite.datacite+json" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+json" }
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://doi.org/10.7554/elife.01567")
-    end
-
-    it "link" do
-      get "/application/vnd.datacite.datacite+json/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://doi.org/10.7554/elife.01567")
-    end
-  end
-
-  context "application/vnd.schemaorg.ld+json" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.schemaorg.ld+json" }
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["@type"]).to eq("ScholarlyArticle")
-    end
-
-    it "link" do
-      get "/application/vnd.schemaorg.ld+json/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["@type"]).to eq("ScholarlyArticle")
-    end
-  end
-
-  context "application/ld+json" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/ld+json" }
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["@type"]).to eq("ScholarlyArticle")
-    end
-
-    it "link" do
-      get "/application/ld+json/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["@type"]).to eq("ScholarlyArticle")
-    end
-  end
-
-  context "application/vnd.citationstyles.csl+json" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["type"]).to eq("article-journal")
-    end
-
-    it "link" do
-      get "/application/vnd.citationstyles.csl+json/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["type"]).to eq("article-journal")
-    end
-
-    it "header crossref" do
-      get "/10.1186/1471-2164-7-187", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["type"]).to eq("article-journal")
-      expect(response["title"]).to eq("Finding function: evaluation methods for functional genomic data")
-    end
-
-    it "link crossref" do
-      get "/application/vnd.citationstyles.csl+json/10.1186/1471-2164-7-187"
-
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["type"]).to eq("article-journal")
-      expect(response["title"]).to eq("Finding function: evaluation methods for functional genomic data")
-    end
-
-    # it "doi with + character" do
-    #   doi = "10.14454/terra+aqua/ceres/cldtyphist_l3.004"
-    #   get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
-
-    #   expect(last_response.status).to eq(200)
-    #   response = JSON.parse(last_response.body)
-    #   expect(response["type"]).to eq("dataset")
-    # end
-  end
-
-  context "application/x-research-info-systems" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-research-info-systems" }
-
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("TY  - JOUR")
-    end
-
-    it "link" do
-      get "/application/x-research-info-systems/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("TY  - JOUR")
-    end
-  end
-
-  context "application/x-bibtex" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-bibtex" }
-
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@article{https://doi.org/10.7554/elife.01567")
-    end
-
-    it "link" do
-      get "/application/x-bibtex/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@article{https://doi.org/10.7554/elife.01567")
-    end
-  end
-
-  # context "application/rdf+xml" do
-  #   it "header" do
-  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
-
-  #     expect(last_response.status).to eq(200)
-  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-  #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.7554/elife.01567")   
-  #   end
-
-  #   it "link" do
-  #     get "/application/rdf+xml/#{doi}"
-
-  #     expect(last_response.status).to eq(200)
-  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-  #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.7554/elife.01567")   
-  #   end
-  # end
-
-  # context "application/x-turtle" do
-  #   it "header" do
-  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
-
-  #     expect(last_response.status).to eq(200)
-  #     ttl = last_response.body.split("\n")
-  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-  #     expect(ttl[2]).to eq("<https://doi.org/10.7554/elife.01567> a schema:ScholarlyArticle;")
-  #   end
-
-  #   it "link" do
-  #     get "/application/x-turtle/#{doi}"
-
-  #     expect(last_response.status).to eq(200)
-  #     ttl = last_response.body.split("\n")
-  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-  #     expect(ttl[2]).to eq("<https://doi.org/10.7554/elife.01567> a schema:ScholarlyArticle;")
-  #   end
-  # end
-
-  context "text/x-bibliography" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography" }
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("Sankar, M., Nieminen, K.")
-    end
-
-    it "header with style" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography; style=ieee" }
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("M. Sankar, K. Nieminen")
-    end
-
-    it "header with style software apa" do
-      doi = "10.21373/1572872428618"
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography; style=apa" }
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to eq("Miller, E. (2014). <i>Full DataCite XML Example</i> (Version 4.2) [Computer software]. DataCite. https://doi.org/10.21373/1572872428618")
-    end
-
-    it "header with style and locale" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography; style=vancouver; locale=de" }
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("Sankar M")
-    end
-
-    it "link" do
-      get "/text/x-bibliography/#{doi}"
-
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("Sankar, M., Nieminen, K.")
-    end
-
-    it "link with style" do
-      get "/text/x-bibliography/#{doi}?style=ieee"
-
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("M. Sankar, K. Nieminen")
-    end
-
-    it "link with style and locale" do
-      get "/text/x-bibliography/#{doi}?style=vancouver&locale=de"
-
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("Sankar M")
-    end
-
-    it "link with style not found" do
-      get "/text/x-bibliography/#{doi}?style=mla"
-
-      # falling back to default APA style
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to eq("Sankar, M., Nieminen, K., Ragni, L., Xenarios, I., &amp; Hardtke, C. S. (2014). Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth. <i>ELife</i>, <i>3</i>, e01567. https://doi.org/10.7554/elife.01567")
-    end
-  end
-
-  context "unknown accept header" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
-
-      expect(last_response.status).to eq(303)
-      expect(last_response.headers["Location"]).to eq("https://elifesciences.org/articles/01567")
-    end
-
-    it "link" do
-      get "/application/xml/#{doi}"
-
-      expect(last_response.status).to eq(404)
-      expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
-    end
-  end
-end
+# describe 'content negotiation crossref', type: :api, vcr: true do
+#   let(:doi) { "10.7554/elife.01567" }
+
+#   context "application/vnd.crossref.unixref+xml" do
+#     let(:doi) { "10.7554/elife.01567" }
+
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.crossref.unixref+xml" }
+
+#       expect(last_response.status).to eq(200)
+#       response = Maremma.from_xml(last_response.body).dig("crossref_result", "query_result", "body", "query", "doi_record")
+#       expect(response.dig("crossref", "journal", "journal_article", "doi_data", "doi")).to eq("10.7554/eLife.01567")
+#     end
+
+#     it "link" do
+#       get "/application/vnd.crossref.unixref+xml/#{doi}"
+
+#       expect(last_response.status).to eq(200)
+#       response = Maremma.from_xml(last_response.body).dig("crossref_result", "query_result", "body", "query", "doi_record")
+#       expect(response.dig("crossref", "journal", "journal_article", "doi_data", "doi")).to eq("10.7554/eLife.01567")
+#     end
+#   end
+
+#   context "application/vnd.jats+xml" do
+#     let(:doi) { "10.7554/elife.01567" }
+
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.jats+xml" }
+
+#       expect(last_response.status).to eq(200)
+#       response = Maremma.from_xml(last_response.body).dig("element_citation")
+#       expect(response.dig("pub_id")).to eq("pub_id_type"=>"doi", "__content__"=>"10.7554/elife.01567")
+#     end
+
+#     it "link" do
+#       get "/application/vnd.jats+xml/#{doi}"
+
+#       expect(last_response.status).to eq(200)
+#       response = Maremma.from_xml(last_response.body).dig("element_citation")
+#       expect(response.dig("pub_id")).to eq("pub_id_type"=>"doi", "__content__"=>"10.7554/elife.01567")
+#     end
+#   end
+
+#   context "application/vnd.datacite.datacite+xml" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
+
+#       expect(last_response.status).to eq(200)
+#       response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
+#       expect(response.dig("publisher")).to eq("eLife Sciences Publications, Ltd")
+#       expect(response.dig("titles", "title")).to eq("Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth")
+#     end
+
+#     it "link" do
+#       get "/application/vnd.datacite.datacite+xml/#{doi}"
+
+#       expect(last_response.status).to eq(200)
+#       response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
+#       expect(response.dig("publisher")).to eq("eLife Sciences Publications, Ltd")
+#       expect(response.dig("titles", "title")).to eq("Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth")
+#     end
+
+#     it "not found" do
+#       doi = "10.15146/R34015"
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
+
+#       expect(last_response.status).to eq(404)
+#       expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
+#     end
+#   end
+
+#   context "application/vnd.datacite.datacite+json" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+json" }
+
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["id"]).to eq("https://doi.org/10.7554/elife.01567")
+#     end
+
+#     it "link" do
+#       get "/application/vnd.datacite.datacite+json/#{doi}"
+
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["id"]).to eq("https://doi.org/10.7554/elife.01567")
+#     end
+#   end
+
+#   context "application/vnd.schemaorg.ld+json" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.schemaorg.ld+json" }
+
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["@type"]).to eq("ScholarlyArticle")
+#     end
+
+#     it "link" do
+#       get "/application/vnd.schemaorg.ld+json/#{doi}"
+
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["@type"]).to eq("ScholarlyArticle")
+#     end
+#   end
+
+#   context "application/ld+json" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/ld+json" }
+
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["@type"]).to eq("ScholarlyArticle")
+#     end
+
+#     it "link" do
+#       get "/application/ld+json/#{doi}"
+
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["@type"]).to eq("ScholarlyArticle")
+#     end
+#   end
+
+#   context "application/vnd.citationstyles.csl+json" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
+
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["type"]).to eq("article-journal")
+#     end
+
+#     it "link" do
+#       get "/application/vnd.citationstyles.csl+json/#{doi}"
+
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["type"]).to eq("article-journal")
+#     end
+
+#     it "header crossref" do
+#       get "/10.1186/1471-2164-7-187", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
+
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["type"]).to eq("article-journal")
+#       expect(response["title"]).to eq("Finding function: evaluation methods for functional genomic data")
+#     end
+
+#     it "link crossref" do
+#       get "/application/vnd.citationstyles.csl+json/10.1186/1471-2164-7-187"
+
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["type"]).to eq("article-journal")
+#       expect(response["title"]).to eq("Finding function: evaluation methods for functional genomic data")
+#     end
+
+#     # it "doi with + character" do
+#     #   doi = "10.14454/terra+aqua/ceres/cldtyphist_l3.004"
+#     #   get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
+
+#     #   expect(last_response.status).to eq(200)
+#     #   response = JSON.parse(last_response.body)
+#     #   expect(response["type"]).to eq("dataset")
+#     # end
+#   end
+
+#   context "application/x-research-info-systems" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-research-info-systems" }
+
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("TY  - JOUR")
+#     end
+
+#     it "link" do
+#       get "/application/x-research-info-systems/#{doi}"
+
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("TY  - JOUR")
+#     end
+#   end
+
+#   context "application/x-bibtex" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-bibtex" }
+
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("@article{https://doi.org/10.7554/elife.01567")
+#     end
+
+#     it "link" do
+#       get "/application/x-bibtex/#{doi}"
+
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("@article{https://doi.org/10.7554/elife.01567")
+#     end
+#   end
+
+#   # context "application/rdf+xml" do
+#   #   it "header" do
+#   #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
+
+#   #     expect(last_response.status).to eq(200)
+#   #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+#   #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.7554/elife.01567")
+#   #   end
+
+#   #   it "link" do
+#   #     get "/application/rdf+xml/#{doi}"
+
+#   #     expect(last_response.status).to eq(200)
+#   #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+#   #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.7554/elife.01567")
+#   #   end
+#   # end
+
+#   # context "application/x-turtle" do
+#   #   it "header" do
+#   #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
+
+#   #     expect(last_response.status).to eq(200)
+#   #     ttl = last_response.body.split("\n")
+#   #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+#   #     expect(ttl[2]).to eq("<https://doi.org/10.7554/elife.01567> a schema:ScholarlyArticle;")
+#   #   end
+
+#   #   it "link" do
+#   #     get "/application/x-turtle/#{doi}"
+
+#   #     expect(last_response.status).to eq(200)
+#   #     ttl = last_response.body.split("\n")
+#   #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+#   #     expect(ttl[2]).to eq("<https://doi.org/10.7554/elife.01567> a schema:ScholarlyArticle;")
+#   #   end
+#   # end
+
+#   context "text/x-bibliography" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography" }
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("Sankar, M., Nieminen, K.")
+#     end
+
+#     it "header with style" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography; style=ieee" }
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("M. Sankar, K. Nieminen")
+#     end
+
+#     it "header with style software apa" do
+#       doi = "10.21373/1572872428618"
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography; style=apa" }
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to eq("Miller, E. (2014). <i>Full DataCite XML Example</i> (Version 4.2) [Computer software]. DataCite. https://doi.org/10.21373/1572872428618")
+#     end
+
+#     it "header with style and locale" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography; style=vancouver; locale=de" }
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("Sankar M")
+#     end
+
+#     it "link" do
+#       get "/text/x-bibliography/#{doi}"
+
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("Sankar, M., Nieminen, K.")
+#     end
+
+#     it "link with style" do
+#       get "/text/x-bibliography/#{doi}?style=ieee"
+
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("M. Sankar, K. Nieminen")
+#     end
+
+#     it "link with style and locale" do
+#       get "/text/x-bibliography/#{doi}?style=vancouver&locale=de"
+
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("Sankar M")
+#     end
+
+#     it "link with style not found" do
+#       get "/text/x-bibliography/#{doi}?style=mla"
+
+#       # falling back to default APA style
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to eq("Sankar, M., Nieminen, K., Ragni, L., Xenarios, I., &amp; Hardtke, C. S. (2014). Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth. <i>ELife</i>, <i>3</i>, e01567. https://doi.org/10.7554/elife.01567")
+#     end
+#   end
+
+#   context "unknown accept header" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
+
+#       expect(last_response.status).to eq(303)
+#       expect(last_response.headers["Location"]).to eq("https://elifesciences.org/articles/01567")
+#     end
+
+#     it "link" do
+#       get "/application/xml/#{doi}"
+
+#       expect(last_response.status).to eq(404)
+#       expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
+#     end
+#   end
+# end
 
 # describe 'content negotiation medra', type: :api, vcr: true do
 #   let(:doi) { "10.1393/ncc/i2016-16378-6" }
@@ -773,7 +773,7 @@ end
 
 #   #     expect(last_response.status).to eq(200)
 #   #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-#   #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.1393/ncc/i2016-16378-6")   
+#   #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.1393/ncc/i2016-16378-6")
 #   #   end
 
 #   #   it "link" do
@@ -781,7 +781,7 @@ end
 
 #   #     expect(last_response.status).to eq(200)
 #   #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-#   #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.1393/ncc/i2016-16378-6")   
+#   #     expect(rdfxml.dig("ScholarlyArticle", "rdf:about")).to eq("https://doi.org/10.1393/ncc/i2016-16378-6")
 #   #   end
 #   # end
 
@@ -859,257 +859,257 @@ end
 #   end
 # end
 
-describe 'content negotiation jalc', type: :api, vcr: true do
-  let(:doi) { "10.18942/apg.201812" }
+# describe 'content negotiation jalc', type: :api, vcr: true do
+#   let(:doi) { "10.18942/apg.201812" }
 
-  context "application/vnd.jats+xml" do
+#   context "application/vnd.jats+xml" do
 
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.jats+xml" }
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.jats+xml" }
 
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).dig("element_citation")
-      expect(response.dig("pub_id")).to eq("__content__"=>"10.18942/apg.201812", "pub_id_type"=>"doi")
-    end
+#       expect(last_response.status).to eq(200)
+#       response = Maremma.from_xml(last_response.body).dig("element_citation")
+#       expect(response.dig("pub_id")).to eq("__content__"=>"10.18942/apg.201812", "pub_id_type"=>"doi")
+#     end
 
-    it "link" do
-      get "/application/vnd.jats+xml/#{doi}"
+#     it "link" do
+#       get "/application/vnd.jats+xml/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).dig("element_citation")
-      expect(response.dig("pub_id")).to eq("__content__"=>"10.18942/apg.201812", "pub_id_type"=>"doi")
-    end
-  end
+#       expect(last_response.status).to eq(200)
+#       response = Maremma.from_xml(last_response.body).dig("element_citation")
+#       expect(response.dig("pub_id")).to eq("__content__"=>"10.18942/apg.201812", "pub_id_type"=>"doi")
+#     end
+#   end
 
-  context "application/vnd.datacite.datacite+xml" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
+#   context "application/vnd.datacite.datacite+xml" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
 
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
-      expect(response.dig("publisher")).to eq("The Japanese Society for Plant Systematics")
-      expect(response.dig("titles", "title")).to eq("Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales)")
-    end
+#       expect(last_response.status).to eq(200)
+#       response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
+#       expect(response.dig("publisher")).to eq("The Japanese Society for Plant Systematics")
+#       expect(response.dig("titles", "title")).to eq("Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales)")
+#     end
 
-    it "link" do
-      get "/application/vnd.datacite.datacite+xml/#{doi}"
+#     it "link" do
+#       get "/application/vnd.datacite.datacite+xml/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
-      expect(response.dig("publisher")).to eq("The Japanese Society for Plant Systematics")
-      expect(response.dig("titles", "title")).to eq("Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales)")
-    end
+#       expect(last_response.status).to eq(200)
+#       response = Maremma.from_xml(last_response.body).to_h.fetch("resource", {})
+#       expect(response.dig("publisher")).to eq("The Japanese Society for Plant Systematics")
+#       expect(response.dig("titles", "title")).to eq("Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales)")
+#     end
 
-    it "not found" do
-      doi = "10.15146/R34015"
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
+#     it "not found" do
+#       doi = "10.15146/R34015"
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+xml" }
 
-      expect(last_response.status).to eq(404)
-      expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
-    end
-  end
+#       expect(last_response.status).to eq(404)
+#       expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
+#     end
+#   end
 
-  context "application/vnd.datacite.datacite+json" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+json" }
+#   context "application/vnd.datacite.datacite+json" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.datacite.datacite+json" }
 
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://doi.org/10.18942/apg.201812")
-    end
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["id"]).to eq("https://doi.org/10.18942/apg.201812")
+#     end
 
-    it "link" do
-      get "/application/vnd.datacite.datacite+json/#{doi}"
+#     it "link" do
+#       get "/application/vnd.datacite.datacite+json/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["id"]).to eq("https://doi.org/10.18942/apg.201812")
-    end
-  end
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["id"]).to eq("https://doi.org/10.18942/apg.201812")
+#     end
+#   end
 
-  context "application/vnd.schemaorg.ld+json" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.schemaorg.ld+json" }
+#   context "application/vnd.schemaorg.ld+json" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.schemaorg.ld+json" }
 
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["@type"]).to eq("CreativeWork")
-    end
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["@type"]).to eq("CreativeWork")
+#     end
 
-    it "link" do
-      get "/application/vnd.schemaorg.ld+json/#{doi}"
+#     it "link" do
+#       get "/application/vnd.schemaorg.ld+json/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["@type"]).to eq("CreativeWork")
-    end
-  end
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["@type"]).to eq("CreativeWork")
+#     end
+#   end
 
-  context "application/vnd.citationstyles.csl+json" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
+#   context "application/vnd.citationstyles.csl+json" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
 
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["title"]).to eq("Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales)")
-    end
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["title"]).to eq("Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales)")
+#     end
 
-    it "link" do
-      get "/application/vnd.citationstyles.csl+json/#{doi}"
+#     it "link" do
+#       get "/application/vnd.citationstyles.csl+json/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      response = JSON.parse(last_response.body)
-      expect(response["title"]).to eq("Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales)")
-    end
+#       expect(last_response.status).to eq(200)
+#       response = JSON.parse(last_response.body)
+#       expect(response["title"]).to eq("Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales)")
+#     end
 
-    # it "doi with + character" do
-    #   doi = "10.14454/terra+aqua/ceres/cldtyphist_l3.004"
-    #   get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
+#     # it "doi with + character" do
+#     #   doi = "10.14454/terra+aqua/ceres/cldtyphist_l3.004"
+#     #   get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/vnd.citationstyles.csl+json" }
 
-    #   expect(last_response.status).to eq(200)
-    #   response = JSON.parse(last_response.body)
-    #   expect(response["type"]).to eq("dataset")
-    # end
-  end
+#     #   expect(last_response.status).to eq(200)
+#     #   response = JSON.parse(last_response.body)
+#     #   expect(response["type"]).to eq("dataset")
+#     # end
+#   end
 
-  context "application/x-research-info-systems" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-research-info-systems" }
+#   context "application/x-research-info-systems" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-research-info-systems" }
 
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("TY  - GEN")
-    end
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("TY  - GEN")
+#     end
 
-    it "link" do
-      get "/application/x-research-info-systems/#{doi}"
+#     it "link" do
+#       get "/application/x-research-info-systems/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("TY  - GEN")
-    end
-  end
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("TY  - GEN")
+#     end
+#   end
 
-  context "application/x-bibtex" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-bibtex" }
+#   context "application/x-bibtex" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-bibtex" }
 
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@misc{https://doi.org/10.18942/apg.201812")
-    end
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("@misc{https://doi.org/10.18942/apg.201812")
+#     end
 
-    it "link" do
-      get "/application/x-bibtex/#{doi}"
+#     it "link" do
+#       get "/application/x-bibtex/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("@misc{https://doi.org/10.18942/apg.201812")
-    end
-  end
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("@misc{https://doi.org/10.18942/apg.201812")
+#     end
+#   end
 
-  # context "application/rdf+xml" do
-  #   it "header" do
-  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
+#   # context "application/rdf+xml" do
+#   #   it "header" do
+#   #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/rdf+xml" }
 
-  #     expect(last_response.status).to eq(200)
-  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-  #     expect(rdfxml.dig("CreativeWork", "rdf:about")).to eq("https://doi.org/10.18942/apg.201812")   
-  #   end
+#   #     expect(last_response.status).to eq(200)
+#   #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+#   #     expect(rdfxml.dig("CreativeWork", "rdf:about")).to eq("https://doi.org/10.18942/apg.201812")
+#   #   end
 
-  #   it "link" do
-  #     get "/application/rdf+xml/#{doi}"
+#   #   it "link" do
+#   #     get "/application/rdf+xml/#{doi}"
 
-  #     expect(last_response.status).to eq(200)
-  #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
-  #     expect(rdfxml.dig("CreativeWork", "rdf:about")).to eq("https://doi.org/10.18942/apg.201812")   
-  #   end
-  # end
+#   #     expect(last_response.status).to eq(200)
+#   #     rdfxml = Maremma.from_xml(last_response.body).fetch("RDF", {})
+#   #     expect(rdfxml.dig("CreativeWork", "rdf:about")).to eq("https://doi.org/10.18942/apg.201812")
+#   #   end
+#   # end
 
-  # context "application/x-turtle" do
-  #   it "header" do
-  #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
+#   # context "application/x-turtle" do
+#   #   it "header" do
+#   #     get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/x-turtle" }
 
-  #     expect(last_response.status).to eq(200)
-  #     ttl = last_response.body.split("\n")
-  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-  #     expect(ttl[2]).to eq("<https://doi.org/10.18942/apg.201812> a schema:CreativeWork;")
-  #   end
+#   #     expect(last_response.status).to eq(200)
+#   #     ttl = last_response.body.split("\n")
+#   #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+#   #     expect(ttl[2]).to eq("<https://doi.org/10.18942/apg.201812> a schema:CreativeWork;")
+#   #   end
 
-  #   it "link" do
-  #     get "/application/x-turtle/#{doi}"
+#   #   it "link" do
+#   #     get "/application/x-turtle/#{doi}"
 
-  #     expect(last_response.status).to eq(200)
-  #     ttl = last_response.body.split("\n")
-  #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
-  #     expect(ttl[2]).to eq("<https://doi.org/10.18942/apg.201812> a schema:CreativeWork;")
-  #   end
-  # end
+#   #     expect(last_response.status).to eq(200)
+#   #     ttl = last_response.body.split("\n")
+#   #     expect(ttl[0]).to eq("@prefix schema: <http://schema.org/> .")
+#   #     expect(ttl[2]).to eq("<https://doi.org/10.18942/apg.201812> a schema:CreativeWork;")
+#   #   end
+#   # end
 
-  context "text/x-bibliography" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography" }
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("Ebihara, A., Nakato, N.")
-    end
+#   context "text/x-bibliography" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "text/x-bibliography" }
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("Ebihara, A., Nakato, N.")
+#     end
 
-    it "link" do
-      get "/text/x-bibliography/#{doi}"
+#     it "link" do
+#       get "/text/x-bibliography/#{doi}"
 
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("Ebihara, A., Nakato, N.")
-    end
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("Ebihara, A., Nakato, N.")
+#     end
 
-    it "link with style" do
-      get "/text/x-bibliography/#{doi}?style=ieee"
+#     it "link with style" do
+#       get "/text/x-bibliography/#{doi}?style=ieee"
 
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("A. Ebihara, N. Nakato")
-    end
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("A. Ebihara, N. Nakato")
+#     end
 
-    it "link with style and locale" do
-      get "/text/x-bibliography/#{doi}?style=vancouver&locale=de"
+#     it "link with style and locale" do
+#       get "/text/x-bibliography/#{doi}?style=vancouver&locale=de"
 
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to eq("Ebihara A, Nakato N, Kuo L-Y, Miyazaki H, Serizawa S. Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales) [Internet]. Bd. 70, Acta phytotaxonomica et geobotanica. The Japanese Society for Plant Systematics; 2019. S. 19–28. Verfügbar unter: https://doi.org/10.18942/apg.201812")
-    end
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to eq("Ebihara A, Nakato N, Kuo L-Y, Miyazaki H, Serizawa S. Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales) [Internet]. Bd. 70, Acta phytotaxonomica et geobotanica. The Japanese Society for Plant Systematics; 2019. S. 19–28. Verfügbar unter: https://doi.org/10.18942/apg.201812")
+#     end
 
-    it "link with style not found" do
-      get "/text/x-bibliography/#{doi}?style=mla"
+#     it "link with style not found" do
+#       get "/text/x-bibliography/#{doi}?style=mla"
 
-      # falling back to default APA style
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to eq("Ebihara, A., Nakato, N., Kuo, L.-Y., Miyazaki, H., &amp; Serizawa, S. (2019). Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales). In <i>Acta phytotaxonomica et geobotanica</i> (Vol. 70, pp. 19–28). The Japanese Society for Plant Systematics. https://doi.org/10.18942/apg.201812")
-    end
+#       # falling back to default APA style
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to eq("Ebihara, A., Nakato, N., Kuo, L.-Y., Miyazaki, H., &amp; Serizawa, S. (2019). Allopolyploid Origin and Distribution Range of <i>Acystopteris taiwaniana </i>(Cystopteridaceae: Polypodiales). In <i>Acta phytotaxonomica et geobotanica</i> (Vol. 70, pp. 19–28). The Japanese Society for Plant Systematics. https://doi.org/10.18942/apg.201812")
+#     end
 
-    it "link with style" do
-      get "/text/x-bibliography/#{doi}?style=ieee"
+#     it "link with style" do
+#       get "/text/x-bibliography/#{doi}?style=ieee"
 
-      expect(last_response.status).to eq(200)
-      expect(last_response.body).to start_with("A. Ebihara, N. Nakato")
-    end
-  end
+#       expect(last_response.status).to eq(200)
+#       expect(last_response.body).to start_with("A. Ebihara, N. Nakato")
+#     end
+#   end
 
-  context "unknown accept header" do
-    it "header" do
-      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
+#   context "unknown accept header" do
+#     it "header" do
+#       get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/xml" }
 
-      expect(last_response.status).to eq(303)
-      expect(last_response.headers["Location"]).to eq("https://doi.org/10.18942/apg.201812")
-    end
+#       expect(last_response.status).to eq(303)
+#       expect(last_response.headers["Location"]).to eq("https://doi.org/10.18942/apg.201812")
+#     end
 
-    it "link" do
-      get "/application/xml/#{doi}"
+#     it "link" do
+#       get "/application/xml/#{doi}"
 
-      expect(last_response.status).to eq(404)
-      expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
-    end
-  end
+#       expect(last_response.status).to eq(404)
+#       expect(last_response.body).to eq("The resource you are looking for doesn't exist.")
+#     end
+#   end
 
-  describe 'rmethod not allowed error', type: :api do
-    let(:doi) { "10.14454/cne7-ar31" }
-  
-    it "post" do
-      post "/#{doi}"
-  
-      expect(last_response.status).to eq(405)
-      expect(last_response.body).to eq("Method not allowed.")
-    end
-  end
-end
+#   describe 'rmethod not allowed error', type: :api do
+#     let(:doi) { "10.14454/cne7-ar31" }
+
+#     it "post" do
+#       post "/#{doi}"
+
+#       expect(last_response.status).to eq(405)
+#       expect(last_response.body).to eq("Method not allowed.")
+#     end
+#   end
+# end
