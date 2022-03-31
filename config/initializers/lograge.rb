@@ -15,4 +15,9 @@ Rails.application.configure do
       params: event.payload[:params].except(*exceptions),
     }
   end
+
+  config.lograge.ignore_custom = lambda do |event|
+    # If 404 is raised, it's a routing error and should be ignored
+    event.payload[:status] == 404
+  end
 end
