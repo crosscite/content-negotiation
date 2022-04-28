@@ -18,7 +18,7 @@ gem "logstash-logger", "~> 0.26.1"
 gem "sentry-raven", "~> 2.9"
 gem "gender_detector", "~> 0.1.2"
 gem "rack-cors", "~> 1.0", require: "rack/cors"
-gem "git", "~> 1.5"
+gem "git", "~> 1.11"
 gem "sprockets", "~> 3.7", ">= 3.7.2"
 
 group :development do
