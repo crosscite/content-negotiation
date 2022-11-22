@@ -107,7 +107,7 @@ GEM
       rexml
     csl-styles (1.0.1.11)
       csl (~> 1.0)
-    dalli (2.7.11)
+    dalli (3.2.3)
     debug_inspector (1.1.0)
     diff-lcs (1.5.0)
     docile (1.4.0)
@@ -360,7 +360,7 @@ DEPENDENCIES
   binding_of_caller
   bolognese (~> 1.7)
   capybara
-  dalli (~> 2.7.6)
+  dalli (~> 3.2.3)
   dotenv
   equivalent-xml (~> 0.6.0)
   faraday (~> 0.17.3)
