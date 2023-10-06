@@ -7,9 +7,10 @@ gem "oj_mimic_json", "~> 1.0", ">= 1.0.1"
 gem "equivalent-xml", "~> 0.6.0"
 gem "nokogiri", ">= 1.10.8"
 gem "iso8601", "~> 0.9.0"
-gem "maremma", "~> 4.7.1"
+gem "maremma", '>= 4.9.4', '< 5'
+gem 'addressable', '2.8.1'
 gem "faraday", "~> 0.17.3"
-gem "bolognese", "~> 1.7"
+gem "bolognese", "~> 1.11.4"
 gem "json-ld-preloaded", "~> 3.1", ">= 3.1.3"
 gem "dalli", "~> 2.7.6"
 gem "lograge", "~> 0.11.2"
@@ -30,6 +31,7 @@ group :development do
   gem "rubocop-rails", "~> 2.4"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+  gem 'byebug'
 end
 
 group :test do
