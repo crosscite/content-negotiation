@@ -8,6 +8,7 @@ gem "equivalent-xml", "~> 0.6.0"
 gem "nokogiri", ">= 1.10.8"
 gem "iso8601", "~> 0.9.0"
 gem "maremma", '>= 4.9.4', '< 5'
+gem 'addressable', '2.8.1'
 gem "faraday", "~> 0.17.3"
 gem "bolognese", "~> 1.11.4"
 gem "json-ld-preloaded", "~> 3.1", ">= 3.1.3"
