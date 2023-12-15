@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "~> 5.2"
+gem "rails", "6.0"
 gem "dotenv"
 gem "oj", ">= 3.1.0"
 gem "oj_mimic_json", "~> 1.0", ">= 1.0.1"
@@ -22,22 +22,19 @@ gem "rack-cors", "~> 1.0", require: "rack/cors"
 gem "git", "~> 1.5"
 gem "sprockets", "~> 3.7", ">= 3.7.2"
 
-group :development do
+group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
   gem "listen", "~> 3.0.5"
-  gem "rubocop", "~> 0.77.0"
+  gem "rubocop", "~> 1.3", ">= 1.3.1"
   gem "rubocop-performance", "~> 1.5", ">= 1.5.1"
-  gem "rubocop-rails", "~> 2.4"
+  gem "rubocop-rails", "~> 2.8", ">= 2.8.1"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem 'byebug'
-end
-
-group :test do
-  gem "rspec-rails", "~> 3.5", ">= 3.5.2"
+  gem "rspec-rails", "~> 3.8", ">= 3.8.2"
   gem "capybara"
   gem "webmock", "~> 3.8", ">= 3.8.2"
-  gem "vcr", "~> 3.0.3"
+  gem "vcr", "~> 5.1"
   gem 'simplecov', '~> 0.17.1'
 end
