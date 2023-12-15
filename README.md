@@ -1,7 +1,10 @@
 # DOI Content Negotiation
 
 [![Identifier](https://img.shields.io/badge/doi-10.5438%2Ft1jg--hvhn-fca709.svg)](https://doi.org/10.5438/t1jg-hvhn)
-[![Build Status](https://travis-ci.org/crosscite/content-negotiation.svg?branch=master)](https://travis-ci.org/crosscite/content-negotiation) [![Code Climate](https://codeclimate.com/github/crosscite/content-negotiation/badges/gpa.svg)](https://codeclimate.com/github/crosscite/content-negotiation) [![Test Coverage](https://codeclimate.com/github/crosscite/content-negotiation/badges/coverage.svg)](https://codeclimate.com/github/crosscite/content-negotiation/coverage)
+[![Build Status](https://github.com/crosscite/content-negotiation/actions/workflows/stage.yml/badge.svg?branch=master)](https://github.com/crosscite/content-negotiation/workflows/Deploy/badge.svg)
+![Release](https://github.com/crosscite/content-negotiation/workflows/Deploy/badge.svg)
+[![Code Climate](https://codeclimate.com/github/crosscite/content-negotiation/badges/gpa.svg)](https://codeclimate.com/github/crosscite/content-negotiation)
+[![Test Coverage](https://codeclimate.com/github/crosscite/content-negotiation/badges/coverage.svg)](https://codeclimate.com/github/crosscite/content-negotiation/coverage)
 
 Rails API application for conversion of DOI metadata form/to other metadata formats, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) library for metadata conversion.
 
