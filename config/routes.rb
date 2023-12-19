@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get '/application/x-turtle/:id', :to => 'index#show', constraints: { :id => /.+/ }, defaults: { format: :turtle }
   get '/text/x-bibliography/:id', :to => 'index#show', constraints: { :id => /.+/ }, defaults: { format: :citation }
   
-  resources :index, path: '/', only: [:show, :index], constraints: { id: /.+/, format: false }
+  resources :index, path: '/', only: [:show, :index], constraints: { id: /.+/ }
   root :to => 'index#index'
 
   # rescue method not allowed errors
