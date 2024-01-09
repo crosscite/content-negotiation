@@ -68,11 +68,12 @@ GEM
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
-    bibtex-ruby (6.0.0)
+    bibtex-ruby (6.1.0)
       latex-decode (~> 0.0)
+      racc (~> 1.7)
     binding_of_caller (1.0.0)
       debug_inspector (>= 0.0.1)
-    bolognese (2.0.3)
+    bolognese (2.1.0)
       activesupport (>= 4.2.5)
       benchmark_methods (~> 0.7)
       bibtex-ruby (>= 5.1.0)
@@ -377,7 +378,7 @@ DEPENDENCIES
   addressable (= 2.8.1)
   better_errors
   binding_of_caller
-  bolognese (= 2.0.3)
+  bolognese (= 2.1.0)
   byebug
   capybara
   dalli (~> 2.7.6)
@@ -411,4 +412,4 @@ DEPENDENCIES
   webmock (~> 3.8, >= 3.8.2)
 
 BUNDLED WITH
-   2.4.10
+   2.4.22

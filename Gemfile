@@ -10,7 +10,7 @@ gem "iso8601", "~> 0.9.0"
 gem "maremma", '>= 4.9.4', '< 5'
 gem 'addressable', '2.8.1'
 gem "faraday", "~> 0.17.3"
-gem "bolognese", "2.0.3"
+gem "bolognese", "2.1.0"
 gem "json-ld-preloaded", "~> 3.1", ">= 3.1.3"
 gem "dalli", "~> 2.7.6"
 gem "lograge", "~> 0.11.2"
