@@ -73,7 +73,7 @@ GEM
       racc (~> 1.7)
     binding_of_caller (1.0.0)
       debug_inspector (>= 0.0.1)
-    bolognese (2.1.0)
+    bolognese (2.1.1)
       activesupport (>= 4.2.5)
       benchmark_methods (~> 0.7)
       bibtex-ruby (>= 5.1.0)
@@ -214,7 +214,8 @@ GEM
     minitest (5.20.0)
     multi_json (1.15.0)
     multipart-post (2.3.0)
-    namae (1.1.1)
+    namae (1.2.0)
+      racc (~> 1.7)
     net-imap (0.3.7)
       date
       net-protocol
@@ -378,7 +379,7 @@ DEPENDENCIES
   addressable (= 2.8.1)
   better_errors
   binding_of_caller
-  bolognese (= 2.1.0)
+  bolognese (= 2.1.1)
   byebug
   capybara
   dalli (~> 2.7.6)
