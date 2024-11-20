@@ -1,4 +1,4 @@
-FROM phusion/passenger-full:2.0.0
+FROM phusion/passenger-ruby31:3.0.7
 LABEL maintainer="support@datacite.org"
 
 # Set correct environment variables.
