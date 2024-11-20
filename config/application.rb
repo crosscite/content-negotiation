@@ -12,7 +12,7 @@ Bundler.require(*Rails.groups)
 # load ENV variables from .env file if it exists
 env_file = File.expand_path("../../.env", __FILE__)
 if File.exist?(env_file)
-  require 'dotenv'
+  require "dotenv"
   Dotenv.load! env_file
 end
 
@@ -38,7 +38,7 @@ ENV["RAILS_LOG_TO_STDOUT"] = "enabled"
 
 module ContentNegotiation
   class Application < Rails::Application
-    config.load_defaults 6.1
+    config.load_defaults 7.1
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -49,7 +49,7 @@ module ContentNegotiation
     config.api_only = true
 
     # secret_key_base is not used by Rails API, as there are no sessions
-    config.secret_key_base = 'blipblapblup'
+    config.secret_key_base = "blipblapblup"
 
     # serve assets via web server
     config.public_file_server.enabled = false
@@ -65,6 +65,7 @@ module ContentNegotiation
     config.middleware.use Rack::Deflater
 
     # Use memcached as cache store
-    config.cache_store = :dalli_store, nil, { :namespace => ENV['APPLICATION'] }
+    config.cache_store = :mem_cache_store, ENV["MEMCACHE_SERVERS"],
+                         { namespace: ENV["APPLICATION"] }
   end
 end
