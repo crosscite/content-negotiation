@@ -37,7 +37,8 @@ RUN mkdir -p vendor/bundle && \
     chmod -R 755 . && \
     gem update --system 3.5.6 && \
     gem install bundler -v 2.5.6 && \
-    /sbin/setuser app bundle install --path vendor/bundle
+    su - app -c "bundle config set path 'vendor/bundle'" && \
+    su - app -c 'cd /home/app/webapp && bundle install'
 
 # Copy webapp folder
 WORKDIR /home/app/webapp
