@@ -11,8 +11,8 @@ RUN usermod -a -G docker_env app
 # Use baseimage-docker's init process.
 CMD ["/sbin/my_init"]
 
-# Use Ruby 2.6.8
-RUN bash -lc 'rvm --default use ruby-2.6.8'
+# Use Ruby 3.1.6
+RUN bash -lc 'rvm --default use ruby-3.1.6'
 
 # Update installed APT packages
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
@@ -35,8 +35,8 @@ WORKDIR /home/app/webapp
 RUN mkdir -p vendor/bundle && \
     chown -R app:app . && \
     chmod -R 755 . && \
-    gem update --system 3.4.22 && \
-    gem install bundler -v 2.4.22 && \
+    gem update --system 3.5.6 && \
+    gem install bundler -v 2.5.6 && \
     /sbin/setuser app bundle install --path vendor/bundle
 
 # Copy webapp folder
