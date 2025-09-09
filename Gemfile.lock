@@ -125,6 +125,7 @@ GEM
       xpath (~> 3.2)
     citeproc (1.1.0)
       date
+      forwardable
       json
       namae (~> 1.0)
       observer (< 1.0)
