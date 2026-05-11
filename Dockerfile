@@ -1,9 +1,12 @@
-FROM phusion/passenger-ruby32:3.1.4
+FROM phusion/passenger-ruby40:3.1.6
 LABEL maintainer="support@datacite.org"
+
+ARG GIT_TAG=1.0
 
 # Set correct environment variables.
 ENV HOME=/home/app
 ENV DOCKERIZE_VERSION=v0.6.0
+ENV GIT_TAG=${GIT_TAG}
 
 # Allow app user to read /etc/container_environment
 RUN usermod -a -G docker_env app
@@ -12,7 +15,7 @@ RUN usermod -a -G docker_env app
 CMD ["/sbin/my_init"]
 
 # Use Ruby
-RUN bash -lc 'rvm --default use ruby-3.2.9'
+RUN bash -lc 'rvm --default use ruby-4.0.1'
 
 # Update installed APT packages
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
