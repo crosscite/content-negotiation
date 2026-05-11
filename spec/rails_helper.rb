@@ -30,8 +30,6 @@ VCR.configure do |c|
 end
 
 RSpec.configure do |config|
-  config.fixture_path = "#{::Rails.root}/spec/fixtures/"
-
   # config.include WebMock::API
   config.include Rack::Test::Methods, :type => :api
   config.include Rack::Test::Methods, :type => :controller

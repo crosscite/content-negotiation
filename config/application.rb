@@ -4,6 +4,7 @@ require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "action_controller/railtie"
+require "action_view/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -38,7 +39,7 @@ ENV["RAILS_LOG_TO_STDOUT"] = "enabled"
 
 module ContentNegotiation
   class Application < Rails::Application
-    config.load_defaults 7.1
+    config.load_defaults 8.1
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -53,10 +54,6 @@ module ContentNegotiation
 
     # serve assets via web server
     config.public_file_server.enabled = false
-
-    # Make Ruby 2.4 preserve the timezone of the receiver when calling `to_time`.
-    # Previous versions had false.
-    config.active_support.to_time_preserves_timezone = true
 
     # Configure SSL options to enable HSTS with subdomains. Previous versions had false.
     config.ssl_options = { hsts: { subdomains: true } }
