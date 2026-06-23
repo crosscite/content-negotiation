@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "rails", "~> 8.1", ">= 8.1.2.1"
 gem "dotenv", "~> 3.2"
-gem "oj", ">= 3.16", ">= 3.16.16"
+gem "oj", ">= 3.16.16"
 gem "oj_mimic_json", "~> 1.0", ">= 1.0.1"
 gem "nokogiri", ">= 1.19", ">= 1.19.2"
 gem "maremma", "~> 6.0"
