@@ -7,12 +7,6 @@ class ApplicationController < ActionController::API
                           ActionController::UnpermittedParameters,
                           NoMethodError]
 
-  rescue_from ActionDispatch::Http::MimeNegotiation::InvalidType do |_exception|
-    render plain: "Not Acceptable: invalid or missing Accept header",
-           status: :not_acceptable,
-           content_type: "text/plain"
-  end
-
   unless Rails.env.development?
     rescue_from *RESCUABLE_EXCEPTIONS do |exception|
       status, message = case exception.class.to_s
