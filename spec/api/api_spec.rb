@@ -291,6 +291,15 @@ describe 'content negotiation', type: :api, vcr: true do
     end
   end
 
+  context "invalid accept header" do
+    it "returns 406 for malformed Accept header" do
+      get "/#{doi}", nil, { "HTTP_ACCEPT" => "application/json, *" }
+
+      expect(last_response.status).to eq(406)
+      expect(last_response.body).to eq("Not Acceptable: invalid or missing Accept header")
+    end
+  end
+
   context "registration agency op in datacite index" do
     let (:doi) { "10.2899/caricom/1" }
 
