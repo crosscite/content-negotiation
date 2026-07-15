@@ -1,0 +1,183 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.stage.datacite.org/dois/10.14454/cne7-ar31
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/6.0.0; mailto:info@datacite.org)
+      Accept:
+      - application/vnd.datacite.datacite+json
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Jul 2026 10:59:20 GMT
+      Content-Type:
+      - application/vnd.datacite.datacite+json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept,Accept-Encoding
+      Content-Encoding:
+      - ''
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      X-Request-Id:
+      - dc8027ce-8042-452a-a38a-e05eee78b2ee
+      X-Runtime:
+      - '0.038727'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.1.2
+      Server:
+      - nginx/1.24.0 + Phusion Passenger(R) 6.1.2
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+      X-Lupoversion:
+      - ks-add-api-keys
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": "https://doi.org/10.14454/cne7-ar31",
+          "doi": "10.14454/CNE7-AR31",
+          "url": "https://blog.datacite.org/announcing-schema-4-2/",
+          "types": {
+            "ris": "GEN",
+            "bibtex": "article",
+            "citeproc": "post-weblog",
+            "schemaOrg": "BlogPosting",
+            "resourceTypeGeneral": "Text"
+          },
+          "creators": [
+            {
+              "name": "Dasler, Robin",
+              "nameType": "Personal",
+              "givenName": "Robin",
+              "familyName": "Dasler",
+              "affiliation": [
+                {
+                  "name": "DataCite",
+                  "schemeUri": "https://ror.org",
+                  "affiliationIdentifier": "https://ror.org/04wxnsj81",
+                  "affiliationIdentifierScheme": "ROR"
+                }
+              ],
+              "nameIdentifiers": [
+                {
+                  "schemeUri": "https://orcid.org",
+                  "nameIdentifier": "https://orcid.org/0000-0002-4695-7874",
+                  "nameIdentifierScheme": "ORCID"
+                }
+              ]
+            },
+            {
+              "name": "de Smaele, Madeleine",
+              "nameType": "Personal",
+              "givenName": "Madeleine",
+              "familyName": "de Smaele",
+              "affiliation": [
+                {
+                  "name": "Delft University of Technology",
+                  "schemeUri": "https://ror.org",
+                  "affiliationIdentifier": "https://ror.org/02e2c7k09",
+                  "affiliationIdentifierScheme": "ROR"
+                }
+              ],
+              "nameIdentifiers": [
+                {
+                  "schemeUri": "https://orcid.org",
+                  "nameIdentifier": "https://orcid.org/0000-0002-8963-3415",
+                  "nameIdentifierScheme": "ORCID"
+                }
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "lang": null,
+              "title": "Announcing schema 4.2",
+              "titleType": null
+            }
+          ],
+          "publisher": {
+            "name": "DataCite"
+          },
+          "container": {},
+          "subjects": [
+            {
+              "subject": "featured"
+            }
+          ],
+          "contributors": [],
+          "dates": [
+            {
+              "date": "2019-03-20T07:17:52.792Z",
+              "dateType": "Issued"
+            },
+            {
+              "date": "2019-03-20T07:17:52.792Z",
+              "dateType": "Created"
+            },
+            {
+              "date": "2019-03-20T07:17:52.792Z",
+              "dateType": "Updated"
+            }
+          ],
+          "publicationYear": 2019,
+          "identifiers": [],
+          "version": "1.0",
+          "rightsList": {
+            "rights": null,
+            "rightsUri": null
+          },
+          "descriptions": [
+            {
+              "lang": null,
+              "description": "The DataCite Metadata Schema is the basis for the metadata you submit to DataCite. It tells you the available fields and structure for your metadata records, and it’s what we validate against to make sure everything is as it should be. The metadata...",
+              "descriptionType": "Abstract"
+            }
+          ],
+          "relatedIdentifiers": [
+            {
+              "relationType": "IsPartOf",
+              "relatedIdentifier": "10.5438/0000-00ss",
+              "resourceTypeGeneral": "Text",
+              "relatedIdentifierType": "DOI"
+            }
+          ],
+          "schemaVersion": "http://datacite.org/schema/kernel-4",
+          "providerId": "datacite",
+          "clientId": "datacite.datacite",
+          "agency": "datacite",
+          "state": "findable"
+        }
+  recorded_at: Wed, 15 Jul 2026 10:59:20 GMT
+recorded_with: VCR 6.4.0
